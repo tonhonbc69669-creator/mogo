@@ -1,0 +1,5993 @@
+{
+  "slime": {
+    "coins": [
+      2,
+      4
+    ],
+    "items": [
+      {
+        "id": "jelly",
+        "chance": 0.6
+      },
+      {
+        "id": "slime_core",
+        "chance": 0.05
+      },
+      {
+        "id": "potion_red",
+        "chance": 0.04
+      },
+      {
+        "id": "jelly_ring",
+        "chance": 0.015
+      },
+      {
+        "id": "egg_slime",
+        "chance": 0.004
+      }
+    ]
+  },
+  "shroom": {
+    "coins": [
+      4,
+      8
+    ],
+    "items": [
+      {
+        "id": "cap",
+        "chance": 0.5
+      },
+      {
+        "id": "glow_spores",
+        "chance": 0.15
+      },
+      {
+        "id": "potion_red",
+        "chance": 0.05
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.03
+      },
+      {
+        "id": "spore_charm",
+        "chance": 0.02
+      },
+      {
+        "id": "swift_boots",
+        "chance": 0.01
+      }
+    ]
+  },
+  "goblin": {
+    "coins": [
+      8,
+      16
+    ],
+    "items": [
+      {
+        "id": "goblin_tooth",
+        "chance": 0.4
+      },
+      {
+        "id": "broken_club",
+        "chance": 0.1
+      },
+      {
+        "id": "goblin_pouch",
+        "chance": 0.05
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.06
+      },
+      {
+        "id": "goblin_cleaver",
+        "chance": 0.02
+      },
+      {
+        "id": "fang_necklace",
+        "chance": 0.015
+      },
+      {
+        "id": "iron_helmet",
+        "chance": 0.01
+      }
+    ]
+  },
+  "bunny": {
+    "coins": [
+      3,
+      6
+    ],
+    "items": [
+      {
+        "id": "bunny_fur",
+        "chance": 0.55
+      },
+      {
+        "id": "potion_red",
+        "chance": 0.05
+      },
+      {
+        "id": "swift_boots",
+        "chance": 0.008
+      },
+      {
+        "id": "egg_bunny",
+        "chance": 0.004
+      }
+    ]
+  },
+  "bee": {
+    "coins": [
+      5,
+      9
+    ],
+    "items": [
+      {
+        "id": "honey",
+        "chance": 0.5
+      },
+      {
+        "id": "bee_stinger",
+        "chance": 0.08
+      },
+      {
+        "id": "potion_red",
+        "chance": 0.05
+      }
+    ]
+  },
+  "bull": {
+    "coins": [
+      8,
+      14
+    ],
+    "items": [
+      {
+        "id": "bull_horn",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_red",
+        "chance": 0.06
+      },
+      {
+        "id": "leather_armor",
+        "chance": 0.012
+      }
+    ]
+  },
+  "frog": {
+    "coins": [
+      7,
+      12
+    ],
+    "items": [
+      {
+        "id": "frog_leg",
+        "chance": 0.5
+      },
+      {
+        "id": "potion_red",
+        "chance": 0.05
+      }
+    ]
+  },
+  "crab": {
+    "coins": [
+      9,
+      15
+    ],
+    "items": [
+      {
+        "id": "crab_shell",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.05
+      },
+      {
+        "id": "leather_cap",
+        "chance": 0.012
+      }
+    ]
+  },
+  "snake": {
+    "coins": [
+      10,
+      16
+    ],
+    "items": [
+      {
+        "id": "snake_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.05
+      }
+    ]
+  },
+  "wolf": {
+    "coins": [
+      10,
+      17
+    ],
+    "items": [
+      {
+        "id": "wolf_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.05
+      },
+      {
+        "id": "fang_necklace",
+        "chance": 0.01
+      },
+      {
+        "id": "bow_hunter",
+        "chance": 0.005
+      },
+      {
+        "id": "egg_wolf",
+        "chance": 0.003
+      }
+    ]
+  },
+  "spider": {
+    "coins": [
+      11,
+      18
+    ],
+    "items": [
+      {
+        "id": "silk",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.05
+      }
+    ]
+  },
+  "woodling": {
+    "coins": [
+      11,
+      18
+    ],
+    "items": [
+      {
+        "id": "magic_twig",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.05
+      },
+      {
+        "id": "spore_charm",
+        "chance": 0.012
+      }
+    ]
+  },
+  "bear": {
+    "coins": [
+      14,
+      22
+    ],
+    "items": [
+      {
+        "id": "bear_claw",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.06
+      },
+      {
+        "id": "iron_helmet",
+        "chance": 0.01
+      },
+      {
+        "id": "egg_mystery",
+        "chance": 0.003
+      }
+    ]
+  },
+  "archer": {
+    "coins": [
+      14,
+      22
+    ],
+    "items": [
+      {
+        "id": "broken_arrow",
+        "chance": 0.45
+      },
+      {
+        "id": "goblin_tooth",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.06
+      },
+      {
+        "id": "bow_hunter",
+        "chance": 0.01
+      }
+    ]
+  },
+  "shaman": {
+    "coins": [
+      15,
+      24
+    ],
+    "items": [
+      {
+        "id": "shaman_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "goblin_tooth",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.07
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.08
+      },
+      {
+        "id": "staff_moon",
+        "chance": 0.012
+      }
+    ]
+  },
+  "brute": {
+    "coins": [
+      18,
+      28
+    ],
+    "items": [
+      {
+        "id": "broken_club",
+        "chance": 0.5
+      },
+      {
+        "id": "goblin_tooth",
+        "chance": 0.35
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.07
+      },
+      {
+        "id": "goblin_cleaver",
+        "chance": 0.015
+      },
+      {
+        "id": "axe_war",
+        "chance": 0.01
+      }
+    ]
+  },
+  "bat": {
+    "coins": [
+      14,
+      22
+    ],
+    "items": [
+      {
+        "id": "wing",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.06
+      }
+    ]
+  },
+  "mole": {
+    "coins": [
+      15,
+      24
+    ],
+    "items": [
+      {
+        "id": "iron_ore",
+        "chance": 0.5
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.06
+      }
+    ]
+  },
+  "skeleton": {
+    "coins": [
+      16,
+      26
+    ],
+    "items": [
+      {
+        "id": "old_bone",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.06
+      },
+      {
+        "id": "iron_helmet",
+        "chance": 0.012
+      }
+    ]
+  },
+  "beetle": {
+    "coins": [
+      17,
+      27
+    ],
+    "items": [
+      {
+        "id": "beetle_shell",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.04
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.008
+      }
+    ]
+  },
+  "golem": {
+    "coins": [
+      19,
+      30
+    ],
+    "items": [
+      {
+        "id": "rock_core",
+        "chance": 0.45
+      },
+      {
+        "id": "iron_ore",
+        "chance": 0.25
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.05
+      }
+    ]
+  },
+  "ghost": {
+    "coins": [
+      20,
+      32
+    ],
+    "items": [
+      {
+        "id": "lamp_oil",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.05
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.06
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.004
+      }
+    ]
+  },
+  "shard": {
+    "coins": [
+      22,
+      34
+    ],
+    "items": [
+      {
+        "id": "pure_crystal",
+        "chance": 0.35
+      },
+      {
+        "id": "crystal_chip",
+        "chance": 0.4
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.06
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.005
+      }
+    ]
+  },
+  "boar": {
+    "coins": [
+      15,
+      24
+    ],
+    "items": [
+      {
+        "id": "boar_tusk",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.06
+      },
+      {
+        "id": "leather_armor",
+        "chance": 0.012
+      }
+    ]
+  },
+  "wisp": {
+    "coins": [
+      16,
+      25
+    ],
+    "items": [
+      {
+        "id": "wisp_ember",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.07
+      },
+      {
+        "id": "staff_moon",
+        "chance": 0.01
+      }
+    ]
+  },
+  "owlbear": {
+    "coins": [
+      18,
+      28
+    ],
+    "items": [
+      {
+        "id": "owl_plume",
+        "chance": 0.45
+      },
+      {
+        "id": "bear_claw",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.04
+      },
+      {
+        "id": "iron_helmet",
+        "chance": 0.012
+      }
+    ]
+  },
+  "silverstag": {
+    "coins": [
+      260,
+      380
+    ],
+    "items": [
+      {
+        "id": "silver_antler",
+        "chance": 0.6
+      },
+      {
+        "id": "wisp_ember",
+        "chance": 1
+      },
+      {
+        "id": "bow_hunter",
+        "chance": 0.25
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.12
+      },
+      {
+        "id": "staff_moon",
+        "chance": 0.15
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.5
+      }
+    ]
+  },
+  "ram": {
+    "coins": [
+      17,
+      27
+    ],
+    "items": [
+      {
+        "id": "ram_wool",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.04
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.008
+      }
+    ]
+  },
+  "eagle": {
+    "coins": [
+      18,
+      28
+    ],
+    "items": [
+      {
+        "id": "eagle_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.05
+      },
+      {
+        "id": "bow_hunter",
+        "chance": 0.012
+      }
+    ]
+  },
+  "yeti": {
+    "coins": [
+      20,
+      32
+    ],
+    "items": [
+      {
+        "id": "yeti_fur",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.06
+      },
+      {
+        "id": "iron_helmet",
+        "chance": 0.012
+      },
+      {
+        "id": "steel_sword",
+        "chance": 0.006
+      }
+    ]
+  },
+  "roc": {
+    "coins": [
+      300,
+      450
+    ],
+    "items": [
+      {
+        "id": "roc_plume",
+        "chance": 0.6
+      },
+      {
+        "id": "eagle_feather",
+        "chance": 1
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.1
+      },
+      {
+        "id": "steel_sword",
+        "chance": 0.15
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.15
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.6
+      }
+    ]
+  },
+  "turtle": {
+    "coins": [
+      8,
+      14
+    ],
+    "items": [
+      {
+        "id": "turtle_shell",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_red",
+        "chance": 0.06
+      },
+      {
+        "id": "leather_cap",
+        "chance": 0.012
+      }
+    ]
+  },
+  "gull": {
+    "coins": [
+      9,
+      15
+    ],
+    "items": [
+      {
+        "id": "gull_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.05
+      },
+      {
+        "id": "swift_boots",
+        "chance": 0.006
+      }
+    ]
+  },
+  "pirate": {
+    "coins": [
+      14,
+      24
+    ],
+    "items": [
+      {
+        "id": "doubloon",
+        "chance": 0.5
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.06
+      },
+      {
+        "id": "leather_armor",
+        "chance": 0.012
+      },
+      {
+        "id": "goblin_cleaver",
+        "chance": 0.006
+      },
+      {
+        "id": "dagger_shadow",
+        "chance": 0.008
+      }
+    ]
+  },
+  "crabking": {
+    "coins": [
+      160,
+      240
+    ],
+    "items": [
+      {
+        "id": "king_claw",
+        "chance": 0.6
+      },
+      {
+        "id": "crab_shell",
+        "chance": 1
+      },
+      {
+        "id": "leather_armor",
+        "chance": 0.2
+      },
+      {
+        "id": "swift_boots",
+        "chance": 0.15
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.6
+      }
+    ]
+  },
+  "puffin": {
+    "coins": [
+      10,
+      16
+    ],
+    "items": [
+      {
+        "id": "puffin_beak",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.05
+      }
+    ]
+  },
+  "stormwisp": {
+    "coins": [
+      12,
+      20
+    ],
+    "items": [
+      {
+        "id": "storm_core",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.07
+      },
+      {
+        "id": "staff_moon",
+        "chance": 0.008
+      }
+    ]
+  },
+  "drake": {
+    "coins": [
+      14,
+      22
+    ],
+    "items": [
+      {
+        "id": "drake_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.06
+      },
+      {
+        "id": "iron_helmet",
+        "chance": 0.01
+      },
+      {
+        "id": "bow_hunter",
+        "chance": 0.006
+      }
+    ]
+  },
+  "stormdrake": {
+    "coins": [
+      200,
+      300
+    ],
+    "items": [
+      {
+        "id": "storm_horn",
+        "chance": 0.6
+      },
+      {
+        "id": "drake_scale",
+        "chance": 1
+      },
+      {
+        "id": "staff_moon",
+        "chance": 0.2
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.1
+      },
+      {
+        "id": "fang_necklace",
+        "chance": 0.25
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.4
+      }
+    ]
+  },
+  "scorpion": {
+    "coins": [
+      20,
+      32
+    ],
+    "items": [
+      {
+        "id": "scorpion_stinger",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.06
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.008
+      }
+    ]
+  },
+  "vulture": {
+    "coins": [
+      20,
+      32
+    ],
+    "items": [
+      {
+        "id": "vulture_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.05
+      },
+      {
+        "id": "bow_hunter",
+        "chance": 0.01
+      }
+    ]
+  },
+  "sandworm": {
+    "coins": [
+      22,
+      34
+    ],
+    "items": [
+      {
+        "id": "worm_hide",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.06
+      },
+      {
+        "id": "iron_helmet",
+        "chance": 0.012
+      }
+    ]
+  },
+  "bandit": {
+    "coins": [
+      26,
+      40
+    ],
+    "items": [
+      {
+        "id": "bandit_bandana",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.07
+      },
+      {
+        "id": "steel_sword",
+        "chance": 0.008
+      },
+      {
+        "id": "goblin_cleaver",
+        "chance": 0.01
+      }
+    ]
+  },
+  "salamander": {
+    "coins": [
+      26,
+      40
+    ],
+    "items": [
+      {
+        "id": "fire_gland",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.08
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.004
+      }
+    ]
+  },
+  "scorpking": {
+    "coins": [
+      420,
+      620
+    ],
+    "items": [
+      {
+        "id": "scorpion_crown",
+        "chance": 0.6
+      },
+      {
+        "id": "scorpion_stinger",
+        "chance": 1
+      },
+      {
+        "id": "steel_sword",
+        "chance": 0.2
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.2
+      },
+      {
+        "id": "mace_star",
+        "chance": 0.1
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.8
+      }
+    ]
+  },
+  "wyvern": {
+    "coins": [
+      600,
+      900
+    ],
+    "items": [
+      {
+        "id": "wyvern_heart",
+        "chance": 0.6
+      },
+      {
+        "id": "fire_gland",
+        "chance": 1
+      },
+      {
+        "id": "knight_sword",
+        "chance": 0.15
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.12
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.12
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "emberling": {
+    "coins": [
+      28,
+      42
+    ],
+    "items": [
+      {
+        "id": "ember_dust",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.08
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.005
+      },
+      {
+        "id": "egg_wisp",
+        "chance": 0.003
+      }
+    ]
+  },
+  "ashwolf": {
+    "coins": [
+      28,
+      42
+    ],
+    "items": [
+      {
+        "id": "ash_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.07
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.005
+      }
+    ]
+  },
+  "cinderknight": {
+    "coins": [
+      32,
+      48
+    ],
+    "items": [
+      {
+        "id": "cinder_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.08
+      },
+      {
+        "id": "knight_sword",
+        "chance": 0.006
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.012
+      }
+    ]
+  },
+  "lavagolem": {
+    "coins": [
+      34,
+      52
+    ],
+    "items": [
+      {
+        "id": "magma_core",
+        "chance": 0.35
+      },
+      {
+        "id": "rock_core",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.08
+      },
+      {
+        "id": "mace_holy",
+        "chance": 0.004
+      }
+    ]
+  },
+  "snowwolf": {
+    "coins": [
+      34,
+      50
+    ],
+    "items": [
+      {
+        "id": "snow_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.08
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.004
+      }
+    ]
+  },
+  "frostwisp": {
+    "coins": [
+      34,
+      50
+    ],
+    "items": [
+      {
+        "id": "frost_shard",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.1
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.004
+      }
+    ]
+  },
+  "mammoth": {
+    "coins": [
+      40,
+      60
+    ],
+    "items": [
+      {
+        "id": "mammoth_tusk",
+        "chance": 0.3
+      },
+      {
+        "id": "snow_pelt",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "icegolem": {
+    "coins": [
+      40,
+      60
+    ],
+    "items": [
+      {
+        "id": "ice_core",
+        "chance": 0.3
+      },
+      {
+        "id": "frost_shard",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "frostknight": {
+    "coins": [
+      38,
+      56
+    ],
+    "items": [
+      {
+        "id": "frost_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      },
+      {
+        "id": "knight_sword",
+        "chance": 0.006
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.012
+      }
+    ]
+  },
+  "snowharpy": {
+    "coins": [
+      36,
+      52
+    ],
+    "items": [
+      {
+        "id": "harpy_plume",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.08
+      }
+    ]
+  },
+  "swamptoad": {
+    "coins": [
+      36,
+      52
+    ],
+    "items": [
+      {
+        "id": "bog_slime",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.08
+      }
+    ]
+  },
+  "mossling": {
+    "coins": [
+      38,
+      56
+    ],
+    "items": [
+      {
+        "id": "moss_clump",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      },
+      {
+        "id": "mace_holy",
+        "chance": 0.004
+      }
+    ]
+  },
+  "lizardman": {
+    "coins": [
+      38,
+      56
+    ],
+    "items": [
+      {
+        "id": "lizard_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      },
+      {
+        "id": "dagger_venom",
+        "chance": 0.006
+      }
+    ]
+  },
+  "crocodile": {
+    "coins": [
+      42,
+      62
+    ],
+    "items": [
+      {
+        "id": "croc_hide",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "witch": {
+    "coins": [
+      40,
+      58
+    ],
+    "items": [
+      {
+        "id": "hex_charm",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.005
+      }
+    ]
+  },
+  "swampgolem": {
+    "coins": [
+      44,
+      64
+    ],
+    "items": [
+      {
+        "id": "bog_heart",
+        "chance": 0.3
+      },
+      {
+        "id": "moss_clump",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "monkey": {
+    "coins": [
+      36,
+      52
+    ],
+    "items": [
+      {
+        "id": "monkey_fur",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.08
+      }
+    ]
+  },
+  "coconutcrab": {
+    "coins": [
+      40,
+      58
+    ],
+    "items": [
+      {
+        "id": "coconut",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "parrot": {
+    "coins": [
+      38,
+      54
+    ],
+    "items": [
+      {
+        "id": "parrot_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.08
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.005
+      }
+    ]
+  },
+  "panther": {
+    "coins": [
+      44,
+      62
+    ],
+    "items": [
+      {
+        "id": "panther_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "serpent": {
+    "coins": [
+      44,
+      64
+    ],
+    "items": [
+      {
+        "id": "serpent_fang",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "tikiwarrior": {
+    "coins": [
+      46,
+      66
+    ],
+    "items": [
+      {
+        "id": "tiki_mask",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      },
+      {
+        "id": "axe_magma",
+        "chance": 0.003
+      }
+    ]
+  },
+  "icewyrm": {
+    "coins": [
+      800,
+      1200
+    ],
+    "items": [
+      {
+        "id": "wyrm_fang",
+        "chance": 0.6
+      },
+      {
+        "id": "ice_core",
+        "chance": 1
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.15
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.15
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "frostqueen": {
+    "coins": [
+      1500,
+      2200
+    ],
+    "items": [
+      {
+        "id": "frost_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "ice_core",
+        "chance": 1
+      },
+      {
+        "id": "knight_sword",
+        "chance": 0.25
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "bogking": {
+    "coins": [
+      800,
+      1200
+    ],
+    "items": [
+      {
+        "id": "toad_crown",
+        "chance": 0.6
+      },
+      {
+        "id": "bog_heart",
+        "chance": 1
+      },
+      {
+        "id": "mace_holy",
+        "chance": 0.15
+      },
+      {
+        "id": "dagger_venom",
+        "chance": 0.15
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "swamphag": {
+    "coins": [
+      1500,
+      2200
+    ],
+    "items": [
+      {
+        "id": "hag_eye",
+        "chance": 0.7
+      },
+      {
+        "id": "bog_heart",
+        "chance": 1
+      },
+      {
+        "id": "mace_holy",
+        "chance": 0.25
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "tikichief": {
+    "coins": [
+      800,
+      1200
+    ],
+    "items": [
+      {
+        "id": "tiki_idol",
+        "chance": 0.6
+      },
+      {
+        "id": "tiki_mask",
+        "chance": 1
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.15
+      },
+      {
+        "id": "axe_magma",
+        "chance": 0.1
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "serpentking": {
+    "coins": [
+      1600,
+      2400
+    ],
+    "items": [
+      {
+        "id": "serpent_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "serpent_fang",
+        "chance": 1
+      },
+      {
+        "id": "dagger_cinder",
+        "chance": 0.15
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "cinderking": {
+    "coins": [
+      1200,
+      1800
+    ],
+    "items": [
+      {
+        "id": "cinder_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "magma_core",
+        "chance": 1
+      },
+      {
+        "id": "knight_sword",
+        "chance": 0.25
+      },
+      {
+        "id": "mace_holy",
+        "chance": 0.15
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.15
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.15
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "kingslime": {
+    "coins": [
+      60,
+      90
+    ],
+    "items": [
+      {
+        "id": "king_crown",
+        "chance": 0.6
+      },
+      {
+        "id": "slime_core",
+        "chance": 1
+      },
+      {
+        "id": "jelly_ring",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.5
+      },
+      {
+        "id": "egg_silver",
+        "chance": 0.04
+      }
+    ]
+  },
+  "goldbull": {
+    "coins": [
+      120,
+      180
+    ],
+    "items": [
+      {
+        "id": "gold_horn",
+        "chance": 0.6
+      },
+      {
+        "id": "bull_horn",
+        "chance": 1
+      },
+      {
+        "id": "swift_boots",
+        "chance": 0.25
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.5
+      },
+      {
+        "id": "egg_silver",
+        "chance": 0.04
+      }
+    ]
+  },
+  "toadking": {
+    "coins": [
+      150,
+      220
+    ],
+    "items": [
+      {
+        "id": "toad_tongue",
+        "chance": 0.6
+      },
+      {
+        "id": "frog_leg",
+        "chance": 1
+      },
+      {
+        "id": "spore_charm",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.6
+      },
+      {
+        "id": "egg_silver",
+        "chance": 0.04
+      }
+    ]
+  },
+  "bearking": {
+    "coins": [
+      220,
+      320
+    ],
+    "items": [
+      {
+        "id": "king_pelt",
+        "chance": 0.6
+      },
+      {
+        "id": "bear_claw",
+        "chance": 1
+      },
+      {
+        "id": "fang_necklace",
+        "chance": 0.35
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.1
+      },
+      {
+        "id": "bow_hunter",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.4
+      },
+      {
+        "id": "egg_silver",
+        "chance": 0.04
+      }
+    ]
+  },
+  "chief": {
+    "coins": [
+      300,
+      450
+    ],
+    "items": [
+      {
+        "id": "chief_purse",
+        "chance": 0.6
+      },
+      {
+        "id": "goblin_pouch",
+        "chance": 1
+      },
+      {
+        "id": "goblin_cleaver",
+        "chance": 0.4
+      },
+      {
+        "id": "iron_helmet",
+        "chance": 0.25
+      },
+      {
+        "id": "staff_moon",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.5
+      }
+    ]
+  },
+  "foreman": {
+    "coins": [
+      320,
+      480
+    ],
+    "items": [
+      {
+        "id": "haunted_pick",
+        "chance": 0.6
+      },
+      {
+        "id": "old_bone",
+        "chance": 1
+      },
+      {
+        "id": "steel_sword",
+        "chance": 0.15
+      },
+      {
+        "id": "iron_helmet",
+        "chance": 0.25
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.08
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.5
+      },
+      {
+        "id": "egg_silver",
+        "chance": 0.04
+      }
+    ]
+  },
+  "ragingbull": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "blackswan": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "treant": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "dragon": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "phoenix": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "kraken": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "sunphoenix": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "briarwyrm": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "stormbehemoth": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "wraithswan": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "rimedragon": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "tidequeen": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "hydra": {
+    "coins": [
+      180,
+      260
+    ],
+    "items": [
+      {
+        "id": "hydra_fang",
+        "chance": 0.5
+      },
+      {
+        "id": "snake_scale",
+        "chance": 1
+      },
+      {
+        "id": "potion_orange",
+        "chance": 0.6
+      },
+      {
+        "id": "mace_star",
+        "chance": 0.08
+      },
+      {
+        "id": "swift_boots",
+        "chance": 0.15
+      }
+    ]
+  },
+  "goblinking": {
+    "coins": [
+      360,
+      520
+    ],
+    "items": [
+      {
+        "id": "goblin_crown",
+        "chance": 0.5
+      },
+      {
+        "id": "goblin_pouch",
+        "chance": 1
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.5
+      },
+      {
+        "id": "goblin_cleaver",
+        "chance": 0.3
+      },
+      {
+        "id": "mace_star",
+        "chance": 0.12
+      },
+      {
+        "id": "bow_hunter",
+        "chance": 0.12
+      }
+    ]
+  },
+  "lich": {
+    "coins": [
+      700,
+      1000
+    ],
+    "items": [
+      {
+        "id": "soul_gem",
+        "chance": 0.5
+      },
+      {
+        "id": "old_bone",
+        "chance": 1
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      },
+      {
+        "id": "mace_holy",
+        "chance": 0.1
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.1
+      },
+      {
+        "id": "knight_sword",
+        "chance": 0.1
+      }
+    ]
+  },
+  "naga": {
+    "coins": [
+      1000,
+      1400
+    ],
+    "items": [
+      {
+        "id": "naga_scale",
+        "chance": 0.5
+      },
+      {
+        "id": "serpent_fang",
+        "chance": 1
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "emberbat": {
+    "coins": [
+      70,
+      96
+    ],
+    "items": [
+      {
+        "id": "ember_wing",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.08
+      }
+    ]
+  },
+  "cinderling": {
+    "coins": [
+      72,
+      100
+    ],
+    "items": [
+      {
+        "id": "cinder_ash",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.1
+      }
+    ]
+  },
+  "flamewraith": {
+    "coins": [
+      74,
+      104
+    ],
+    "items": [
+      {
+        "id": "wraith_flame",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "obsidiangolem": {
+    "coins": [
+      78,
+      110
+    ],
+    "items": [
+      {
+        "id": "obsidian_shard",
+        "chance": 0.45
+      },
+      {
+        "id": "magma_core",
+        "chance": 0.15
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "magmaknight": {
+    "coins": [
+      80,
+      112
+    ],
+    "items": [
+      {
+        "id": "magma_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "tombscarab": {
+    "coins": [
+      78,
+      110
+    ],
+    "items": [
+      {
+        "id": "scarab_shell",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "sandmummy": {
+    "coins": [
+      80,
+      112
+    ],
+    "items": [
+      {
+        "id": "mummy_wrap",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "cursedasp": {
+    "coins": [
+      80,
+      114
+    ],
+    "items": [
+      {
+        "id": "asp_venom",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "tombguard": {
+    "coins": [
+      84,
+      118
+    ],
+    "items": [
+      {
+        "id": "tomb_bronze",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "templecat": {
+    "coins": [
+      86,
+      120
+    ],
+    "items": [
+      {
+        "id": "temple_whisker",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "anubispriest": {
+    "coins": [
+      90,
+      126
+    ],
+    "items": [
+      {
+        "id": "jackal_idol",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "sunpharaoh": {
+    "coins": [
+      3400,
+      4700
+    ],
+    "items": [
+      {
+        "id": "pharaoh_mask",
+        "chance": 0.7
+      },
+      {
+        "id": "mummy_wrap",
+        "chance": 1
+      },
+      {
+        "id": "gorgon_staff",
+        "chance": 0.2
+      },
+      {
+        "id": "gorgon_circlet",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "cryptbat": {
+    "coins": [
+      90,
+      126
+    ],
+    "items": [
+      {
+        "id": "crypt_wing",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "candlewisp": {
+    "coins": [
+      92,
+      128
+    ],
+    "items": [
+      {
+        "id": "candle_wax",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "bonemonk": {
+    "coins": [
+      94,
+      130
+    ],
+    "items": [
+      {
+        "id": "prayer_beads",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "hauntedarmor": {
+    "coins": [
+      96,
+      134
+    ],
+    "items": [
+      {
+        "id": "haunted_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "gargoyle": {
+    "coins": [
+      98,
+      136
+    ],
+    "items": [
+      {
+        "id": "gargoyle_stone",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "cryptspider": {
+    "coins": [
+      98,
+      136
+    ],
+    "items": [
+      {
+        "id": "crypt_silk",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "banshee": {
+    "coins": [
+      100,
+      140
+    ],
+    "items": [
+      {
+        "id": "banshee_veil",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "darkacolyte": {
+    "coins": [
+      104,
+      146
+    ],
+    "items": [
+      {
+        "id": "dark_censer",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "darkarchbishop": {
+    "coins": [
+      4000,
+      5500
+    ],
+    "items": [
+      {
+        "id": "archbishop_mitre",
+        "chance": 0.7
+      },
+      {
+        "id": "prayer_beads",
+        "chance": 1
+      },
+      {
+        "id": "lich_mace",
+        "chance": 0.2
+      },
+      {
+        "id": "soul_ring",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "prismcrab": {
+    "coins": [
+      110,
+      150
+    ],
+    "items": [
+      {
+        "id": "prism_claw",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "shoalserpent": {
+    "coins": [
+      113,
+      154
+    ],
+    "items": [
+      {
+        "id": "serpent_fin",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "glasswisp": {
+    "coins": [
+      116,
+      158
+    ],
+    "items": [
+      {
+        "id": "glass_mote",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "tidecolossus": {
+    "coins": [
+      6600,
+      9300
+    ],
+    "items": [
+      {
+        "id": "tide_core",
+        "chance": 0.7
+      },
+      {
+        "id": "prism_claw",
+        "chance": 1
+      },
+      {
+        "id": "tide_sword",
+        "chance": 0.2
+      },
+      {
+        "id": "moon_boots",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "moonhare": {
+    "coins": [
+      116,
+      158
+    ],
+    "items": [
+      {
+        "id": "moon_fur",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "lunamoth": {
+    "coins": [
+      119,
+      162
+    ],
+    "items": [
+      {
+        "id": "moon_dust",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "moonstag": {
+    "coins": [
+      122,
+      166
+    ],
+    "items": [
+      {
+        "id": "moon_antler",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "lunarwitch": {
+    "coins": [
+      6840,
+      9620
+    ],
+    "items": [
+      {
+        "id": "lunar_tiara",
+        "chance": 0.7
+      },
+      {
+        "id": "moon_fur",
+        "chance": 1
+      },
+      {
+        "id": "moon_staff",
+        "chance": 0.2
+      },
+      {
+        "id": "prism_crown",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "prismgolem": {
+    "coins": [
+      122,
+      166
+    ],
+    "items": [
+      {
+        "id": "prism_shard",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "rainbowdrake": {
+    "coins": [
+      125,
+      170
+    ],
+    "items": [
+      {
+        "id": "rainbow_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "shardling": {
+    "coins": [
+      128,
+      174
+    ],
+    "items": [
+      {
+        "id": "shard_dust",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "prismwyrm": {
+    "coins": [
+      7080,
+      9940
+    ],
+    "items": [
+      {
+        "id": "prism_heart",
+        "chance": 0.7
+      },
+      {
+        "id": "prism_shard",
+        "chance": 1
+      },
+      {
+        "id": "prism_bow",
+        "chance": 0.2
+      },
+      {
+        "id": "prism_crown",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "thornbeetle": {
+    "coins": [
+      128,
+      174
+    ],
+    "items": [
+      {
+        "id": "beetle_horn",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "giantshroom": {
+    "coins": [
+      131,
+      178
+    ],
+    "items": [
+      {
+        "id": "giant_spore",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "woodtitan": {
+    "coins": [
+      134,
+      182
+    ],
+    "items": [
+      {
+        "id": "titan_bark",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "gardenlord": {
+    "coins": [
+      7320,
+      10260
+    ],
+    "items": [
+      {
+        "id": "garden_seed",
+        "chance": 0.7
+      },
+      {
+        "id": "beetle_horn",
+        "chance": 1
+      },
+      {
+        "id": "garden_mace",
+        "chance": 0.2
+      },
+      {
+        "id": "tide_mail",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "cloudmonkey": {
+    "coins": [
+      137,
+      186
+    ],
+    "items": [
+      {
+        "id": "cloud_tuft",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "rainfrog": {
+    "coins": [
+      140,
+      190
+    ],
+    "items": [
+      {
+        "id": "rain_pearl",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "terraceguard": {
+    "coins": [
+      143,
+      194
+    ],
+    "items": [
+      {
+        "id": "guard_mask",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "raindragon": {
+    "coins": [
+      7680,
+      10740
+    ],
+    "items": [
+      {
+        "id": "rain_orb",
+        "chance": 0.7
+      },
+      {
+        "id": "cloud_tuft",
+        "chance": 1
+      },
+      {
+        "id": "tide_sword",
+        "chance": 0.2
+      },
+      {
+        "id": "moon_boots",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "amberscorpion": {
+    "coins": [
+      146,
+      198
+    ],
+    "items": [
+      {
+        "id": "amber_stinger",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "fossilcroc": {
+    "coins": [
+      149,
+      202
+    ],
+    "items": [
+      {
+        "id": "fossil_tooth",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "ambergolem": {
+    "coins": [
+      152,
+      206
+    ],
+    "items": [
+      {
+        "id": "amber_chunk",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "amberking": {
+    "coins": [
+      8040,
+      11220
+    ],
+    "items": [
+      {
+        "id": "amber_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "amber_stinger",
+        "chance": 1
+      },
+      {
+        "id": "amber_dagger",
+        "chance": 0.2
+      },
+      {
+        "id": "clock_axe",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "drownedknight": {
+    "coins": [
+      155,
+      210
+    ],
+    "items": [
+      {
+        "id": "drowned_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "sirenwitch": {
+    "coins": [
+      158,
+      214
+    ],
+    "items": [
+      {
+        "id": "siren_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "coralnaga": {
+    "coins": [
+      161,
+      218
+    ],
+    "items": [
+      {
+        "id": "coral_fang",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "leviathan2": {
+    "coins": [
+      8400,
+      11700
+    ],
+    "items": [
+      {
+        "id": "leviathan_eye",
+        "chance": 0.7
+      },
+      {
+        "id": "drowned_plate",
+        "chance": 1
+      },
+      {
+        "id": "tide_mail",
+        "chance": 0.2
+      },
+      {
+        "id": "prism_bow",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "clockgolem": {
+    "coins": [
+      164,
+      222
+    ],
+    "items": [
+      {
+        "id": "brass_gear",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "brassspider": {
+    "coins": [
+      167,
+      226
+    ],
+    "items": [
+      {
+        "id": "brass_spring",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "gearknight": {
+    "coins": [
+      173,
+      234
+    ],
+    "items": [
+      {
+        "id": "gear_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "clockcolossus": {
+    "coins": [
+      8880,
+      12340
+    ],
+    "items": [
+      {
+        "id": "mainspring",
+        "chance": 0.7
+      },
+      {
+        "id": "brass_gear",
+        "chance": 1
+      },
+      {
+        "id": "clock_axe",
+        "chance": 0.2
+      },
+      {
+        "id": "garden_mace",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "ashghoul": {
+    "coins": [
+      182,
+      246
+    ],
+    "items": [
+      {
+        "id": "ash_bone",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "cinderhound": {
+    "coins": [
+      185,
+      250
+    ],
+    "items": [
+      {
+        "id": "cinder_fang",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "gatewarden": {
+    "coins": [
+      191,
+      258
+    ],
+    "items": [
+      {
+        "id": "warden_chain",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "ashenlord": {
+    "coins": [
+      9600,
+      13300
+    ],
+    "items": [
+      {
+        "id": "ash_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "ash_bone",
+        "chance": 1
+      },
+      {
+        "id": "hellfire_blade",
+        "chance": 0.2
+      },
+      {
+        "id": "soul_greaves",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "bloodbat": {
+    "coins": [
+      191,
+      258
+    ],
+    "items": [
+      {
+        "id": "bloodbat_wing",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "redwraith": {
+    "coins": [
+      197,
+      266
+    ],
+    "items": [
+      {
+        "id": "wraith_ember",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "werewolf": {
+    "coins": [
+      200,
+      270
+    ],
+    "items": [
+      {
+        "id": "were_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "bloodcountess": {
+    "coins": [
+      9960,
+      13780
+    ],
+    "items": [
+      {
+        "id": "blood_chalice",
+        "chance": 0.7
+      },
+      {
+        "id": "bloodbat_wing",
+        "chance": 1
+      },
+      {
+        "id": "bloodfang",
+        "chance": 0.2
+      },
+      {
+        "id": "fallen_circlet",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "chasmcrawler": {
+    "coins": [
+      200,
+      270
+    ],
+    "items": [
+      {
+        "id": "crawler_claw",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "echowisp": {
+    "coins": [
+      206,
+      278
+    ],
+    "items": [
+      {
+        "id": "echo_mote",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "abysswyrm": {
+    "coins": [
+      209,
+      282
+    ],
+    "items": [
+      {
+        "id": "abysswyrm_hide",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "chasmhydra": {
+    "coins": [
+      10320,
+      14260
+    ],
+    "items": [
+      {
+        "id": "chasmhydra_fang",
+        "chance": 0.7
+      },
+      {
+        "id": "crawler_claw",
+        "chance": 1
+      },
+      {
+        "id": "rime_staff",
+        "chance": 0.2
+      },
+      {
+        "id": "demonforged_plate",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "hellyeti": {
+    "coins": [
+      209,
+      282
+    ],
+    "items": [
+      {
+        "id": "yeti_horn",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "frostfiend": {
+    "coins": [
+      215,
+      290
+    ],
+    "items": [
+      {
+        "id": "fiend_ice",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "rimeharpy": {
+    "coins": [
+      218,
+      294
+    ],
+    "items": [
+      {
+        "id": "rime_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "rimelich": {
+    "coins": [
+      10680,
+      14740
+    ],
+    "items": [
+      {
+        "id": "rime_phylactery",
+        "chance": 0.7
+      },
+      {
+        "id": "yeti_horn",
+        "chance": 1
+      },
+      {
+        "id": "rime_staff",
+        "chance": 0.2
+      },
+      {
+        "id": "soul_greaves",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "phantomsoldier": {
+    "coins": [
+      218,
+      294
+    ],
+    "items": [
+      {
+        "id": "phantom_badge",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "cursedarcher": {
+    "coins": [
+      224,
+      302
+    ],
+    "items": [
+      {
+        "id": "cursed_arrow",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "dreadknight": {
+    "coins": [
+      227,
+      306
+    ],
+    "items": [
+      {
+        "id": "dread_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "fallenking": {
+    "coins": [
+      11040,
+      15220
+    ],
+    "items": [
+      {
+        "id": "fallen_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "phantom_badge",
+        "chance": 1
+      },
+      {
+        "id": "fallen_circlet",
+        "chance": 0.2
+      },
+      {
+        "id": "judgement_mace",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "soulowl": {
+    "coins": [
+      227,
+      306
+    ],
+    "items": [
+      {
+        "id": "soul_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "soulling": {
+    "coins": [
+      230,
+      310
+    ],
+    "items": [
+      {
+        "id": "soul_sap",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "soulpanther": {
+    "coins": [
+      236,
+      318
+    ],
+    "items": [
+      {
+        "id": "soul_claw",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "soulheron": {
+    "coins": [
+      11400,
+      15700
+    ],
+    "items": [
+      {
+        "id": "soul_plume",
+        "chance": 0.7
+      },
+      {
+        "id": "soul_feather",
+        "chance": 1
+      },
+      {
+        "id": "soul_bow",
+        "chance": 0.2
+      },
+      {
+        "id": "soul_greaves",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "infernoimp": {
+    "coins": [
+      236,
+      318
+    ],
+    "items": [
+      {
+        "id": "imp_horn",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "hellhound": {
+    "coins": [
+      239,
+      322
+    ],
+    "items": [
+      {
+        "id": "hell_fang",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "infernobull": {
+    "coins": [
+      245,
+      330
+    ],
+    "items": [
+      {
+        "id": "inferno_horn",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "hellphoenix": {
+    "coins": [
+      11760,
+      16180
+    ],
+    "items": [
+      {
+        "id": "hell_plume",
+        "chance": 0.7
+      },
+      {
+        "id": "imp_horn",
+        "chance": 1
+      },
+      {
+        "id": "inferno_axe",
+        "chance": 0.2
+      },
+      {
+        "id": "hellfire_blade",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "demonimp": {
+    "coins": [
+      245,
+      330
+    ],
+    "items": [
+      {
+        "id": "demon_tail",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "demonmage": {
+    "coins": [
+      248,
+      334
+    ],
+    "items": [
+      {
+        "id": "demon_sigil",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "demonknight": {
+    "coins": [
+      254,
+      342
+    ],
+    "items": [
+      {
+        "id": "demon_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "demongeneral": {
+    "coins": [
+      12000,
+      16500
+    ],
+    "items": [
+      {
+        "id": "general_horn",
+        "chance": 0.7
+      },
+      {
+        "id": "demon_tail",
+        "chance": 1
+      },
+      {
+        "id": "demonforged_plate",
+        "chance": 0.2
+      },
+      {
+        "id": "inferno_axe",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "tideguard": {
+    "coins": [
+      180,
+      242
+    ],
+    "items": [
+      {
+        "id": "tide_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "shelltitan": {
+    "coins": [
+      180,
+      242
+    ],
+    "items": [
+      {
+        "id": "titan_shell",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "voidjelly": {
+    "coins": [
+      180,
+      242
+    ],
+    "items": [
+      {
+        "id": "palace_gel",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "tideempress": {
+    "coins": [
+      9000,
+      12500
+    ],
+    "items": [
+      {
+        "id": "empress_pearl",
+        "chance": 0.7
+      },
+      {
+        "id": "tide_scale",
+        "chance": 1
+      },
+      {
+        "id": "empress_ring",
+        "chance": 0.5
+      },
+      {
+        "id": "amber_dagger",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "hellsalamander": {
+    "coins": [
+      258,
+      346
+    ],
+    "items": [
+      {
+        "id": "hell_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "demonbeast": {
+    "coins": [
+      258,
+      346
+    ],
+    "items": [
+      {
+        "id": "beast_tusk",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.12
+      }
+    ]
+  },
+  "doomroc": {
+    "coins": [
+      258,
+      346
+    ],
+    "items": [
+      {
+        "id": "doom_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "demonking": {
+    "coins": [
+      14000,
+      19000
+    ],
+    "items": [
+      {
+        "id": "demon_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "hell_scale",
+        "chance": 1
+      },
+      {
+        "id": "demonking_seal",
+        "chance": 0.5
+      },
+      {
+        "id": "soul_bow",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "moontitan": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "islandturtle": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "bonecolossus": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "fallenseraph": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "bloodwyrm": {
+    "coins": [
+      0,
+      0
+    ],
+    "items": []
+  },
+  "prismsovereign": {
+    "coins": [
+      3000,
+      4400
+    ],
+    "items": []
+  },
+  "clockking": {
+    "coins": [
+      3800,
+      5400
+    ],
+    "items": []
+  },
+  "vampirelord": {
+    "coins": [
+      4600,
+      6400
+    ],
+    "items": []
+  },
+  "voidsovereign": {
+    "coins": [
+      5400,
+      7400
+    ],
+    "items": []
+  },
+  "starwisp": {
+    "coins": [
+      106,
+      148
+    ],
+    "items": [
+      {
+        "id": "star_mote",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "astralgolem": {
+    "coins": [
+      110,
+      152
+    ],
+    "items": [
+      {
+        "id": "astral_core",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "skysentinel": {
+    "coins": [
+      112,
+      156
+    ],
+    "items": [
+      {
+        "id": "sentinel_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "starhawk": {
+    "coins": [
+      114,
+      158
+    ],
+    "items": [
+      {
+        "id": "starhawk_quill",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "nebulaslime": {
+    "coins": [
+      116,
+      160
+    ],
+    "items": [
+      {
+        "id": "nebula_gel",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "celestialknight": {
+    "coins": [
+      120,
+      166
+    ],
+    "items": [
+      {
+        "id": "celestial_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "starmage": {
+    "coins": [
+      124,
+      172
+    ],
+    "items": [
+      {
+        "id": "starmage_tome",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "stardragon": {
+    "coins": [
+      7000,
+      9500
+    ],
+    "items": [
+      {
+        "id": "stardragon_heart",
+        "chance": 0.7
+      },
+      {
+        "id": "star_mote",
+        "chance": 1
+      },
+      {
+        "id": "stormstring",
+        "chance": 0.2
+      },
+      {
+        "id": "sky_circlet",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "magmawyrm": {
+    "coins": [
+      3000,
+      4200
+    ],
+    "items": [
+      {
+        "id": "wyrm_ember_heart",
+        "chance": 0.7
+      },
+      {
+        "id": "magma_core",
+        "chance": 1
+      },
+      {
+        "id": "magma_axe",
+        "chance": 0.2
+      },
+      {
+        "id": "obsidian_plate",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "drownedadmiral": {
+    "coins": [
+      1400,
+      2000
+    ],
+    "items": [
+      {
+        "id": "admiral_compass",
+        "chance": 0.5
+      },
+      {
+        "id": "brine_essence",
+        "chance": 1
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "hivequeen": {
+    "coins": [
+      1800,
+      2500
+    ],
+    "items": [
+      {
+        "id": "royal_jelly",
+        "chance": 0.5
+      },
+      {
+        "id": "potion_blue",
+        "chance": 1
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "ironclad": {
+    "coins": [
+      2400,
+      3300
+    ],
+    "items": [
+      {
+        "id": "forge_core",
+        "chance": 0.5
+      },
+      {
+        "id": "imp_ash",
+        "chance": 1
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "seraph": {
+    "coins": [
+      3200,
+      4400
+    ],
+    "items": [
+      {
+        "id": "seraph_feather",
+        "chance": 0.5
+      },
+      {
+        "id": "rune_stone",
+        "chance": 1
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "crystalgolem": {
+    "coins": [
+      900,
+      1400
+    ],
+    "items": [
+      {
+        "id": "crystal_heart",
+        "chance": 0.8
+      },
+      {
+        "id": "pure_crystal",
+        "chance": 1
+      },
+      {
+        "id": "knight_sword",
+        "chance": 0.2
+      },
+      {
+        "id": "bow_crystal",
+        "chance": 0.15
+      },
+      {
+        "id": "staff_crystal",
+        "chance": 0.15
+      },
+      {
+        "id": "chain_mail",
+        "chance": 0.3
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "reefcrab": {
+    "coins": [
+      46,
+      66
+    ],
+    "items": [
+      {
+        "id": "coral_shard",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "stormgull": {
+    "coins": [
+      46,
+      66
+    ],
+    "items": [
+      {
+        "id": "storm_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "seawraith": {
+    "coins": [
+      48,
+      70
+    ],
+    "items": [
+      {
+        "id": "brine_essence",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "magmacrab": {
+    "coins": [
+      48,
+      70
+    ],
+    "items": [
+      {
+        "id": "magma_shell",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "firemonkey": {
+    "coins": [
+      48,
+      70
+    ],
+    "items": [
+      {
+        "id": "fire_fur",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "lavalizard": {
+    "coins": [
+      50,
+      72
+    ],
+    "items": [
+      {
+        "id": "lava_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.1
+      }
+    ]
+  },
+  "mangrovecroc": {
+    "coins": [
+      48,
+      68
+    ],
+    "items": [
+      {
+        "id": "mangrove_hide",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "bloodfly": {
+    "coins": [
+      46,
+      66
+    ],
+    "items": [
+      {
+        "id": "blood_wing",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.08
+      }
+    ]
+  },
+  "mudtoad": {
+    "coins": [
+      48,
+      70
+    ],
+    "items": [
+      {
+        "id": "mud_slime",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "dunescorp": {
+    "coins": [
+      50,
+      72
+    ],
+    "items": [
+      {
+        "id": "scorp_stinger",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "sandwyrm": {
+    "coins": [
+      52,
+      76
+    ],
+    "items": [
+      {
+        "id": "wyrm_hide",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "sunvulture": {
+    "coins": [
+      50,
+      72
+    ],
+    "items": [
+      {
+        "id": "sun_plume",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "glowcap": {
+    "coins": [
+      52,
+      76
+    ],
+    "items": [
+      {
+        "id": "glowcap_spore",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "sporespider": {
+    "coins": [
+      54,
+      78
+    ],
+    "items": [
+      {
+        "id": "spore_silk",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "sporeling": {
+    "coins": [
+      56,
+      80
+    ],
+    "items": [
+      {
+        "id": "spore_moss",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "bonewolf": {
+    "coins": [
+      56,
+      80
+    ],
+    "items": [
+      {
+        "id": "bone_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "bonebat": {
+    "coins": [
+      56,
+      80
+    ],
+    "items": [
+      {
+        "id": "bone_wing",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "wraithknight": {
+    "coins": [
+      60,
+      86
+    ],
+    "items": [
+      {
+        "id": "wraith_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "leviathan": {
+    "coins": [
+      1700,
+      2500
+    ],
+    "items": [
+      {
+        "id": "leviathan_scale",
+        "chance": 0.7
+      },
+      {
+        "id": "brine_essence",
+        "chance": 1
+      },
+      {
+        "id": "tide_staff",
+        "chance": 0.2
+      },
+      {
+        "id": "pearl_charm",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "volcanotitan": {
+    "coins": [
+      1900,
+      2800
+    ],
+    "items": [
+      {
+        "id": "titan_core",
+        "chance": 0.7
+      },
+      {
+        "id": "magma_shell",
+        "chance": 1
+      },
+      {
+        "id": "magma_axe",
+        "chance": 0.2
+      },
+      {
+        "id": "obsidian_plate",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "deltahydra": {
+    "coins": [
+      1800,
+      2600
+    ],
+    "items": [
+      {
+        "id": "hydra_crest",
+        "chance": 0.7
+      },
+      {
+        "id": "mud_slime",
+        "chance": 1
+      },
+      {
+        "id": "hydra_bow",
+        "chance": 0.2
+      },
+      {
+        "id": "mire_boots",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "scarabking": {
+    "coins": [
+      1900,
+      2700
+    ],
+    "items": [
+      {
+        "id": "scarab_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "scorp_stinger",
+        "chance": 1
+      },
+      {
+        "id": "scarab_dagger",
+        "chance": 0.2
+      },
+      {
+        "id": "scarab_helm",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "mycolord": {
+    "coins": [
+      2000,
+      2900
+    ],
+    "items": [
+      {
+        "id": "myco_heart",
+        "chance": 0.7
+      },
+      {
+        "id": "spore_moss",
+        "chance": 1
+      },
+      {
+        "id": "spore_mace",
+        "chance": 0.2
+      },
+      {
+        "id": "glowcap_charm",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "bonedragon": {
+    "coins": [
+      2300,
+      3300
+    ],
+    "items": [
+      {
+        "id": "dragonbone",
+        "chance": 0.7
+      },
+      {
+        "id": "bone_pelt",
+        "chance": 1
+      },
+      {
+        "id": "bone_greatsword",
+        "chance": 0.2
+      },
+      {
+        "id": "dragonbone_mail",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "glasscrab": {
+    "coins": [
+      60,
+      86
+    ],
+    "items": [
+      {
+        "id": "glass_shard",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "obsidiandrake": {
+    "coins": [
+      62,
+      88
+    ],
+    "items": [
+      {
+        "id": "drake_ember",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "voidwisp": {
+    "coins": [
+      62,
+      88
+    ],
+    "items": [
+      {
+        "id": "void_mote",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "thornwolf": {
+    "coins": [
+      62,
+      88
+    ],
+    "items": [
+      {
+        "id": "thorn_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "briarling": {
+    "coins": [
+      64,
+      90
+    ],
+    "items": [
+      {
+        "id": "briar_heart",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "thornspider": {
+    "coins": [
+      64,
+      90
+    ],
+    "items": [
+      {
+        "id": "thorn_silk",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "stonedeer": {
+    "coins": [
+      64,
+      92
+    ],
+    "items": [
+      {
+        "id": "stone_antler",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "basilisk": {
+    "coins": [
+      66,
+      94
+    ],
+    "items": [
+      {
+        "id": "basilisk_eye",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.1
+      }
+    ]
+  },
+  "rockgolem": {
+    "coins": [
+      68,
+      96
+    ],
+    "items": [
+      {
+        "id": "rock_core2",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "mesaboar": {
+    "coins": [
+      68,
+      96
+    ],
+    "items": [
+      {
+        "id": "mesa_tusk",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "canyonhawk": {
+    "coins": [
+      68,
+      96
+    ],
+    "items": [
+      {
+        "id": "hawk_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "dustdevil": {
+    "coins": [
+      70,
+      98
+    ],
+    "items": [
+      {
+        "id": "dust_mote",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "steppewolf": {
+    "coins": [
+      70,
+      98
+    ],
+    "items": [
+      {
+        "id": "steppe_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "thunderbull": {
+    "coins": [
+      72,
+      102
+    ],
+    "items": [
+      {
+        "id": "thunder_horn",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "windharpy": {
+    "coins": [
+      72,
+      102
+    ],
+    "items": [
+      {
+        "id": "harpy_quill",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "riftimp": {
+    "coins": [
+      74,
+      104
+    ],
+    "items": [
+      {
+        "id": "imp_ash",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "magmaworm": {
+    "coins": [
+      74,
+      106
+    ],
+    "items": [
+      {
+        "id": "worm_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "riftknight": {
+    "coins": [
+      78,
+      110
+    ],
+    "items": [
+      {
+        "id": "rift_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "glassgiant": {
+    "coins": [
+      2400,
+      3400
+    ],
+    "items": [
+      {
+        "id": "giant_glass",
+        "chance": 0.7
+      },
+      {
+        "id": "glass_shard",
+        "chance": 1
+      },
+      {
+        "id": "glass_blade",
+        "chance": 0.2
+      },
+      {
+        "id": "void_charm",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "thornbeast": {
+    "coins": [
+      2500,
+      3500
+    ],
+    "items": [
+      {
+        "id": "beast_thorn",
+        "chance": 0.7
+      },
+      {
+        "id": "thorn_pelt",
+        "chance": 1
+      },
+      {
+        "id": "thorn_bow",
+        "chance": 0.2
+      },
+      {
+        "id": "briar_boots",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "gorgon": {
+    "coins": [
+      2600,
+      3700
+    ],
+    "items": [
+      {
+        "id": "gorgon_scale",
+        "chance": 0.7
+      },
+      {
+        "id": "basilisk_eye",
+        "chance": 1
+      },
+      {
+        "id": "gorgon_staff",
+        "chance": 0.2
+      },
+      {
+        "id": "gorgon_circlet",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "mesacolossus": {
+    "coins": [
+      2800,
+      3900
+    ],
+    "items": [
+      {
+        "id": "colossus_stone",
+        "chance": 0.7
+      },
+      {
+        "id": "mesa_tusk",
+        "chance": 1
+      },
+      {
+        "id": "colossus_axe",
+        "chance": 0.2
+      },
+      {
+        "id": "mesa_plate",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "thunderhorn": {
+    "coins": [
+      2900,
+      4100
+    ],
+    "items": [
+      {
+        "id": "tempest_horn",
+        "chance": 0.7
+      },
+      {
+        "id": "thunder_horn",
+        "chance": 1
+      },
+      {
+        "id": "thunder_mace",
+        "chance": 0.2
+      },
+      {
+        "id": "storm_boots",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "riftwyrm": {
+    "coins": [
+      3300,
+      4600
+    ],
+    "items": [
+      {
+        "id": "wyrm_heart",
+        "chance": 0.7
+      },
+      {
+        "id": "worm_scale",
+        "chance": 1
+      },
+      {
+        "id": "rift_fang",
+        "chance": 0.2
+      },
+      {
+        "id": "wyrmscale_mail",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "moorhound": {
+    "coins": [
+      78,
+      110
+    ],
+    "items": [
+      {
+        "id": "hound_fang",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "heathwisp": {
+    "coins": [
+      78,
+      110
+    ],
+    "items": [
+      {
+        "id": "heath_mote",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "bogwraith": {
+    "coins": [
+      80,
+      114
+    ],
+    "items": [
+      {
+        "id": "wraith_veil",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "gravebat": {
+    "coins": [
+      80,
+      112
+    ],
+    "items": [
+      {
+        "id": "grave_wing",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "ghoul": {
+    "coins": [
+      82,
+      116
+    ],
+    "items": [
+      {
+        "id": "ghoul_claw",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "phantom": {
+    "coins": [
+      82,
+      116
+    ],
+    "items": [
+      {
+        "id": "phantom_veil",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "frostcrab": {
+    "coins": [
+      84,
+      118
+    ],
+    "items": [
+      {
+        "id": "frost_carapace",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "frostturtle": {
+    "coins": [
+      84,
+      120
+    ],
+    "items": [
+      {
+        "id": "ice_shell",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "icetroll": {
+    "coins": [
+      86,
+      122
+    ],
+    "items": [
+      {
+        "id": "troll_hide",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "spiritlynx": {
+    "coins": [
+      86,
+      122
+    ],
+    "items": [
+      {
+        "id": "lynx_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "spirithawk": {
+    "coins": [
+      86,
+      122
+    ],
+    "items": [
+      {
+        "id": "spirit_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "spiritshard": {
+    "coins": [
+      88,
+      126
+    ],
+    "items": [
+      {
+        "id": "spirit_shard",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "spinedrake": {
+    "coins": [
+      88,
+      126
+    ],
+    "items": [
+      {
+        "id": "spine_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "dracoknight": {
+    "coins": [
+      92,
+      130
+    ],
+    "items": [
+      {
+        "id": "draco_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "dragonhound": {
+    "coins": [
+      90,
+      128
+    ],
+    "items": [
+      {
+        "id": "hound_ember",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "summitroc": {
+    "coins": [
+      92,
+      130
+    ],
+    "items": [
+      {
+        "id": "summit_plume",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.09
+      }
+    ]
+  },
+  "frostbear": {
+    "coins": [
+      94,
+      134
+    ],
+    "items": [
+      {
+        "id": "frostbear_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "skywisp": {
+    "coins": [
+      94,
+      134
+    ],
+    "items": [
+      {
+        "id": "sky_mote",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "aurorawisp": {
+    "coins": [
+      96,
+      136
+    ],
+    "items": [
+      {
+        "id": "aurora_mote",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "aurorawolf": {
+    "coins": [
+      98,
+      138
+    ],
+    "items": [
+      {
+        "id": "aurora_pelt",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "crystalsentinel": {
+    "coins": [
+      100,
+      142
+    ],
+    "items": [
+      {
+        "id": "sentinel_core",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "moorhag": {
+    "coins": [
+      3600,
+      5000
+    ],
+    "items": [
+      {
+        "id": "moor_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "wraith_veil",
+        "chance": 1
+      },
+      {
+        "id": "hag_staff",
+        "chance": 0.2
+      },
+      {
+        "id": "witch_hood",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "valelich": {
+    "coins": [
+      3800,
+      5200
+    ],
+    "items": [
+      {
+        "id": "lich_phylactery",
+        "chance": 0.7
+      },
+      {
+        "id": "ghoul_claw",
+        "chance": 1
+      },
+      {
+        "id": "lich_mace",
+        "chance": 0.2
+      },
+      {
+        "id": "soul_ring",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "frostkraken": {
+    "coins": [
+      4000,
+      5500
+    ],
+    "items": [
+      {
+        "id": "frost_tentacle",
+        "chance": 0.7
+      },
+      {
+        "id": "ice_shell",
+        "chance": 1
+      },
+      {
+        "id": "kraken_bow",
+        "chance": 0.2
+      },
+      {
+        "id": "tidewalkers",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "spiritstag": {
+    "coins": [
+      4200,
+      5800
+    ],
+    "items": [
+      {
+        "id": "spirit_antler",
+        "chance": 0.7
+      },
+      {
+        "id": "spirit_shard",
+        "chance": 1
+      },
+      {
+        "id": "spirit_fang",
+        "chance": 0.2
+      },
+      {
+        "id": "spirit_circlet",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "elderdragon": {
+    "coins": [
+      4800,
+      6600
+    ],
+    "items": [
+      {
+        "id": "elder_heart",
+        "chance": 0.7
+      },
+      {
+        "id": "spine_scale",
+        "chance": 1
+      },
+      {
+        "id": "dragonsong",
+        "chance": 0.2
+      },
+      {
+        "id": "elderscale_mail",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "thunderbird": {
+    "coins": [
+      4800,
+      6600
+    ],
+    "items": [
+      {
+        "id": "thunder_plume",
+        "chance": 0.7
+      },
+      {
+        "id": "summit_plume",
+        "chance": 1
+      },
+      {
+        "id": "storm_axe",
+        "chance": 0.2
+      },
+      {
+        "id": "thunder_feather",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "auroraqueen": {
+    "coins": [
+      5400,
+      7400
+    ],
+    "items": [
+      {
+        "id": "aurora_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "sentinel_core",
+        "chance": 1
+      },
+      {
+        "id": "aurora_staff",
+        "chance": 0.2
+      },
+      {
+        "id": "aurora_robe",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "stormharpy": {
+    "coins": [
+      100,
+      142
+    ],
+    "items": [
+      {
+        "id": "harpy_talon",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "drownedcrew": {
+    "coins": [
+      104,
+      146
+    ],
+    "items": [
+      {
+        "id": "drowned_locket",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "stormeel": {
+    "coins": [
+      104,
+      146
+    ],
+    "items": [
+      {
+        "id": "eel_skin",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "ruingolem": {
+    "coins": [
+      108,
+      150
+    ],
+    "items": [
+      {
+        "id": "rune_stone",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "fallenknight": {
+    "coins": [
+      108,
+      152
+    ],
+    "items": [
+      {
+        "id": "fallen_crest",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "griffin": {
+    "coins": [
+      110,
+      154
+    ],
+    "items": [
+      {
+        "id": "griffin_feather",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "deepcrab": {
+    "coins": [
+      112,
+      156
+    ],
+    "items": [
+      {
+        "id": "deep_shell",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "deepone": {
+    "coins": [
+      114,
+      160
+    ],
+    "items": [
+      {
+        "id": "deep_scale",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "abyssjelly": {
+    "coins": [
+      114,
+      160
+    ],
+    "items": [
+      {
+        "id": "abyss_jelly",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "blightboar": {
+    "coins": [
+      116,
+      162
+    ],
+    "items": [
+      {
+        "id": "blight_tusk",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "elderling": {
+    "coins": [
+      118,
+      166
+    ],
+    "items": [
+      {
+        "id": "elder_bark",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "blightmoth": {
+    "coins": [
+      118,
+      166
+    ],
+    "items": [
+      {
+        "id": "moth_dust",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "shadehound": {
+    "coins": [
+      120,
+      170
+    ],
+    "items": [
+      {
+        "id": "shade_fang",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "voidshard": {
+    "coins": [
+      122,
+      172
+    ],
+    "items": [
+      {
+        "id": "void_shard",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_blue",
+        "chance": 0.12
+      }
+    ]
+  },
+  "voidknight": {
+    "coins": [
+      126,
+      176
+    ],
+    "items": [
+      {
+        "id": "void_plate",
+        "chance": 0.45
+      },
+      {
+        "id": "potion_white",
+        "chance": 0.1
+      }
+    ]
+  },
+  "tempestwyvern": {
+    "coins": [
+      5600,
+      7700
+    ],
+    "items": [
+      {
+        "id": "tempest_scale",
+        "chance": 0.7
+      },
+      {
+        "id": "harpy_talon",
+        "chance": 1
+      },
+      {
+        "id": "stormstring",
+        "chance": 0.2
+      },
+      {
+        "id": "gale_boots",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "skyguardian": {
+    "coins": [
+      5800,
+      8000
+    ],
+    "items": [
+      {
+        "id": "guardian_core",
+        "chance": 0.7
+      },
+      {
+        "id": "rune_stone",
+        "chance": 1
+      },
+      {
+        "id": "guardian_mace",
+        "chance": 0.2
+      },
+      {
+        "id": "sky_circlet",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "krakenking": {
+    "coins": [
+      6400,
+      8800
+    ],
+    "items": [
+      {
+        "id": "kraken_crown",
+        "chance": 0.7
+      },
+      {
+        "id": "deep_scale",
+        "chance": 1
+      },
+      {
+        "id": "kraken_blade",
+        "chance": 0.2
+      },
+      {
+        "id": "deepsea_mail",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "blightroot": {
+    "coins": [
+      6600,
+      9000
+    ],
+    "items": [
+      {
+        "id": "blight_heart",
+        "chance": 0.7
+      },
+      {
+        "id": "elder_bark",
+        "chance": 1
+      },
+      {
+        "id": "elder_staff",
+        "chance": 0.2
+      },
+      {
+        "id": "grove_ring",
+        "chance": 0.2
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  },
+  "heartshadow": {
+    "coins": [
+      9000,
+      12000
+    ],
+    "items": [
+      {
+        "id": "heart_fragment",
+        "chance": 1
+      },
+      {
+        "id": "void_shard",
+        "chance": 1
+      },
+      {
+        "id": "heartbreaker",
+        "chance": 0.15
+      },
+      {
+        "id": "starfall_axe",
+        "chance": 0.15
+      },
+      {
+        "id": "shadow_mail",
+        "chance": 0.15
+      },
+      {
+        "id": "potion_white",
+        "chance": 1
+      }
+    ]
+  }
+}

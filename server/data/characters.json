@@ -1,0 +1,15 @@
+[
+  {
+    "slot": 0,
+    "name": "Arthur",
+    "job": "novice",
+    "level": 1,
+    "look": "m1",
+    "gear": "novice_knife",
+    "zeny": 500,
+    "hp": 120,
+    "maxHp": 120,
+    "sp": 30,
+    "maxSp": 30
+  }
+]

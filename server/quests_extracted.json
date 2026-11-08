@@ -1,0 +1,5593 @@
+{
+  "m01": {
+    "kind": "main",
+    "giver": null,
+    "turnIn": "guide",
+    "level": 1,
+    "goals": [
+      {
+        "kind": "talk",
+        "npc": "guide"
+      }
+    ],
+    "reward": {
+      "zeny": 50,
+      "items": [
+        {
+          "id": "potion_red",
+          "qty": 3
+        }
+      ]
+    }
+  },
+  "m02": {
+    "kind": "main",
+    "giver": "guide",
+    "turnIn": "guide",
+    "level": 1,
+    "after": "m01",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "slime"
+        ],
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 80,
+      "items": [
+        {
+          "id": "cloth_tunic",
+          "qty": 1
+        }
+      ]
+    }
+  },
+  "m03": {
+    "kind": "main",
+    "giver": "guide",
+    "turnIn": "guide",
+    "level": 2,
+    "after": "m02",
+    "goals": [
+      {
+        "kind": "equip",
+        "slot": "body"
+      },
+      {
+        "kind": "stat"
+      }
+    ],
+    "reward": {
+      "zeny": 100,
+      "items": [
+        {
+          "id": "leather_boots",
+          "qty": 1
+        }
+      ]
+    }
+  },
+  "m04": {
+    "kind": "main",
+    "giver": "guide",
+    "turnIn": "guide",
+    "level": 3,
+    "after": "m03",
+    "goals": [
+      {
+        "kind": "sell",
+        "n": 3
+      },
+      {
+        "kind": "buy",
+        "item": "potion_red"
+      }
+    ],
+    "reward": {
+      "zeny": 150
+    }
+  },
+  "m05": {
+    "kind": "main",
+    "giver": "guide",
+    "turnIn": null,
+    "level": 4,
+    "after": "m04",
+    "goals": [
+      {
+        "kind": "save"
+      }
+    ],
+    "reward": {
+      "zeny": 100
+    }
+  },
+  "m06": {
+    "kind": "main",
+    "giver": "guide",
+    "turnIn": "farmer",
+    "level": 5,
+    "after": "m05",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "shroom",
+          "bee",
+          "bull"
+        ],
+        "n": 10
+      },
+      {
+        "kind": "level",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 300,
+      "items": [
+        {
+          "id": "potion_red",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "m07": {
+    "kind": "main",
+    "giver": "farmer",
+    "turnIn": "jobMaster",
+    "level": 8,
+    "after": "m06",
+    "goals": [
+      {
+        "kind": "level",
+        "n": 10
+      },
+      {
+        "kind": "job"
+      }
+    ],
+    "reward": {
+      "zeny": 500,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 3
+        }
+      ]
+    }
+  },
+  "m08": {
+    "kind": "main",
+    "giver": "jobMaster",
+    "turnIn": "fisher",
+    "level": 10,
+    "after": "m07",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "frog",
+          "crab",
+          "snake"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "crab_shell",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 600
+    }
+  },
+  "m09": {
+    "kind": "main",
+    "giver": "fisher",
+    "turnIn": "fisher",
+    "level": 11,
+    "after": "m08",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "toadking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 900,
+      "items": [
+        {
+          "id": "potion_orange",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "m10": {
+    "kind": "main",
+    "giver": "fisher",
+    "turnIn": "hunter",
+    "level": 12,
+    "after": "m09",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "wolf",
+          "bear"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "bear_claw",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 1100
+    }
+  },
+  "m11": {
+    "kind": "main",
+    "giver": "hunter",
+    "turnIn": "hunter",
+    "level": 14,
+    "after": "m10",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "bearking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 1600,
+      "items": [
+        {
+          "id": "fang_necklace",
+          "qty": 1
+        }
+      ]
+    }
+  },
+  "m12": {
+    "kind": "main",
+    "giver": "hunter",
+    "turnIn": "scout",
+    "level": 16,
+    "after": "m11",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "goblin",
+          "archer",
+          "shaman",
+          "brute"
+        ],
+        "n": 15
+      },
+      {
+        "kind": "collect",
+        "item": "shaman_feather",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 2000
+    }
+  },
+  "m13": {
+    "kind": "main",
+    "giver": "scout",
+    "turnIn": "scout",
+    "level": 18,
+    "after": "m12",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "chief"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 2800,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "m14": {
+    "kind": "main",
+    "giver": "scout",
+    "turnIn": "elder",
+    "level": 20,
+    "after": "m13",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "wick"
+      },
+      {
+        "kind": "talk",
+        "npc": "elder"
+      }
+    ],
+    "reward": {
+      "zeny": 1500
+    }
+  },
+  "m15": {
+    "kind": "main",
+    "giver": "elder",
+    "turnIn": "miner",
+    "level": 20,
+    "after": "m14",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "bat",
+          "mole",
+          "skeleton",
+          "beetle"
+        ],
+        "n": 15
+      },
+      {
+        "kind": "collect",
+        "item": "iron_ore",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 3500
+    }
+  },
+  "m16": {
+    "kind": "main",
+    "giver": "miner",
+    "turnIn": "miner",
+    "level": 23,
+    "after": "m15",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "foreman"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 4500,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 8
+        }
+      ]
+    }
+  },
+  "m17": {
+    "kind": "main",
+    "giver": "miner",
+    "turnIn": "miner",
+    "level": 26,
+    "after": "m16",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "golem",
+          "ghost",
+          "shard"
+        ],
+        "n": 18
+      },
+      {
+        "kind": "collect",
+        "item": "pure_crystal",
+        "n": 3
+      }
+    ],
+    "reward": {
+      "zeny": 6000
+    }
+  },
+  "m18": {
+    "kind": "main",
+    "giver": "miner",
+    "turnIn": "elder",
+    "level": 30,
+    "after": "m17",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "crystalgolem"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 15000
+    }
+  },
+  "m19": {
+    "kind": "main",
+    "giver": "elder",
+    "turnIn": "sage",
+    "level": 30,
+    "after": "m18",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "highwick"
+      },
+      {
+        "kind": "talk",
+        "npc": "sage"
+      }
+    ],
+    "reward": {
+      "zeny": 5000
+    }
+  },
+  "m20": {
+    "kind": "main",
+    "giver": "sage",
+    "turnIn": "sage",
+    "level": 30,
+    "after": "m19",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "roc"
+        ],
+        "n": 1
+      },
+      {
+        "kind": "collect",
+        "item": "yeti_fur",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 16000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 10
+        }
+      ]
+    }
+  },
+  "m21": {
+    "kind": "main",
+    "giver": "sage",
+    "turnIn": "sage",
+    "level": 34,
+    "after": "m20",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "ash"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "emberling",
+          "ashwolf",
+          "cinderknight",
+          "lavagolem"
+        ],
+        "n": 20
+      }
+    ],
+    "reward": {
+      "zeny": 18000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 10
+        }
+      ]
+    }
+  },
+  "m22": {
+    "kind": "main",
+    "giver": "sage",
+    "turnIn": "sage",
+    "level": 38,
+    "after": "m21",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "cinderking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 40000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 15
+        }
+      ]
+    }
+  },
+  "m23": {
+    "kind": "main",
+    "giver": "sage",
+    "turnIn": "ranger",
+    "level": 40,
+    "after": "m22",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "frost"
+      },
+      {
+        "kind": "talk",
+        "npc": "ranger"
+      }
+    ],
+    "reward": {
+      "zeny": 12000
+    }
+  },
+  "m24": {
+    "kind": "main",
+    "giver": "ranger",
+    "turnIn": "ranger",
+    "level": 41,
+    "after": "m23",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "snowwolf",
+          "frostwisp",
+          "mammoth"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "icewyrm"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 26000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 15
+        }
+      ]
+    }
+  },
+  "m25": {
+    "kind": "main",
+    "giver": "ranger",
+    "turnIn": "hermit",
+    "level": 43,
+    "after": "m24",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "marsh"
+      },
+      {
+        "kind": "talk",
+        "npc": "hermit"
+      }
+    ],
+    "reward": {
+      "zeny": 14000
+    }
+  },
+  "m26": {
+    "kind": "main",
+    "giver": "hermit",
+    "turnIn": "hermit",
+    "level": 44,
+    "after": "m25",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "swamptoad",
+          "mossling",
+          "lizardman"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "bogking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 30000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 15
+        }
+      ]
+    }
+  },
+  "m27": {
+    "kind": "main",
+    "giver": "hermit",
+    "turnIn": "islander",
+    "level": 45,
+    "after": "m26",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "isle"
+      },
+      {
+        "kind": "talk",
+        "npc": "islander"
+      }
+    ],
+    "reward": {
+      "zeny": 16000
+    }
+  },
+  "m28": {
+    "kind": "main",
+    "giver": "islander",
+    "turnIn": "islander",
+    "level": 46,
+    "after": "m27",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "monkey",
+          "coconutcrab",
+          "parrot"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "tikichief"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 34000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 15
+        }
+      ]
+    }
+  },
+  "m29": {
+    "kind": "main",
+    "giver": "islander",
+    "turnIn": "sage",
+    "level": 48,
+    "after": "m28",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "frostqueen"
+        ],
+        "n": 1
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "swamphag"
+        ],
+        "n": 1
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "serpentking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 100000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 30
+        }
+      ]
+    }
+  },
+  "m30": {
+    "kind": "main",
+    "giver": "sage",
+    "turnIn": "captain",
+    "level": 50,
+    "after": "m29",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "volcano"
+      },
+      {
+        "kind": "talk",
+        "npc": "captain"
+      }
+    ],
+    "reward": {
+      "zeny": 20000
+    }
+  },
+  "m31": {
+    "kind": "main",
+    "giver": "captain",
+    "turnIn": "captain",
+    "level": 51,
+    "after": "m30",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "magmacrab",
+          "firemonkey",
+          "lavalizard"
+        ],
+        "n": 20
+      }
+    ],
+    "reward": {
+      "zeny": 26000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 15
+        }
+      ]
+    }
+  },
+  "m32": {
+    "kind": "main",
+    "giver": "captain",
+    "turnIn": "captain",
+    "level": 53,
+    "after": "m31",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "reef"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "reefcrab",
+          "stormgull",
+          "seawraith"
+        ],
+        "n": 15
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "leviathan"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 42000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 20
+        }
+      ]
+    }
+  },
+  "m33": {
+    "kind": "main",
+    "giver": "captain",
+    "turnIn": "ferry",
+    "level": 53,
+    "after": "m32",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "delta"
+      },
+      {
+        "kind": "talk",
+        "npc": "ferry"
+      }
+    ],
+    "reward": {
+      "zeny": 22000
+    }
+  },
+  "m34": {
+    "kind": "main",
+    "giver": "ferry",
+    "turnIn": "ferry",
+    "level": 54,
+    "after": "m33",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "mangrovecroc",
+          "bloodfly",
+          "mudtoad"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "deltahydra"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 46000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 20
+        }
+      ]
+    }
+  },
+  "m35": {
+    "kind": "main",
+    "giver": "ferry",
+    "turnIn": "ferry",
+    "level": 56,
+    "after": "m34",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "dunes"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "dunescorp",
+          "sandwyrm",
+          "sunvulture"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "scarabking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 52000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 20
+        }
+      ]
+    }
+  },
+  "m36": {
+    "kind": "main",
+    "giver": "ferry",
+    "turnIn": "mystic",
+    "level": 56,
+    "after": "m35",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "fungal"
+      },
+      {
+        "kind": "talk",
+        "npc": "mystic"
+      }
+    ],
+    "reward": {
+      "zeny": 26000
+    }
+  },
+  "m37": {
+    "kind": "main",
+    "giver": "mystic",
+    "turnIn": "mystic",
+    "level": 58,
+    "after": "m36",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "glowcap",
+          "sporespider",
+          "sporeling"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "mycolord"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 58000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 25
+        }
+      ]
+    }
+  },
+  "m38": {
+    "kind": "main",
+    "giver": "mystic",
+    "turnIn": "mystic",
+    "level": 60,
+    "after": "m37",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "bones"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "volcanotitan"
+        ],
+        "n": 1
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "bonedragon"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 120000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 40
+        }
+      ]
+    }
+  },
+  "m39": {
+    "kind": "main",
+    "giver": "mystic",
+    "turnIn": "exile",
+    "level": 60,
+    "after": "m38",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "obsidian"
+      },
+      {
+        "kind": "talk",
+        "npc": "exile"
+      }
+    ],
+    "reward": {
+      "zeny": 30000
+    }
+  },
+  "m40": {
+    "kind": "main",
+    "giver": "exile",
+    "turnIn": "exile",
+    "level": 62,
+    "after": "m39",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "glasscrab",
+          "obsidiandrake",
+          "voidwisp"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "glassgiant"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 64000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 25
+        }
+      ]
+    }
+  },
+  "m41": {
+    "kind": "main",
+    "giver": "exile",
+    "turnIn": "exile",
+    "level": 63,
+    "after": "m40",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "thornwood"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "thornwolf",
+          "briarling",
+          "thornspider"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "thornbeast"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 68000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 25
+        }
+      ]
+    }
+  },
+  "m42": {
+    "kind": "main",
+    "giver": "exile",
+    "turnIn": "nomad",
+    "level": 64,
+    "after": "m41",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "petrified"
+      },
+      {
+        "kind": "visit",
+        "map": "mesa"
+      },
+      {
+        "kind": "talk",
+        "npc": "nomad"
+      }
+    ],
+    "reward": {
+      "zeny": 34000
+    }
+  },
+  "m43": {
+    "kind": "main",
+    "giver": "nomad",
+    "turnIn": "nomad",
+    "level": 66,
+    "after": "m42",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "stonedeer",
+          "basilisk",
+          "rockgolem"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "gorgon"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 74000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 25
+        }
+      ]
+    }
+  },
+  "m44": {
+    "kind": "main",
+    "giver": "nomad",
+    "turnIn": "nomad",
+    "level": 68,
+    "after": "m43",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "mesaboar",
+          "canyonhawk",
+          "dustdevil"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "mesacolossus"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 80000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 30
+        }
+      ]
+    }
+  },
+  "m45": {
+    "kind": "main",
+    "giver": "nomad",
+    "turnIn": "nomad",
+    "level": 70,
+    "after": "m44",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "steppe"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "steppewolf",
+          "thunderbull",
+          "windharpy"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "thunderhorn"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 86000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 30
+        }
+      ]
+    }
+  },
+  "m46": {
+    "kind": "main",
+    "giver": "nomad",
+    "turnIn": "seer",
+    "level": 70,
+    "after": "m45",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "rift"
+      },
+      {
+        "kind": "talk",
+        "npc": "seer"
+      }
+    ],
+    "reward": {
+      "zeny": 40000
+    }
+  },
+  "m47": {
+    "kind": "main",
+    "giver": "seer",
+    "turnIn": "seer",
+    "level": 72,
+    "after": "m46",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "riftimp",
+          "magmaworm",
+          "riftknight"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "riftwyrm"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 180000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 50
+        }
+      ]
+    }
+  },
+  "m48": {
+    "kind": "main",
+    "giver": "seer",
+    "turnIn": "watcher",
+    "level": 72,
+    "after": "m47",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "moor"
+      },
+      {
+        "kind": "talk",
+        "npc": "watcher"
+      }
+    ],
+    "reward": {
+      "zeny": 48000
+    }
+  },
+  "m49": {
+    "kind": "main",
+    "giver": "watcher",
+    "turnIn": "watcher",
+    "level": 74,
+    "after": "m48",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "moorhound",
+          "heathwisp",
+          "bogwraith"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "moorhag"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 96000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 35
+        }
+      ]
+    }
+  },
+  "m50": {
+    "kind": "main",
+    "giver": "watcher",
+    "turnIn": "watcher",
+    "level": 76,
+    "after": "m49",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "vale"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "gravebat",
+          "ghoul",
+          "phantom"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "valelich"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 104000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 35
+        }
+      ]
+    }
+  },
+  "m51": {
+    "kind": "main",
+    "giver": "watcher",
+    "turnIn": "watcher",
+    "level": 78,
+    "after": "m50",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "fjord"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "frostcrab",
+          "frostturtle",
+          "icetroll"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "frostkraken"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 112000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 35
+        }
+      ]
+    }
+  },
+  "m52": {
+    "kind": "main",
+    "giver": "watcher",
+    "turnIn": "monk",
+    "level": 78,
+    "after": "m51",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "spirit"
+      },
+      {
+        "kind": "talk",
+        "npc": "monk"
+      }
+    ],
+    "reward": {
+      "zeny": 56000
+    }
+  },
+  "m53": {
+    "kind": "main",
+    "giver": "monk",
+    "turnIn": "monk",
+    "level": 80,
+    "after": "m52",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "spiritlynx",
+          "spirithawk",
+          "spiritshard"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "spiritstag"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 120000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 40
+        }
+      ]
+    }
+  },
+  "m54": {
+    "kind": "main",
+    "giver": "monk",
+    "turnIn": "monk",
+    "level": 82,
+    "after": "m53",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "spine"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "spinedrake",
+          "dracoknight",
+          "dragonhound"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "elderdragon"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 130000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 40
+        }
+      ]
+    }
+  },
+  "m55": {
+    "kind": "main",
+    "giver": "monk",
+    "turnIn": "climber",
+    "level": 82,
+    "after": "m54",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "summit"
+      },
+      {
+        "kind": "talk",
+        "npc": "climber"
+      }
+    ],
+    "reward": {
+      "zeny": 64000
+    }
+  },
+  "m56": {
+    "kind": "main",
+    "giver": "climber",
+    "turnIn": "climber",
+    "level": 85,
+    "after": "m55",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "summitroc",
+          "frostbear",
+          "skywisp"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "thunderbird"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 140000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 45
+        }
+      ]
+    }
+  },
+  "m57": {
+    "kind": "main",
+    "giver": "climber",
+    "turnIn": "climber",
+    "level": 87,
+    "after": "m56",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "aurora"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "aurorawisp",
+          "aurorawolf",
+          "crystalsentinel"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "auroraqueen"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 260000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 60
+        }
+      ]
+    }
+  },
+  "m58": {
+    "kind": "main",
+    "giver": "climber",
+    "turnIn": "sailor",
+    "level": 86,
+    "after": "m57",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "cape"
+      },
+      {
+        "kind": "talk",
+        "npc": "sailor"
+      }
+    ],
+    "reward": {
+      "zeny": 72000
+    }
+  },
+  "m59": {
+    "kind": "main",
+    "giver": "sailor",
+    "turnIn": "sailor",
+    "level": 88,
+    "after": "m58",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "stormharpy",
+          "drownedcrew",
+          "stormeel"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "tempestwyvern"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 150000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 45
+        }
+      ]
+    }
+  },
+  "m60": {
+    "kind": "main",
+    "giver": "sailor",
+    "turnIn": "scholar",
+    "level": 88,
+    "after": "m59",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "skyruins"
+      },
+      {
+        "kind": "talk",
+        "npc": "scholar"
+      }
+    ],
+    "reward": {
+      "zeny": 76000
+    }
+  },
+  "m61": {
+    "kind": "main",
+    "giver": "scholar",
+    "turnIn": "scholar",
+    "level": 90,
+    "after": "m60",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "ruingolem",
+          "fallenknight",
+          "griffin"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "skyguardian"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 160000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 50
+        }
+      ]
+    }
+  },
+  "m62": {
+    "kind": "main",
+    "giver": "scholar",
+    "turnIn": "scholar",
+    "level": 92,
+    "after": "m61",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "krakencoast"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "deepcrab",
+          "deepone",
+          "abyssjelly"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "krakenking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 170000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 50
+        }
+      ]
+    }
+  },
+  "m63": {
+    "kind": "main",
+    "giver": "scholar",
+    "turnIn": "druid",
+    "level": 92,
+    "after": "m62",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "eldergrove"
+      },
+      {
+        "kind": "talk",
+        "npc": "druid"
+      }
+    ],
+    "reward": {
+      "zeny": 84000
+    }
+  },
+  "m64": {
+    "kind": "main",
+    "giver": "druid",
+    "turnIn": "druid",
+    "level": 94,
+    "after": "m63",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "blightboar",
+          "elderling",
+          "blightmoth"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "blightroot"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 180000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 55
+        }
+      ]
+    }
+  },
+  "m65": {
+    "kind": "main",
+    "giver": "druid",
+    "turnIn": "druid",
+    "level": 96,
+    "after": "m64",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "abyss"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "shadehound",
+          "voidshard",
+          "voidknight"
+        ],
+        "n": 20
+      }
+    ],
+    "reward": {
+      "zeny": 190000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 60
+        }
+      ]
+    }
+  },
+  "m66": {
+    "kind": "main",
+    "giver": "druid",
+    "turnIn": "druid",
+    "level": 98,
+    "after": "m65",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "heartshadow"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 500000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 99
+        }
+      ]
+    }
+  },
+  "m67": {
+    "kind": "main",
+    "giver": "druid",
+    "turnIn": "admiral",
+    "level": 100,
+    "after": "m66",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "crownport"
+      },
+      {
+        "kind": "visit",
+        "map": "shoals"
+      },
+      {
+        "kind": "talk",
+        "npc": "admiral"
+      }
+    ],
+    "reward": {
+      "zeny": 200000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 30
+        }
+      ]
+    }
+  },
+  "m68": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": null,
+    "level": 100,
+    "after": "m67",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "shoals"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "prismcrab",
+          "shoalserpent",
+          "glasswisp"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "tidecolossus"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 220000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 30
+        }
+      ]
+    }
+  },
+  "m69": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": null,
+    "level": 103,
+    "after": "m68",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "moonmeadow"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "moonhare",
+          "lunamoth",
+          "moonstag"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "lunarwitch"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 250000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 35
+        }
+      ]
+    }
+  },
+  "m70": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": null,
+    "level": 105,
+    "after": "m69",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "prismcanyon"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "prismgolem",
+          "rainbowdrake",
+          "shardling"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "prismwyrm"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 280000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 40
+        }
+      ]
+    }
+  },
+  "m71": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": null,
+    "level": 107,
+    "after": "m70",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "titangarden"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "thornbeetle",
+          "giantshroom",
+          "woodtitan"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "gardenlord"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 310000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 45
+        }
+      ]
+    }
+  },
+  "m72": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": null,
+    "level": 110,
+    "after": "m71",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "cloudterrace"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "cloudmonkey",
+          "rainfrog",
+          "terraceguard"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "raindragon"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 340000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 50
+        }
+      ]
+    }
+  },
+  "m73": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": null,
+    "level": 113,
+    "after": "m72",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "amberwaste"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "amberscorpion",
+          "fossilcroc",
+          "ambergolem"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "amberking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 370000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 55
+        }
+      ]
+    }
+  },
+  "m74": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": null,
+    "level": 116,
+    "after": "m73",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "sunkencity"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "drownedknight",
+          "sirenwitch",
+          "coralnaga"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "leviathan2"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 400000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 60
+        }
+      ]
+    }
+  },
+  "m75": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": null,
+    "level": 119,
+    "after": "m74",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "clockruins"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "clockgolem",
+          "brassspider",
+          "gearknight"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "clockcolossus"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 430000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 65
+        }
+      ]
+    }
+  },
+  "m76": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": null,
+    "level": 122,
+    "after": "m75",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "tideempress"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 520000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 70
+        }
+      ]
+    }
+  },
+  "m77": {
+    "kind": "main",
+    "giver": "admiral",
+    "turnIn": "templar",
+    "level": 124,
+    "after": "m76",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "ashgate"
+      },
+      {
+        "kind": "talk",
+        "npc": "templar"
+      }
+    ],
+    "reward": {
+      "zeny": 300000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 40
+        }
+      ]
+    }
+  },
+  "m78": {
+    "kind": "main",
+    "giver": "templar",
+    "turnIn": null,
+    "level": 125,
+    "after": "m77",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "ashgate"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "ashghoul",
+          "cinderhound",
+          "gatewarden"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "ashenlord"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 380000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 40
+        }
+      ]
+    }
+  },
+  "m79": {
+    "kind": "main",
+    "giver": "templar",
+    "turnIn": null,
+    "level": 128,
+    "after": "m78",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "bloodmoor"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "bloodbat",
+          "redwraith",
+          "werewolf"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "bloodcountess"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 420000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 45
+        }
+      ]
+    }
+  },
+  "m80": {
+    "kind": "main",
+    "giver": "templar",
+    "turnIn": null,
+    "level": 131,
+    "after": "m79",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "echochasm"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "chasmcrawler",
+          "echowisp",
+          "abysswyrm"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "chasmhydra"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 460000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 50
+        }
+      ]
+    }
+  },
+  "m81": {
+    "kind": "main",
+    "giver": "templar",
+    "turnIn": null,
+    "level": 134,
+    "after": "m80",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "rimehell"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "hellyeti",
+          "frostfiend",
+          "rimeharpy"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "rimelich"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 500000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 55
+        }
+      ]
+    }
+  },
+  "m82": {
+    "kind": "main",
+    "giver": "templar",
+    "turnIn": null,
+    "level": 137,
+    "after": "m81",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "fallenkingdom"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "phantomsoldier",
+          "cursedarcher",
+          "dreadknight"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "fallenking"
+        ],
+        "n": 1
+      },
+      {
+        "kind": "visit",
+        "map": "duskhold"
+      }
+    ],
+    "reward": {
+      "zeny": 540000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 60
+        }
+      ]
+    }
+  },
+  "m83": {
+    "kind": "main",
+    "giver": "templar",
+    "turnIn": null,
+    "level": 140,
+    "after": "m82",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "soulwood"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "soulowl",
+          "soulling",
+          "soulpanther"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "soulheron"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 580000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 65
+        }
+      ]
+    }
+  },
+  "m84": {
+    "kind": "main",
+    "giver": "templar",
+    "turnIn": null,
+    "level": 143,
+    "after": "m83",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "inferno"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "infernoimp",
+          "hellhound",
+          "infernobull"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "hellphoenix"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 620000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 70
+        }
+      ]
+    }
+  },
+  "m85": {
+    "kind": "main",
+    "giver": "templar",
+    "turnIn": null,
+    "level": 146,
+    "after": "m84",
+    "goals": [
+      {
+        "kind": "visit",
+        "map": "demonthrone"
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "demonimp",
+          "demonmage",
+          "demonknight"
+        ],
+        "n": 20
+      },
+      {
+        "kind": "kill",
+        "monsters": [
+          "demongeneral"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 660000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 75
+        }
+      ]
+    }
+  },
+  "m86": {
+    "kind": "main",
+    "giver": "templar",
+    "turnIn": null,
+    "level": 148,
+    "after": "m85",
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "demonking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 1500000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 99
+        }
+      ]
+    }
+  },
+  "s_shoals": {
+    "kind": "side",
+    "giver": "admiral",
+    "turnIn": "admiral",
+    "level": 101,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "prism_claw",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 73000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 20
+        }
+      ]
+    }
+  },
+  "s_moonmeadow": {
+    "kind": "side",
+    "giver": "admiral",
+    "turnIn": "admiral",
+    "level": 103,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "moon_fur",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 79000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 21
+        }
+      ]
+    }
+  },
+  "s_prismcanyon": {
+    "kind": "side",
+    "giver": "admiral",
+    "turnIn": "admiral",
+    "level": 105,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "prism_shard",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 85000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 21
+        }
+      ]
+    }
+  },
+  "s_titangarden": {
+    "kind": "side",
+    "giver": "admiral",
+    "turnIn": "admiral",
+    "level": 107,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "beetle_horn",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 91000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 22
+        }
+      ]
+    }
+  },
+  "s_cloudterrace": {
+    "kind": "side",
+    "giver": "admiral",
+    "turnIn": "admiral",
+    "level": 110,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "cloud_tuft",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 100000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 23
+        }
+      ]
+    }
+  },
+  "s_amberwaste": {
+    "kind": "side",
+    "giver": "admiral",
+    "turnIn": "admiral",
+    "level": 113,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "amber_stinger",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 109000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 24
+        }
+      ]
+    }
+  },
+  "s_sunkencity": {
+    "kind": "side",
+    "giver": "admiral",
+    "turnIn": "admiral",
+    "level": 116,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "drowned_plate",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 118000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 25
+        }
+      ]
+    }
+  },
+  "s_clockruins": {
+    "kind": "side",
+    "giver": "admiral",
+    "turnIn": "admiral",
+    "level": 119,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "brass_gear",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 127000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 26
+        }
+      ]
+    }
+  },
+  "s_ashgate": {
+    "kind": "side",
+    "giver": "templar",
+    "turnIn": "templar",
+    "level": 125,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "ash_bone",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 145000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 28
+        }
+      ]
+    }
+  },
+  "s_bloodmoor": {
+    "kind": "side",
+    "giver": "templar",
+    "turnIn": "templar",
+    "level": 128,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "bloodbat_wing",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 154000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 29
+        }
+      ]
+    }
+  },
+  "s_echochasm": {
+    "kind": "side",
+    "giver": "templar",
+    "turnIn": "templar",
+    "level": 131,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "crawler_claw",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 163000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 30
+        }
+      ]
+    }
+  },
+  "s_rimehell": {
+    "kind": "side",
+    "giver": "templar",
+    "turnIn": "templar",
+    "level": 134,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "yeti_horn",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 172000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 31
+        }
+      ]
+    }
+  },
+  "s_fallenkingdom": {
+    "kind": "side",
+    "giver": "templar",
+    "turnIn": "templar",
+    "level": 137,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "phantom_badge",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 181000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 32
+        }
+      ]
+    }
+  },
+  "s_soulwood": {
+    "kind": "side",
+    "giver": "templar",
+    "turnIn": "templar",
+    "level": 140,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "soul_feather",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 190000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 33
+        }
+      ]
+    }
+  },
+  "s_inferno": {
+    "kind": "side",
+    "giver": "templar",
+    "turnIn": "templar",
+    "level": 143,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "imp_horn",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 199000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 34
+        }
+      ]
+    }
+  },
+  "s_demonthrone": {
+    "kind": "side",
+    "giver": "templar",
+    "turnIn": "templar",
+    "level": 146,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "demon_tail",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 208000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 35
+        }
+      ]
+    }
+  },
+  "s_coral": {
+    "kind": "side",
+    "giver": "captain",
+    "turnIn": "captain",
+    "level": 50,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "coral_shard",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 9000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_embers": {
+    "kind": "side",
+    "giver": "captain",
+    "turnIn": "captain",
+    "level": 52,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "magma_shell",
+        "n": 8
+      },
+      {
+        "kind": "collect",
+        "item": "fire_fur",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 11000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_flies": {
+    "kind": "side",
+    "giver": "ferry",
+    "turnIn": "ferry",
+    "level": 52,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "bloodfly"
+        ],
+        "n": 15
+      }
+    ],
+    "reward": {
+      "zeny": 10000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_oasis": {
+    "kind": "side",
+    "giver": "ferry",
+    "turnIn": "ferry",
+    "level": 54,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "scorp_stinger",
+        "n": 10
+      },
+      {
+        "kind": "collect",
+        "item": "wyrm_hide",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 13000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 6
+        }
+      ]
+    }
+  },
+  "s_spores": {
+    "kind": "side",
+    "giver": "mystic",
+    "turnIn": "mystic",
+    "level": 55,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "glowcap_spore",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 12000,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 8
+        }
+      ]
+    }
+  },
+  "s_glass": {
+    "kind": "side",
+    "giver": "exile",
+    "turnIn": "exile",
+    "level": 60,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "glass_shard",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 16000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 8
+        }
+      ]
+    }
+  },
+  "s_thorns": {
+    "kind": "side",
+    "giver": "exile",
+    "turnIn": "exile",
+    "level": 62,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "briarling"
+        ],
+        "n": 15
+      },
+      {
+        "kind": "collect",
+        "item": "thorn_pelt",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 18000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 8
+        }
+      ]
+    }
+  },
+  "s_tusks": {
+    "kind": "side",
+    "giver": "nomad",
+    "turnIn": "nomad",
+    "level": 65,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "mesa_tusk",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 20000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 10
+        }
+      ]
+    }
+  },
+  "s_herd": {
+    "kind": "side",
+    "giver": "nomad",
+    "turnIn": "nomad",
+    "level": 67,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "steppewolf"
+        ],
+        "n": 15
+      },
+      {
+        "kind": "collect",
+        "item": "harpy_quill",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 22000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 10
+        }
+      ]
+    }
+  },
+  "s_ashes": {
+    "kind": "side",
+    "giver": "seer",
+    "turnIn": "seer",
+    "level": 69,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "imp_ash",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 24000,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 12
+        }
+      ]
+    }
+  },
+  "s_riftknights": {
+    "kind": "side",
+    "giver": "seer",
+    "turnIn": "seer",
+    "level": 71,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "riftknight"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "worm_scale",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 26000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 12
+        }
+      ]
+    }
+  },
+  "s_hounds": {
+    "kind": "side",
+    "giver": "watcher",
+    "turnIn": "watcher",
+    "level": 72,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "moorhound"
+        ],
+        "n": 15
+      }
+    ],
+    "reward": {
+      "zeny": 28000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 12
+        }
+      ]
+    }
+  },
+  "s_lanterns": {
+    "kind": "side",
+    "giver": "watcher",
+    "turnIn": "watcher",
+    "level": 75,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "heath_mote",
+        "n": 10
+      },
+      {
+        "kind": "collect",
+        "item": "phantom_veil",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 30000,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 15
+        }
+      ]
+    }
+  },
+  "s_beads": {
+    "kind": "side",
+    "giver": "monk",
+    "turnIn": "monk",
+    "level": 78,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "spirit_shard",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 32000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 14
+        }
+      ]
+    }
+  },
+  "s_relics": {
+    "kind": "side",
+    "giver": "monk",
+    "turnIn": "monk",
+    "level": 81,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "dracoknight"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "spine_scale",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 34000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 14
+        }
+      ]
+    }
+  },
+  "s_ropes": {
+    "kind": "side",
+    "giver": "climber",
+    "turnIn": "climber",
+    "level": 82,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "frostbear_pelt",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 36000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 16
+        }
+      ]
+    }
+  },
+  "s_plumes": {
+    "kind": "side",
+    "giver": "climber",
+    "turnIn": "climber",
+    "level": 85,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "skywisp"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "summit_plume",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 38000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 16
+        }
+      ]
+    }
+  },
+  "s_harpies": {
+    "kind": "side",
+    "giver": "sailor",
+    "turnIn": "sailor",
+    "level": 86,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "stormharpy"
+        ],
+        "n": 15
+      }
+    ],
+    "reward": {
+      "zeny": 40000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 16
+        }
+      ]
+    }
+  },
+  "s_lockets": {
+    "kind": "side",
+    "giver": "sailor",
+    "turnIn": "sailor",
+    "level": 88,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "drowned_locket",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 42000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 18
+        }
+      ]
+    }
+  },
+  "s_runes": {
+    "kind": "side",
+    "giver": "scholar",
+    "turnIn": "scholar",
+    "level": 89,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "rune_stone",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 44000,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 18
+        }
+      ]
+    }
+  },
+  "s_griffins": {
+    "kind": "side",
+    "giver": "scholar",
+    "turnIn": "scholar",
+    "level": 91,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "griffin"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "griffin_feather",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 46000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 18
+        }
+      ]
+    }
+  },
+  "s_ink": {
+    "kind": "side",
+    "giver": "scholar",
+    "turnIn": "scholar",
+    "level": 92,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "abyss_jelly",
+        "n": 8
+      },
+      {
+        "kind": "collect",
+        "item": "deep_scale",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 48000,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 20
+        }
+      ]
+    }
+  },
+  "s_bark": {
+    "kind": "side",
+    "giver": "druid",
+    "turnIn": "druid",
+    "level": 93,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "elder_bark",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 50000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 20
+        }
+      ]
+    }
+  },
+  "s_moths": {
+    "kind": "side",
+    "giver": "druid",
+    "turnIn": "druid",
+    "level": 95,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "blightmoth"
+        ],
+        "n": 15
+      }
+    ],
+    "reward": {
+      "zeny": 52000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 22
+        }
+      ]
+    }
+  },
+  "s_void": {
+    "kind": "side",
+    "giver": "druid",
+    "turnIn": "druid",
+    "level": 97,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "voidknight"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "void_shard",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 56000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 24
+        }
+      ]
+    }
+  },
+  "s_wraith": {
+    "kind": "side",
+    "giver": "mystic",
+    "turnIn": "mystic",
+    "level": 58,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "wraithknight"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "bone_pelt",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 15000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 8
+        }
+      ]
+    }
+  },
+  "s_wig": {
+    "kind": "side",
+    "giver": "stylist",
+    "turnIn": "stylist",
+    "level": 2,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "bunny_fur",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 300
+    }
+  },
+  "s_refine": {
+    "kind": "side",
+    "giver": "smith",
+    "turnIn": "smith",
+    "level": 4,
+    "goals": [
+      {
+        "kind": "refine"
+      }
+    ],
+    "reward": {
+      "zeny": 250
+    }
+  },
+  "s_kingslime": {
+    "kind": "side",
+    "giver": "guard",
+    "turnIn": "guard",
+    "level": 3,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "kingslime"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 400
+    }
+  },
+  "s_jelly": {
+    "kind": "side",
+    "giver": "potion",
+    "turnIn": "potion",
+    "level": 1,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "jelly",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 100,
+      "items": [
+        {
+          "id": "potion_red",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_honey": {
+    "kind": "side",
+    "giver": "farmer",
+    "turnIn": "farmer",
+    "level": 5,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "honey",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 350
+    }
+  },
+  "s_goldbull": {
+    "kind": "side",
+    "giver": "farmer",
+    "turnIn": "farmer",
+    "level": 7,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "goldbull"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 700
+    }
+  },
+  "s_frog": {
+    "kind": "side",
+    "giver": "fisher",
+    "turnIn": "fisher",
+    "level": 9,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "frog_leg",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 500
+    }
+  },
+  "s_snake": {
+    "kind": "side",
+    "giver": "fisher",
+    "turnIn": "fisher",
+    "level": 10,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "snake"
+        ],
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 600
+    }
+  },
+  "s_silk": {
+    "kind": "side",
+    "giver": "hunter",
+    "turnIn": "hunter",
+    "level": 12,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "silk",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 800
+    }
+  },
+  "s_twig": {
+    "kind": "side",
+    "giver": "hunter",
+    "turnIn": "potion",
+    "level": 13,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "magic_twig",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 900,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_arrows": {
+    "kind": "side",
+    "giver": "scout",
+    "turnIn": "scout",
+    "level": 16,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "broken_arrow",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 1300
+    }
+  },
+  "s_brute": {
+    "kind": "side",
+    "giver": "scout",
+    "turnIn": "scout",
+    "level": 17,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "brute"
+        ],
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 1500
+    }
+  },
+  "s_pelt": {
+    "kind": "side",
+    "giver": "elder",
+    "turnIn": "elder",
+    "level": 18,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "wolf_pelt",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 1400
+    }
+  },
+  "s_inn": {
+    "kind": "side",
+    "giver": "inn",
+    "turnIn": "inn",
+    "level": 18,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "honey",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 1200,
+      "items": [
+        {
+          "id": "potion_orange",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_tusk": {
+    "kind": "side",
+    "giver": "elder",
+    "turnIn": "elder",
+    "level": 18,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "boar_tusk",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 1600
+    }
+  },
+  "s_wisp": {
+    "kind": "side",
+    "giver": "elder",
+    "turnIn": "elder",
+    "level": 20,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "wisp"
+        ],
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 2200,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_plume": {
+    "kind": "side",
+    "giver": "scout",
+    "turnIn": "scout",
+    "level": 22,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "owl_plume",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 2800
+    }
+  },
+  "s_stag": {
+    "kind": "side",
+    "giver": "hunter",
+    "turnIn": "hunter",
+    "level": 24,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "silverstag"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 4500,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_wool": {
+    "kind": "side",
+    "giver": "elder",
+    "turnIn": "elder",
+    "level": 22,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "ram_wool",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 2700
+    }
+  },
+  "s_eagle": {
+    "kind": "side",
+    "giver": "miner",
+    "turnIn": "miner",
+    "level": 24,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "eagle"
+        ],
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 3200
+    }
+  },
+  "s_yeti": {
+    "kind": "side",
+    "giver": "chef",
+    "turnIn": "chef",
+    "level": 26,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "yeti_fur",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 3800,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_roc": {
+    "kind": "side",
+    "giver": "elder",
+    "turnIn": "elder",
+    "level": 28,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "roc"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 6500,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 8
+        }
+      ]
+    }
+  },
+  "s_ember": {
+    "kind": "side",
+    "giver": "sage",
+    "turnIn": "sage",
+    "level": 22,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "wisp_ember",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 2900,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_turtle": {
+    "kind": "side",
+    "giver": "farmer",
+    "turnIn": "farmer",
+    "level": 10,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "turtle_shell",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 600
+    }
+  },
+  "s_gull": {
+    "kind": "side",
+    "giver": "fisher",
+    "turnIn": "fisher",
+    "level": 12,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "gull"
+        ],
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 750
+    }
+  },
+  "s_doubloon": {
+    "kind": "side",
+    "giver": "merchant",
+    "turnIn": "merchant",
+    "level": 14,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "doubloon",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 1400
+    }
+  },
+  "s_crabking": {
+    "kind": "side",
+    "giver": "fisher",
+    "turnIn": "fisher",
+    "level": 15,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "crabking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 1600,
+      "items": [
+        {
+          "id": "potion_orange",
+          "qty": 8
+        }
+      ]
+    }
+  },
+  "s_puffin": {
+    "kind": "side",
+    "giver": "fisher",
+    "turnIn": "fisher",
+    "level": 14,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "puffin_beak",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 900
+    }
+  },
+  "s_storm": {
+    "kind": "side",
+    "giver": "sage",
+    "turnIn": "sage",
+    "level": 16,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "storm_core",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 1200,
+      "items": [
+        {
+          "id": "potion_blue",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_drake": {
+    "kind": "side",
+    "giver": "guard",
+    "turnIn": "guard",
+    "level": 18,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "drake"
+        ],
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 1600
+    }
+  },
+  "s_stormdrake": {
+    "kind": "side",
+    "giver": "guard",
+    "turnIn": "guard",
+    "level": 20,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "stormdrake"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 2600,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 5
+        }
+      ]
+    }
+  },
+  "s_stinger": {
+    "kind": "side",
+    "giver": "hunter",
+    "turnIn": "hunter",
+    "level": 26,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "scorpion_stinger",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 4000
+    }
+  },
+  "s_worm": {
+    "kind": "side",
+    "giver": "miner",
+    "turnIn": "miner",
+    "level": 28,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "sandworm"
+        ],
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 4600
+    }
+  },
+  "s_scorpking": {
+    "kind": "side",
+    "giver": "hunter",
+    "turnIn": "hunter",
+    "level": 30,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "scorpking"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 7500,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 8
+        }
+      ]
+    }
+  },
+  "s_bandit": {
+    "kind": "side",
+    "giver": "scout",
+    "turnIn": "scout",
+    "level": 30,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "bandit"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "bandit_bandana",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 7000
+    }
+  },
+  "s_gland": {
+    "kind": "side",
+    "giver": "potion",
+    "turnIn": "potion",
+    "level": 31,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "fire_gland",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 6500,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 6
+        }
+      ]
+    }
+  },
+  "s_wyvern": {
+    "kind": "side",
+    "giver": "sage",
+    "turnIn": "sage",
+    "level": 34,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "wyvern"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 14000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 10
+        }
+      ]
+    }
+  },
+  "s_dust": {
+    "kind": "side",
+    "giver": "potion",
+    "turnIn": "potion",
+    "level": 34,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "ember_dust",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 9000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 6
+        }
+      ]
+    }
+  },
+  "s_magma": {
+    "kind": "side",
+    "giver": "smith",
+    "turnIn": "smith",
+    "level": 37,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "magma_core",
+        "n": 4
+      }
+    ],
+    "reward": {
+      "zeny": 12000
+    }
+  },
+  "s_snowpelt": {
+    "kind": "side",
+    "giver": "ranger",
+    "turnIn": "ranger",
+    "level": 40,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "snow_pelt",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 12000
+    }
+  },
+  "s_mammoth": {
+    "kind": "side",
+    "giver": "ranger",
+    "turnIn": "smith",
+    "level": 42,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "mammoth_tusk",
+        "n": 4
+      }
+    ],
+    "reward": {
+      "zeny": 14000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 6
+        }
+      ]
+    }
+  },
+  "s_golemice": {
+    "kind": "side",
+    "giver": "ranger",
+    "turnIn": "ranger",
+    "level": 43,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "icegolem"
+        ],
+        "n": 12
+      }
+    ],
+    "reward": {
+      "zeny": 15000
+    }
+  },
+  "s_knights": {
+    "kind": "side",
+    "giver": "ranger",
+    "turnIn": "ranger",
+    "level": 45,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "frostknight"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "frost_plate",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 17000
+    }
+  },
+  "s_slime": {
+    "kind": "side",
+    "giver": "hermit",
+    "turnIn": "potion",
+    "level": 42,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "bog_slime",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 13000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 6
+        }
+      ]
+    }
+  },
+  "s_lizard": {
+    "kind": "side",
+    "giver": "hermit",
+    "turnIn": "hermit",
+    "level": 44,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "lizardman"
+        ],
+        "n": 12
+      }
+    ],
+    "reward": {
+      "zeny": 15000
+    }
+  },
+  "s_croc": {
+    "kind": "side",
+    "giver": "hermit",
+    "turnIn": "smith",
+    "level": 45,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "croc_hide",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 17000
+    }
+  },
+  "s_witch": {
+    "kind": "side",
+    "giver": "hermit",
+    "turnIn": "hermit",
+    "level": 46,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "witch"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "hex_charm",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 18000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 8
+        }
+      ]
+    }
+  },
+  "s_coconut": {
+    "kind": "side",
+    "giver": "islander",
+    "turnIn": "chef",
+    "level": 45,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "coconut",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 16000
+    }
+  },
+  "s_feather": {
+    "kind": "side",
+    "giver": "islander",
+    "turnIn": "islander",
+    "level": 46,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "parrot_feather",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 17000
+    }
+  },
+  "s_panther": {
+    "kind": "side",
+    "giver": "islander",
+    "turnIn": "islander",
+    "level": 47,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "panther"
+        ],
+        "n": 12
+      }
+    ],
+    "reward": {
+      "zeny": 19000
+    }
+  },
+  "s_tiki": {
+    "kind": "side",
+    "giver": "islander",
+    "turnIn": "islander",
+    "level": 49,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "tikiwarrior"
+        ],
+        "n": 12
+      },
+      {
+        "kind": "collect",
+        "item": "tiki_mask",
+        "n": 4
+      }
+    ],
+    "reward": {
+      "zeny": 21000,
+      "items": [
+        {
+          "id": "potion_white",
+          "qty": 10
+        }
+      ]
+    }
+  },
+  "s_bones": {
+    "kind": "side",
+    "giver": "miner",
+    "turnIn": "elder",
+    "level": 20,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "old_bone",
+        "n": 8
+      }
+    ],
+    "reward": {
+      "zeny": 2200
+    }
+  },
+  "s_shell": {
+    "kind": "side",
+    "giver": "miner",
+    "turnIn": "smith",
+    "level": 21,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "beetle_shell",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 2400
+    }
+  },
+  "s_oil": {
+    "kind": "side",
+    "giver": "miner",
+    "turnIn": "miner",
+    "level": 24,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "lamp_oil",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 3000
+    }
+  },
+  "s_golem": {
+    "kind": "side",
+    "giver": "miner",
+    "turnIn": "miner",
+    "level": 25,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "golem"
+        ],
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 3300
+    }
+  },
+  "s_chips": {
+    "kind": "side",
+    "giver": "miner",
+    "turnIn": "smith",
+    "level": 28,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "crystal_chip",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 4200
+    }
+  },
+  "s_ghost": {
+    "kind": "side",
+    "giver": "miner",
+    "turnIn": "miner",
+    "level": 29,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "ghost"
+        ],
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 4500
+    }
+  },
+  "s_copper": {
+    "kind": "side",
+    "giver": "smith",
+    "turnIn": "smith",
+    "level": 2,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "copper_ore",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 300
+    }
+  },
+  "s_soup": {
+    "kind": "side",
+    "giver": "chef",
+    "turnIn": "chef",
+    "level": 2,
+    "goals": [
+      {
+        "kind": "cook",
+        "n": 2
+      }
+    ],
+    "reward": {
+      "zeny": 250
+    }
+  },
+  "s_stew": {
+    "kind": "side",
+    "giver": "guard",
+    "turnIn": "guard",
+    "level": 4,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "fish_stew",
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 400
+    }
+  },
+  "s_harvest": {
+    "kind": "side",
+    "giver": "farmer",
+    "turnIn": "farmer",
+    "level": 5,
+    "goals": [
+      {
+        "kind": "harvest",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 400,
+      "items": [
+        {
+          "id": "seed_potato",
+          "qty": 3
+        }
+      ]
+    }
+  },
+  "s_rod": {
+    "kind": "side",
+    "giver": "fisher",
+    "turnIn": "fisher",
+    "level": 8,
+    "goals": [
+      {
+        "kind": "fish",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 400
+    }
+  },
+  "s_pike": {
+    "kind": "side",
+    "giver": "fisher",
+    "turnIn": "fisher",
+    "level": 10,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "pike",
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 800
+    }
+  },
+  "s_pie": {
+    "kind": "side",
+    "giver": "chef",
+    "turnIn": "chef",
+    "level": 10,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "pumpkin_pie",
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 1500
+    }
+  },
+  "s_trout": {
+    "kind": "side",
+    "giver": "hunter",
+    "turnIn": "hunter",
+    "level": 12,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "trout",
+        "n": 3
+      }
+    ],
+    "reward": {
+      "zeny": 900
+    }
+  },
+  "s_silver": {
+    "kind": "side",
+    "giver": "miner",
+    "turnIn": "miner",
+    "level": 20,
+    "goals": [
+      {
+        "kind": "collect",
+        "item": "silver_ore",
+        "n": 5
+      }
+    ],
+    "reward": {
+      "zeny": 2500
+    }
+  },
+  "d_slime": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 1,
+    "maxLevel": 9,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "slime",
+          "bunny"
+        ],
+        "n": 20
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_bull": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 5,
+    "maxLevel": 14,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "shroom",
+          "bee",
+          "bull"
+        ],
+        "n": 20
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_lake": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 8,
+    "maxLevel": 17,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "frog",
+          "slime",
+          "crab",
+          "snake"
+        ],
+        "n": 20
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_woods": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 12,
+    "maxLevel": 21,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "wolf",
+          "spider",
+          "woodling",
+          "bear"
+        ],
+        "n": 20
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_goblin": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 16,
+    "maxLevel": 25,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "goblin",
+          "archer",
+          "shaman",
+          "brute"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_deep": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 18,
+    "maxLevel": 27,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "boar",
+          "wisp",
+          "owlbear"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_pass": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 22,
+    "maxLevel": 31,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "ram",
+          "eagle",
+          "yeti"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_shore": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 10,
+    "maxLevel": 19,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "turtle",
+          "gull",
+          "crab",
+          "pirate"
+        ],
+        "n": 20
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_cliffs": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 14,
+    "maxLevel": 23,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "puffin",
+          "stormwisp",
+          "drake"
+        ],
+        "n": 20
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_dry": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 26,
+    "maxLevel": 35,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "scorpion",
+          "vulture",
+          "sandworm"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_canyon": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 30,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "bandit",
+          "salamander",
+          "golem"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_ash": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 34,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "emberling",
+          "ashwolf",
+          "cinderknight",
+          "lavagolem"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_frost": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 40,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "snowwolf",
+          "frostwisp",
+          "mammoth",
+          "icegolem",
+          "frostknight",
+          "snowharpy"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_swamp": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 42,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "swamptoad",
+          "mossling",
+          "lizardman",
+          "crocodile",
+          "witch",
+          "swampgolem"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_isle": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 44,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "monkey",
+          "coconutcrab",
+          "parrot",
+          "panther",
+          "serpent",
+          "tikiwarrior"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_farisles": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 50,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "reefcrab",
+          "stormgull",
+          "seawraith",
+          "magmacrab",
+          "firemonkey",
+          "lavalizard"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_delta": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 51,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "mangrovecroc",
+          "bloodfly",
+          "mudtoad",
+          "dunescorp",
+          "sandwyrm",
+          "sunvulture"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_hollow": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 55,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "glowcap",
+          "sporespider",
+          "sporeling",
+          "bonewolf",
+          "bonebat",
+          "wraithknight"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_coast": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 60,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "glasscrab",
+          "obsidiandrake",
+          "voidwisp",
+          "thornwolf",
+          "briarling",
+          "thornspider"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_mesa": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 63,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "stonedeer",
+          "basilisk",
+          "rockgolem",
+          "mesaboar",
+          "canyonhawk",
+          "dustdevil"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_rift": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 67,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "steppewolf",
+          "thunderbull",
+          "windharpy",
+          "riftimp",
+          "magmaworm",
+          "riftknight"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_moor": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 72,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "moorhound",
+          "heathwisp",
+          "bogwraith",
+          "gravebat",
+          "ghoul",
+          "phantom"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_peaks": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 76,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "frostcrab",
+          "frostturtle",
+          "icetroll",
+          "spiritlynx",
+          "spirithawk",
+          "spiritshard"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_heights": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 80,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "spinedrake",
+          "dracoknight",
+          "dragonhound",
+          "summitroc",
+          "frostbear",
+          "skywisp",
+          "aurorawisp",
+          "aurorawolf",
+          "crystalsentinel"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_cape": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 86,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "stormharpy",
+          "drownedcrew",
+          "stormeel",
+          "ruingolem",
+          "fallenknight",
+          "griffin"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_grove": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 90,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "deepcrab",
+          "deepone",
+          "abyssjelly",
+          "blightboar",
+          "elderling",
+          "blightmoth"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_abyss": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 95,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "shadehound",
+          "voidshard",
+          "voidknight"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_mine": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 20,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "bat",
+          "mole",
+          "skeleton",
+          "beetle",
+          "golem",
+          "ghost",
+          "shard"
+        ],
+        "n": 25
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_boss": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 5,
+    "goals": [
+      {
+        "kind": "kill",
+        "monsters": [
+          "kingslime",
+          "goldbull",
+          "toadking",
+          "bearking",
+          "chief",
+          "foreman",
+          "crystalgolem",
+          "silverstag",
+          "roc",
+          "crabking",
+          "stormdrake",
+          "scorpking",
+          "wyvern",
+          "cinderking",
+          "icewyrm",
+          "frostqueen",
+          "bogking",
+          "swamphag",
+          "tikichief",
+          "serpentking",
+          "leviathan",
+          "volcanotitan",
+          "deltahydra",
+          "scarabking",
+          "mycolord",
+          "bonedragon",
+          "glassgiant",
+          "thornbeast",
+          "gorgon",
+          "mesacolossus",
+          "thunderhorn",
+          "riftwyrm",
+          "moorhag",
+          "valelich",
+          "frostkraken",
+          "spiritstag",
+          "elderdragon",
+          "thunderbird",
+          "auroraqueen",
+          "tempestwyvern",
+          "skyguardian",
+          "krakenking",
+          "blightroot",
+          "heartshadow"
+        ],
+        "n": 1
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_refine": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 3,
+    "goals": [
+      {
+        "kind": "refine"
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_sell": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 1,
+    "goals": [
+      {
+        "kind": "sell",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_fish": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 1,
+    "goals": [
+      {
+        "kind": "fish",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_ore": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 1,
+    "goals": [
+      {
+        "kind": "mine",
+        "n": 10
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_cook": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 1,
+    "goals": [
+      {
+        "kind": "cook",
+        "n": 3
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  },
+  "d_crop": {
+    "kind": "daily",
+    "giver": null,
+    "turnIn": null,
+    "level": 1,
+    "goals": [
+      {
+        "kind": "harvest",
+        "n": 6
+      }
+    ],
+    "reward": {
+      "zeny": 0
+    }
+  }
+}

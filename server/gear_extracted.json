@@ -1,0 +1,6075 @@
+{
+  "copper_sword_great": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "atk": 24,
+      "vit": 2,
+      "str": 1
+    },
+    "price": null,
+    "sell": 2800,
+    "look": {
+      "blade": {
+        "color": "#c8743a",
+        "guard": "#5a3a22",
+        "grip": "#3a2414",
+        "len": 0.95,
+        "width": 0.32,
+        "shape": "great"
+      }
+    }
+  },
+  "granite_sword_katana": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "atk": 29,
+      "vit": 1,
+      "str": 2
+    },
+    "price": null,
+    "sell": 5300,
+    "look": {
+      "blade": {
+        "color": "#8a8f99",
+        "guard": "#3a3f4a",
+        "grip": "#3a2414",
+        "len": 0.58,
+        "width": 0.05,
+        "shape": "katana"
+      }
+    }
+  },
+  "bone_sword_great": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "atk": 34,
+      "vit": 1,
+      "str": 3
+    },
+    "price": null,
+    "sell": 8000,
+    "look": {
+      "blade": {
+        "color": "#e8e2cf",
+        "guard": "#7a6a4a",
+        "grip": "#3a2414",
+        "len": 0.99,
+        "width": 0.332,
+        "shape": "great"
+      }
+    }
+  },
+  "jade_sword_rapier": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "atk": 42,
+      "str": 4,
+      "crit": 0.02
+    },
+    "price": null,
+    "sell": 12000,
+    "look": {
+      "blade": {
+        "color": "#5fae5a",
+        "guard": "#e0aa36",
+        "grip": "#3a2414",
+        "len": 0.64,
+        "width": 0.022,
+        "shape": "rapier"
+      }
+    }
+  },
+  "storm_sword_great": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "atk": 54,
+      "str": 6,
+      "crit": 0.05
+    },
+    "price": null,
+    "sell": 17600,
+    "look": {
+      "blade": {
+        "color": "#8ab0ff",
+        "guard": "#2a3550",
+        "grip": "#3a2414",
+        "len": 1.02,
+        "width": 0.344,
+        "shape": "great",
+        "glow": "#d6e6ff"
+      }
+    }
+  },
+  "crimson_sword_scimitar": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "atk": 65,
+      "str": 8,
+      "crit": 0.05
+    },
+    "price": null,
+    "sell": 24300,
+    "look": {
+      "blade": {
+        "color": "#b5361c",
+        "guard": "#1d1418",
+        "grip": "#3a2414",
+        "len": 0.58,
+        "width": 0.05,
+        "shape": "scimitar"
+      }
+    }
+  },
+  "moon_sword_great": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "atk": 78,
+      "str": 9,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 32100,
+    "look": {
+      "blade": {
+        "color": "#cfd8e6",
+        "guard": "#5a6a8a",
+        "grip": "#3a2414",
+        "len": 1.06,
+        "width": 0.356,
+        "shape": "great",
+        "glow": "#e6f0ff"
+      }
+    }
+  },
+  "sun_sword_flame": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "atk": 91,
+      "str": 11,
+      "crit": 0.06
+    },
+    "price": null,
+    "sell": 40900,
+    "look": {
+      "blade": {
+        "color": "#f2c03a",
+        "guard": "#8a5a00",
+        "grip": "#3a2414",
+        "len": 0.58,
+        "width": 0.07,
+        "shape": "flame",
+        "glow": "#fff2a8"
+      }
+    }
+  },
+  "shadow_sword_great": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "atk": 102,
+      "str": 12,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 50900,
+    "look": {
+      "blade": {
+        "color": "#3a3048",
+        "guard": "#1d1418",
+        "grip": "#3a2414",
+        "len": 1.09,
+        "width": 0.368,
+        "shape": "great",
+        "glow": "#c08aff"
+      }
+    }
+  },
+  "coral_sword_cleaver": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "atk": 114,
+      "str": 14,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 63500,
+    "look": {
+      "blade": {
+        "color": "#ff7a6a",
+        "guard": "#2a6a8a",
+        "grip": "#3a2414",
+        "len": 0.46,
+        "width": 0.12,
+        "shape": "cleaver"
+      }
+    }
+  },
+  "frost_sword_great": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "atk": 131,
+      "str": 15,
+      "crit": 0.08
+    },
+    "price": null,
+    "sell": 81400,
+    "look": {
+      "blade": {
+        "color": "#bfe6ff",
+        "guard": "#3f6fb0",
+        "grip": "#3a2414",
+        "len": 1.13,
+        "width": 0.38,
+        "shape": "great",
+        "glow": "#e6f6ff"
+      }
+    }
+  },
+  "thunder_sword_katana": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "atk": 154,
+      "str": 18,
+      "crit": 0.09
+    },
+    "price": null,
+    "sell": 105600,
+    "look": {
+      "blade": {
+        "color": "#ffe36a",
+        "guard": "#3a3f4a",
+        "grip": "#3a2414",
+        "len": 0.58,
+        "width": 0.05,
+        "shape": "katana",
+        "glow": "#fff6c9"
+      }
+    }
+  },
+  "abyss_sword_great": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "atk": 188,
+      "str": 22,
+      "crit": 0.1
+    },
+    "price": null,
+    "sell": 138000,
+    "look": {
+      "blade": {
+        "color": "#2a2a5a",
+        "guard": "#1d1418",
+        "grip": "#3a2414",
+        "len": 1.17,
+        "width": 0.392,
+        "shape": "great",
+        "glow": "#7ad8ff"
+      }
+    }
+  },
+  "phoenix_sword_flame": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "atk": 234,
+      "str": 26,
+      "crit": 0.11
+    },
+    "price": null,
+    "sell": 180200,
+    "look": {
+      "blade": {
+        "color": "#ff8a3a",
+        "guard": "#5a1a14",
+        "grip": "#3a2414",
+        "len": 0.58,
+        "width": 0.07,
+        "shape": "flame",
+        "glow": "#ffd84d"
+      }
+    }
+  },
+  "starfall_sword_great": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "atk": 284,
+      "str": 31,
+      "crit": 0.13
+    },
+    "price": null,
+    "sell": 231300,
+    "look": {
+      "blade": {
+        "color": "#e8e8ff",
+        "guard": "#e0aa36",
+        "grip": "#3a2414",
+        "len": 1.2,
+        "width": 0.404,
+        "shape": "great",
+        "glow": "#ffffff"
+      }
+    }
+  },
+  "copper_dagger_kunai": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "atk": 16,
+      "crit": 0.06,
+      "agi": 1
+    },
+    "price": null,
+    "sell": 2800,
+    "look": {
+      "blade": {
+        "color": "#c8743a",
+        "guard": "#5a3a22",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.06,
+        "shape": "kunai"
+      }
+    }
+  },
+  "granite_dagger_kris": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "atk": 23,
+      "agi": 3,
+      "crit": 0.08
+    },
+    "price": null,
+    "sell": 5300,
+    "look": {
+      "blade": {
+        "color": "#8a8f99",
+        "guard": "#3a3f4a",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05,
+        "shape": "kris"
+      }
+    }
+  },
+  "bone_dagger_plain": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "atk": 29,
+      "agi": 4,
+      "crit": 0.08
+    },
+    "price": null,
+    "sell": 8000,
+    "look": {
+      "blade": {
+        "color": "#e8e2cf",
+        "guard": "#7a6a4a",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05
+      }
+    }
+  },
+  "jade_dagger_scimitar": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "atk": 37,
+      "agi": 5,
+      "crit": 0.09
+    },
+    "price": null,
+    "sell": 12000,
+    "look": {
+      "blade": {
+        "color": "#5fae5a",
+        "guard": "#e0aa36",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05,
+        "shape": "scimitar"
+      }
+    }
+  },
+  "storm_dagger_kunai": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "atk": 50,
+      "agi": 7,
+      "crit": 0.11
+    },
+    "price": null,
+    "sell": 17600,
+    "look": {
+      "blade": {
+        "color": "#8ab0ff",
+        "guard": "#2a3550",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.06,
+        "shape": "kunai",
+        "glow": "#d6e6ff"
+      }
+    }
+  },
+  "crimson_dagger_kris": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "atk": 61,
+      "agi": 9,
+      "crit": 0.13
+    },
+    "price": null,
+    "sell": 24300,
+    "look": {
+      "blade": {
+        "color": "#b5361c",
+        "guard": "#1d1418",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05,
+        "shape": "kris"
+      }
+    }
+  },
+  "moon_dagger_plain": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "atk": 72,
+      "agi": 10,
+      "crit": 0.14
+    },
+    "price": null,
+    "sell": 32100,
+    "look": {
+      "blade": {
+        "color": "#cfd8e6",
+        "guard": "#5a6a8a",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05,
+        "glow": "#e6f0ff"
+      }
+    }
+  },
+  "sun_dagger_kunai": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "atk": 83,
+      "agi": 12,
+      "crit": 0.15
+    },
+    "price": null,
+    "sell": 40900,
+    "look": {
+      "blade": {
+        "color": "#f2c03a",
+        "guard": "#8a5a00",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.06,
+        "shape": "kunai",
+        "glow": "#fff2a8"
+      }
+    }
+  },
+  "shadow_dagger_scimitar": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "atk": 94,
+      "agi": 14,
+      "crit": 0.16
+    },
+    "price": null,
+    "sell": 50900,
+    "look": {
+      "blade": {
+        "color": "#3a3048",
+        "guard": "#1d1418",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05,
+        "shape": "scimitar",
+        "glow": "#c08aff"
+      }
+    }
+  },
+  "coral_dagger_kris": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "atk": 106,
+      "agi": 16,
+      "crit": 0.16
+    },
+    "price": null,
+    "sell": 63500,
+    "look": {
+      "blade": {
+        "color": "#ff7a6a",
+        "guard": "#2a6a8a",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05,
+        "shape": "kris"
+      }
+    }
+  },
+  "frost_dagger_kunai": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "atk": 120,
+      "agi": 18,
+      "crit": 0.17
+    },
+    "price": null,
+    "sell": 81400,
+    "look": {
+      "blade": {
+        "color": "#bfe6ff",
+        "guard": "#3f6fb0",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.06,
+        "shape": "kunai",
+        "glow": "#e6f6ff"
+      }
+    }
+  },
+  "thunder_dagger_plain": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "atk": 133,
+      "agi": 20,
+      "crit": 0.19
+    },
+    "price": null,
+    "sell": 105600,
+    "look": {
+      "blade": {
+        "color": "#ffe36a",
+        "guard": "#3a3f4a",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05,
+        "glow": "#fff6c9"
+      }
+    }
+  },
+  "abyss_dagger_kris": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "atk": 175,
+      "agi": 24,
+      "crit": 0.22
+    },
+    "price": null,
+    "sell": 138000,
+    "look": {
+      "blade": {
+        "color": "#2a2a5a",
+        "guard": "#1d1418",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05,
+        "shape": "kris",
+        "glow": "#7ad8ff"
+      }
+    }
+  },
+  "phoenix_dagger_kunai": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "atk": 216,
+      "agi": 29,
+      "crit": 0.25
+    },
+    "price": null,
+    "sell": 180200,
+    "look": {
+      "blade": {
+        "color": "#ff8a3a",
+        "guard": "#5a1a14",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.06,
+        "shape": "kunai",
+        "glow": "#ffd84d"
+      }
+    }
+  },
+  "starfall_dagger_scimitar": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "atk": 261,
+      "agi": 33,
+      "crit": 0.28
+    },
+    "price": null,
+    "sell": 231300,
+    "look": {
+      "blade": {
+        "color": "#e8e8ff",
+        "guard": "#e0aa36",
+        "grip": "#2a1418",
+        "len": 0.3,
+        "width": 0.05,
+        "shape": "scimitar",
+        "glow": "#ffffff"
+      }
+    }
+  },
+  "copper_bow_recurve": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "atk": 16,
+      "agi": 2
+    },
+    "price": null,
+    "sell": 2800,
+    "look": {
+      "bow": {
+        "wood": "#5a3a22",
+        "tip": "#c8743a",
+        "size": 1,
+        "shape": "recurve"
+      }
+    }
+  },
+  "granite_bow_long": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "atk": 24,
+      "agi": 4,
+      "crit": 0.02
+    },
+    "price": null,
+    "sell": 5300,
+    "look": {
+      "bow": {
+        "wood": "#3a3f4a",
+        "tip": "#8a8f99",
+        "size": 1.4
+      }
+    }
+  },
+  "bone_bow_cross": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "atk": 32,
+      "agi": 5,
+      "crit": 0.03
+    },
+    "price": null,
+    "sell": 8000,
+    "look": {
+      "bow": {
+        "wood": "#7a6a4a",
+        "tip": "#e8e2cf",
+        "size": 1.04,
+        "shape": "cross"
+      }
+    }
+  },
+  "jade_bow_wing": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "atk": 44,
+      "agi": 6,
+      "crit": 0.04
+    },
+    "price": null,
+    "sell": 12000,
+    "look": {
+      "bow": {
+        "wood": "#f4ead0",
+        "tip": "#5fae5a",
+        "size": 1.06,
+        "shape": "wing"
+      }
+    }
+  },
+  "storm_bow_recurve": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "atk": 56,
+      "agi": 7,
+      "crit": 0.06
+    },
+    "price": null,
+    "sell": 17600,
+    "look": {
+      "bow": {
+        "wood": "#2a3550",
+        "tip": "#8ab0ff",
+        "size": 1.08,
+        "shape": "recurve",
+        "glow": "#d6e6ff"
+      }
+    }
+  },
+  "crimson_bow_cross": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "atk": 67,
+      "agi": 9,
+      "crit": 0.06
+    },
+    "price": null,
+    "sell": 24300,
+    "look": {
+      "bow": {
+        "wood": "#1d1418",
+        "tip": "#b5361c",
+        "size": 1.1,
+        "shape": "cross"
+      }
+    }
+  },
+  "moon_bow_long": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "atk": 80,
+      "agi": 10,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 32100,
+    "look": {
+      "bow": {
+        "wood": "#5a6a8a",
+        "tip": "#cfd8e6",
+        "size": 1.4,
+        "glow": "#e6f0ff"
+      }
+    }
+  },
+  "sun_bow_wing": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "atk": 92,
+      "agi": 12,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 40900,
+    "look": {
+      "bow": {
+        "wood": "#f4ead0",
+        "tip": "#f2c03a",
+        "size": 1.14,
+        "shape": "wing",
+        "glow": "#fff2a8"
+      }
+    }
+  },
+  "shadow_bow_recurve": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "atk": 104,
+      "agi": 13,
+      "crit": 0.08
+    },
+    "price": null,
+    "sell": 50900,
+    "look": {
+      "bow": {
+        "wood": "#1d1418",
+        "tip": "#3a3048",
+        "size": 1.16,
+        "shape": "recurve",
+        "glow": "#c08aff"
+      }
+    }
+  },
+  "coral_bow_cross": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "atk": 117,
+      "agi": 15,
+      "crit": 0.08
+    },
+    "price": null,
+    "sell": 63500,
+    "look": {
+      "bow": {
+        "wood": "#2a6a8a",
+        "tip": "#ff7a6a",
+        "size": 1.18,
+        "shape": "cross"
+      }
+    }
+  },
+  "frost_bow_wing": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "atk": 132,
+      "agi": 17,
+      "crit": 0.09
+    },
+    "price": null,
+    "sell": 81400,
+    "look": {
+      "bow": {
+        "wood": "#f4ead0",
+        "tip": "#bfe6ff",
+        "size": 1.2,
+        "shape": "wing",
+        "glow": "#e6f6ff"
+      }
+    }
+  },
+  "thunder_bow_long": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "atk": 150,
+      "agi": 20,
+      "crit": 0.11
+    },
+    "price": null,
+    "sell": 105600,
+    "look": {
+      "bow": {
+        "wood": "#3a3f4a",
+        "tip": "#ffe36a",
+        "size": 1.4,
+        "glow": "#fff6c9"
+      }
+    }
+  },
+  "abyss_bow_recurve": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "atk": 180,
+      "agi": 23,
+      "crit": 0.12
+    },
+    "price": null,
+    "sell": 138000,
+    "look": {
+      "bow": {
+        "wood": "#1d1418",
+        "tip": "#2a2a5a",
+        "size": 1.24,
+        "shape": "recurve",
+        "glow": "#7ad8ff"
+      }
+    }
+  },
+  "phoenix_bow_cross": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "atk": 224,
+      "agi": 27,
+      "crit": 0.13
+    },
+    "price": null,
+    "sell": 180200,
+    "look": {
+      "bow": {
+        "wood": "#5a1a14",
+        "tip": "#ff8a3a",
+        "size": 1.26,
+        "shape": "cross",
+        "glow": "#ffd84d"
+      }
+    }
+  },
+  "starfall_bow_wing": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "atk": 271,
+      "agi": 32,
+      "crit": 0.15
+    },
+    "price": null,
+    "sell": 231300,
+    "look": {
+      "bow": {
+        "wood": "#f4ead0",
+        "tip": "#e8e8ff",
+        "size": 1.28,
+        "shape": "wing",
+        "glow": "#ffffff"
+      }
+    }
+  },
+  "copper_staff_branch": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "matk": 21,
+      "int": 3
+    },
+    "price": null,
+    "sell": 2800,
+    "look": {
+      "staff": {
+        "shaft": "#5a3a22",
+        "head": "branch",
+        "gem": "#c8743a"
+      }
+    }
+  },
+  "granite_staff_skull": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "matk": 32,
+      "int": 4
+    },
+    "price": null,
+    "sell": 5300,
+    "look": {
+      "staff": {
+        "shaft": "#3a3f4a",
+        "head": "skull",
+        "gem": "#8a8f99"
+      }
+    }
+  },
+  "bone_staff_orb": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "matk": 41,
+      "int": 5
+    },
+    "price": null,
+    "sell": 8000,
+    "look": {
+      "staff": {
+        "shaft": "#7a6a4a",
+        "head": "orb",
+        "gem": "#e8e2cf"
+      }
+    }
+  },
+  "jade_staff_crystal": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "matk": 56,
+      "int": 6
+    },
+    "price": null,
+    "sell": 12000,
+    "look": {
+      "staff": {
+        "shaft": "#e0aa36",
+        "head": "crystal",
+        "gem": "#5fae5a"
+      }
+    }
+  },
+  "storm_staff_moon": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "matk": 72,
+      "int": 8
+    },
+    "price": null,
+    "sell": 17600,
+    "look": {
+      "staff": {
+        "shaft": "#2a3550",
+        "head": "moon",
+        "gem": "#d6e6ff",
+        "glow": true
+      }
+    }
+  },
+  "crimson_staff_skull": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "matk": 87,
+      "int": 10
+    },
+    "price": null,
+    "sell": 24300,
+    "look": {
+      "staff": {
+        "shaft": "#1d1418",
+        "head": "skull",
+        "gem": "#b5361c"
+      }
+    }
+  },
+  "moon_staff_branch": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "matk": 102,
+      "int": 12
+    },
+    "price": null,
+    "sell": 32100,
+    "look": {
+      "staff": {
+        "shaft": "#5a6a8a",
+        "head": "branch",
+        "gem": "#e6f0ff",
+        "glow": true
+      }
+    }
+  },
+  "sun_staff_orb": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "matk": 117,
+      "int": 13
+    },
+    "price": null,
+    "sell": 40900,
+    "look": {
+      "staff": {
+        "shaft": "#8a5a00",
+        "head": "orb",
+        "gem": "#fff2a8",
+        "glow": true
+      }
+    }
+  },
+  "shadow_staff_scythe": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "matk": 133,
+      "int": 15
+    },
+    "price": null,
+    "sell": 50900,
+    "look": {
+      "staff": {
+        "shaft": "#1d1418",
+        "head": "scythe",
+        "gem": "#c08aff",
+        "glow": true
+      }
+    }
+  },
+  "coral_staff_crystal": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "matk": 151,
+      "int": 17
+    },
+    "price": null,
+    "sell": 63500,
+    "look": {
+      "staff": {
+        "shaft": "#2a6a8a",
+        "head": "crystal",
+        "gem": "#ff7a6a"
+      }
+    }
+  },
+  "frost_staff_orb": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "matk": 174,
+      "int": 20
+    },
+    "price": null,
+    "sell": 81400,
+    "look": {
+      "staff": {
+        "shaft": "#3f6fb0",
+        "head": "orb",
+        "gem": "#e6f6ff",
+        "glow": true
+      }
+    }
+  },
+  "thunder_staff_skull": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "matk": 206,
+      "int": 23
+    },
+    "price": null,
+    "sell": 105600,
+    "look": {
+      "staff": {
+        "shaft": "#3a3f4a",
+        "head": "skull",
+        "gem": "#fff6c9",
+        "glow": true
+      }
+    }
+  },
+  "abyss_staff_moon": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "matk": 253,
+      "int": 27
+    },
+    "price": null,
+    "sell": 138000,
+    "look": {
+      "staff": {
+        "shaft": "#1d1418",
+        "head": "moon",
+        "gem": "#7ad8ff",
+        "glow": true
+      }
+    }
+  },
+  "phoenix_staff_scythe": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "matk": 314,
+      "int": 33
+    },
+    "price": null,
+    "sell": 180200,
+    "look": {
+      "staff": {
+        "shaft": "#5a1a14",
+        "head": "scythe",
+        "gem": "#ffd84d",
+        "glow": true
+      }
+    }
+  },
+  "starfall_staff_orb": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "matk": 377,
+      "int": 38
+    },
+    "price": null,
+    "sell": 231300,
+    "look": {
+      "staff": {
+        "shaft": "#e0aa36",
+        "head": "orb",
+        "gem": "#ffffff",
+        "glow": true
+      }
+    }
+  },
+  "copper_mace_hammer": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "atk": 15,
+      "int": 3,
+      "matk": 5
+    },
+    "price": null,
+    "sell": 2800,
+    "look": {
+      "mace": {
+        "head": "hammer",
+        "metal": "#c8743a",
+        "shaft": "#5a3a22"
+      }
+    }
+  },
+  "granite_mace_flail": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "atk": 23,
+      "int": 4,
+      "matk": 10
+    },
+    "price": null,
+    "sell": 5300,
+    "look": {
+      "mace": {
+        "head": "flail",
+        "metal": "#8a8f99",
+        "shaft": "#3a3f4a"
+      }
+    }
+  },
+  "bone_mace_flange": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "atk": 29,
+      "int": 5,
+      "matk": 14
+    },
+    "price": null,
+    "sell": 8000,
+    "look": {
+      "mace": {
+        "head": "flange",
+        "metal": "#e8e2cf",
+        "shaft": "#7a6a4a"
+      }
+    }
+  },
+  "jade_mace_star": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "atk": 39,
+      "int": 6,
+      "matk": 19
+    },
+    "price": null,
+    "sell": 12000,
+    "look": {
+      "mace": {
+        "head": "star",
+        "metal": "#5fae5a",
+        "shaft": "#e0aa36"
+      }
+    }
+  },
+  "storm_mace_hammer": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "atk": 52,
+      "int": 7,
+      "matk": 25
+    },
+    "price": null,
+    "sell": 17600,
+    "look": {
+      "mace": {
+        "head": "hammer",
+        "metal": "#8ab0ff",
+        "shaft": "#2a3550",
+        "glow": "#d6e6ff"
+      }
+    }
+  },
+  "crimson_mace_holy": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "atk": 63,
+      "int": 9,
+      "matk": 33
+    },
+    "price": null,
+    "sell": 24300,
+    "look": {
+      "mace": {
+        "head": "holy",
+        "metal": "#b5361c",
+        "shaft": "#1d1418"
+      }
+    }
+  },
+  "moon_mace_flail": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "atk": 75,
+      "int": 10,
+      "matk": 38
+    },
+    "price": null,
+    "sell": 32100,
+    "look": {
+      "mace": {
+        "head": "flail",
+        "metal": "#cfd8e6",
+        "shaft": "#5a6a8a",
+        "glow": "#e6f0ff"
+      }
+    }
+  },
+  "sun_mace_hammer": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "atk": 86,
+      "int": 12,
+      "matk": 44
+    },
+    "price": null,
+    "sell": 40900,
+    "look": {
+      "mace": {
+        "head": "hammer",
+        "metal": "#f2c03a",
+        "shaft": "#8a5a00",
+        "glow": "#fff2a8"
+      }
+    }
+  },
+  "shadow_mace_star": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "atk": 97,
+      "int": 13,
+      "matk": 50
+    },
+    "price": null,
+    "sell": 50900,
+    "look": {
+      "mace": {
+        "head": "star",
+        "metal": "#3a3048",
+        "shaft": "#1d1418",
+        "glow": "#c08aff"
+      }
+    }
+  },
+  "coral_mace_flange": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "atk": 109,
+      "int": 15,
+      "matk": 57
+    },
+    "price": null,
+    "sell": 63500,
+    "look": {
+      "mace": {
+        "head": "flange",
+        "metal": "#ff7a6a",
+        "shaft": "#2a6a8a"
+      }
+    }
+  },
+  "frost_mace_flail": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "atk": 126,
+      "int": 17,
+      "matk": 64
+    },
+    "price": null,
+    "sell": 81400,
+    "look": {
+      "mace": {
+        "head": "flail",
+        "metal": "#bfe6ff",
+        "shaft": "#3f6fb0",
+        "glow": "#e6f6ff"
+      }
+    }
+  },
+  "thunder_mace_hammer": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "atk": 140,
+      "int": 19,
+      "matk": 71
+    },
+    "price": null,
+    "sell": 105600,
+    "look": {
+      "mace": {
+        "head": "hammer",
+        "metal": "#ffe36a",
+        "shaft": "#3a3f4a",
+        "glow": "#fff6c9"
+      }
+    }
+  },
+  "abyss_mace_holy": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "atk": 166,
+      "int": 23,
+      "matk": 85
+    },
+    "price": null,
+    "sell": 138000,
+    "look": {
+      "mace": {
+        "head": "holy",
+        "metal": "#2a2a5a",
+        "shaft": "#1d1418",
+        "glow": "#7ad8ff"
+      }
+    }
+  },
+  "phoenix_mace_flail": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "atk": 207,
+      "int": 27,
+      "matk": 106
+    },
+    "price": null,
+    "sell": 180200,
+    "look": {
+      "mace": {
+        "head": "flail",
+        "metal": "#ff8a3a",
+        "shaft": "#5a1a14",
+        "glow": "#ffd84d"
+      }
+    }
+  },
+  "starfall_mace_hammer": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "atk": 250,
+      "int": 32,
+      "matk": 128
+    },
+    "price": null,
+    "sell": 231300,
+    "look": {
+      "mace": {
+        "head": "hammer",
+        "metal": "#e8e8ff",
+        "shaft": "#e0aa36",
+        "glow": "#ffffff"
+      }
+    }
+  },
+  "copper_axe_double": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "atk": 20,
+      "str": 1
+    },
+    "price": null,
+    "sell": 2800,
+    "look": {
+      "axe": {
+        "blade": "#c8743a",
+        "haft": "#5a3a22",
+        "shape": "double"
+      }
+    }
+  },
+  "granite_axe_hatchet": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "atk": 29,
+      "str": 3
+    },
+    "price": null,
+    "sell": 5300,
+    "look": {
+      "axe": {
+        "blade": "#8a8f99",
+        "haft": "#3a3f4a",
+        "shape": "hatchet"
+      }
+    }
+  },
+  "bone_axe_halberd": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "atk": 36,
+      "str": 4
+    },
+    "price": null,
+    "sell": 8000,
+    "look": {
+      "axe": {
+        "blade": "#e8e2cf",
+        "haft": "#7a6a4a",
+        "shape": "halberd"
+      }
+    }
+  },
+  "jade_axe_plain": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "atk": 47,
+      "str": 5,
+      "crit": 0.01
+    },
+    "price": null,
+    "sell": 12000,
+    "look": {
+      "axe": {
+        "blade": "#5fae5a",
+        "haft": "#e0aa36"
+      }
+    }
+  },
+  "storm_axe_double": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "atk": 61,
+      "str": 7,
+      "crit": 0.03
+    },
+    "price": null,
+    "sell": 17600,
+    "look": {
+      "axe": {
+        "blade": "#8ab0ff",
+        "haft": "#2a3550",
+        "shape": "double",
+        "glow": "#d6e6ff"
+      }
+    }
+  },
+  "crimson_axe_halberd": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "atk": 74,
+      "str": 9,
+      "crit": 0.04
+    },
+    "price": null,
+    "sell": 24300,
+    "look": {
+      "axe": {
+        "blade": "#b5361c",
+        "haft": "#1d1418",
+        "shape": "halberd"
+      }
+    }
+  },
+  "moon_axe_hatchet": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "atk": 86,
+      "str": 10,
+      "crit": 0.05
+    },
+    "price": null,
+    "sell": 32100,
+    "look": {
+      "axe": {
+        "blade": "#cfd8e6",
+        "haft": "#5a6a8a",
+        "shape": "hatchet",
+        "glow": "#e6f0ff"
+      }
+    }
+  },
+  "sun_axe_double": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "atk": 99,
+      "str": 12,
+      "crit": 0.05
+    },
+    "price": null,
+    "sell": 40900,
+    "look": {
+      "axe": {
+        "blade": "#f2c03a",
+        "haft": "#8a5a00",
+        "shape": "double",
+        "glow": "#fff2a8"
+      }
+    }
+  },
+  "shadow_axe_halberd": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "atk": 113,
+      "str": 14,
+      "crit": 0.05
+    },
+    "price": null,
+    "sell": 50900,
+    "look": {
+      "axe": {
+        "blade": "#3a3048",
+        "haft": "#1d1418",
+        "shape": "halberd",
+        "glow": "#c08aff"
+      }
+    }
+  },
+  "coral_axe_plain": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "atk": 128,
+      "str": 15,
+      "crit": 0.06
+    },
+    "price": null,
+    "sell": 63500,
+    "look": {
+      "axe": {
+        "blade": "#ff7a6a",
+        "haft": "#2a6a8a"
+      }
+    }
+  },
+  "frost_axe_double": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "atk": 147,
+      "str": 17,
+      "crit": 0.06
+    },
+    "price": null,
+    "sell": 81400,
+    "look": {
+      "axe": {
+        "blade": "#bfe6ff",
+        "haft": "#3f6fb0",
+        "shape": "double",
+        "glow": "#e6f6ff"
+      }
+    }
+  },
+  "thunder_axe_halberd": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "atk": 166,
+      "str": 20,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 105600,
+    "look": {
+      "axe": {
+        "blade": "#ffe36a",
+        "haft": "#3a3f4a",
+        "shape": "halberd",
+        "glow": "#fff6c9"
+      }
+    }
+  },
+  "abyss_axe_hatchet": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "atk": 214,
+      "str": 25,
+      "crit": 0.09
+    },
+    "price": null,
+    "sell": 138000,
+    "look": {
+      "axe": {
+        "blade": "#2a2a5a",
+        "haft": "#1d1418",
+        "shape": "hatchet",
+        "glow": "#7ad8ff"
+      }
+    }
+  },
+  "phoenix_axe_double": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "atk": 265,
+      "str": 30,
+      "crit": 0.1
+    },
+    "price": null,
+    "sell": 180200,
+    "look": {
+      "axe": {
+        "blade": "#ff8a3a",
+        "haft": "#5a1a14",
+        "shape": "double",
+        "glow": "#ffd84d"
+      }
+    }
+  },
+  "starfall_axe_halberd": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "atk": 319,
+      "str": 36,
+      "crit": 0.12
+    },
+    "price": null,
+    "sell": 231300,
+    "look": {
+      "axe": {
+        "blade": "#e8e8ff",
+        "haft": "#e0aa36",
+        "shape": "halberd",
+        "glow": "#ffffff"
+      }
+    }
+  },
+  "steel_head_helmet": {
+    "slot": "head",
+    "rarity": "common",
+    "level": 15,
+    "add": {
+      "def": 5,
+      "hp": 17,
+      "vit": 1
+    },
+    "price": 2800,
+    "sell": 900,
+    "look": {
+      "hat": "helmet",
+      "hatColor": "#b9c1cb"
+    }
+  },
+  "guard_head_beret": {
+    "slot": "head",
+    "rarity": "common",
+    "level": 25,
+    "add": {
+      "def": 7,
+      "hp": 26,
+      "vit": 2
+    },
+    "price": 6800,
+    "sell": 2500,
+    "look": {
+      "hat": "beret",
+      "hatColor": "#3f6fb0"
+    }
+  },
+  "ranger_head_hood": {
+    "slot": "head",
+    "rarity": "common",
+    "level": 35,
+    "add": {
+      "def": 11,
+      "hp": 45,
+      "agi": 3
+    },
+    "price": 12800,
+    "sell": 4900,
+    "look": {
+      "hat": "hood",
+      "hatColor": "#3f6a3a"
+    }
+  },
+  "knight_head_plume": {
+    "slot": "head",
+    "rarity": "common",
+    "level": 50,
+    "add": {
+      "def": 16,
+      "hp": 73,
+      "str": 4
+    },
+    "price": 25500,
+    "sell": 10000,
+    "look": {
+      "hat": "plume",
+      "hatColor": "#dfe6ee"
+    }
+  },
+  "royal_head_circlet": {
+    "slot": "head",
+    "rarity": "common",
+    "level": 65,
+    "add": {
+      "def": 21,
+      "hp": 94,
+      "int": 5
+    },
+    "price": 42800,
+    "sell": 16900,
+    "look": {
+      "hat": "circlet",
+      "hatColor": "#6a3a8a"
+    }
+  },
+  "copper_head_horned": {
+    "slot": "head",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "def": 6,
+      "hp": 20,
+      "str": 1
+    },
+    "price": null,
+    "sell": 2300,
+    "look": {
+      "hat": "horned",
+      "hatColor": "#c8743a"
+    }
+  },
+  "granite_head_wizard": {
+    "slot": "head",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "def": 7,
+      "hp": 26,
+      "vit": 2
+    },
+    "price": null,
+    "sell": 4400,
+    "look": {
+      "hat": "wizard",
+      "hatColor": "#8a8f99"
+    }
+  },
+  "bone_head_ears": {
+    "slot": "head",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "def": 8,
+      "hp": 31,
+      "str": 2
+    },
+    "price": null,
+    "sell": 6600,
+    "look": {
+      "hat": "ears",
+      "hatColor": "#e8e2cf"
+    }
+  },
+  "jade_head_plume": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "def": 11,
+      "hp": 45,
+      "int": 3
+    },
+    "price": null,
+    "sell": 9800,
+    "look": {
+      "hat": "plume",
+      "hatColor": "#5fae5a"
+    }
+  },
+  "storm_head_hood": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "def": 14,
+      "hp": 61,
+      "agi": 3
+    },
+    "price": null,
+    "sell": 14400,
+    "look": {
+      "hat": "hood",
+      "hatColor": "#8ab0ff"
+    }
+  },
+  "crimson_head_helmet": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "def": 17,
+      "hp": 75,
+      "str": 4
+    },
+    "price": null,
+    "sell": 19900,
+    "look": {
+      "hat": "helmet",
+      "hatColor": "#b5361c"
+    }
+  },
+  "moon_head_halo": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "def": 20,
+      "hp": 89,
+      "int": 4
+    },
+    "price": null,
+    "sell": 26200,
+    "look": {
+      "hat": "halo",
+      "hatColor": "#e6f0ff"
+    }
+  },
+  "sun_head_crown": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "def": 23,
+      "hp": 101,
+      "vit": 5
+    },
+    "price": null,
+    "sell": 33500,
+    "look": {
+      "hat": "crown",
+      "hatColor": "#f2c03a"
+    }
+  },
+  "shadow_head_horned": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "def": 25,
+      "hp": 108,
+      "agi": 6
+    },
+    "price": null,
+    "sell": 41600,
+    "look": {
+      "hat": "horned",
+      "hatColor": "#3a3048"
+    }
+  },
+  "coral_head_beret": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "def": 29,
+      "hp": 123,
+      "vit": 6
+    },
+    "price": null,
+    "sell": 52000,
+    "look": {
+      "hat": "beret",
+      "hatColor": "#ff7a6a"
+    }
+  },
+  "frost_head_plume": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "def": 32,
+      "hp": 139,
+      "int": 7
+    },
+    "price": null,
+    "sell": 66600,
+    "look": {
+      "hat": "plume",
+      "hatColor": "#bfe6ff"
+    }
+  },
+  "thunder_head_wizard": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "def": 37,
+      "hp": 160,
+      "agi": 8
+    },
+    "price": null,
+    "sell": 86400,
+    "look": {
+      "hat": "wizard",
+      "hatColor": "#ffe36a"
+    }
+  },
+  "abyss_head_halo": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "def": 42,
+      "hp": 186,
+      "int": 9
+    },
+    "price": null,
+    "sell": 112900,
+    "look": {
+      "hat": "halo",
+      "hatColor": "#7ad8ff"
+    }
+  },
+  "phoenix_head_horned": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "def": 54,
+      "hp": 237,
+      "str": 10
+    },
+    "price": null,
+    "sell": 147500,
+    "look": {
+      "hat": "horned",
+      "hatColor": "#ff8a3a"
+    }
+  },
+  "starfall_head_crown": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "def": 66,
+      "hp": 292,
+      "agi": 12
+    },
+    "price": null,
+    "sell": 189200,
+    "look": {
+      "hat": "crown",
+      "hatColor": "#e8e8ff"
+    }
+  },
+  "steel_body_armor": {
+    "slot": "body",
+    "rarity": "common",
+    "level": 15,
+    "add": {
+      "def": 8,
+      "hp": 24,
+      "vit": 1
+    },
+    "price": 2800,
+    "sell": 900,
+    "look": {
+      "top": "armor",
+      "color": "#b9c1cb",
+      "trim": "#5a6270",
+      "cape": "#b9c1cb"
+    }
+  },
+  "guard_body_leather": {
+    "slot": "body",
+    "rarity": "common",
+    "level": 25,
+    "add": {
+      "def": 11,
+      "hp": 35,
+      "vit": 2
+    },
+    "price": 6800,
+    "sell": 2500,
+    "look": {
+      "top": "leather",
+      "color": "#3f6fb0",
+      "trim": "#e0aa36",
+      "sleeve": "#3f6fb0",
+      "pauldrons": "#e0aa36"
+    }
+  },
+  "ranger_body_vest": {
+    "slot": "body",
+    "rarity": "common",
+    "level": 35,
+    "add": {
+      "def": 17,
+      "hp": 71,
+      "agi": 3
+    },
+    "price": 12800,
+    "sell": 4900,
+    "look": {
+      "top": "vest",
+      "color": "#3f6a3a",
+      "trim": "#8a5a32",
+      "sleeve": "#3f6a3a",
+      "cape": "#3f6a3a"
+    }
+  },
+  "knight_body_armor": {
+    "slot": "body",
+    "rarity": "common",
+    "level": 50,
+    "add": {
+      "def": 26,
+      "hp": 112,
+      "str": 4
+    },
+    "price": 25500,
+    "sell": 10000,
+    "look": {
+      "top": "armor",
+      "color": "#dfe6ee",
+      "trim": "#a8323a",
+      "pauldrons": "#a8323a"
+    }
+  },
+  "royal_body_robe": {
+    "slot": "body",
+    "rarity": "common",
+    "level": 65,
+    "add": {
+      "def": 35,
+      "hp": 150,
+      "int": 5
+    },
+    "price": 42800,
+    "sell": 16900,
+    "look": {
+      "top": "robe",
+      "color": "#6a3a8a",
+      "trim": "#e0aa36",
+      "sleeve": "#6a3a8a",
+      "cape": "#6a3a8a"
+    }
+  },
+  "copper_body_leather": {
+    "slot": "body",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "def": 10,
+      "hp": 28,
+      "str": 1
+    },
+    "price": null,
+    "sell": 2300,
+    "look": {
+      "top": "leather",
+      "color": "#c8743a",
+      "trim": "#5a3a22",
+      "sleeve": "#c8743a",
+      "pauldrons": "#5a3a22"
+    }
+  },
+  "granite_body_armor": {
+    "slot": "body",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "def": 12,
+      "hp": 35,
+      "vit": 2
+    },
+    "price": null,
+    "sell": 4400,
+    "look": {
+      "top": "armor",
+      "color": "#8a8f99",
+      "trim": "#3a3f4a",
+      "cape": "#8a8f99"
+    }
+  },
+  "bone_body_robe": {
+    "slot": "body",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "def": 13,
+      "hp": 41,
+      "str": 2
+    },
+    "price": null,
+    "sell": 6600,
+    "look": {
+      "top": "robe",
+      "color": "#e8e2cf",
+      "trim": "#7a6a4a",
+      "sleeve": "#e8e2cf",
+      "pauldrons": "#7a6a4a"
+    }
+  },
+  "jade_body_vest": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "def": 18,
+      "hp": 69,
+      "int": 3
+    },
+    "price": null,
+    "sell": 9800,
+    "look": {
+      "top": "vest",
+      "color": "#5fae5a",
+      "trim": "#e0aa36",
+      "sleeve": "#5fae5a",
+      "cape": "#5fae5a"
+    }
+  },
+  "storm_body_armor": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "def": 23,
+      "hp": 95,
+      "agi": 3
+    },
+    "price": null,
+    "sell": 14400,
+    "look": {
+      "top": "armor",
+      "color": "#8ab0ff",
+      "trim": "#2a3550",
+      "pauldrons": "#2a3550"
+    }
+  },
+  "crimson_body_leather": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "def": 27,
+      "hp": 115,
+      "str": 4
+    },
+    "price": null,
+    "sell": 19900,
+    "look": {
+      "top": "leather",
+      "color": "#b5361c",
+      "trim": "#1d1418",
+      "sleeve": "#b5361c",
+      "cape": "#b5361c"
+    }
+  },
+  "moon_body_robe": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "def": 32,
+      "hp": 137,
+      "int": 4
+    },
+    "price": null,
+    "sell": 26200,
+    "look": {
+      "top": "robe",
+      "color": "#cfd8e6",
+      "trim": "#5a6a8a",
+      "sleeve": "#cfd8e6",
+      "pauldrons": "#5a6a8a"
+    }
+  },
+  "sun_body_armor": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "def": 37,
+      "hp": 164,
+      "vit": 5
+    },
+    "price": null,
+    "sell": 33500,
+    "look": {
+      "top": "armor",
+      "color": "#f2c03a",
+      "trim": "#8a5a00",
+      "cape": "#f2c03a"
+    }
+  },
+  "shadow_body_vest": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "def": 40,
+      "hp": 169,
+      "agi": 6
+    },
+    "price": null,
+    "sell": 41600,
+    "look": {
+      "top": "vest",
+      "color": "#3a3048",
+      "trim": "#1d1418",
+      "sleeve": "#3a3048",
+      "pauldrons": "#1d1418"
+    }
+  },
+  "coral_body_armor": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "def": 46,
+      "hp": 193,
+      "vit": 6
+    },
+    "price": null,
+    "sell": 52000,
+    "look": {
+      "top": "armor",
+      "color": "#ff7a6a",
+      "trim": "#2a6a8a",
+      "cape": "#ff7a6a"
+    }
+  },
+  "frost_body_robe": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "def": 52,
+      "hp": 217,
+      "int": 7
+    },
+    "price": null,
+    "sell": 66600,
+    "look": {
+      "top": "robe",
+      "color": "#bfe6ff",
+      "trim": "#3f6fb0",
+      "sleeve": "#bfe6ff",
+      "pauldrons": "#3f6fb0"
+    }
+  },
+  "thunder_body_armor": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "def": 61,
+      "hp": 257,
+      "agi": 8
+    },
+    "price": null,
+    "sell": 86400,
+    "look": {
+      "top": "armor",
+      "color": "#ffe36a",
+      "trim": "#3a3f4a",
+      "cape": "#ffe36a"
+    }
+  },
+  "abyss_body_leather": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "def": 72,
+      "hp": 307,
+      "int": 9
+    },
+    "price": null,
+    "sell": 112900,
+    "look": {
+      "top": "leather",
+      "color": "#2a2a5a",
+      "trim": "#1d1418",
+      "sleeve": "#2a2a5a",
+      "pauldrons": "#1d1418"
+    }
+  },
+  "phoenix_body_armor": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "def": 87,
+      "hp": 372,
+      "str": 10
+    },
+    "price": null,
+    "sell": 147500,
+    "look": {
+      "top": "armor",
+      "color": "#ff8a3a",
+      "trim": "#5a1a14",
+      "cape": "#ff8a3a"
+    }
+  },
+  "starfall_body_robe": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "def": 105,
+      "hp": 442,
+      "agi": 12
+    },
+    "price": null,
+    "sell": 189200,
+    "look": {
+      "top": "robe",
+      "color": "#e8e8ff",
+      "trim": "#e0aa36",
+      "sleeve": "#e8e8ff",
+      "pauldrons": "#e0aa36"
+    }
+  },
+  "steel_feet_boots": {
+    "slot": "feet",
+    "rarity": "common",
+    "level": 15,
+    "add": {
+      "agi": 4,
+      "def": 1,
+      "vit": 1
+    },
+    "price": 2800,
+    "sell": 900,
+    "look": {
+      "boots": "#b9c1cb"
+    }
+  },
+  "guard_feet_shoes": {
+    "slot": "feet",
+    "rarity": "common",
+    "level": 25,
+    "add": {
+      "agi": 5,
+      "def": 2,
+      "vit": 1
+    },
+    "price": 6800,
+    "sell": 2500,
+    "look": {
+      "boots": "#3f6fb0"
+    }
+  },
+  "ranger_feet_boots": {
+    "slot": "feet",
+    "rarity": "common",
+    "level": 35,
+    "add": {
+      "agi": 7,
+      "def": 5,
+      "hp": 18
+    },
+    "price": 12800,
+    "sell": 4900,
+    "look": {
+      "boots": "#3f6a3a"
+    }
+  },
+  "knight_feet_greaves": {
+    "slot": "feet",
+    "rarity": "common",
+    "level": 50,
+    "add": {
+      "agi": 11,
+      "def": 7,
+      "hp": 30,
+      "str": 3
+    },
+    "price": 25500,
+    "sell": 10000,
+    "look": {
+      "boots": "#dfe6ee"
+    }
+  },
+  "royal_feet_boots": {
+    "slot": "feet",
+    "rarity": "common",
+    "level": 65,
+    "add": {
+      "agi": 14,
+      "def": 9,
+      "hp": 38,
+      "int": 3
+    },
+    "price": 42800,
+    "sell": 16900,
+    "look": {
+      "boots": "#6a3a8a"
+    }
+  },
+  "copper_feet_shoes": {
+    "slot": "feet",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "agi": 5,
+      "def": 1,
+      "str": 1
+    },
+    "price": null,
+    "sell": 2300,
+    "look": {
+      "boots": "#c8743a"
+    }
+  },
+  "granite_feet_boots": {
+    "slot": "feet",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "agi": 6,
+      "def": 2,
+      "vit": 1
+    },
+    "price": null,
+    "sell": 4400,
+    "look": {
+      "boots": "#8a8f99"
+    }
+  },
+  "bone_feet_greaves": {
+    "slot": "feet",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "agi": 6,
+      "def": 3,
+      "str": 2
+    },
+    "price": null,
+    "sell": 6600,
+    "look": {
+      "boots": "#e8e2cf"
+    }
+  },
+  "jade_feet_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "agi": 8,
+      "def": 5,
+      "hp": 19,
+      "int": 2
+    },
+    "price": null,
+    "sell": 9800,
+    "look": {
+      "boots": "#5fae5a"
+    }
+  },
+  "storm_feet_shoes": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "agi": 10,
+      "def": 6,
+      "hp": 24
+    },
+    "price": null,
+    "sell": 14400,
+    "look": {
+      "boots": "#8ab0ff"
+    }
+  },
+  "crimson_feet_greaves": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "agi": 11,
+      "def": 7,
+      "hp": 30,
+      "str": 3
+    },
+    "price": null,
+    "sell": 19900,
+    "look": {
+      "boots": "#b5361c"
+    }
+  },
+  "moon_feet_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "agi": 13,
+      "def": 8,
+      "hp": 37,
+      "int": 3
+    },
+    "price": null,
+    "sell": 26200,
+    "look": {
+      "boots": "#cfd8e6"
+    }
+  },
+  "sun_feet_greaves": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "agi": 15,
+      "def": 9,
+      "hp": 41,
+      "vit": 4
+    },
+    "price": null,
+    "sell": 33500,
+    "look": {
+      "boots": "#f2c03a"
+    }
+  },
+  "shadow_feet_shoes": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "agi": 17,
+      "def": 10,
+      "hp": 45
+    },
+    "price": null,
+    "sell": 41600,
+    "look": {
+      "boots": "#3a3048"
+    }
+  },
+  "coral_feet_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "agi": 19,
+      "def": 11,
+      "hp": 50,
+      "vit": 4
+    },
+    "price": null,
+    "sell": 52000,
+    "look": {
+      "boots": "#ff7a6a"
+    }
+  },
+  "frost_feet_greaves": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "agi": 21,
+      "def": 12,
+      "hp": 55,
+      "int": 5
+    },
+    "price": null,
+    "sell": 66600,
+    "look": {
+      "boots": "#bfe6ff"
+    }
+  },
+  "thunder_feet_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "agi": 23,
+      "def": 14,
+      "hp": 63
+    },
+    "price": null,
+    "sell": 86400,
+    "look": {
+      "boots": "#ffe36a"
+    }
+  },
+  "abyss_feet_shoes": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "agi": 25,
+      "def": 16,
+      "hp": 74,
+      "int": 7
+    },
+    "price": null,
+    "sell": 112900,
+    "look": {
+      "boots": "#2a2a5a"
+    }
+  },
+  "phoenix_feet_greaves": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "agi": 31,
+      "def": 21,
+      "hp": 98,
+      "str": 8
+    },
+    "price": null,
+    "sell": 147500,
+    "look": {
+      "boots": "#ff8a3a"
+    }
+  },
+  "starfall_feet_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "agi": 37,
+      "def": 26,
+      "hp": 123
+    },
+    "price": null,
+    "sell": 189200,
+    "look": {
+      "boots": "#e8e8ff"
+    }
+  },
+  "steel_accessory_ring": {
+    "slot": "accessory",
+    "rarity": "common",
+    "level": 15,
+    "add": {
+      "hp": 33,
+      "vit": 2,
+      "str": 1
+    },
+    "price": 2800,
+    "sell": 900,
+    "look": null
+  },
+  "guard_accessory_bracelet": {
+    "slot": "accessory",
+    "rarity": "common",
+    "level": 25,
+    "add": {
+      "hp": 49,
+      "vit": 3,
+      "str": 2
+    },
+    "price": 6800,
+    "sell": 2500,
+    "look": null
+  },
+  "ranger_accessory_pendant_leaf": {
+    "slot": "accessory",
+    "rarity": "common",
+    "level": 35,
+    "add": {
+      "hp": 67,
+      "agi": 4,
+      "str": 3
+    },
+    "price": 12800,
+    "sell": 4900,
+    "look": null
+  },
+  "knight_accessory_medallion": {
+    "slot": "accessory",
+    "rarity": "common",
+    "level": 50,
+    "add": {
+      "hp": 105,
+      "str": 5,
+      "vit": 4
+    },
+    "price": 25500,
+    "sell": 10000,
+    "look": null
+  },
+  "royal_accessory_signet": {
+    "slot": "accessory",
+    "rarity": "common",
+    "level": 65,
+    "add": {
+      "hp": 136,
+      "int": 7,
+      "vit": 6
+    },
+    "price": 42800,
+    "sell": 16900,
+    "look": null
+  },
+  "copper_accessory_ring": {
+    "slot": "accessory",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "hp": 39,
+      "str": 2,
+      "vit": 2
+    },
+    "price": null,
+    "sell": 2300,
+    "look": null
+  },
+  "granite_accessory_pendant_heart": {
+    "slot": "accessory",
+    "rarity": "rare",
+    "level": 22,
+    "add": {
+      "hp": 49,
+      "vit": 3,
+      "str": 2
+    },
+    "price": null,
+    "sell": 4400,
+    "look": null
+  },
+  "bone_accessory_totem": {
+    "slot": "accessory",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "hp": 58,
+      "str": 3,
+      "vit": 3
+    },
+    "price": null,
+    "sell": 6600,
+    "look": null
+  },
+  "jade_accessory_pendant_drop": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 33,
+    "add": {
+      "hp": 70,
+      "int": 4,
+      "vit": 3
+    },
+    "price": null,
+    "sell": 9800,
+    "look": null
+  },
+  "storm_accessory_twin": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "hp": 85,
+      "agi": 5,
+      "str": 4
+    },
+    "price": null,
+    "sell": 14400,
+    "look": null
+  },
+  "crimson_accessory_medallion": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 47,
+    "add": {
+      "hp": 107,
+      "str": 6,
+      "vit": 4
+    },
+    "price": null,
+    "sell": 19900,
+    "look": null
+  },
+  "moon_accessory_pendant_moon": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "hp": 117,
+      "int": 7,
+      "vit": 5
+    },
+    "price": null,
+    "sell": 26200,
+    "look": null
+  },
+  "sun_accessory_talisman": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "hp": 140,
+      "vit": 7,
+      "str": 6
+    },
+    "price": null,
+    "sell": 33500,
+    "look": null
+  },
+  "shadow_accessory_bracelet": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 68,
+    "add": {
+      "hp": 163,
+      "agi": 8,
+      "str": 6
+    },
+    "price": null,
+    "sell": 41600,
+    "look": null
+  },
+  "coral_accessory_pendant_star": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "hp": 178,
+      "vit": 9,
+      "str": 7
+    },
+    "price": null,
+    "sell": 52000,
+    "look": null
+  },
+  "frost_accessory_bell": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "hp": 201,
+      "int": 10,
+      "vit": 8
+    },
+    "price": null,
+    "sell": 66600,
+    "look": null
+  },
+  "thunder_accessory_pendant_shell": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 98,
+    "add": {
+      "hp": 246,
+      "agi": 12,
+      "str": 9
+    },
+    "price": null,
+    "sell": 86400,
+    "look": null
+  },
+  "abyss_accessory_seal": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "hp": 307,
+      "int": 14,
+      "vit": 11
+    },
+    "price": null,
+    "sell": 112900,
+    "look": null
+  },
+  "phoenix_accessory_pendant_eye": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 128,
+    "add": {
+      "hp": 343,
+      "str": 16,
+      "vit": 12
+    },
+    "price": null,
+    "sell": 147500,
+    "look": null
+  },
+  "starfall_accessory_halo": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 145,
+    "add": {
+      "hp": 390,
+      "agi": 18,
+      "str": 14
+    },
+    "price": null,
+    "sell": 189200,
+    "look": null
+  },
+  "apprentice_head_hat": {
+    "slot": "head",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "def": 5,
+      "hp": 18,
+      "int": 1
+    },
+    "price": null,
+    "sell": 2300,
+    "look": {
+      "hat": "wizard",
+      "hatColor": "#3f5aa8"
+    }
+  },
+  "apprentice_body_robe": {
+    "slot": "body",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "def": 9,
+      "hp": 26,
+      "int": 1
+    },
+    "price": null,
+    "sell": 2300,
+    "look": {
+      "top": "robe",
+      "color": "#3f5aa8",
+      "trim": "#e0c070",
+      "sleeve": "#3f5aa8",
+      "pauldrons": "#e0c070"
+    }
+  },
+  "apprentice_feet_shoes": {
+    "slot": "feet",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "agi": 5,
+      "def": 1,
+      "int": 1
+    },
+    "price": null,
+    "sell": 2300,
+    "look": {
+      "boots": "#3f5aa8"
+    }
+  },
+  "apprentice_accessory_ring": {
+    "slot": "accessory",
+    "rarity": "rare",
+    "level": 16,
+    "add": {
+      "hp": 36,
+      "int": 2,
+      "vit": 2
+    },
+    "price": null,
+    "sell": 2300,
+    "look": null
+  },
+  "sage_head_hood": {
+    "slot": "head",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "def": 7,
+      "hp": 29,
+      "int": 2
+    },
+    "price": null,
+    "sell": 6600,
+    "look": {
+      "hat": "hood",
+      "hatColor": "#5a3a7a"
+    }
+  },
+  "sage_body_robe": {
+    "slot": "body",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "def": 12,
+      "hp": 39,
+      "int": 2
+    },
+    "price": null,
+    "sell": 6600,
+    "look": {
+      "top": "robe",
+      "color": "#5a3a7a",
+      "trim": "#c8d0dc",
+      "sleeve": "#5a3a7a",
+      "pauldrons": "#c8d0dc"
+    }
+  },
+  "sage_feet_boots": {
+    "slot": "feet",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "agi": 6,
+      "def": 3,
+      "int": 2
+    },
+    "price": null,
+    "sell": 6600,
+    "look": {
+      "boots": "#5a3a7a"
+    }
+  },
+  "sage_accessory_orb": {
+    "slot": "accessory",
+    "rarity": "rare",
+    "level": 27,
+    "add": {
+      "hp": 55,
+      "int": 3,
+      "vit": 3
+    },
+    "price": null,
+    "sell": 6600,
+    "look": null
+  },
+  "wooden_sword": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "common",
+    "level": 1,
+    "add": {
+      "atk": 3
+    },
+    "price": 60,
+    "sell": 20,
+    "look": {
+      "blade": {
+        "color": "#c08a52",
+        "guard": "#7b5233",
+        "grip": "#5a3a22",
+        "len": 0.42,
+        "width": 0.05
+      }
+    }
+  },
+  "iron_sword": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "common",
+    "level": 3,
+    "add": {
+      "atk": 7
+    },
+    "price": 300,
+    "sell": 120,
+    "look": {
+      "blade": {
+        "color": "#c9d0d8",
+        "guard": "#6b6f78",
+        "grip": "#5a3a22",
+        "len": 0.47,
+        "width": 0.05
+      }
+    }
+  },
+  "steel_sword": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "common",
+    "level": 8,
+    "add": {
+      "atk": 13
+    },
+    "price": 1200,
+    "sell": 480,
+    "look": {
+      "blade": {
+        "color": "#eef5ff",
+        "guard": "#3f6fb0",
+        "grip": "#2a3550",
+        "len": 0.51,
+        "width": 0.055
+      }
+    }
+  },
+  "goblin_cleaver": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "rare",
+    "level": 7,
+    "add": {
+      "atk": 12,
+      "crit": 0.04
+    },
+    "price": null,
+    "sell": 400,
+    "look": {
+      "blade": {
+        "color": "#8f9aa6",
+        "guard": "#5a3a22",
+        "grip": "#3a2414",
+        "len": 0.44,
+        "width": 0.085
+      }
+    }
+  },
+  "knight_sword": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "rare",
+    "level": 12,
+    "add": {
+      "atk": 20,
+      "vit": 2
+    },
+    "price": 4500,
+    "sell": 1800,
+    "look": {
+      "blade": {
+        "color": "#f6f9fd",
+        "guard": "#e0aa36",
+        "grip": "#7a2a35",
+        "len": 0.56,
+        "width": 0.058
+      }
+    }
+  },
+  "dagger_iron": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "common",
+    "level": 10,
+    "add": {
+      "atk": 7,
+      "crit": 0.03
+    },
+    "price": 900,
+    "sell": 360,
+    "look": {
+      "blade": {
+        "color": "#dfe6ee",
+        "guard": "#5a5a64",
+        "grip": "#3a2414",
+        "len": 0.28,
+        "width": 0.045
+      }
+    }
+  },
+  "dagger_steel": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "common",
+    "level": 14,
+    "add": {
+      "atk": 12,
+      "crit": 0.05
+    },
+    "price": 2600,
+    "sell": 1040,
+    "look": {
+      "blade": {
+        "color": "#eef5ff",
+        "guard": "#3f6fb0",
+        "grip": "#2a3550",
+        "len": 0.3,
+        "width": 0.045
+      }
+    }
+  },
+  "dagger_shadow": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "rare",
+    "level": 18,
+    "add": {
+      "atk": 18,
+      "agi": 2,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 1400,
+    "look": {
+      "blade": {
+        "color": "#5a5070",
+        "guard": "#8a5ac8",
+        "grip": "#1a1420",
+        "len": 0.32,
+        "width": 0.05
+      }
+    }
+  },
+  "dagger_venom": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "rare",
+    "level": 30,
+    "add": {
+      "atk": 30,
+      "agi": 4,
+      "crit": 0.08
+    },
+    "price": null,
+    "sell": 6000,
+    "look": {
+      "blade": {
+        "color": "#9ae86a",
+        "guard": "#3a5a2a",
+        "grip": "#1a2414",
+        "len": 0.33,
+        "width": 0.05
+      }
+    }
+  },
+  "dagger_cinder": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 38,
+    "add": {
+      "atk": 44,
+      "agi": 6,
+      "crit": 0.1
+    },
+    "price": null,
+    "sell": 18000,
+    "look": {
+      "blade": {
+        "color": "#4a4448",
+        "guard": "#ff7a1a",
+        "grip": "#1a1416",
+        "len": 0.35,
+        "width": 0.055
+      }
+    }
+  },
+  "axe_hand": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "common",
+    "level": 10,
+    "add": {
+      "atk": 9
+    },
+    "price": 900,
+    "sell": 360,
+    "look": {
+      "axe": {
+        "blade": "#c8ced6",
+        "haft": "#7b5233"
+      }
+    }
+  },
+  "axe_battle": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "common",
+    "level": 14,
+    "add": {
+      "atk": 15
+    },
+    "price": 2600,
+    "sell": 1040,
+    "look": {
+      "axe": {
+        "blade": "#e8eef6",
+        "haft": "#4a3a2a"
+      }
+    }
+  },
+  "axe_war": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "rare",
+    "level": 18,
+    "add": {
+      "atk": 22,
+      "str": 2
+    },
+    "price": null,
+    "sell": 1400,
+    "look": {
+      "axe": {
+        "blade": "#b8c0c8",
+        "haft": "#2a2024"
+      }
+    }
+  },
+  "axe_drake": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "rare",
+    "level": 30,
+    "add": {
+      "atk": 38,
+      "str": 4
+    },
+    "price": null,
+    "sell": 6000,
+    "look": {
+      "axe": {
+        "blade": "#9ac08a",
+        "haft": "#3e5a34"
+      }
+    }
+  },
+  "axe_magma": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 38,
+    "add": {
+      "atk": 54,
+      "str": 6,
+      "crit": 0.03
+    },
+    "price": null,
+    "sell": 18000,
+    "look": {
+      "axe": {
+        "blade": "#4a4448",
+        "haft": "#1a1416",
+        "glow": "#ff7a1a"
+      }
+    }
+  },
+  "bow_short": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "common",
+    "level": 10,
+    "add": {
+      "atk": 6
+    },
+    "price": 900,
+    "sell": 360,
+    "look": {
+      "bow": {
+        "wood": "#a8784a"
+      }
+    }
+  },
+  "bow_composite": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "common",
+    "level": 14,
+    "add": {
+      "atk": 12,
+      "agi": 1
+    },
+    "price": 2600,
+    "sell": 1040,
+    "look": {
+      "bow": {
+        "wood": "#5a3a24",
+        "tip": "#e8e2cf"
+      }
+    }
+  },
+  "bow_hunter": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "rare",
+    "level": 18,
+    "add": {
+      "atk": 18,
+      "agi": 3
+    },
+    "price": null,
+    "sell": 1400,
+    "look": {
+      "bow": {
+        "wood": "#3f6a2e",
+        "tip": "#c9a050",
+        "size": 1.15
+      }
+    }
+  },
+  "bow_crystal": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 26,
+    "add": {
+      "atk": 28,
+      "agi": 4,
+      "crit": 0.03
+    },
+    "price": null,
+    "sell": 3000,
+    "look": {
+      "bow": {
+        "wood": "#7fb0d8",
+        "tip": "#bfeaff",
+        "size": 1.2,
+        "glow": "#bfeaff"
+      }
+    }
+  },
+  "staff_wood": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "common",
+    "level": 10,
+    "add": {
+      "matk": 8,
+      "int": 1
+    },
+    "price": 900,
+    "sell": 360,
+    "look": {
+      "staff": {
+        "shaft": "#8a5a36",
+        "head": "knob",
+        "gem": "#8a5a36"
+      }
+    }
+  },
+  "staff_ruby": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "common",
+    "level": 14,
+    "add": {
+      "matk": 16,
+      "int": 2
+    },
+    "price": 2600,
+    "sell": 1040,
+    "look": {
+      "staff": {
+        "shaft": "#5a3a24",
+        "head": "gem",
+        "gem": "#e8323a"
+      }
+    }
+  },
+  "staff_moon": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "rare",
+    "level": 18,
+    "add": {
+      "matk": 24,
+      "int": 3
+    },
+    "price": null,
+    "sell": 1400,
+    "look": {
+      "staff": {
+        "shaft": "#3a3f5a",
+        "head": "moon",
+        "gem": "#ffe066"
+      }
+    }
+  },
+  "staff_crystal": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 26,
+    "add": {
+      "matk": 36,
+      "int": 4
+    },
+    "price": null,
+    "sell": 3000,
+    "look": {
+      "staff": {
+        "shaft": "#9aa3ad",
+        "head": "crystal",
+        "gem": "#6fd0ff",
+        "glow": true
+      }
+    }
+  },
+  "mace_wood": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "common",
+    "level": 10,
+    "add": {
+      "atk": 5,
+      "int": 1
+    },
+    "price": 900,
+    "sell": 360,
+    "look": {
+      "mace": {
+        "head": "knob",
+        "metal": "#9a6a40",
+        "shaft": "#6a4228"
+      }
+    }
+  },
+  "mace_iron": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "common",
+    "level": 14,
+    "add": {
+      "atk": 11,
+      "int": 2,
+      "matk": 4
+    },
+    "price": 2600,
+    "sell": 1040,
+    "look": {
+      "mace": {
+        "head": "flange",
+        "metal": "#c3cad3",
+        "shaft": "#5a3a24"
+      }
+    }
+  },
+  "mace_star": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "rare",
+    "level": 18,
+    "add": {
+      "atk": 17,
+      "int": 3,
+      "matk": 6
+    },
+    "price": null,
+    "sell": 1400,
+    "look": {
+      "mace": {
+        "head": "star",
+        "metal": "#8d96a2",
+        "shaft": "#3a2a1a"
+      }
+    }
+  },
+  "mace_holy": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 26,
+    "add": {
+      "atk": 26,
+      "int": 4,
+      "matk": 12
+    },
+    "price": null,
+    "sell": 3000,
+    "look": {
+      "mace": {
+        "head": "holy",
+        "metal": "#f2d36a",
+        "shaft": "#f4f0e4",
+        "glow": "#fff3b0"
+      }
+    }
+  },
+  "drake_blade": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "rare",
+    "level": 30,
+    "add": {
+      "atk": 34,
+      "str": 3
+    },
+    "price": null,
+    "sell": 6000,
+    "look": {
+      "blade": {
+        "color": "#cfe0c0",
+        "guard": "#5a7a4a",
+        "grip": "#3a2a1a",
+        "len": 0.58,
+        "width": 0.07
+      }
+    }
+  },
+  "cinder_greatsword": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 38,
+    "add": {
+      "atk": 48,
+      "str": 5,
+      "crit": 0.04
+    },
+    "price": null,
+    "sell": 18000,
+    "look": {
+      "blade": {
+        "color": "#4a4448",
+        "guard": "#ff7a1a",
+        "grip": "#1a1416",
+        "len": 0.66,
+        "width": 0.085
+      }
+    }
+  },
+  "wyvern_bow": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "rare",
+    "level": 30,
+    "add": {
+      "atk": 36,
+      "agi": 5,
+      "crit": 0.03
+    },
+    "price": null,
+    "sell": 6000,
+    "look": {
+      "bow": {
+        "wood": "#a83a2a",
+        "tip": "#e8b070",
+        "size": 1.2
+      }
+    }
+  },
+  "phoenix_bow": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 38,
+    "add": {
+      "atk": 50,
+      "agi": 6,
+      "crit": 0.05
+    },
+    "price": null,
+    "sell": 18000,
+    "look": {
+      "bow": {
+        "wood": "#e8502a",
+        "tip": "#ffd04a",
+        "size": 1.25,
+        "glow": "#ffb03a"
+      }
+    }
+  },
+  "storm_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "rare",
+    "level": 30,
+    "add": {
+      "matk": 46,
+      "int": 5
+    },
+    "price": null,
+    "sell": 6000,
+    "look": {
+      "staff": {
+        "shaft": "#34405e",
+        "head": "crystal",
+        "gem": "#8ab0ff",
+        "glow": true
+      }
+    }
+  },
+  "ember_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 38,
+    "add": {
+      "matk": 64,
+      "int": 7
+    },
+    "price": null,
+    "sell": 18000,
+    "look": {
+      "staff": {
+        "shaft": "#2a2224",
+        "head": "gem",
+        "gem": "#ff7a1a",
+        "glow": true
+      }
+    }
+  },
+  "sun_mace": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "rare",
+    "level": 30,
+    "add": {
+      "atk": 32,
+      "int": 5,
+      "matk": 16
+    },
+    "price": null,
+    "sell": 6000,
+    "look": {
+      "mace": {
+        "head": "star",
+        "metal": "#e0902a",
+        "shaft": "#5a3a22"
+      }
+    }
+  },
+  "ash_mace": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 38,
+    "add": {
+      "atk": 46,
+      "int": 6,
+      "matk": 22
+    },
+    "price": null,
+    "sell": 18000,
+    "look": {
+      "mace": {
+        "head": "holy",
+        "metal": "#5a5458",
+        "shaft": "#1a1416",
+        "glow": "#ff7a1a"
+      }
+    }
+  },
+  "frost_blade": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 46,
+    "add": {
+      "atk": 60,
+      "str": 7,
+      "crit": 0.05
+    },
+    "price": null,
+    "sell": 30000,
+    "look": {
+      "blade": {
+        "color": "#bfeaff",
+        "guard": "#3f7aff",
+        "grip": "#1a2a4a",
+        "len": 0.68,
+        "width": 0.08
+      }
+    }
+  },
+  "tempest_bow": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 46,
+    "add": {
+      "atk": 62,
+      "agi": 8,
+      "crit": 0.06
+    },
+    "price": null,
+    "sell": 30000,
+    "look": {
+      "bow": {
+        "wood": "#2a8a5a",
+        "tip": "#ffd04a",
+        "size": 1.3,
+        "glow": "#7ad8ff"
+      }
+    }
+  },
+  "glacier_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 46,
+    "add": {
+      "matk": 80,
+      "int": 9
+    },
+    "price": null,
+    "sell": 30000,
+    "look": {
+      "staff": {
+        "shaft": "#e8f0f8",
+        "head": "crystal",
+        "gem": "#7ad8ff",
+        "glow": true
+      }
+    }
+  },
+  "hex_mace": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 46,
+    "add": {
+      "atk": 58,
+      "int": 8,
+      "matk": 30
+    },
+    "price": null,
+    "sell": 30000,
+    "look": {
+      "mace": {
+        "head": "star",
+        "metal": "#5a7a4a",
+        "shaft": "#2a1a2a",
+        "glow": "#b08aff"
+      }
+    }
+  },
+  "fang_dagger": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 46,
+    "add": {
+      "atk": 56,
+      "agi": 8,
+      "crit": 0.12
+    },
+    "price": null,
+    "sell": 30000,
+    "look": {
+      "blade": {
+        "color": "#f4f0e0",
+        "guard": "#2a8a3a",
+        "grip": "#1a2a14",
+        "len": 0.36,
+        "width": 0.055
+      }
+    }
+  },
+  "tusk_axe": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 46,
+    "add": {
+      "atk": 68,
+      "str": 8,
+      "crit": 0.04
+    },
+    "price": null,
+    "sell": 30000,
+    "look": {
+      "axe": {
+        "blade": "#f0ead8",
+        "haft": "#3a2a1a",
+        "glow": "#bfeaff"
+      }
+    }
+  },
+  "frost_helm": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 44,
+    "add": {
+      "def": 15,
+      "hp": 65,
+      "str": 3
+    },
+    "price": null,
+    "sell": 18000,
+    "look": {
+      "hat": "helmet",
+      "hatColor": "#bfeaff"
+    }
+  },
+  "croc_armor": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 44,
+    "add": {
+      "def": 24,
+      "hp": 100
+    },
+    "price": null,
+    "sell": 26000,
+    "look": {
+      "top": "armor",
+      "color": "#3a5a3a",
+      "trim": "#c8b878"
+    }
+  },
+  "panther_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 44,
+    "add": {
+      "agi": 10,
+      "def": 6,
+      "hp": 26
+    },
+    "price": null,
+    "sell": 17000,
+    "look": {
+      "boots": "#1a1a20"
+    }
+  },
+  "drake_helm": {
+    "slot": "head",
+    "rarity": "rare",
+    "level": 28,
+    "add": {
+      "def": 8,
+      "hp": 30
+    },
+    "price": null,
+    "sell": 3600,
+    "look": {
+      "hat": "helmet",
+      "hatColor": "#5a7a4a"
+    }
+  },
+  "cinder_helm": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 36,
+    "add": {
+      "def": 12,
+      "hp": 50,
+      "str": 2
+    },
+    "price": null,
+    "sell": 11000,
+    "look": {
+      "hat": "helmet",
+      "hatColor": "#3a383e"
+    }
+  },
+  "scale_mail": {
+    "slot": "body",
+    "rarity": "rare",
+    "level": 28,
+    "add": {
+      "def": 13,
+      "hp": 40
+    },
+    "price": null,
+    "sell": 5600,
+    "look": {
+      "top": "armor",
+      "color": "#5a7a4a",
+      "trim": "#c8b878"
+    }
+  },
+  "cinder_armor": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 36,
+    "add": {
+      "def": 19,
+      "hp": 80
+    },
+    "price": null,
+    "sell": 16000,
+    "look": {
+      "top": "armor",
+      "color": "#2e2c30",
+      "trim": "#ff7a1a"
+    }
+  },
+  "wind_boots": {
+    "slot": "feet",
+    "rarity": "rare",
+    "level": 28,
+    "add": {
+      "agi": 6,
+      "def": 3
+    },
+    "price": null,
+    "sell": 3600,
+    "look": {
+      "boots": "#e8ecef"
+    }
+  },
+  "ember_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 36,
+    "add": {
+      "agi": 8,
+      "def": 5,
+      "hp": 20
+    },
+    "price": null,
+    "sell": 10000,
+    "look": {
+      "boots": "#3a2a28"
+    }
+  },
+  "bandana": {
+    "slot": "head",
+    "rarity": "common",
+    "level": 1,
+    "add": {
+      "def": 1,
+      "agi": 1
+    },
+    "price": 70,
+    "sell": 25,
+    "look": {
+      "hat": "headband",
+      "hatColor": "#b5361c"
+    }
+  },
+  "leather_cap": {
+    "slot": "head",
+    "rarity": "common",
+    "level": 2,
+    "add": {
+      "def": 2
+    },
+    "price": 120,
+    "sell": 45,
+    "look": {
+      "hat": "beret",
+      "hatColor": "#7b5233"
+    }
+  },
+  "iron_helmet": {
+    "slot": "head",
+    "rarity": "common",
+    "level": 6,
+    "add": {
+      "def": 4,
+      "hp": 10
+    },
+    "price": 900,
+    "sell": 360,
+    "look": {
+      "hat": "helmet",
+      "hatColor": "#a9b2bc"
+    }
+  },
+  "cloth_tunic": {
+    "slot": "body",
+    "rarity": "common",
+    "level": 1,
+    "add": {
+      "def": 1
+    },
+    "price": 70,
+    "sell": 25,
+    "look": {
+      "top": "tunic",
+      "color": "#5f7fa8",
+      "trim": "#3f5f88"
+    }
+  },
+  "leather_armor": {
+    "slot": "body",
+    "rarity": "common",
+    "level": 4,
+    "add": {
+      "def": 3
+    },
+    "price": 500,
+    "sell": 200,
+    "look": {
+      "top": "leather",
+      "color": "#8a5a33",
+      "sleeve": "#6a4228"
+    }
+  },
+  "chain_mail": {
+    "slot": "body",
+    "rarity": "common",
+    "level": 10,
+    "add": {
+      "def": 7,
+      "hp": 20
+    },
+    "price": 2500,
+    "sell": 1000,
+    "look": {
+      "top": "armor",
+      "color": "#b9c1cb"
+    }
+  },
+  "leather_boots": {
+    "slot": "feet",
+    "rarity": "common",
+    "level": 1,
+    "add": {
+      "def": 1,
+      "agi": 1
+    },
+    "price": 90,
+    "sell": 30,
+    "look": {
+      "boots": "#6a4228"
+    }
+  },
+  "swift_boots": {
+    "slot": "feet",
+    "rarity": "rare",
+    "level": 8,
+    "add": {
+      "agi": 4
+    },
+    "price": null,
+    "sell": 600,
+    "look": {
+      "boots": "#2f8a8a"
+    }
+  },
+  "jelly_ring": {
+    "slot": "accessory",
+    "rarity": "rare",
+    "level": 2,
+    "add": {
+      "hp": 15
+    },
+    "price": null,
+    "sell": 150,
+    "look": null
+  },
+  "spore_charm": {
+    "slot": "accessory",
+    "rarity": "rare",
+    "level": 5,
+    "add": {
+      "int": 2,
+      "hp": 10
+    },
+    "price": null,
+    "sell": 260,
+    "look": null
+  },
+  "fang_necklace": {
+    "slot": "accessory",
+    "rarity": "rare",
+    "level": 7,
+    "add": {
+      "str": 2,
+      "crit": 0.02
+    },
+    "price": null,
+    "sell": 380,
+    "look": null
+  },
+  "bull_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 12,
+    "add": {
+      "str": 3,
+      "hp": 30
+    },
+    "price": null,
+    "sell": 2500,
+    "look": null
+  },
+  "swan_brooch": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 15,
+    "add": {
+      "agi": 3,
+      "int": 3
+    },
+    "price": null,
+    "sell": 2800,
+    "look": null
+  },
+  "heartwood_amulet": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 18,
+    "add": {
+      "vit": 4,
+      "hp": 40
+    },
+    "price": null,
+    "sell": 3200,
+    "look": null
+  },
+  "kraken_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 40,
+    "add": {
+      "str": 4,
+      "agi": 4,
+      "hp": 80
+    },
+    "price": null,
+    "sell": 6000,
+    "look": null
+  },
+  "phoenix_plume": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 30,
+    "add": {
+      "int": 4,
+      "vit": 3,
+      "hp": 60
+    },
+    "price": null,
+    "sell": 4400,
+    "look": null
+  },
+  "dragon_ring": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 22,
+    "add": {
+      "str": 3,
+      "int": 3,
+      "crit": 0.03
+    },
+    "price": null,
+    "sell": 3600,
+    "look": null
+  },
+  "sun_amulet": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 50,
+    "add": {
+      "int": 6,
+      "vit": 4,
+      "hp": 110
+    },
+    "price": null,
+    "sell": 9000,
+    "look": null
+  },
+  "briar_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 58,
+    "add": {
+      "str": 6,
+      "agi": 5,
+      "hp": 125
+    },
+    "price": null,
+    "sell": 11000,
+    "look": null
+  },
+  "behemoth_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 64,
+    "add": {
+      "str": 7,
+      "vit": 5,
+      "hp": 150
+    },
+    "price": null,
+    "sell": 13500,
+    "look": null
+  },
+  "wraith_brooch": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 72,
+    "add": {
+      "agi": 8,
+      "int": 7,
+      "crit": 0.04
+    },
+    "price": null,
+    "sell": 16000,
+    "look": null
+  },
+  "rime_ring": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 80,
+    "add": {
+      "str": 8,
+      "int": 8,
+      "hp": 180
+    },
+    "price": null,
+    "sell": 19000,
+    "look": null
+  },
+  "pearl_necklace": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 90,
+    "add": {
+      "str": 9,
+      "agi": 9,
+      "int": 9,
+      "hp": 210
+    },
+    "price": null,
+    "sell": 23000,
+    "look": null
+  },
+  "tide_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "matk": 96,
+      "int": 11
+    },
+    "price": null,
+    "sell": 43000,
+    "look": {
+      "staff": {
+        "shaft": "#2a5a7a",
+        "head": "crystal",
+        "gem": "#4ad8c8",
+        "glow": true
+      }
+    }
+  },
+  "pearl_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 54,
+    "add": {
+      "int": 6,
+      "vit": 5,
+      "hp": 110
+    },
+    "price": null,
+    "sell": 26000,
+    "look": null
+  },
+  "magma_axe": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 56,
+    "add": {
+      "atk": 85,
+      "str": 10,
+      "crit": 0.05
+    },
+    "price": null,
+    "sell": 47000,
+    "look": {
+      "axe": {
+        "blade": "#3a2a28",
+        "haft": "#1a1416",
+        "glow": "#ff7a1a"
+      }
+    }
+  },
+  "obsidian_plate": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 56,
+    "add": {
+      "def": 31,
+      "hp": 135,
+      "vit": 3
+    },
+    "price": null,
+    "sell": 40000,
+    "look": {
+      "top": "armor",
+      "color": "#2a2430",
+      "trim": "#ff7a1a"
+    }
+  },
+  "hydra_bow": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 55,
+    "add": {
+      "atk": 77,
+      "agi": 10,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 45000,
+    "look": {
+      "bow": {
+        "wood": "#3a5a2a",
+        "tip": "#c8f04a",
+        "size": 1.35,
+        "glow": "#9aff5a"
+      }
+    }
+  },
+  "mire_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 55,
+    "add": {
+      "agi": 13,
+      "def": 8,
+      "hp": 36
+    },
+    "price": null,
+    "sell": 26000,
+    "look": {
+      "boots": "#3a3a24"
+    }
+  },
+  "scarab_dagger": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 57,
+    "add": {
+      "atk": 72,
+      "agi": 10,
+      "crit": 0.14
+    },
+    "price": null,
+    "sell": 48000,
+    "look": {
+      "blade": {
+        "color": "#ffd84d",
+        "guard": "#2a8a8a",
+        "grip": "#3a2a14",
+        "len": 0.38,
+        "width": 0.06
+      }
+    }
+  },
+  "scarab_helm": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 57,
+    "add": {
+      "def": 20,
+      "hp": 90,
+      "agi": 4
+    },
+    "price": null,
+    "sell": 30000,
+    "look": {
+      "hat": "helmet",
+      "hatColor": "#e0b040"
+    }
+  },
+  "spore_mace": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 59,
+    "add": {
+      "atk": 78,
+      "int": 11,
+      "matk": 40
+    },
+    "price": null,
+    "sell": 52000,
+    "look": {
+      "mace": {
+        "head": "star",
+        "metal": "#7a5aa8",
+        "shaft": "#2a1a3a",
+        "glow": "#6ae8ff"
+      }
+    }
+  },
+  "glowcap_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 59,
+    "add": {
+      "int": 7,
+      "agi": 6,
+      "hp": 120
+    },
+    "price": null,
+    "sell": 30000,
+    "look": null
+  },
+  "bone_greatsword": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "atk": 86,
+      "str": 10,
+      "crit": 0.06
+    },
+    "price": null,
+    "sell": 56000,
+    "look": {
+      "blade": {
+        "color": "#f0e8d8",
+        "guard": "#5a5050",
+        "grip": "#2a2428",
+        "len": 0.72,
+        "width": 0.09
+      }
+    }
+  },
+  "dragonbone_mail": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 61,
+    "add": {
+      "def": 35,
+      "hp": 155,
+      "str": 4
+    },
+    "price": null,
+    "sell": 46000,
+    "look": {
+      "top": "armor",
+      "color": "#d8d0c0",
+      "trim": "#5a5050"
+    }
+  },
+  "glass_blade": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 64,
+    "add": {
+      "atk": 90,
+      "str": 11,
+      "crit": 0.06
+    },
+    "price": null,
+    "sell": 60000,
+    "look": {
+      "blade": {
+        "color": "#2a2034",
+        "guard": "#b08aff",
+        "grip": "#140e1a",
+        "len": 0.7,
+        "width": 0.08
+      }
+    }
+  },
+  "void_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 64,
+    "add": {
+      "int": 7,
+      "str": 6,
+      "hp": 140
+    },
+    "price": null,
+    "sell": 34000,
+    "look": null
+  },
+  "thorn_bow": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 65,
+    "add": {
+      "atk": 93,
+      "agi": 12,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 62000,
+    "look": {
+      "bow": {
+        "wood": "#3a1a14",
+        "tip": "#c83a2a",
+        "size": 1.4,
+        "glow": "#ff6a4a"
+      }
+    }
+  },
+  "briar_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 65,
+    "add": {
+      "agi": 15,
+      "def": 9,
+      "hp": 40
+    },
+    "price": null,
+    "sell": 34000,
+    "look": {
+      "boots": "#3a2a1a"
+    }
+  },
+  "gorgon_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 67,
+    "add": {
+      "matk": 123,
+      "int": 14
+    },
+    "price": null,
+    "sell": 66000,
+    "look": {
+      "staff": {
+        "shaft": "#5a6a5a",
+        "head": "gem",
+        "gem": "#7aff8a",
+        "glow": true
+      }
+    }
+  },
+  "gorgon_circlet": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 67,
+    "add": {
+      "def": 23,
+      "hp": 100,
+      "int": 5
+    },
+    "price": null,
+    "sell": 38000,
+    "look": {
+      "hat": "circlet",
+      "hatColor": "#8aa88a"
+    }
+  },
+  "colossus_axe": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 69,
+    "add": {
+      "atk": 108,
+      "str": 13,
+      "crit": 0.05
+    },
+    "price": null,
+    "sell": 70000,
+    "look": {
+      "axe": {
+        "blade": "#c86a3a",
+        "haft": "#3a2a1a",
+        "glow": "#ffb04a"
+      }
+    }
+  },
+  "mesa_plate": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 69,
+    "add": {
+      "def": 38,
+      "hp": 160,
+      "vit": 4
+    },
+    "price": null,
+    "sell": 56000,
+    "look": {
+      "top": "armor",
+      "color": "#a8502a",
+      "trim": "#e8c088"
+    }
+  },
+  "thunder_mace": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 71,
+    "add": {
+      "atk": 96,
+      "int": 13,
+      "matk": 50
+    },
+    "price": null,
+    "sell": 74000,
+    "look": {
+      "mace": {
+        "head": "flange",
+        "metal": "#4a5a8a",
+        "shaft": "#2a2a3a",
+        "glow": "#8ab0ff"
+      }
+    }
+  },
+  "storm_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 71,
+    "add": {
+      "agi": 17,
+      "def": 10,
+      "hp": 44
+    },
+    "price": null,
+    "sell": 40000,
+    "look": {
+      "boots": "#2a3a5a"
+    }
+  },
+  "rift_fang": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 73,
+    "add": {
+      "atk": 95,
+      "agi": 14,
+      "crit": 0.15
+    },
+    "price": null,
+    "sell": 80000,
+    "look": {
+      "blade": {
+        "color": "#ff6a1a",
+        "guard": "#2a1a1a",
+        "grip": "#140c0c",
+        "len": 0.4,
+        "width": 0.06
+      }
+    }
+  },
+  "wyrmscale_mail": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 73,
+    "add": {
+      "def": 41,
+      "hp": 175,
+      "str": 5
+    },
+    "price": null,
+    "sell": 64000,
+    "look": {
+      "top": "armor",
+      "color": "#5a1e1a",
+      "trim": "#ff7a1a"
+    }
+  },
+  "hag_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "matk": 142,
+      "int": 16
+    },
+    "price": null,
+    "sell": 84000,
+    "look": {
+      "staff": {
+        "shaft": "#3a2a4a",
+        "head": "moon",
+        "gem": "#d8a8ff",
+        "glow": true
+      }
+    }
+  },
+  "witch_hood": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 76,
+    "add": {
+      "def": 27,
+      "hp": 116,
+      "int": 6
+    },
+    "price": null,
+    "sell": 46000,
+    "look": {
+      "hat": "wizard",
+      "hatColor": "#3a2a4a"
+    }
+  },
+  "lich_mace": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 78,
+    "add": {
+      "atk": 106,
+      "int": 15,
+      "matk": 55
+    },
+    "price": null,
+    "sell": 88000,
+    "look": {
+      "mace": {
+        "head": "holy",
+        "metal": "#2a3a6a",
+        "shaft": "#141a2a",
+        "glow": "#6affc8"
+      }
+    }
+  },
+  "soul_ring": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 78,
+    "add": {
+      "int": 8,
+      "str": 8,
+      "hp": 170
+    },
+    "price": null,
+    "sell": 48000,
+    "look": null
+  },
+  "kraken_bow": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 80,
+    "add": {
+      "atk": 117,
+      "agi": 15,
+      "crit": 0.08
+    },
+    "price": null,
+    "sell": 92000,
+    "look": {
+      "bow": {
+        "wood": "#2a4a6a",
+        "tip": "#bfeaff",
+        "size": 1.45,
+        "glow": "#8ad8ff"
+      }
+    }
+  },
+  "tidewalkers": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 80,
+    "add": {
+      "agi": 19,
+      "def": 11,
+      "hp": 49
+    },
+    "price": null,
+    "sell": 50000,
+    "look": {
+      "boots": "#2a4a6a"
+    }
+  },
+  "spirit_fang": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 82,
+    "add": {
+      "atk": 109,
+      "agi": 16,
+      "crit": 0.16
+    },
+    "price": null,
+    "sell": 96000,
+    "look": {
+      "blade": {
+        "color": "#e8fff8",
+        "guard": "#5ac8b8",
+        "grip": "#1e2a2a",
+        "len": 0.42,
+        "width": 0.06
+      }
+    }
+  },
+  "spirit_circlet": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 82,
+    "add": {
+      "def": 29,
+      "hp": 126,
+      "agi": 6
+    },
+    "price": null,
+    "sell": 52000,
+    "look": {
+      "hat": "circlet",
+      "hatColor": "#aaffef"
+    }
+  },
+  "dragonsong": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 84,
+    "add": {
+      "atk": 120,
+      "str": 14,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 100000,
+    "look": {
+      "blade": {
+        "color": "#ffd08a",
+        "guard": "#8a1e14",
+        "grip": "#1a0806",
+        "len": 0.74,
+        "width": 0.09
+      }
+    }
+  },
+  "elderscale_mail": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 84,
+    "add": {
+      "def": 48,
+      "hp": 200,
+      "str": 6
+    },
+    "price": null,
+    "sell": 80000,
+    "look": {
+      "top": "armor",
+      "color": "#8a1e14",
+      "trim": "#ffd08a"
+    }
+  },
+  "storm_axe": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "atk": 139,
+      "str": 16,
+      "crit": 0.06
+    },
+    "price": null,
+    "sell": 104000,
+    "look": {
+      "axe": {
+        "blade": "#2e4a9a",
+        "haft": "#141a30",
+        "glow": "#ffe86a"
+      }
+    }
+  },
+  "thunder_feather": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 86,
+    "add": {
+      "agi": 10,
+      "str": 8,
+      "hp": 190
+    },
+    "price": null,
+    "sell": 54000,
+    "look": null
+  },
+  "aurora_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 88,
+    "add": {
+      "matk": 169,
+      "int": 19
+    },
+    "price": null,
+    "sell": 110000,
+    "look": {
+      "staff": {
+        "shaft": "#e8f0f8",
+        "head": "crystal",
+        "gem": "#7affc8",
+        "glow": true
+      }
+    }
+  },
+  "aurora_robe": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 88,
+    "add": {
+      "def": 50,
+      "hp": 210,
+      "int": 7
+    },
+    "price": null,
+    "sell": 86000,
+    "look": {
+      "top": "armor",
+      "color": "#3a8ab0",
+      "trim": "#e8c8ff"
+    }
+  },
+  "admiral_cutlass": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 60,
+    "add": {
+      "atk": 84,
+      "str": 10,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 56000,
+    "look": {
+      "blade": {
+        "color": "#c8d0d8",
+        "guard": "#d8b04a",
+        "grip": "#2a1a10",
+        "len": 0.66,
+        "width": 0.09
+      }
+    }
+  },
+  "admiral_hat": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 60,
+    "add": {
+      "def": 21,
+      "hp": 95,
+      "str": 4
+    },
+    "price": null,
+    "sell": 32000,
+    "look": {
+      "hat": "beret",
+      "hatColor": "#1a1a2a"
+    }
+  },
+  "stinger_dagger": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 70,
+    "add": {
+      "atk": 92,
+      "agi": 14,
+      "crit": 0.15
+    },
+    "price": null,
+    "sell": 76000,
+    "look": {
+      "blade": {
+        "color": "#e8c040",
+        "guard": "#2a1a0a",
+        "grip": "#1a1208",
+        "len": 0.42,
+        "width": 0.06
+      }
+    }
+  },
+  "amber_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 70,
+    "add": {
+      "agi": 7,
+      "str": 7,
+      "hp": 160
+    },
+    "price": null,
+    "sell": 40000,
+    "look": null
+  },
+  "forge_hammer": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 82,
+    "add": {
+      "atk": 116,
+      "int": 16,
+      "matk": 60
+    },
+    "price": null,
+    "sell": 96000,
+    "look": {
+      "mace": {
+        "head": "flange",
+        "metal": "#4a4a52",
+        "shaft": "#2a1a10",
+        "glow": "#ff8a2a"
+      }
+    }
+  },
+  "ironclad_plate": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 82,
+    "add": {
+      "def": 47,
+      "hp": 196,
+      "vit": 6
+    },
+    "price": null,
+    "sell": 78000,
+    "look": {
+      "top": "armor",
+      "color": "#4a4a52",
+      "trim": "#ff8a2a"
+    }
+  },
+  "seraph_bow": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 96,
+    "add": {
+      "atk": 138,
+      "agi": 18,
+      "crit": 0.1
+    },
+    "price": null,
+    "sell": 126000,
+    "look": {
+      "bow": {
+        "wood": "#f4f0e4",
+        "tip": "#ffe86a",
+        "size": 1.55,
+        "glow": "#ffffff"
+      }
+    }
+  },
+  "halo_ring": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 96,
+    "add": {
+      "int": 10,
+      "agi": 9,
+      "hp": 230
+    },
+    "price": null,
+    "sell": 66000,
+    "look": null
+  },
+  "stormstring": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 90,
+    "add": {
+      "atk": 130,
+      "agi": 17,
+      "crit": 0.09
+    },
+    "price": null,
+    "sell": 114000,
+    "look": {
+      "bow": {
+        "wood": "#1e2a4a",
+        "tip": "#ffe86a",
+        "size": 1.5,
+        "glow": "#cfe8ff"
+      }
+    }
+  },
+  "gale_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 90,
+    "add": {
+      "agi": 21,
+      "def": 12,
+      "hp": 54
+    },
+    "price": null,
+    "sell": 58000,
+    "look": {
+      "boots": "#1e2a4a"
+    }
+  },
+  "guardian_mace": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 92,
+    "add": {
+      "atk": 122,
+      "int": 17,
+      "matk": 62
+    },
+    "price": null,
+    "sell": 118000,
+    "look": {
+      "mace": {
+        "head": "holy",
+        "metal": "#f0e8d0",
+        "shaft": "#a8803a",
+        "glow": "#7ae8ff"
+      }
+    }
+  },
+  "sky_circlet": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 92,
+    "add": {
+      "def": 33,
+      "hp": 140,
+      "int": 7
+    },
+    "price": null,
+    "sell": 62000,
+    "look": {
+      "hat": "circlet",
+      "hatColor": "#ffd84d"
+    }
+  },
+  "kraken_blade": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 94,
+    "add": {
+      "atk": 136,
+      "str": 16,
+      "crit": 0.08
+    },
+    "price": null,
+    "sell": 122000,
+    "look": {
+      "blade": {
+        "color": "#5a2a7a",
+        "guard": "#c83a5a",
+        "grip": "#140a1e",
+        "len": 0.76,
+        "width": 0.09
+      }
+    }
+  },
+  "deepsea_mail": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 94,
+    "add": {
+      "def": 54,
+      "hp": 228,
+      "vit": 6
+    },
+    "price": null,
+    "sell": 94000,
+    "look": {
+      "top": "armor",
+      "color": "#2a1e4a",
+      "trim": "#c83a5a"
+    }
+  },
+  "elder_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 96,
+    "add": {
+      "matk": 188,
+      "int": 21
+    },
+    "price": null,
+    "sell": 126000,
+    "look": {
+      "staff": {
+        "shaft": "#5a3a1e",
+        "head": "gem",
+        "gem": "#9aff6a",
+        "glow": true
+      }
+    }
+  },
+  "grove_ring": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 96,
+    "add": {
+      "int": 9,
+      "str": 9,
+      "hp": 220
+    },
+    "price": null,
+    "sell": 64000,
+    "look": null
+  },
+  "heartbreaker": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 100,
+    "add": {
+      "atk": 128,
+      "agi": 19,
+      "crit": 0.18
+    },
+    "price": null,
+    "sell": 140000,
+    "look": {
+      "blade": {
+        "color": "#b08aff",
+        "guard": "#1a0e2a",
+        "grip": "#0a0612",
+        "len": 0.44,
+        "width": 0.06
+      }
+    }
+  },
+  "starfall_axe": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 100,
+    "add": {
+      "atk": 160,
+      "str": 19,
+      "crit": 0.07
+    },
+    "price": null,
+    "sell": 140000,
+    "look": {
+      "axe": {
+        "blade": "#2a1a4a",
+        "haft": "#0e0a14",
+        "glow": "#d8a8ff"
+      }
+    }
+  },
+  "tide_sword": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 110,
+    "add": {
+      "atk": 172,
+      "str": 20,
+      "crit": 0.09
+    },
+    "price": null,
+    "sell": 168000,
+    "look": {
+      "blade": {
+        "color": "#8af0e8",
+        "guard": "#2a8a9a",
+        "grip": "#0e2a3a",
+        "len": 0.78,
+        "width": 0.09
+      }
+    }
+  },
+  "prism_bow": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 110,
+    "add": {
+      "atk": 165,
+      "agi": 21,
+      "crit": 0.11
+    },
+    "price": null,
+    "sell": 166000,
+    "look": {
+      "bow": {
+        "wood": "#d8a8f0",
+        "tip": "#8ad8ff",
+        "size": 1.6,
+        "glow": "#ffd8ff"
+      }
+    }
+  },
+  "moon_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 110,
+    "add": {
+      "matk": 232,
+      "int": 25
+    },
+    "price": null,
+    "sell": 168000,
+    "look": {
+      "staff": {
+        "shaft": "#3a4a7a",
+        "head": "moon",
+        "gem": "#d8e0ff",
+        "glow": true
+      }
+    }
+  },
+  "garden_mace": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 110,
+    "add": {
+      "atk": 152,
+      "int": 21,
+      "matk": 78
+    },
+    "price": null,
+    "sell": 160000,
+    "look": {
+      "mace": {
+        "head": "holy",
+        "metal": "#f0d84a",
+        "shaft": "#4a7a2a",
+        "glow": "#c8ff6a"
+      }
+    }
+  },
+  "amber_dagger": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 110,
+    "add": {
+      "atk": 160,
+      "agi": 22,
+      "crit": 0.2
+    },
+    "price": null,
+    "sell": 166000,
+    "look": {
+      "blade": {
+        "color": "#ffb03a",
+        "guard": "#6a3a0a",
+        "grip": "#2a1408",
+        "len": 0.46,
+        "width": 0.05
+      }
+    }
+  },
+  "clock_axe": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 110,
+    "add": {
+      "atk": 196,
+      "str": 23,
+      "crit": 0.08
+    },
+    "price": null,
+    "sell": 168000,
+    "look": {
+      "axe": {
+        "blade": "#c8903a",
+        "haft": "#3a2a1a",
+        "glow": "#7ae8ff"
+      }
+    }
+  },
+  "prism_crown": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "def": 40,
+      "hp": 175,
+      "int": 9
+    },
+    "price": null,
+    "sell": 78000,
+    "look": {
+      "hat": "circlet",
+      "hatColor": "#ffb8f0"
+    }
+  },
+  "tide_mail": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 115,
+    "add": {
+      "def": 70,
+      "hp": 300,
+      "vit": 8,
+      "str": 8
+    },
+    "price": null,
+    "sell": 132000,
+    "look": {
+      "top": "armor",
+      "color": "#1e5a6a",
+      "trim": "#8af0e8"
+    }
+  },
+  "moon_boots": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "agi": 24,
+      "def": 15,
+      "hp": 70
+    },
+    "price": null,
+    "sell": 74000,
+    "look": {
+      "boots": "#3a4a7a"
+    }
+  },
+  "empress_ring": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 120,
+    "add": {
+      "str": 12,
+      "agi": 12,
+      "int": 12,
+      "hp": 280
+    },
+    "price": null,
+    "sell": 96000,
+    "look": null
+  },
+  "hellfire_blade": {
+    "slot": "weapon",
+    "weapon": "sword",
+    "rarity": "epic",
+    "level": 132,
+    "add": {
+      "atk": 232,
+      "str": 26,
+      "crit": 0.11
+    },
+    "price": null,
+    "sell": 240000,
+    "look": {
+      "blade": {
+        "color": "#ff6a2a",
+        "guard": "#2a0a0a",
+        "grip": "#140404",
+        "len": 0.84,
+        "width": 0.1
+      }
+    }
+  },
+  "soul_bow": {
+    "slot": "weapon",
+    "weapon": "bow",
+    "rarity": "epic",
+    "level": 132,
+    "add": {
+      "atk": 222,
+      "agi": 27,
+      "crit": 0.13
+    },
+    "price": null,
+    "sell": 236000,
+    "look": {
+      "bow": {
+        "wood": "#e8ffff",
+        "tip": "#8affff",
+        "size": 1.7,
+        "glow": "#8affff"
+      }
+    }
+  },
+  "rime_staff": {
+    "slot": "weapon",
+    "weapon": "staff",
+    "rarity": "epic",
+    "level": 132,
+    "add": {
+      "matk": 310,
+      "int": 32
+    },
+    "price": null,
+    "sell": 240000,
+    "look": {
+      "staff": {
+        "shaft": "#1a2a4a",
+        "head": "crystal",
+        "gem": "#6ad8ff",
+        "glow": true
+      }
+    }
+  },
+  "judgement_mace": {
+    "slot": "weapon",
+    "weapon": "mace",
+    "rarity": "epic",
+    "level": 132,
+    "add": {
+      "atk": 205,
+      "int": 27,
+      "matk": 105
+    },
+    "price": null,
+    "sell": 228000,
+    "look": {
+      "mace": {
+        "head": "holy",
+        "metal": "#fff3b0",
+        "shaft": "#3a2a4a",
+        "glow": "#ffffff"
+      }
+    }
+  },
+  "bloodfang": {
+    "slot": "weapon",
+    "weapon": "dagger",
+    "rarity": "epic",
+    "level": 132,
+    "add": {
+      "atk": 214,
+      "agi": 28,
+      "crit": 0.24
+    },
+    "price": null,
+    "sell": 236000,
+    "look": {
+      "blade": {
+        "color": "#d81a2a",
+        "guard": "#1a0408",
+        "grip": "#0a0204",
+        "len": 0.48,
+        "width": 0.055
+      }
+    }
+  },
+  "inferno_axe": {
+    "slot": "weapon",
+    "weapon": "axe",
+    "rarity": "epic",
+    "level": 132,
+    "add": {
+      "atk": 262,
+      "str": 30,
+      "crit": 0.1
+    },
+    "price": null,
+    "sell": 240000,
+    "look": {
+      "axe": {
+        "blade": "#2a0a0a",
+        "haft": "#140404",
+        "glow": "#ff6a1a"
+      }
+    }
+  },
+  "fallen_circlet": {
+    "slot": "head",
+    "rarity": "epic",
+    "level": 130,
+    "add": {
+      "def": 52,
+      "hp": 230,
+      "int": 12
+    },
+    "price": null,
+    "sell": 112000,
+    "look": {
+      "hat": "circlet",
+      "hatColor": "#b08aff"
+    }
+  },
+  "demonforged_plate": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 138,
+    "add": {
+      "def": 92,
+      "hp": 390,
+      "vit": 11,
+      "str": 10
+    },
+    "price": null,
+    "sell": 190000,
+    "look": {
+      "top": "armor",
+      "color": "#1a0a0e",
+      "trim": "#ff3a3a"
+    }
+  },
+  "soul_greaves": {
+    "slot": "feet",
+    "rarity": "epic",
+    "level": 130,
+    "add": {
+      "agi": 30,
+      "def": 20,
+      "hp": 95
+    },
+    "price": null,
+    "sell": 106000,
+    "look": {
+      "boots": "#2a4a4a"
+    }
+  },
+  "demonking_seal": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 150,
+    "add": {
+      "str": 16,
+      "agi": 16,
+      "int": 16,
+      "hp": 360
+    },
+    "price": null,
+    "sell": 150000,
+    "look": null
+  },
+  "turtle_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 104,
+    "add": {
+      "str": 11,
+      "agi": 11,
+      "int": 11,
+      "hp": 270
+    },
+    "price": null,
+    "sell": 36000,
+    "look": null
+  },
+  "bone_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 126,
+    "add": {
+      "str": 14,
+      "agi": 14,
+      "int": 14,
+      "hp": 320
+    },
+    "price": null,
+    "sell": 48000,
+    "look": null
+  },
+  "fallen_halo": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 148,
+    "add": {
+      "str": 17,
+      "agi": 17,
+      "int": 17,
+      "hp": 380
+    },
+    "price": null,
+    "sell": 64000,
+    "look": null
+  },
+  "moon_charm": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 112,
+    "add": {
+      "str": 12,
+      "agi": 12,
+      "int": 12,
+      "hp": 290
+    },
+    "price": null,
+    "sell": 40000,
+    "look": null
+  },
+  "bloodmoon_ring": {
+    "slot": "accessory",
+    "rarity": "epic",
+    "level": 138,
+    "add": {
+      "str": 15,
+      "agi": 15,
+      "int": 15,
+      "hp": 340
+    },
+    "price": null,
+    "sell": 56000,
+    "look": null
+  },
+  "shadow_mail": {
+    "slot": "body",
+    "rarity": "epic",
+    "level": 100,
+    "add": {
+      "def": 60,
+      "hp": 250,
+      "str": 7,
+      "int": 7
+    },
+    "price": null,
+    "sell": 110000,
+    "look": {
+      "top": "armor",
+      "color": "#1a1028",
+      "trim": "#b08aff"
+    }
+  }
+}

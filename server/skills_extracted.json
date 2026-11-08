@@ -1,0 +1,1677 @@
+{
+  "firstAid": {
+    "job": "novice",
+    "max": 1,
+    "aim": "self",
+    "mp": [
+      3
+    ],
+    "cooldownMs": 3000,
+    "value": [
+      0.08
+    ],
+    "element": "holy"
+  },
+  "bash": {
+    "job": "swordsman",
+    "max": 5,
+    "aim": "foe",
+    "range": 1.6,
+    "mp": [
+      12,
+      14,
+      15,
+      16,
+      18
+    ],
+    "cooldownMs": 1100,
+    "power": [
+      0.8,
+      0.95,
+      1.1,
+      1.25,
+      1.4
+    ]
+  },
+  "magnumBreak": {
+    "job": "swordsman",
+    "max": 5,
+    "aim": "around",
+    "radius": 2.4,
+    "mp": [
+      22,
+      22,
+      22,
+      22,
+      22
+    ],
+    "cooldownMs": 4500,
+    "power": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1
+    ],
+    "knock": 1,
+    "element": "fire"
+  },
+  "provoke": {
+    "job": "swordsman",
+    "max": 5,
+    "aim": "foe",
+    "range": 9,
+    "mp": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "cooldownMs": 2500,
+    "secs": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "value": [
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1
+    ]
+  },
+  "endure": {
+    "job": "swordsman",
+    "max": 5,
+    "aim": "self",
+    "mp": [
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "cooldownMs": 20000,
+    "secs": [
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "value": [
+      0.025,
+      0.05,
+      0.075,
+      0.1,
+      0.125
+    ]
+  },
+  "swordMastery": {
+    "job": "swordsman",
+    "max": 5,
+    "passive": true,
+    "value": [
+      1.5,
+      3,
+      4.5,
+      6,
+      7.5
+    ]
+  },
+  "doubleStrafe": {
+    "job": "archer",
+    "max": 5,
+    "aim": "foe",
+    "range": 9,
+    "mp": [
+      12,
+      12,
+      12,
+      12,
+      12
+    ],
+    "cooldownMs": 700,
+    "hits": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "power": [
+      1.1,
+      1.2,
+      1.3,
+      1.4,
+      1.5
+    ]
+  },
+  "arrowShower": {
+    "job": "archer",
+    "max": 5,
+    "aim": "spot",
+    "range": 9,
+    "radius": 2.6,
+    "mp": [
+      15,
+      15,
+      15,
+      15,
+      15
+    ],
+    "cooldownMs": 3000,
+    "power": [
+      0.9,
+      1,
+      1.1,
+      1.2,
+      1.3
+    ],
+    "knock": 1,
+    "element": "wind"
+  },
+  "chargeArrow": {
+    "job": "archer",
+    "max": 5,
+    "aim": "foe",
+    "range": 9,
+    "mp": [
+      12,
+      12,
+      12,
+      12,
+      12
+    ],
+    "cooldownMs": 4000,
+    "power": [
+      1.4,
+      1.5,
+      1.6,
+      1.7,
+      1.8
+    ],
+    "knock": 3.5
+  },
+  "concentration": {
+    "job": "archer",
+    "max": 5,
+    "aim": "self",
+    "mp": [
+      16,
+      20,
+      24,
+      28,
+      32
+    ],
+    "cooldownMs": 30000,
+    "secs": [
+      40,
+      50,
+      60,
+      70,
+      80
+    ],
+    "value": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "owlEye": {
+    "job": "archer",
+    "max": 5,
+    "passive": true,
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "fireBolt": {
+    "job": "mage",
+    "max": 5,
+    "aim": "foe",
+    "range": 8,
+    "magic": true,
+    "mp": [
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "cooldownMs": 1000,
+    "castMs": [
+      500,
+      700,
+      900,
+      1100,
+      1300
+    ],
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "power": [
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "element": "fire"
+  },
+  "coldBolt": {
+    "job": "mage",
+    "max": 5,
+    "aim": "foe",
+    "range": 8,
+    "magic": true,
+    "mp": [
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "cooldownMs": 1000,
+    "castMs": [
+      500,
+      700,
+      900,
+      1100,
+      1300
+    ],
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "power": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "secs": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "value": [
+      0.35,
+      0.35,
+      0.35,
+      0.35,
+      0.35
+    ],
+    "element": "ice"
+  },
+  "frostDiver": {
+    "job": "mage",
+    "max": 5,
+    "aim": "foe",
+    "range": 8,
+    "magic": true,
+    "mp": [
+      25,
+      25,
+      25,
+      25,
+      25
+    ],
+    "cooldownMs": 6000,
+    "castMs": [
+      800,
+      800,
+      800,
+      800,
+      800
+    ],
+    "power": [
+      1.1,
+      1.2,
+      1.3,
+      1.4,
+      1.5
+    ],
+    "secs": [
+      2.6,
+      3.2,
+      3.8,
+      4.4,
+      5
+    ],
+    "element": "ice"
+  },
+  "thunderstorm": {
+    "job": "mage",
+    "max": 5,
+    "aim": "spot",
+    "range": 8,
+    "radius": 2.8,
+    "magic": true,
+    "mp": [
+      24,
+      28,
+      32,
+      36,
+      40
+    ],
+    "cooldownMs": 3000,
+    "castMs": [
+      1000,
+      1200,
+      1400,
+      1600,
+      1800
+    ],
+    "hits": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "power": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "element": "wind"
+  },
+  "mpRecovery": {
+    "job": "mage",
+    "max": 5,
+    "passive": true,
+    "value": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ]
+  },
+  "heal": {
+    "job": "acolyte",
+    "max": 5,
+    "aim": "ally",
+    "range": 7,
+    "mp": [
+      12,
+      15,
+      18,
+      21,
+      24
+    ],
+    "cooldownMs": 1500,
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "element": "holy"
+  },
+  "blessing": {
+    "job": "acolyte",
+    "max": 5,
+    "aim": "party",
+    "radius": 8,
+    "mp": [
+      28,
+      32,
+      36,
+      40,
+      44
+    ],
+    "cooldownMs": 8000,
+    "secs": [
+      60,
+      80,
+      100,
+      120,
+      140
+    ],
+    "value": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "element": "holy"
+  },
+  "increaseAgi": {
+    "job": "acolyte",
+    "max": 5,
+    "aim": "party",
+    "radius": 8,
+    "mp": [
+      18,
+      21,
+      24,
+      27,
+      30
+    ],
+    "cooldownMs": 8000,
+    "secs": [
+      60,
+      80,
+      100,
+      120,
+      140
+    ],
+    "value": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "element": "wind"
+  },
+  "holyLight": {
+    "job": "acolyte",
+    "max": 5,
+    "aim": "foe",
+    "range": 8,
+    "magic": true,
+    "mp": [
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "cooldownMs": 1500,
+    "castMs": [
+      600,
+      650,
+      700,
+      750,
+      800
+    ],
+    "power": [
+      1.3,
+      1.5,
+      1.7,
+      1.9,
+      2.1
+    ],
+    "value": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "element": "holy"
+  },
+  "divineProtection": {
+    "job": "acolyte",
+    "max": 5,
+    "passive": true,
+    "value": [
+      0.03,
+      0.06,
+      0.09,
+      0.12,
+      0.15
+    ]
+  },
+  "doubleStab": {
+    "job": "thief",
+    "max": 5,
+    "aim": "foe",
+    "range": 1.6,
+    "mp": [
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "cooldownMs": 450,
+    "hits": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "power": [
+      1.8,
+      2,
+      2.2,
+      2.4,
+      2.6
+    ],
+    "as": "doubleStrafe"
+  },
+  "envenom": {
+    "job": "thief",
+    "max": 5,
+    "aim": "foe",
+    "range": 1.6,
+    "mp": [
+      5,
+      5,
+      6,
+      6,
+      7
+    ],
+    "cooldownMs": 500,
+    "power": [
+      2.8,
+      3.2,
+      3.6,
+      4,
+      4.4
+    ],
+    "secs": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "value": [
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6
+    ],
+    "element": "poison",
+    "as": "coldBolt"
+  },
+  "smokeBomb": {
+    "job": "thief",
+    "max": 5,
+    "aim": "around",
+    "radius": 2.4,
+    "mp": [
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    "cooldownMs": 4000,
+    "power": [
+      1.6,
+      1.8,
+      2,
+      2.2,
+      2.4
+    ],
+    "secs": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "value": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "element": "poison",
+    "as": "magnumBreak"
+  },
+  "shadowStep": {
+    "job": "thief",
+    "max": 5,
+    "aim": "self",
+    "mp": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "cooldownMs": 1200,
+    "secs": [
+      40,
+      50,
+      60,
+      70,
+      80
+    ],
+    "value": [
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "as": "concentration",
+    "power": [
+      2,
+      2.4,
+      2.8,
+      3.2,
+      3.6
+    ]
+  },
+  "daggerMastery": {
+    "job": "thief",
+    "max": 5,
+    "passive": true,
+    "value": [
+      6,
+      12,
+      18,
+      24,
+      30
+    ]
+  },
+  "mammonite": {
+    "job": "merchant",
+    "max": 5,
+    "aim": "foe",
+    "range": 1.7,
+    "mp": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "cooldownMs": 900,
+    "power": [
+      1.8,
+      2.1,
+      2.4,
+      2.7,
+      3
+    ],
+    "as": "bash"
+  },
+  "cartRevolution": {
+    "job": "merchant",
+    "max": 5,
+    "aim": "around",
+    "radius": 2.6,
+    "mp": [
+      15,
+      15,
+      15,
+      15,
+      15
+    ],
+    "cooldownMs": 3500,
+    "power": [
+      1.1,
+      1.25,
+      1.4,
+      1.55,
+      1.7
+    ],
+    "knock": 2.5,
+    "as": "magnumBreak"
+  },
+  "coinToss": {
+    "job": "merchant",
+    "max": 5,
+    "aim": "foe",
+    "range": 6,
+    "mp": [
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "cooldownMs": 1500,
+    "power": [
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2
+    ],
+    "as": "chargeArrow"
+  },
+  "battleCry": {
+    "job": "merchant",
+    "max": 5,
+    "aim": "party",
+    "radius": 8,
+    "mp": [
+      24,
+      28,
+      32,
+      36,
+      40
+    ],
+    "cooldownMs": 10000,
+    "secs": [
+      40,
+      55,
+      70,
+      85,
+      100
+    ],
+    "value": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "as": "blessing"
+  },
+  "haggle": {
+    "job": "merchant",
+    "max": 5,
+    "passive": true,
+    "value": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25
+    ]
+  },
+  "pierce": {
+    "job": "knight",
+    "max": 5,
+    "aim": "foe",
+    "range": 1.9,
+    "mp": [
+      15,
+      16,
+      18,
+      20,
+      22
+    ],
+    "cooldownMs": 1200,
+    "hits": [
+      2,
+      2,
+      3,
+      3,
+      3
+    ],
+    "power": [
+      0.45,
+      0.5,
+      0.48,
+      0.52,
+      0.58
+    ],
+    "as": "doubleStrafe"
+  },
+  "bowlingBash": {
+    "job": "knight",
+    "max": 5,
+    "aim": "around",
+    "radius": 2.8,
+    "mp": [
+      30,
+      30,
+      30,
+      30,
+      30
+    ],
+    "cooldownMs": 3000,
+    "power": [
+      0.75,
+      0.88,
+      1,
+      1.12,
+      1.25
+    ],
+    "knock": 3,
+    "as": "magnumBreak"
+  },
+  "spiralPierce": {
+    "job": "knight",
+    "max": 5,
+    "aim": "foe",
+    "range": 2.4,
+    "mp": [
+      27,
+      30,
+      33,
+      36,
+      39
+    ],
+    "cooldownMs": 3500,
+    "power": [
+      1.25,
+      1.5,
+      1.75,
+      2,
+      2.25
+    ],
+    "as": "bash"
+  },
+  "twoHandQuicken": {
+    "job": "knight",
+    "max": 5,
+    "aim": "self",
+    "mp": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "cooldownMs": 40000,
+    "secs": [
+      60,
+      75,
+      90,
+      105,
+      120
+    ],
+    "value": [
+      3,
+      3.5,
+      4,
+      4.5,
+      5
+    ],
+    "as": "concentration"
+  },
+  "knightMastery": {
+    "job": "knight",
+    "max": 5,
+    "passive": true,
+    "value": [
+      2,
+      4,
+      6,
+      8,
+      10
+    ]
+  },
+  "beastStrike": {
+    "job": "hunter",
+    "max": 5,
+    "aim": "foe",
+    "range": 9,
+    "mp": [
+      14,
+      14,
+      14,
+      14,
+      14
+    ],
+    "cooldownMs": 900,
+    "hits": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "power": [
+      0.8,
+      0.9,
+      1,
+      1.1,
+      1.2
+    ],
+    "as": "doubleStrafe"
+  },
+  "trapBlast": {
+    "job": "hunter",
+    "max": 5,
+    "aim": "spot",
+    "range": 9,
+    "radius": 3,
+    "mp": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "cooldownMs": 3500,
+    "power": [
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2
+    ],
+    "knock": 1.5,
+    "element": "fire",
+    "as": "arrowShower"
+  },
+  "piercingShot": {
+    "job": "hunter",
+    "max": 5,
+    "aim": "foe",
+    "range": 9,
+    "mp": [
+      16,
+      16,
+      16,
+      16,
+      16
+    ],
+    "cooldownMs": 3000,
+    "power": [
+      2.2,
+      2.5,
+      2.8,
+      3.1,
+      3.4
+    ],
+    "knock": 2,
+    "as": "chargeArrow"
+  },
+  "wildCall": {
+    "job": "hunter",
+    "max": 5,
+    "aim": "party",
+    "radius": 8,
+    "mp": [
+      20,
+      23,
+      26,
+      29,
+      32
+    ],
+    "cooldownMs": 10000,
+    "secs": [
+      60,
+      80,
+      100,
+      120,
+      140
+    ],
+    "value": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "element": "wind",
+    "as": "increaseAgi"
+  },
+  "beastBond": {
+    "job": "hunter",
+    "max": 5,
+    "passive": true,
+    "value": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ]
+  },
+  "shuriken": {
+    "job": "ninja",
+    "max": 5,
+    "aim": "foe",
+    "range": 7,
+    "mp": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "cooldownMs": 400,
+    "hits": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "power": [
+      2,
+      2.2,
+      2.4,
+      2.6,
+      2.8
+    ],
+    "as": "doubleStrafe"
+  },
+  "kunaiRain": {
+    "job": "ninja",
+    "max": 5,
+    "aim": "spot",
+    "range": 7,
+    "radius": 4.5,
+    "mp": [
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "cooldownMs": 1500,
+    "power": [
+      2,
+      2.3,
+      2.6,
+      2.9,
+      3.2
+    ],
+    "as": "arrowShower"
+  },
+  "fireJutsu": {
+    "job": "ninja",
+    "max": 5,
+    "aim": "around",
+    "radius": 3,
+    "mp": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cooldownMs": 1500,
+    "power": [
+      2.6,
+      3,
+      3.4,
+      3.8,
+      4.2
+    ],
+    "knock": 2,
+    "element": "fire",
+    "as": "magnumBreak"
+  },
+  "shadowClone": {
+    "job": "ninja",
+    "max": 5,
+    "aim": "self",
+    "mp": [
+      8,
+      8,
+      8,
+      8,
+      8
+    ],
+    "cooldownMs": 25000,
+    "secs": [
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "value": [
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6
+    ],
+    "as": "endure"
+  },
+  "ninjutsu": {
+    "job": "ninja",
+    "max": 5,
+    "passive": true,
+    "value": [
+      8,
+      16,
+      24,
+      32,
+      40
+    ]
+  },
+  "powerSmash": {
+    "job": "blacksmith",
+    "max": 5,
+    "aim": "foe",
+    "range": 1.8,
+    "mp": [
+      14,
+      16,
+      18,
+      20,
+      22
+    ],
+    "cooldownMs": 2000,
+    "power": [
+      2.4,
+      2.8,
+      3.2,
+      3.6,
+      4
+    ],
+    "as": "bash"
+  },
+  "hammerFall": {
+    "job": "blacksmith",
+    "max": 5,
+    "aim": "around",
+    "radius": 2.8,
+    "mp": [
+      24,
+      24,
+      24,
+      24,
+      24
+    ],
+    "cooldownMs": 6000,
+    "power": [
+      1,
+      1.15,
+      1.3,
+      1.45,
+      1.6
+    ],
+    "secs": [
+      1,
+      1.25,
+      1.5,
+      1.75,
+      2
+    ],
+    "as": "magnumBreak"
+  },
+  "adrenalineRush": {
+    "job": "blacksmith",
+    "max": 5,
+    "aim": "self",
+    "mp": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "cooldownMs": 40000,
+    "secs": [
+      60,
+      75,
+      90,
+      105,
+      120
+    ],
+    "value": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "as": "concentration"
+  },
+  "weaponPerfection": {
+    "job": "blacksmith",
+    "max": 5,
+    "aim": "self",
+    "mp": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "cooldownMs": 40000,
+    "secs": [
+      60,
+      75,
+      90,
+      105,
+      120
+    ],
+    "value": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "as": "blessing"
+  },
+  "forgeMastery": {
+    "job": "blacksmith",
+    "max": 5,
+    "passive": true,
+    "value": [
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1
+    ]
+  },
+  "acidTerror": {
+    "job": "alchemist",
+    "max": 5,
+    "aim": "foe",
+    "range": 6,
+    "mp": [
+      14,
+      16,
+      18,
+      20,
+      22
+    ],
+    "cooldownMs": 1500,
+    "power": [
+      1.8,
+      2.1,
+      2.4,
+      2.7,
+      3
+    ],
+    "element": "poison",
+    "as": "chargeArrow"
+  },
+  "bombFlask": {
+    "job": "alchemist",
+    "max": 5,
+    "aim": "spot",
+    "range": 7,
+    "radius": 2.6,
+    "mp": [
+      22,
+      22,
+      22,
+      22,
+      22
+    ],
+    "cooldownMs": 3500,
+    "power": [
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2
+    ],
+    "knock": 1,
+    "element": "fire",
+    "as": "arrowShower"
+  },
+  "potionPitcher": {
+    "job": "alchemist",
+    "max": 5,
+    "aim": "ally",
+    "range": 7,
+    "mp": [
+      12,
+      15,
+      18,
+      21,
+      24
+    ],
+    "cooldownMs": 1500,
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "as": "heal"
+  },
+  "aidPotion": {
+    "job": "alchemist",
+    "max": 5,
+    "aim": "self",
+    "mp": [
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "cooldownMs": 6000,
+    "value": [
+      0.12,
+      0.16,
+      0.2,
+      0.24,
+      0.28
+    ],
+    "as": "firstAid"
+  },
+  "potionResearch": {
+    "job": "alchemist",
+    "max": 5,
+    "passive": true,
+    "value": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ]
+  },
+  "meteorStorm": {
+    "job": "wizard",
+    "max": 5,
+    "aim": "spot",
+    "range": 8,
+    "radius": 3,
+    "magic": true,
+    "mp": [
+      36,
+      40,
+      44,
+      48,
+      52
+    ],
+    "cooldownMs": 4000,
+    "castMs": [
+      1400,
+      1500,
+      1600,
+      1700,
+      1800
+    ],
+    "hits": [
+      2,
+      2,
+      3,
+      3,
+      4
+    ],
+    "power": [
+      1,
+      1.15,
+      1.05,
+      1.2,
+      1.1
+    ],
+    "element": "fire",
+    "as": "thunderstorm"
+  },
+  "stormGust": {
+    "job": "wizard",
+    "max": 5,
+    "aim": "spot",
+    "range": 8,
+    "radius": 3.2,
+    "magic": true,
+    "mp": [
+      40,
+      44,
+      48,
+      52,
+      56
+    ],
+    "cooldownMs": 5000,
+    "castMs": [
+      1600,
+      1700,
+      1800,
+      1900,
+      2000
+    ],
+    "hits": [
+      2,
+      3,
+      3,
+      4,
+      4
+    ],
+    "power": [
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      1
+    ],
+    "secs": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "value": [
+      0.45,
+      0.45,
+      0.45,
+      0.45,
+      0.45
+    ],
+    "element": "ice",
+    "as": "thunderstorm"
+  },
+  "jupitelThunder": {
+    "job": "wizard",
+    "max": 5,
+    "aim": "foe",
+    "range": 8,
+    "magic": true,
+    "mp": [
+      20,
+      23,
+      26,
+      29,
+      32
+    ],
+    "cooldownMs": 1500,
+    "castMs": [
+      500,
+      600,
+      700,
+      800,
+      900
+    ],
+    "power": [
+      2.2,
+      2.6,
+      3,
+      3.4,
+      3.8
+    ],
+    "knock": 3,
+    "element": "wind",
+    "as": "chargeArrow"
+  },
+  "energyCoat": {
+    "job": "wizard",
+    "max": 5,
+    "aim": "self",
+    "mp": [
+      30,
+      30,
+      30,
+      30,
+      30
+    ],
+    "cooldownMs": 40000,
+    "secs": [
+      60,
+      75,
+      90,
+      105,
+      120
+    ],
+    "value": [
+      0.08,
+      0.12,
+      0.16,
+      0.2,
+      0.24
+    ],
+    "as": "endure"
+  },
+  "wizardMastery": {
+    "job": "wizard",
+    "max": 5,
+    "passive": true,
+    "value": [
+      2,
+      4,
+      6,
+      8,
+      10
+    ]
+  },
+  "magnusExorcismus": {
+    "job": "priest",
+    "max": 5,
+    "aim": "spot",
+    "range": 8,
+    "radius": 3,
+    "magic": true,
+    "mp": [
+      36,
+      40,
+      44,
+      48,
+      52
+    ],
+    "cooldownMs": 4500,
+    "castMs": [
+      1200,
+      1300,
+      1400,
+      1500,
+      1600
+    ],
+    "hits": [
+      2,
+      2,
+      3,
+      3,
+      4
+    ],
+    "power": [
+      0.9,
+      1.05,
+      0.95,
+      1.1,
+      1
+    ],
+    "value": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "element": "holy",
+    "as": "thunderstorm"
+  },
+  "sanctuary": {
+    "job": "priest",
+    "max": 5,
+    "aim": "party",
+    "radius": 8,
+    "mp": [
+      30,
+      35,
+      40,
+      45,
+      50
+    ],
+    "cooldownMs": 6000,
+    "value": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1
+    ],
+    "element": "holy",
+    "as": "blessing"
+  },
+  "kyrieEleison": {
+    "job": "priest",
+    "max": 5,
+    "aim": "party",
+    "radius": 8,
+    "mp": [
+      28,
+      32,
+      36,
+      40,
+      44
+    ],
+    "cooldownMs": 20000,
+    "secs": [
+      20,
+      25,
+      30,
+      35,
+      40
+    ],
+    "value": [
+      0.06,
+      0.09,
+      0.12,
+      0.15,
+      0.18
+    ],
+    "element": "holy",
+    "as": "increaseAgi"
+  },
+  "lexAeterna": {
+    "job": "priest",
+    "max": 5,
+    "aim": "foe",
+    "range": 9,
+    "mp": [
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "cooldownMs": 3000,
+    "secs": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "value": [
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35
+    ],
+    "element": "holy",
+    "as": "provoke"
+  },
+  "maceMastery": {
+    "job": "priest",
+    "max": 5,
+    "passive": true,
+    "value": [
+      3,
+      6,
+      9,
+      12,
+      15
+    ]
+  }
+}

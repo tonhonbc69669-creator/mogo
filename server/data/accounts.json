@@ -1,0 +1,2549 @@
+{
+  "users": {
+    "gunzo": {
+      "id": "acc_f277ccd2dd98",
+      "username": "GunZo",
+      "salt": "d60ddb18925df6450841155dffe9955f",
+      "passwordHash": "6fe9745877aef8eb9f5683f794ac6051d735d83af22f530dbe0c12864d19faca",
+      "token": "tok_8a1a8ec3962f5882344432dc076dd74125e3ef84cb861f65",
+      "createdAt": 1794146530927,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_f277ccd2dd98_char_0",
+          "uid": "acc_f277ccd2dd98_char_0",
+          "slot": 0,
+          "name": "GunZo",
+          "level": 2,
+          "exp": 284,
+          "job": "novice",
+          "style": 0,
+          "look": "c2.0.0.0.0.0.0.0",
+          "hp": 82,
+          "maxHp": 150,
+          "mp": 40,
+          "maxMp": 56,
+          "str": 0,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 5,
+          "map": "aurum",
+          "saveMap": "aurum",
+          "x": 0.05347479331378365,
+          "z": 2.5964379551874,
+          "yaw": 0.0746652832031269,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 1290,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 8
+            },
+            {
+              "id": "jelly",
+              "qty": 20
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m02": [
+                5
+              ]
+            },
+            "done": [
+              "m01"
+            ],
+            "dailyDone": [],
+            "track": [
+              "m02"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 20,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "2026-11-08",
+              "n": 1,
+              "total": 1
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                20,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {
+              "login": 0,
+              "quest": 1,
+              "kill": 20,
+              "level": 0
+            },
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "test_look_1100": {
+      "id": "acc_ab3d3d8a061a",
+      "username": "test_look_1100",
+      "salt": "6cf01eef7d9ff86cdf985af8bc4c7586",
+      "passwordHash": "bc6ec8d60f3666a3fc7c090959523a3fd6a52314736d6f6989f672f0270be9ec",
+      "token": "tok_b4fca052c596ada06ec22559b0541cc4bd250cbe5ceb6702",
+      "createdAt": 1794148241244,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_ab3d3d8a061a_char_0",
+          "uid": "acc_ab3d3d8a061a_char_0",
+          "slot": 0,
+          "name": "CustomHero",
+          "level": 1,
+          "exp": 0,
+          "job": "novice",
+          "style": 0,
+          "look": "c2.1.2.3.4.1.5.1",
+          "hp": 100,
+          "maxHp": 100,
+          "mp": 40,
+          "maxMp": 40,
+          "str": 0,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "aurum",
+          "saveMap": "aurum",
+          "x": 0,
+          "z": 18,
+          "yaw": 0,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 0,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 5
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m01": [
+                0
+              ]
+            },
+            "done": [],
+            "dailyDone": [],
+            "track": [
+              "m01"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 0,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "",
+              "n": 0,
+              "total": 0
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                0,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {},
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "noxz": {
+      "id": "acc_c11fbf9b3983",
+      "username": "NoxZ",
+      "salt": "3cb518ca75823fbfb5b7d9ab9e7d4ccd",
+      "passwordHash": "f2beaf5c5210fc149a2e6be2b54213cb35bb7b9d228cf48e9da4ddad906eaaec",
+      "token": "tok_fb6d01a8e95e7d4ffce10b2ad22d6cac3107ea111e56d49d",
+      "createdAt": 1794148975704,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_c11fbf9b3983_char_0",
+          "uid": "acc_c11fbf9b3983_char_0",
+          "slot": 0,
+          "name": "NZ",
+          "level": 5,
+          "exp": 984,
+          "job": "novice",
+          "style": 0,
+          "look": "c2.1.1.1.0.0.1.0",
+          "hp": 407,
+          "maxHp": 415,
+          "mp": 40,
+          "maxMp": 80,
+          "str": 10,
+          "vit": 10,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "aurum",
+          "saveMap": "aurum",
+          "x": 2.291721473404851,
+          "z": 25.55286689018426,
+          "yaw": -2.7686159675710442,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 4384,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 6
+            },
+            {
+              "id": "jelly",
+              "qty": 205
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            },
+            {
+              "id": "gear_102_1794151907267",
+              "item": "cloth_tunic",
+              "slot": "body",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m04": [
+                0
+              ]
+            },
+            "done": [
+              "m01",
+              "m02",
+              "m03"
+            ],
+            "dailyDone": [],
+            "track": [
+              "m04"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 291,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "2026-11-08",
+              "n": 1,
+              "total": 1
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                40,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {
+              "login": 0,
+              "quest": 3,
+              "kill": 291,
+              "level": 0,
+              "sell": 10
+            },
+            "pass": {
+              "season": 1,
+              "pts": 50,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "gunza": {
+      "id": "acc_2d86be30ab09",
+      "username": "GunZA",
+      "salt": "a5750e7c74814a0f1c5948ce1408fd33",
+      "passwordHash": "c497acf1726e3cd1acd253455f7117d45f130bed849536088698df6b007e4c81",
+      "token": "tok_c754dd86d9187866bbcce1d8cc865b94d05ba2cfad422d24",
+      "createdAt": 1794148981073,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_2d86be30ab09_char_0",
+          "uid": "acc_2d86be30ab09_char_0",
+          "slot": 0,
+          "name": "GunZa",
+          "level": 4,
+          "exp": 1165,
+          "job": "novice",
+          "style": 0,
+          "look": "c2.0.2.5.0.0.6.0",
+          "hp": 174,
+          "maxHp": 210,
+          "mp": 53,
+          "maxMp": 72,
+          "str": 0,
+          "vit": 0,
+          "agi": 15,
+          "int": 0,
+          "points": 0,
+          "map": "bull1",
+          "saveMap": "aurum",
+          "x": -17.415499885448774,
+          "z": 56.7554606419894,
+          "yaw": -2.108089270708052,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 2942,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 19
+            },
+            {
+              "id": "jelly",
+              "qty": 95
+            },
+            {
+              "id": "bunny_fur",
+              "qty": 2
+            },
+            {
+              "id": "potion_orange",
+              "qty": 10
+            },
+            {
+              "id": "jelly_green",
+              "qty": 25
+            },
+            {
+              "id": "slime_core",
+              "qty": 5
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            },
+            {
+              "id": "gear_101_1794151905171",
+              "item": "cloth_tunic",
+              "slot": "body",
+              "refine": 0
+            },
+            {
+              "id": "gear_101_1794157861299",
+              "item": "jelly_ring",
+              "slot": null,
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m04": [
+                0
+              ],
+              "s_jelly": [
+                0
+              ]
+            },
+            "done": [
+              "m01",
+              "m02",
+              "m03"
+            ],
+            "dailyDone": [],
+            "track": [
+              "m04",
+              "s_jelly"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 220,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "2026-11-09",
+              "n": 2,
+              "total": 2
+            },
+            "daily": {
+              "day": "2026-11-09",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                25,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {
+              "login": 0,
+              "quest": 3,
+              "kill": 220
+            },
+            "pass": {
+              "season": 1,
+              "pts": 50,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "guest": {
+      "id": "acc_guest",
+      "username": "Guest",
+      "salt": "guest",
+      "passwordHash": "",
+      "token": "guest_token",
+      "createdAt": 1794150673698,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_guest_char_0",
+          "uid": "acc_guest_char_0",
+          "slot": 0,
+          "name": "นักผจญภัย",
+          "level": 1,
+          "exp": 0,
+          "job": "novice",
+          "style": 0,
+          "look": "",
+          "hp": 100,
+          "maxHp": 125,
+          "mp": 40,
+          "maxMp": 48,
+          "str": 0,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "aurum",
+          "saveMap": "aurum",
+          "x": 0,
+          "z": 18,
+          "yaw": 0,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 0,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 5
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m01": [
+                0
+              ]
+            },
+            "done": [],
+            "dailyDone": [],
+            "track": [
+              "m01"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 0,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "",
+              "n": 0,
+              "total": 0
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                0,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {},
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "reg_test_1": {
+      "id": "acc_94f118e0860c",
+      "username": "reg_test_1",
+      "salt": "ca346889f952f07b9d7d676de6844240",
+      "passwordHash": "4914e3b62bdafaac911d61c1b7f3c90acc0ffad6bdd2bcb9800031ad33850216",
+      "token": "tok_51d70b85e9f12270b998ffbea81582a3fddbbe6f20c59e52",
+      "createdAt": 1794150697684,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_94f118e0860c_char_0",
+          "uid": "acc_94f118e0860c_char_0",
+          "slot": 0,
+          "name": "reg_test_1",
+          "level": 1,
+          "exp": 0,
+          "job": "novice",
+          "style": 0,
+          "look": "",
+          "hp": 100,
+          "maxHp": 100,
+          "mp": 40,
+          "maxMp": 40,
+          "str": 0,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "aurum",
+          "saveMap": "aurum",
+          "x": 0,
+          "z": 18,
+          "yaw": 0,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 0,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 5
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m01": [
+                0
+              ]
+            },
+            "done": [],
+            "dailyDone": [],
+            "track": [
+              "m01"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 0,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "",
+              "n": 0,
+              "total": 0
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                0,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {},
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "reg_debug_1": {
+      "id": "acc_4407ec6ddfd1",
+      "username": "reg_debug_1",
+      "salt": "f005ed892b391658338a53e2fc160e9a",
+      "passwordHash": "ed3dc33a7986b6339d408ad2981eb7274fc2f9f6aa245346b39c3cc70745fc23",
+      "token": "tok_5ba84328b2b214b6fd3e8993649ccbca85db6961b92c50f4",
+      "createdAt": 1794150813312,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_4407ec6ddfd1_char_0",
+          "uid": "acc_4407ec6ddfd1_char_0",
+          "slot": 0,
+          "name": "reg_debug_1",
+          "level": 1,
+          "exp": 0,
+          "job": "novice",
+          "style": 0,
+          "look": "",
+          "hp": 100,
+          "maxHp": 125,
+          "mp": 40,
+          "maxMp": 48,
+          "str": 0,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "aurum",
+          "saveMap": "aurum",
+          "x": 0,
+          "z": 18,
+          "yaw": 0,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 0,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 5
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m01": [
+                0
+              ]
+            },
+            "done": [],
+            "dailyDone": [],
+            "track": [
+              "m01"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 0,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "",
+              "n": 0,
+              "total": 0
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                0,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {},
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "p1_d08ut": {
+      "id": "acc_27668f9df2a9",
+      "username": "p1_d08ut",
+      "salt": "3c658f346f1049e70c450e07fd2c2bb2",
+      "passwordHash": "dabab7a884f8692c45e6474864e63fc1294259bf5334748210840754d34e99b3",
+      "token": "tok_0f80eef04eeb4ad188c9ebe2b53a6450c78fcefaf6363d4d",
+      "createdAt": 1794150840241,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_27668f9df2a9_char_0",
+          "uid": "acc_27668f9df2a9_char_0",
+          "slot": 0,
+          "name": "p1_d08ut",
+          "level": 1,
+          "exp": 0,
+          "job": "novice",
+          "style": 0,
+          "look": "",
+          "hp": 100,
+          "maxHp": 125,
+          "mp": 40,
+          "maxMp": 48,
+          "str": 0,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "aurum",
+          "saveMap": "aurum",
+          "x": 0,
+          "z": 18,
+          "yaw": 0,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 0,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 5
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m01": [
+                0
+              ]
+            },
+            "done": [],
+            "dailyDone": [],
+            "track": [
+              "m01"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 0,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "",
+              "n": 0,
+              "total": 0
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                0,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {},
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "p2_dv1df": {
+      "id": "acc_844455682743",
+      "username": "p2_dv1df",
+      "salt": "03afd5d0a29c1ffa28994b96b649b37f",
+      "passwordHash": "cba11bf53c201715e432ed87fd7700bd8ed220617277d522214fa72407c09bcb",
+      "token": "tok_8e8bc13e026d414f097ffdb0d1eefdc57f4218c62df868d9",
+      "createdAt": 1794150840311,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_844455682743_char_0",
+          "uid": "acc_844455682743_char_0",
+          "slot": 0,
+          "name": "p2_dv1df",
+          "level": 1,
+          "exp": 0,
+          "job": "novice",
+          "style": 0,
+          "look": "",
+          "hp": 100,
+          "maxHp": 125,
+          "mp": 40,
+          "maxMp": 48,
+          "str": 0,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "aurum",
+          "saveMap": "aurum",
+          "x": 0,
+          "z": 18,
+          "yaw": 0,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 0,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 5
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m01": [
+                0
+              ]
+            },
+            "done": [],
+            "dailyDone": [],
+            "track": [
+              "m01"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 0,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "",
+              "n": 0,
+              "total": 0
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                0,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {},
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "gotchape": {
+      "id": "acc_30c219669a6d",
+      "username": "gotchape",
+      "salt": "bcc9a93423a0e70eec4a5255c098369c",
+      "passwordHash": "069bbea95c238b201ed0a84ef64e39f895a193a8ae87d401a39c82f32f08ba88",
+      "token": "tok_1bba160f7c5a4f973e914d7fdc880733586e380e0702209a",
+      "createdAt": 1794152001617,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_30c219669a6d_char_0",
+          "uid": "acc_30c219669a6d_char_0",
+          "slot": 0,
+          "name": "peee",
+          "level": 2,
+          "exp": 256,
+          "job": "novice",
+          "style": 0,
+          "look": "c2.0.3.9.0.1.0.1",
+          "hp": 148,
+          "maxHp": 160,
+          "mp": 28,
+          "maxMp": 56,
+          "str": 5,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "bull1",
+          "saveMap": "aurum",
+          "x": 10.491481302263471,
+          "z": 65.4837606051544,
+          "yaw": 2.776965396003932,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 1262,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 5
+            },
+            {
+              "id": "jelly",
+              "qty": 10
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            },
+            {
+              "id": "gear_103_1794152351216",
+              "item": "cloth_tunic",
+              "slot": "body",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "s_jelly": [
+                0
+              ],
+              "s_copper": [
+                0
+              ]
+            },
+            "done": [
+              "m01",
+              "m02",
+              "m03"
+            ],
+            "dailyDone": [],
+            "track": [
+              "s_jelly",
+              "s_copper"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 14,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "2026-11-08",
+              "n": 1,
+              "total": 1
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                14,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {
+              "login": 0,
+              "quest": 3,
+              "kill": 14,
+              "level": 0
+            },
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "tester_leej7": {
+      "id": "acc_469b84e6966a",
+      "username": "tester_leej7",
+      "salt": "61df58dfa99826ff46365530a86d19cb",
+      "passwordHash": "da790076b01aeb66639bb8c0bda6fa2c5b7cd88ae49b219c8015455642566224",
+      "token": "tok_9681426d32bcc311346a4fe7f83ef00d83b82c1b23d68bd8",
+      "createdAt": 1794152753441,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_469b84e6966a_char_0",
+          "uid": "acc_469b84e6966a_char_0",
+          "slot": 0,
+          "name": "tester_leej7",
+          "level": 1,
+          "exp": 0,
+          "job": "novice",
+          "style": 0,
+          "look": "",
+          "hp": 100,
+          "maxHp": 125,
+          "mp": 40,
+          "maxMp": 48,
+          "str": 0,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "aurum",
+          "saveMap": "aurum",
+          "x": 0,
+          "z": 18,
+          "yaw": 0,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 0,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 5
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m01": [
+                0
+              ]
+            },
+            "done": [],
+            "dailyDone": [],
+            "track": [
+              "m01"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 0,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "",
+              "n": 0,
+              "total": 0
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                0,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {},
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    },
+    "t_drop_jkmiy": {
+      "id": "acc_e205da8a63ae",
+      "username": "t_drop_jkmiy",
+      "salt": "6d7f439063d1292e0f5e524241d4647b",
+      "passwordHash": "fb3c467d96843d93ce23a03ea4346c62d388a9385547d6e23dcc100661753c0b",
+      "token": "tok_00c530d710358c6d56466ed4ea0abf881c4d54b09dfa40de",
+      "createdAt": 1794152774673,
+      "gems": 0,
+      "chars": {
+        "0": {
+          "id": "acc_e205da8a63ae_char_0",
+          "uid": "acc_e205da8a63ae_char_0",
+          "slot": 0,
+          "name": "t_drop_jkmiy",
+          "level": 1,
+          "exp": 18,
+          "job": "novice",
+          "style": 0,
+          "look": "",
+          "hp": 94,
+          "maxHp": 125,
+          "mp": 40,
+          "maxMp": 48,
+          "str": 0,
+          "vit": 0,
+          "agi": 0,
+          "int": 0,
+          "points": 0,
+          "map": "bull1",
+          "saveMap": "aurum",
+          "x": -9.04,
+          "z": 46.07,
+          "yaw": 0,
+          "gm": false,
+          "gmState": {
+            "hide": false,
+            "god": false,
+            "speed": 1
+          },
+          "ride": "",
+          "title": "",
+          "guild": "",
+          "zeny": 12,
+          "gems": 0,
+          "shopOwned": [],
+          "items": [
+            {
+              "id": "potion_red",
+              "qty": 5
+            },
+            {
+              "id": "jelly_green",
+              "qty": 1
+            }
+          ],
+          "gear": [
+            {
+              "id": "gear_sword_1",
+              "item": "wooden_sword",
+              "slot": "weapon",
+              "refine": 0
+            }
+          ],
+          "storageItems": [],
+          "storageGear": [],
+          "storageZeny": 0,
+          "marketListings": [],
+          "mailList": [],
+          "guildData": null,
+          "skills": {
+            "firstAid": 1
+          },
+          "quests": {
+            "on": {
+              "m01": [
+                0
+              ]
+            },
+            "done": [],
+            "dailyDone": [],
+            "track": [
+              "m01"
+            ]
+          },
+          "life": {
+            "lv": {
+              "fish": 1,
+              "mine": 1,
+              "cook": 1,
+              "farm": 1
+            },
+            "exp": {
+              "fish": 0,
+              "mine": 0,
+              "cook": 0,
+              "farm": 0
+            },
+            "rod": 0,
+            "pick": 0,
+            "plots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "homePlots": [
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              },
+              {
+                "crop": "",
+                "at": 0,
+                "water": false
+              }
+            ],
+            "food": null,
+            "mount": null,
+            "home": 0,
+            "homeOpen": "friends",
+            "furn": {
+              "own": {},
+              "placed": []
+            },
+            "pets": {
+              "pets": [],
+              "out": "",
+              "nest": null,
+              "pick": true,
+              "dex": [],
+              "pity": 0
+            }
+          },
+          "stats": {
+            "kills": 1,
+            "dun": 0,
+            "wbMvp": 0,
+            "towns": [
+              "aurum"
+            ],
+            "login": {
+              "day": "",
+              "n": 0,
+              "total": 0
+            },
+            "daily": {
+              "day": "2026-11-08",
+              "ids": [
+                "t_kill",
+                "t_fish",
+                "t_mine"
+              ],
+              "p": [
+                1,
+                0,
+                0
+              ],
+              "bonus": false
+            },
+            "ach": [],
+            "cnt": {
+              "kill": 1
+            },
+            "pass": {
+              "season": 1,
+              "pts": 0,
+              "free": [],
+              "prem": [],
+              "hasPrem": false
+            },
+            "worn": {
+              "hat": "",
+              "back": "",
+              "face": "",
+              "costume": "",
+              "aura": "",
+              "trail": "",
+              "bird": "",
+              "name": "",
+              "pet": ""
+            }
+          },
+          "duels": {
+            "w": 0,
+            "l": 0
+          }
+        }
+      }
+    }
+  },
+  "tokens": {
+    "tok_8a1a8ec3962f5882344432dc076dd74125e3ef84cb861f65": "gunzo",
+    "tok_b4fca052c596ada06ec22559b0541cc4bd250cbe5ceb6702": "test_look_1100",
+    "tok_fb6d01a8e95e7d4ffce10b2ad22d6cac3107ea111e56d49d": "noxz",
+    "tok_c754dd86d9187866bbcce1d8cc865b94d05ba2cfad422d24": "gunza",
+    "guest_token": "guest",
+    "tok_51d70b85e9f12270b998ffbea81582a3fddbbe6f20c59e52": "reg_test_1",
+    "tok_5ba84328b2b214b6fd3e8993649ccbca85db6961b92c50f4": "reg_debug_1",
+    "tok_0f80eef04eeb4ad188c9ebe2b53a6450c78fcefaf6363d4d": "p1_d08ut",
+    "tok_8e8bc13e026d414f097ffdb0d1eefdc57f4218c62df868d9": "p2_dv1df",
+    "tok_1bba160f7c5a4f973e914d7fdc880733586e380e0702209a": "gotchape",
+    "tok_9681426d32bcc311346a4fe7f83ef00d83b82c1b23d68bd8": "tester_leej7",
+    "tok_00c530d710358c6d56466ed4ea0abf881c4d54b09dfa40de": "t_drop_jkmiy"
+  },
+  "marketListings": [
+    {
+      "id": "mkt_1",
+      "seller": "npc_1",
+      "sellerName": "พ่อค้าพเนจร",
+      "item": "potion_white",
+      "qty": 10,
+      "price": 1200
+    },
+    {
+      "id": "mkt_2",
+      "seller": "npc_2",
+      "sellerName": "ช่างตีเหล็กหลวง",
+      "item": "iron_sword",
+      "qty": 1,
+      "price": 250,
+      "refine": 2
+    },
+    {
+      "id": "mkt_3",
+      "seller": "npc_3",
+      "sellerName": "นักล่าสมบัติ",
+      "item": "egg_mystery",
+      "qty": 1,
+      "price": 7500
+    }
+  ]
+}

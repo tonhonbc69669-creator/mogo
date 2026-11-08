@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="th" class="h-full w-full">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+    <title>Final Slop — เกม MMORPG พิกเซล (Local Study & Play Edition)</title>
+    <link rel="icon" href="./favicon.ico"/>
+    <link rel="manifest" href="./manifest.webmanifest"/>
+    <link rel="stylesheet" href="./_next/static/immutable/chunks/2xjtro12qs3fh.css"/>
+    <link rel="stylesheet" href="./_next/static/immutable/chunks/09bss36bp3q87.css"/>
+    <link rel="stylesheet" href="./_next/static/immutable/chunks/2ma4krvus_hi3.css"/>
+    <style>
+        * {
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            box-sizing: border-box;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #16201a;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        #app-mount {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        /* Draggable Medieval HUD Quick Badge (Move anywhere, never covers game UI) */
+        .hud-badge {
+            position: absolute;
+            top: 12px;
+            left: 215px;
+            z-index: 1000;
+            background: rgba(18, 26, 21, 0.94);
+            border: 1.5px solid #e2b755;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.65), inset 0 0 10px rgba(226, 183, 85, 0.15);
+            border-radius: 20px;
+            padding: 4px 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #fffaf0;
+            font-size: 11.5px;
+            font-weight: 700;
+            backdrop-filter: blur(8px);
+            cursor: grab;
+            white-space: nowrap;
+            user-select: none;
+            touch-action: none;
+            transition: box-shadow 0.2s, background 0.2s, border-color 0.2s;
+        }
+        .hud-badge:active {
+            cursor: grabbing;
+        }
+        .hud-badge:hover {
+            background: rgba(28, 40, 32, 0.98);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.8), 0 0 12px rgba(226, 183, 85, 0.45);
+        }
+        .hud-drag-handle {
+            color: #8da495;
+            font-size: 13px;
+            margin-right: -2px;
+            opacity: 0.7;
+        }
+        .hud-pill-dot {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            box-shadow: 0 0 6px #4ade80;
+            flex-shrink: 0;
+        }
+        .hud-pill-divider {
+            color: #4a6352;
+            font-size: 10px;
+        }
+
+        /* Medieval Menu Dropdown Modal */
+        .hud-menu-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 3500;
+            background: rgba(10, 15, 12, 0.75);
+            backdrop-filter: blur(6px);
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+        .hud-menu-box {
+            width: 100%;
+            max-width: 400px;
+            background: linear-gradient(180deg, #223026 0%, #16201a 100%);
+            border: 2.5px solid #e2b755;
+            border-radius: 14px;
+            padding: 22px;
+            color: #fffaf0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.85);
+            animation: fadeInScale 0.18s ease-out;
+        }
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .menu-action-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            border: 1px solid #3c5242;
+            background: #18231c;
+            color: #f7ce6d;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.15s;
+        }
+        .menu-action-btn:hover {
+            background: #2a3a2f;
+            border-color: #e2b755;
+            transform: translateX(3px);
+            color: #fff;
+        }
+
+        /* Swatches & Character Customizer Controls */
+        .swatch-group {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+        .swatch-btn {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+            transition: transform 0.12s, border-color 0.12s;
+        }
+        .swatch-btn:hover {
+            transform: scale(1.15);
+        }
+        .swatch-btn.selected {
+            border-color: #ffffff;
+            outline: 2px solid #e2b755;
+            transform: scale(1.15);
+        }
+        .gender-toggle {
+            display: flex;
+            gap: 8px;
+            margin-top: 5px;
+        }
+        .gender-btn {
+            flex: 1;
+            padding: 8px;
+            border-radius: 7px;
+            border: 1.5px solid #44594a;
+            background: #121c15;
+            color: #a9b8ad;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .gender-btn.selected {
+            border-color: #e2b755;
+            background: #27382d;
+            color: #f7ce6d;
+            box-shadow: 0 2px 8px rgba(226, 183, 85, 0.25);
+        }
+        .study-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .study-box {
+            max-width: 780px;
+            margin: 40px auto;
+            background: #1c2720;
+            border: 2px solid #e2b755;
+            border-radius: 12px;
+            padding: 24px;
+            color: #e5e0d8;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        .study-box h2 {
+            color: #f7ce6d;
+            margin-top: 0;
+            border-bottom: 1px solid #3d4f43;
+            padding-bottom: 8px;
+        }
+        .study-box code {
+            background: #111a14;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #7ce08a;
+            font-family: monospace;
+        }
+        /* Medieval Auth & Account Portal Styles */
+        .auth-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, rgba(28, 39, 32, 0.88) 0%, rgba(10, 15, 12, 0.96) 100%);
+            backdrop-filter: blur(8px);
+            padding: 16px;
+        }
+        .auth-card {
+            width: 100%;
+            max-width: 460px;
+            background: linear-gradient(180deg, #233026 0%, #17211a 100%);
+            border: 3px solid #e2b755;
+            border-radius: 14px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.85), inset 0 0 24px rgba(226, 183, 85, 0.12);
+            padding: 26px 24px;
+            color: #f5efe2;
+            position: relative;
+        }
+        .auth-tabs {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 18px;
+            background: #111913;
+            padding: 5px;
+            border-radius: 8px;
+            border: 1px solid #354739;
+        }
+        .auth-tab {
+            flex: 1;
+            padding: 8px 6px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: #a9b8ad;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .auth-tab.active {
+            background: #e2b755;
+            color: #1a150b;
+            box-shadow: 0 2px 8px rgba(226, 183, 85, 0.35);
+        }
+        .auth-field {
+            margin-bottom: 14px;
+        }
+        .auth-field label {
+            display: block;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #f7ce6d;
+            margin-bottom: 5px;
+        }
+        .auth-input {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 7px;
+            border: 1.5px solid #44594a;
+            background: #0f1712;
+            color: #ffffff;
+            font-size: 14px;
+            outline: none;
+            user-select: text !important;
+            -webkit-user-select: text !important;
+        }
+        .auth-input:focus {
+            border-color: #e2b755;
+            box-shadow: 0 0 0 2px rgba(226, 183, 85, 0.25);
+        }
+        .auth-submit {
+            width: 100%;
+            padding: 11px;
+            border-radius: 8px;
+            border: 1px solid #f9dc8c;
+            background: linear-gradient(180deg, #f3ca68 0%, #d4a338 100%);
+            color: #1c1508;
+            font-weight: 800;
+            font-size: 14.5px;
+            cursor: pointer;
+            margin-top: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: transform 0.1s, filter 0.15s;
+        }
+        .auth-submit:hover {
+            filter: brightness(1.06);
+            transform: translateY(-1px);
+        }
+        .auth-msg {
+            margin-top: 12px;
+            padding: 9px 12px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            display: none;
+        }
+        .auth-msg.error {
+            display: block;
+            background: rgba(220, 53, 69, 0.2);
+            border: 1px solid #ff6b6b;
+            color: #ffd2d2;
+        }
+        .auth-msg.success {
+            display: block;
+            background: rgba(40, 167, 69, 0.22);
+            border: 1px solid #5dd879;
+            color: #d4ffde;
+        }
+    </style>
+    <script>
+        // Force local server by default so cached live server URLs never cause Clerk 523 errors
+        const LOCAL_WS = "ws://" + (window.location.hostname || "localhost") + ":" + (window.location.port || "2567");
+        const LIVE_WS = "wss://119-10-142-20.sslip.io";
+        if (localStorage.getItem('game_server_ws') === LIVE_WS && !window.location.search.includes('live=1')) {
+            localStorage.setItem('game_server_ws', LOCAL_WS);
+        }
+        window.GAME_SERVER_WS = localStorage.getItem('game_server_ws') || LOCAL_WS;
+
+        // Local JSON Colyseus Room Bridge for 100% Full Gameplay without binary schema reflection mismatch
+        window.__createLocalRoom = function(client, reservation, joinOptions) {
+            return new Promise((resolve, reject) => {
+                const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+                const wsHost = window.location.host || 'localhost:2567';
+                const mapName = (joinOptions && joinOptions.map) || reservation.map || 'aurum';
+                const charSlot = (joinOptions && joinOptions.char !== undefined) ? joinOptions.char : (reservation.charSlot ?? 0);
+                const token = (joinOptions && joinOptions.token) || reservation.token || localStorage.getItem('fs_auth_token') || '';
+                const wsUrl = `${wsProtocol}//${wsHost}/${reservation.processId}/${reservation.roomId}?sessionId=${reservation.sessionId}&map=${encodeURIComponent(mapName)}&char=${encodeURIComponent(charSlot)}&token=${encodeURIComponent(token)}`;
+
+                const ws = new WebSocket(wsUrl);
+                window.__fsWs = ws;
+                const msgHandlers = new Map();
+                const leaveHandlers = [];
+                const addCallbacks = { players: [], monsters: [], drops: [] };
+                const removeCallbacks = { players: [], monsters: [], drops: [] };
+
+                const state = {
+                    players: new Map(),
+                    monsters: new Map(),
+                    drops: new Map(),
+                    duels: ""
+                };
+
+                const localCallbacks = {
+                    onAdd(col, cb, immediate) {
+                        if (!addCallbacks[col]) addCallbacks[col] = [];
+                        addCallbacks[col].push(cb);
+                        if (immediate && state[col]) {
+                            for (const [k, v] of state[col].entries()) {
+                                try { cb(v, k); } catch (err) { console.error("onAdd immediate error:", err); }
+                            }
+                        }
+                        return () => {};
+                    },
+                    onRemove(col, cb) {
+                        if (!removeCallbacks[col]) removeCallbacks[col] = [];
+                        removeCallbacks[col].push(cb);
+                        return () => {};
+                    },
+                    listen() { return () => {}; }
+                };
+
+                const room = {
+                    name: reservation.name || "town",
+                    roomId: reservation.roomId,
+                    sessionId: reservation.sessionId,
+                    serializerId: "schema",
+                    serializer: { getState: () => state },
+                    state: state,
+                    _localCallbacks: localCallbacks,
+                    onMessage(type, cb) {
+                        if (!msgHandlers.has(type)) msgHandlers.set(type, []);
+                        msgHandlers.get(type).push(cb);
+                        return () => {};
+                    },
+                    onLeave(cb) {
+                        leaveHandlers.push(cb);
+                        return () => {};
+                    },
+                    onStateChange: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {} }),
+                    onError: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {}, once: () => {}, remove: () => {} }),
+                    onJoin: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {}, once: () => {} }),
+                    ping(cb) {
+                        if (typeof cb === "function") cb(1);
+                    },
+                    send(type, data) {
+                        if (ws.readyState === WebSocket.OPEN) {
+                            ws.send(JSON.stringify({ t: "msg", type, data }));
+                        }
+                    },
+                    sendUnreliable(type, data) {
+                        this.send(type, data);
+                    },
+                    leave() {
+                        try { ws.close(1000); } catch (e) {}
+                        return Promise.resolve(1000);
+                    },
+                    removeAllListeners() {
+                        msgHandlers.clear();
+                        leaveHandlers.length = 0;
+                    }
+                };
+
+                function applyCollectionSync(col, itemsObj) {
+                    if (!itemsObj || !state[col]) return;
+                    for (const [id, val] of Object.entries(itemsObj)) {
+                        if (state[col].has(id)) {
+                            Object.assign(state[col].get(id), val);
+                        } else {
+                            state[col].set(id, val);
+                            for (const cb of (addCallbacks[col] || [])) {
+                                try { cb(val, id); } catch (err) { console.error(`onAdd(${col}) error:`, err); }
+                            }
+                        }
+                    }
+                }
+
+                function applyCollectionRemove(col, ids) {
+                    if (!ids || !state[col]) return;
+                    for (const id of ids) {
+                        const existing = state[col].get(id);
+                        if (existing) {
+                            state[col].delete(id);
+                            for (const cb of (removeCallbacks[col] || [])) {
+                                try { cb(existing, id); } catch (err) { console.error(`onRemove(${col}) error:`, err); }
+                            }
+                        }
+                    }
+                }
+
+                function dispatchMsg(type, data) {
+                    const handlers = msgHandlers.get(type);
+                    if (handlers) {
+                        for (const cb of handlers) {
+                            try { cb(data); } catch (err) { console.error(`onMessage(${type}) error:`, err); }
+                        }
+                    }
+                }
+
+                let resolved = false;
+                ws.onopen = () => {
+                    // Send initial handshake if game data is already loaded on window
+                    if (window.__GAME_MAPS && window.__GAME_MONSTERS) {
+                        fetch("/__SyncGameData", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                                maps: Object.fromEntries(Object.entries(window.__GAME_MAPS).map(([k, v]) => [k, {
+                                    id: v.id, kind: v.kind, lv: v.lv, start: v.start, revive: v.revive,
+                                    warps: v.warps, spawns: v.spawns, bounds: v.bounds, talkers: v.talkers, shops: v.shops
+                                }])),
+                                monsters: window.__GAME_MONSTERS.v,
+                                extras: window.__GAME_EXTRAS || null
+                            })
+                        }).catch(() => {});
+                    }
+                    resolved = true;
+                    resolve(room);
+                };
+
+                ws.onmessage = (ev) => {
+                    if (typeof ev.data !== "string") return;
+                    let packet;
+                    try { packet = JSON.parse(ev.data); } catch (e) { return; }
+
+                    // Schedule slightly if handlers are still being attached on the same tick after resolve(room)
+                    const run = () => {
+                        if (packet.t === "init") {
+                            if (packet.players) applyCollectionSync("players", packet.players);
+                            if (packet.monsters) applyCollectionSync("monsters", packet.monsters);
+                            if (packet.drops) applyCollectionSync("drops", packet.drops);
+                            if (packet.messages) {
+                                for (const m of packet.messages) {
+                                    dispatchMsg(m.type, m.data);
+                                }
+                            }
+                        } else if (packet.t === "patch") {
+                            if (packet.players) applyCollectionSync("players", packet.players);
+                            if (packet.monsters) applyCollectionSync("monsters", packet.monsters);
+                            if (packet.drops) applyCollectionSync("drops", packet.drops);
+                            if (packet.removePlayers) applyCollectionRemove("players", packet.removePlayers);
+                            if (packet.removeMonsters) applyCollectionRemove("monsters", packet.removeMonsters);
+                            if (packet.removeDrops) applyCollectionRemove("drops", packet.removeDrops);
+                        } else if (packet.t === "msg") {
+                            dispatchMsg(packet.type, packet.data);
+                        }
+                    };
+
+                    if (addCallbacks.players.length === 0) {
+                        setTimeout(run, 20);
+                    } else {
+                        run();
+                    }
+                };
+
+                ws.onclose = (ev) => {
+                    if (!resolved) {
+                        reject(new Error("WebSocket closed before open"));
+                        return;
+                    }
+                    for (const cb of leaveHandlers) {
+                        try { cb(ev.code || 1000); } catch (e) {}
+                    }
+                };
+
+                ws.onerror = (err) => {
+                    if (!resolved) reject(new Error("WebSocket connection error"));
+                };
+            });
+        };
+    </script>
+
+    <script>
+        // GitHub Pages & Static Web Auto-Detection
+        const IS_GITHUB_PAGES = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
+        
+        // Multiplayer Cloud Server setting
+        let REMOTE_SERVER_URL = localStorage.getItem('fs_remote_ws') || '';
+        
+        function setRemoteServerUrl(url) {
+            url = (url || '').trim();
+            localStorage.setItem('fs_remote_ws', url);
+            REMOTE_SERVER_URL = url;
+            alert('บันทึกที่อยู่เซิร์ฟเวอร์เรียบร้อย: ' + (url || 'โหมดเล่นคนเดียว (Offline/Local)'));
+            window.location.reload();
+        }
+
+        function promptServerConfig() {
+            const current = localStorage.getItem('fs_remote_ws') || '';
+            const next = prompt('กรอก WebSocket URL เซิร์ฟเวอร์ออนไลน์ (เว้นว่างไว้เพื่อเล่นโหมดคนเดียว/GitHub Pages ออฟไลน์):', current);
+            if (next !== null) {
+                setRemoteServerUrl(next);
+            }
+        }
+    </script>
+
+</head>
+<body class="bg-[#16201a]">
+
+    <!-- Draggable Medieval HUD Quick Badge (Move anywhere, never covers game UI) -->
+    <div id="main-hud-pill" class="hud-badge" title="คลิกเพื่อเปิดเมนูระบบ หรือกดค้างเพื่อลากย้ายตำแหน่ง">
+        <span class="hud-drag-handle">⋮⋮</span>
+        <span class="hud-pill-dot"></span>
+        <span id="hud-pill-status">Local</span>
+        <span class="hud-pill-divider">|</span>
+        <span id="hud-pill-user">แขก (Guest)</span>
+        <span style="font-size:12px; margin-left:2px;">⚙️</span>
+    </div>
+
+    <!-- HUD Action Menu Modal (Opens when tapping the pill) -->
+    <div id="hud-menu-modal" class="hud-menu-modal" onclick="closeHudMenu(event)">
+        <div class="hud-menu-box" onclick="event.stopPropagation()">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #3c5242; padding-bottom:10px; margin-bottom:14px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <span class="hud-pill-dot"></span>
+                    <strong style="color:#f7ce6d; font-size:15px;">เมนูระบบ (Local Server)</strong>
+                </div>
+                <button onclick="closeHudMenu()" style="background:transparent; border:none; color:#a9b8ad; font-size:18px; cursor:pointer;">✕</button>
+            </div>
+
+            <div style="font-size:12px; color:#a9b8ad; margin-bottom:14px;">
+                ไอดีที่กำลังเล่น: <strong id="hud-menu-username" style="color:#4ade80;">-</strong>
+            </div>
+
+            <button class="menu-action-btn" onclick="triggerInGameCustomizer()">
+                <span style="font-size:18px;">🎨</span>
+                <div>
+                    <div>แต่งตัว / เปลี่ยนเพศ / ทรงผม</div>
+                    <div style="font-size:11px; color:#a9b8ad; font-weight:normal;">เปิดหน้าจอหมุน 3D ปรับสีผิว สีผม ชุด ได้ฟรีตลอดเวลา</div>
+                </div>
+            </button>
+
+            <button class="menu-action-btn" onclick="openJobModalFromMenu()">
+                <span style="font-size:18px;">⚔️</span>
+                <div>
+                    <div>เปลี่ยนอาชีพและดูสกิล (14 Job Classes & 66 Skills)</div>
+                    <div style="font-size:11px; color:#a9b8ad; font-weight:normal;">เลือกเปลี่ยนเป็นนักดาบ, นักเวท, นักธนู, นักบวช, โจร, พ่อค้า หรืออาชีพขั้นสูง</div>
+                </div>
+            </button>
+
+            <button class="menu-action-btn" onclick="toggleCharSelect()">
+                <span style="font-size:18px;">👤</span>
+                <div>
+                    <div>สลับตัวละคร (Character Slots)</div>
+                    <div style="font-size:11px; color:#a9b8ad; font-weight:normal;">สร้างหรือสลับตัวละครได้สูงสุด 3 ช่องในไอดีเดียว</div>
+                </div>
+            </button>
+
+            <button class="menu-action-btn" onclick="triggerInGameParty()">
+                <span style="font-size:18px;">👥</span>
+                <div>
+                    <div>ระบบปาร์ตี้ (Party - คีย์ลัด P)</div>
+                    <div style="font-size:11px; color:#a9b8ad; font-weight:normal;">เปิดหน้าต่างปาร์ตี้ ชวนเพื่อนร่วมทีม แชร์ EXP และเควสต์ร่วมกัน</div>
+                </div>
+            </button>
+
+            <button class="menu-action-btn" onclick="openBackupModalFromMenu()">
+                <span style="font-size:18px;">💾</span>
+                <div>
+                    <div>ย้ายเครื่อง / สำรองข้อมูลเซฟ</div>
+                    <div style="font-size:11px; color:#a9b8ad; font-weight:normal;">ดาวน์โหลดไฟล์ .json เพื่อย้ายไปเล่นเครื่องอื่นโดยเซฟไม่หาย</div>
+                </div>
+            </button>
+
+            <button class="menu-action-btn" onclick="openStudyModalFromMenu()">
+                <span style="font-size:18px;">📚</span>
+                <div>
+                    <div>โครงสร้างเกมและวิธีควบคุม</div>
+                    <div style="font-size:11px; color:#a9b8ad; font-weight:normal;">คู่มือ Three.js, ระบบซิงค์ และปุ่มควบคุมบนมือถือ/PC</div>
+                </div>
+            </button>
+
+            <button class="menu-action-btn" style="border-color:#752626; color:#ff8585; margin-top:8px;" onclick="logoutAccount()">
+                <span style="font-size:18px;">🚪</span>
+                <div>
+                    <div>ออกจากระบบ (Logout)</div>
+                    <div style="font-size:11px; color:#e09b9b; font-weight:normal;">ข้อมูลทั้งหมดถูกบันทึกลงเซิร์ฟเวอร์เรียบร้อยแล้ว</div>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Login / Register / Cross-Device Account Screen -->
+    <div id="auth-screen" class="auth-overlay" style="display:none;">
+        <div class="auth-card">
+            <div style="text-align:center; margin-bottom:16px;">
+                <img src="./site/logo.svg" alt="Final Slop" style="width:135px; height:auto; margin:0 auto 6px auto; display:block; image-rendering:pixelated;"/>
+                <div style="font-size:16px; font-weight:800; color:#f7ce6d; letter-spacing:0.3px;">ระบบบัญชีผู้เล่น & บันทึกข้อมูลข้ามเครื่อง</div>
+                <div style="font-size:12px; color:#a9b8ad; margin-top:2px;">บันทึกความคืบหน้าอัตโนมัติทุกการกระทำ รองรับการย้ายเครื่อง 100%</div>
+            </div>
+
+            <div class="auth-tabs">
+                <button id="tab-btn-login" class="auth-tab active" onclick="switchAuthTab('login')">🔑 เข้าสู่ระบบ</button>
+                <button id="tab-btn-register" class="auth-tab" onclick="switchAuthTab('register')">✨ สมัครไอดีใหม่</button>
+                <button id="tab-btn-import" class="auth-tab" onclick="switchAuthTab('import')">📦 ย้ายเครื่อง (นำเข้าเซฟ)</button>
+            </div>
+
+            <!-- Form: Login -->
+            <form id="form-login" onsubmit="handleLogin(event)">
+                <div class="auth-field">
+                    <label>ไอดีผู้เล่น (Account ID / Username)</label>
+                    <input id="login-username" type="text" class="auth-input" placeholder="กรอกไอดีของคุณ (เช่น hero01)" required autocomplete="username"/>
+                </div>
+                <div class="auth-field">
+                    <label>รหัสผ่าน (Password)</label>
+                    <input id="login-password" type="password" class="auth-input" placeholder="กรอกรหัสผ่าน" required autocomplete="current-password"/>
+                </div>
+                <button type="submit" class="auth-submit">เข้าสู่โลก Final Slop</button>
+            </form>
+
+            <!-- Form: Register with Character Customization -->
+            <form id="form-register" onsubmit="handleRegister(event)" style="display:none; max-height:75vh; overflow-y:auto; padding-right:4px;">
+                <div class="auth-field">
+                    <label>ตั้งไอดีผู้เล่น (Account ID 3-20 ตัวอักษร a-z, 0-9, _)</label>
+                    <input id="reg-username" type="text" class="auth-input" placeholder="เช่น kasidit99" required autocomplete="username"/>
+                </div>
+                <div class="auth-field">
+                    <label>ตั้งรหัสผ่าน (Password อย่างน้อย 4 ตัวอักษร)</label>
+                    <input id="reg-password" type="password" class="auth-input" placeholder="ตั้งรหัสผ่านสำหรับล็อกอิน" required autocomplete="new-password"/>
+                </div>
+                <div class="auth-field">
+                    <label>ชื่อตัวละครเริ่มต้น (Character Name)</label>
+                    <input id="reg-charname" type="text" class="auth-input" placeholder="ชื่อในเกม (เช่น นักผจญภัย, GunZo)" maxlength="16"/>
+                </div>
+
+                <div style="border-top:1px dashed #3a4e40; margin:14px 0 10px 0; padding-top:10px;">
+                    <div style="font-size:13.5px; font-weight:bold; color:#f7ce6d; margin-bottom:8px;">🎨 ปรับแต่งตัวละครเริ่มต้น (Appearance & Style)</div>
+                    
+                    <!-- Gender -->
+                    <div class="auth-field">
+                        <label>เพศตัวละคร (Gender)</label>
+                        <div class="gender-toggle">
+                            <button type="button" id="gender-btn-0" class="gender-btn selected" onclick="selectGender(0)">👦 ชาย (Male)</button>
+                            <button type="button" id="gender-btn-1" class="gender-btn" onclick="selectGender(1)">👧 หญิง (Female)</button>
+                        </div>
+                    </div>
+
+                    <!-- Hairstyle -->
+                    <div class="auth-field">
+                        <label>ทรงผม (Hairstyle)</label>
+                        <select id="reg-style" class="auth-input">
+                            <option value="0">ผมสั้นเรียบ (Short)</option>
+                            <option value="1">ชี้ตั้งเท่ (Spiky)</option>
+                            <option value="2">กะลาครอบ (Bowl)</option>
+                            <option value="3">ผมยาวสลวย (Long)</option>
+                            <option value="4">มัดหางม้า (Ponytail)</option>
+                            <option value="5">ทวินเทล (Twintails)</option>
+                            <option value="6">ผมหยิกเป็นลอน (Curly)</option>
+                            <option value="7">ไม่มีผม (None)</option>
+                        </select>
+                    </div>
+
+                    <!-- Hair Color -->
+                    <div class="auth-field">
+                        <label id="hair-label">สีผม (Hair Color)</label>
+                        <div class="swatch-group" id="hair-swatches"></div>
+                    </div>
+
+                    <!-- Skin Color -->
+                    <div class="auth-field">
+                        <label id="skin-label">สีผิว (Skin Tone)</label>
+                        <div class="swatch-group" id="skin-swatches"></div>
+                    </div>
+
+                    <!-- Starter Outfit Palette -->
+                    <div class="auth-field">
+                        <label id="clothes-label">โทนสีชุดเริ่มต้น (Outfit Palette)</label>
+                        <div class="swatch-group" id="clothes-swatches"></div>
+                    </div>
+
+                    <div style="font-size:11.5px; color:#7ce08a; margin-top:8px; line-height:1.4;">
+                        ✨ <em>สามารถกดปุ่ม [🎨 แต่งตัว/เปลี่ยนเพศ] ในเกม เพื่อเปิดหน้าต่าง 3D หมุนตัวละครปรับแต่งฟรีได้ทุกเมื่อ!</em>
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-submit" style="margin-top:14px;">สร้างบัญชีและเริ่มเกมทันที</button>
+            </form>
+                <button type="submit" class="auth-submit">สร้างบัญชีและเริ่มเกมทันที</button>
+            </form>
+
+            <!-- Form: Cross-Device Import -->
+            <div id="form-import" style="display:none;">
+                <p style="font-size:12.5px; color:#d5dfd8; line-height:1.5; margin-top:0;">
+                    หากคุณเคยกด <strong>"ดาวน์โหลดไฟล์เซฟบัญชี (.json)"</strong> จากเครื่องอื่น สามารถเลือกไฟล์ด้านล่างเพื่อกู้คืนไอดี รหัสผ่าน และตัวละครทั้งหมดลงในเครื่องนี้ได้ทันที:
+                </p>
+                <div class="auth-field">
+                    <label>เลือกไฟล์สำรองบัญชี (FinalSlop_Account_*.json)</label>
+                    <input id="import-file-input" type="file" accept=".json,application/json" class="auth-input" style="padding:7px;"/>
+                </div>
+                <button type="button" class="auth-submit" onclick="handleImportAccountFile('import-file-input')">📥 นำเข้าบัญชีและเข้าสู่เกมทันที</button>
+            </div>
+
+            <div id="auth-message" class="auth-msg"></div>
+        </div>
+    </div>
+
+    <!-- Cross-Device Backup & Restore Modal (In-Game) -->
+    <div id="backup-modal" class="study-modal" onclick="closeBackupModal()">
+        <div class="study-box" style="max-width:540px;" onclick="event.stopPropagation()">
+            <h2>💾 ระบบบันทึกข้อมูล & ย้ายเครื่อง (Cross-Device Save)</h2>
+            <p style="font-size:13.5px; line-height:1.6;">
+                ตัวเกมบันทึกความคืบหน้าของบัญชี <strong id="backup-account-name" style="color:#f7ce6d;">-</strong> ลงฐานข้อมูลเซิร์ฟเวอร์ (<code>server/data/accounts.json</code>) <strong>อัตโนมัติทุกครั้งที่เดิน โจมตี เก็บของ หรือทำเควส</strong>
+            </p>
+
+            <div style="background:#121b15; border:1px solid #35493b; border-radius:8px; padding:14px; margin-bottom:14px;">
+                <h3 style="margin:0 0 6px 0; font-size:14.5px; color:#7ce08a;">วิธีที่ 1: เล่นผ่านเครือข่ายเดียวกัน (LAN / Wi-Fi)</h3>
+                <p style="margin:0; font-size:12.5px; color:#c8d6cc;">
+                    เปิดเบราว์เซอร์จากมือถือหรือคอมอีกเครื่องในวง LAN เดียวกัน แล้วเข้าที่พอร์ต <code>:2567</code> ของเครื่องนี้ จากนั้นล็อกอินด้วย <strong>ไอดีและรหัสผ่านเดียวกัน</strong> ข้อมูลจะซิงค์ตรงกันทันที!
+                </p>
+            </div>
+
+            <div style="background:#121b15; border:1px solid #35493b; border-radius:8px; padding:14px; margin-bottom:14px;">
+                <h3 style="margin:0 0 8px 0; font-size:14.5px; color:#f7ce6d;">วิธีที่ 2: ย้ายไปคอมคนละเครื่อง (Export / Import ไฟล์บัญชี)</h3>
+                <p style="margin:0 0 10px 0; font-size:12.5px; color:#c8d6cc;">
+                    ดาวน์โหลดไฟล์บัญชีของคุณเก็บไว้ เพื่อนำไปกด <strong>"ย้ายเครื่อง (นำเข้าเซฟ)"</strong> บนคอมเครื่องอื่น ข้อมูลตัวละคร เลเวล ไอเทม และเควสทั้งหมดจะตามไปครบ 100%
+                </p>
+                <button class="auth-submit" style="margin-bottom:12px;" onclick="downloadAccountBackup()">📤 ดาวน์โหลดไฟล์เซฟบัญชี (.json)</button>
+
+                <div style="border-top:1px dashed #35493b; padding-top:10px; margin-top:4px;">
+                    <label style="display:block; font-size:12px; color:#a9b8ad; margin-bottom:6px;">หรืออัปโหลดไฟล์เซฟจากเครื่องอื่นเพื่อทับข้อมูลปัจจุบัน:</label>
+                    <div style="display:flex; gap:8px;">
+                        <input id="ingame-import-input" type="file" accept=".json,application/json" class="auth-input" style="padding:6px; font-size:12px;"/>
+                        <button class="btn-mode" style="white-space:nowrap; padding:6px 12px;" onclick="handleImportAccountFile('ingame-import-input')">📥 นำเข้าเซฟ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:right;">
+                <button class="btn-mode" onclick="closeBackupModal()">ปิดหน้าต่าง (Close)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mount Point for Game TownClient -->
+    <div id="app-mount">
+        <!-- Initial Loading Splash -->
+        <div id="loading-screen" class="absolute inset-0 z-20 flex flex-col items-center justify-center gap-4 bg-[linear-gradient(#6fa6dc,#c6dbec)] [image-rendering:pixelated]">
+            <img src="./site/logo.svg" alt="Final Slop" width="224" height="192" class="mb-2 h-auto w-[180px]"/>
+            <div class="h-4 w-64 border-2 border-[#2a3550] bg-[#2a3550]/40 p-0.5">
+                <div id="load-progress-bar" class="h-full bg-[#f4d27a] transition-all duration-300" style="width: 25%;"></div>
+            </div>
+            <p id="load-status-text" class="text-sm font-semibold text-white" style="text-shadow:1px 1px 0 #2a3550">กำลังเชื่อมต่อเข้าสู่โลก Final Slop...</p>
+        </div>
+    </div>
+
+    <!-- Architecture & Study Modal -->
+    <div id="study-modal" class="study-modal" onclick="closeStudyModal(event)">
+        <div class="study-box" onclick="event.stopPropagation()">
+            <h2>🗺️ คู่มือศึกษาโครงสร้างเกม Final Slop (Architecture Guide)</h2>
+            <p>เกมนี้เป็นเกม <strong>2.5D Isometric Web MMORPG</strong> ที่เรนเดอร์ในมุมมอง Isometric ด้วยเอนจิ้น <strong>Three.js</strong> และขับเคลื่อนระบบ Multiplayer ด้วย <strong>Colyseus</strong>:</p>
+            
+            <h3 style="color:#7ce08a;">1. Game Engine & Renderer</h3>
+            <ul>
+                <li><strong>Three.js (WebGL):</strong> จัดการฉาก 3 มิติ, มุมมองกล้อง Orthographic/Perspective, ท่อไอคอน/เงา และเอฟเฟกต์แสง</li>
+                <li><strong>Procedural Synthesizer:</strong> ระบบเสียง <code>yF</code> สังเคราะห์เสียงทั้งหมดด้วย Web Audio API สดๆ ไม่ต้องใช้ไฟล์ MP3 ขนาดใหญ่</li>
+                <li><strong>2D Billboard Sprites:</strong> ตัวละครและมอนสเตอร์ใช้เทคนิค 2.5D Sprite Sheets หันหน้า 4-8 ทิศทาง</li>
+            </ul>
+
+            <h3 style="color:#7ce08a;">2. Networking & State Management</h3>
+            <ul>
+                <li><strong>Colyseus Room <code>town</code>:</strong> จัดการการเชื่อมต่อผ่าน WebSocket และประสานสถานะ <code>players</code>, <code>monsters</code>, <code>drops</code></li>
+                <li><strong>Client Message Types:</strong> <code>move</code>, <code>attack</code>, <code>chat</code>, <code>bag</code>, <code>skill</code>, <code>warpTown</code></li>
+            </ul>
+
+            <h3 style="color:#7ce08a;">3. การควบคุม (Controls) & คำสั่งพิเศษ</h3>
+            <ul>
+                <li><strong>PC Keyboard:</strong> <code>W</code> <code>A</code> <code>S</code> <code>D</code> หรือปุ่มลูกศร เพื่อเดิน, <code>Spacebar</code> หรือ <code>J</code> โจมตี, <code>E</code> คุยกับ NPC, <code>H</code> เปิดบอทออโต้</li>
+                <li><strong>Mouse:</strong> คลิกที่พื้นเพื่อเดินไปยังจุดเป้าหมาย (Click-to-Move) หรือคลิกมอนสเตอร์เพื่อโจมตี</li>
+                <li><strong>Mobile / Touch:</strong> จอยสติ๊กเสมือนมุมซ้ายล่าง และปุ่มแอ็กชันมุมขวาล่าง</li>
+            </ul>
+
+            <div style="margin-top:20px; text-align:right;">
+                <button class="btn-mode" onclick="document.getElementById('study-modal').style.display='none'">ปิดหน้าต่าง (Close)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Turbopack Runtime & Core Dependencies -->
+    <script src="./_next/static/immutable/chunks/turbopack-1cvbnb3nlabgn.js"></script>
+    <script src="./_next/static/immutable/chunks/2rv6p6j5p9eda.js"></script>
+    <script src="./_next/static/immutable/chunks/3a9ouwznrymd8.js"></script>
+    <script src="./_next/static/immutable/chunks/0fcmc8odz8v1w.js"></script>
+    <script src="./_next/static/immutable/chunks/2mgu2cp6fto7c.js"></script>
+    <script src="./_next/static/immutable/chunks/3x7cz7lqgi4_a.js"></script>
+    <script src="./_next/static/immutable/chunks/00z4pmesk2f4f.js"></script>
+    <script src="./_next/static/immutable/chunks/43hac3c7fnnri.js"></script>
+    <script src="./_next/static/immutable/chunks/1h9lsa67htw-l.js"></script>
+    <script src="./_next/static/immutable/chunks/1u5etgidtbfdn.js"></script>
+    <script src="./_next/static/immutable/chunks/424393y4rhx5z.js"></script>
+    <script src="./_next/static/immutable/chunks/3tmnfc-z5ph4b.js"></script>
+    <script src="./_next/static/immutable/chunks/1qw2ky3x46e05.js"></script>
+    <script src="./_next/static/immutable/chunks/1pkywcejrxhll.js"></script>
+    <script src="./_next/static/immutable/chunks/2ik365_vkdlgn.js"></script>
+    <script src="./_next/static/immutable/chunks/3_u2tpvmqiizn.js"></script>
+
+    <!-- Client Bootstrapper -->
+    <script>
+        const SKIN_COLORS = ["#f8dcc4", "#f2c6a0", "#e6b08a", "#d39a6c", "#b47a52", "#8a5a3c"];
+        const HAIR_COLORS = ["#2e2622", "#5a3a26", "#8a5a34", "#c3532e", "#e0a24a", "#f0d27a", "#d8d2c8", "#7a4a9a", "#3f6fb0", "#d0648a"];
+        const CLOTHES_PALETTES = ["#2f5c9c", "#b8523a", "#4f8a4a", "#7a4a9a", "#8a5a36", "#2f8a8a", "#d9a636", "#5a5f6a", "#0e4a55"];
+        const EYE_COLORS = ["#3a2a20", "#7a4a24", "#3a6ad0", "#2f9a5a", "#8a4ad0", "#c03a3a", "#e0a020", "#30a8b8"];
+
+        let regGender = 0;
+        let regSkin = 0;
+        let regHair = 0;
+        let regClothes = 0;
+        let regEyes = 0;
+
+        function selectGender(g) {
+            regGender = g;
+            const btn0 = document.getElementById('gender-btn-0');
+            const btn1 = document.getElementById('gender-btn-1');
+            if (btn0) btn0.className = 'gender-btn' + (g === 0 ? ' selected' : '');
+            if (btn1) btn1.className = 'gender-btn' + (g === 1 ? ' selected' : '');
+        }
+
+        function initCustomizerSwatches() {
+            const hairCont = document.getElementById('hair-swatches');
+            if (hairCont && hairCont.children.length === 0) {
+                HAIR_COLORS.forEach((c, idx) => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'swatch-btn' + (idx === regHair ? ' selected' : '');
+                    btn.style.background = c;
+                    btn.title = 'สีผมที่ ' + (idx + 1);
+                    btn.onclick = () => {
+                        regHair = idx;
+                        document.querySelectorAll('#hair-swatches .swatch-btn').forEach((b, i) => b.className = 'swatch-btn' + (i === idx ? ' selected' : ''));
+                    };
+                    hairCont.appendChild(btn);
+                });
+            }
+
+            const skinCont = document.getElementById('skin-swatches');
+            if (skinCont && skinCont.children.length === 0) {
+                SKIN_COLORS.forEach((c, idx) => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'swatch-btn' + (idx === regSkin ? ' selected' : '');
+                    btn.style.background = c;
+                    btn.title = 'สีผิวที่ ' + (idx + 1);
+                    btn.onclick = () => {
+                        regSkin = idx;
+                        document.querySelectorAll('#skin-swatches .swatch-btn').forEach((b, i) => b.className = 'swatch-btn' + (i === idx ? ' selected' : ''));
+                    };
+                    skinCont.appendChild(btn);
+                });
+            }
+
+            const clothesCont = document.getElementById('clothes-swatches');
+            if (clothesCont && clothesCont.children.length === 0) {
+                CLOTHES_PALETTES.forEach((c, idx) => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'swatch-btn' + (idx === regClothes ? ' selected' : '');
+                    btn.style.background = c;
+                    btn.title = 'สีชุดที่ ' + (idx + 1);
+                    btn.onclick = () => {
+                        regClothes = idx;
+                        document.querySelectorAll('#clothes-swatches .swatch-btn').forEach((b, i) => b.className = 'swatch-btn' + (i === idx ? ' selected' : ''));
+                    };
+                    clothesCont.appendChild(btn);
+                });
+            }
+        }
+
+        function openHudMenu() {
+            const modal = document.getElementById('hud-menu-modal');
+            if (modal) modal.style.display = 'flex';
+        }
+        function closeHudMenu() {
+            const modal = document.getElementById('hud-menu-modal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function initDraggableHud() {
+            const hud = document.getElementById('main-hud-pill');
+            if (!hud) return;
+
+            // Restore saved position
+            const savedLeft = localStorage.getItem('fs_hud_left');
+            const savedTop = localStorage.getItem('fs_hud_top');
+            if (savedLeft !== null && savedTop !== null) {
+                const maxX = Math.max(10, window.innerWidth - 120);
+                const maxY = Math.max(10, window.innerHeight - 50);
+                const left = Math.min(Math.max(10, parseInt(savedLeft, 10)), maxX);
+                const top = Math.min(Math.max(10, parseInt(savedTop, 10)), maxY);
+                hud.style.left = left + 'px';
+                hud.style.top = top + 'px';
+            }
+
+            let isDragging = false;
+            let startX = 0, startY = 0;
+            let initialLeft = 0, initialTop = 0;
+            let moved = false;
+
+            function onStart(e) {
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                isDragging = true;
+                moved = false;
+                startX = clientX;
+                startY = clientY;
+                const rect = hud.getBoundingClientRect();
+                initialLeft = rect.left;
+                initialTop = rect.top;
+                hud.style.left = initialLeft + 'px';
+                hud.style.top = initialTop + 'px';
+            }
+
+            function onMove(e) {
+                if (!isDragging) return;
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                const dx = clientX - startX;
+                const dy = clientY - startY;
+                if (Math.hypot(dx, dy) > 5) {
+                    moved = true;
+                }
+                if (moved) {
+                    const maxX = Math.max(10, window.innerWidth - hud.offsetWidth - 10);
+                    const maxY = Math.max(10, window.innerHeight - hud.offsetHeight - 10);
+                    const newLeft = Math.min(Math.max(10, initialLeft + dx), maxX);
+                    const newTop = Math.min(Math.max(10, initialTop + dy), maxY);
+                    hud.style.left = newLeft + 'px';
+                    hud.style.top = newTop + 'px';
+                }
+            }
+
+            function onEnd() {
+                if (!isDragging) return;
+                isDragging = false;
+                if (moved) {
+                    localStorage.setItem('fs_hud_left', hud.offsetLeft);
+                    localStorage.setItem('fs_hud_top', hud.offsetTop);
+                } else {
+                    openHudMenu();
+                }
+            }
+
+            hud.addEventListener('mousedown', onStart);
+            window.addEventListener('mousemove', onMove);
+            window.addEventListener('mouseup', onEnd);
+
+            hud.addEventListener('touchstart', onStart, { passive: true });
+            window.addEventListener('touchmove', onMove, { passive: true });
+            window.addEventListener('touchend', onEnd);
+        }
+        function openBackupModalFromMenu() {
+            closeHudMenu();
+            openBackupModal();
+        }
+        function openStudyModalFromMenu() {
+            closeHudMenu();
+            openStudyModal();
+        }
+        function triggerInGameParty() {
+            closeHudMenu();
+            window.dispatchEvent(new KeyboardEvent('keydown', { code: 'KeyP', key: 'p', bubbles: true }));
+        }
+
+        function triggerInGameCustomizer() {
+            closeHudMenu();
+            if (typeof window.__openCustomizer === 'function') {
+                window.__openCustomizer();
+            } else if (typeof window.__openCharCreator === 'function') {
+                window.__openCharCreator();
+            } else {
+                alert('หน้าต่างแต่งตัว 3D พร้อมใช้งานเมื่อเข้าสู่ฉากเกมเมืองเรียบร้อยครับ');
+            }
+        }
+
+        function toggleCharSelect() {
+            closeHudMenu();
+            if (window.location.search.includes('select=1')) {
+                window.location.search = '';
+            } else {
+                window.location.search = '?select=1';
+            }
+        }
+
+        function openStudyModal() {
+            document.getElementById('study-modal').style.display = 'block';
+        }
+        function closeStudyModal(e) {
+            document.getElementById('study-modal').style.display = 'none';
+        }
+
+        function openBackupModal() {
+            const token = localStorage.getItem('fs_auth_token');
+            if (!token) {
+                document.getElementById('auth-screen').style.display = 'flex';
+                switchAuthTab('import');
+                return;
+            }
+            document.getElementById('backup-modal').style.display = 'block';
+        }
+        function closeBackupModal() {
+            document.getElementById('backup-modal').style.display = 'none';
+        }
+
+        function showAuthMessage(text, isError) {
+            const box = document.getElementById('auth-message');
+            if (!box) return;
+            box.textContent = text;
+            box.className = 'auth-msg ' + (isError ? 'error' : 'success');
+        }
+
+        function switchAuthTab(tab) {
+            const tabs = ['login', 'register', 'import'];
+            for (const t of tabs) {
+                const btn = document.getElementById('tab-btn-' + t);
+                const form = document.getElementById('form-' + t);
+                if (btn) btn.className = 'auth-tab' + (t === tab ? ' active' : '');
+                if (form) form.style.display = (t === tab ? 'block' : 'none');
+            }
+            if (tab === 'register') {
+                initCustomizerSwatches();
+            }
+            const msg = document.getElementById('auth-message');
+            if (msg) msg.className = 'auth-msg';
+        }
+
+        function applyAccountUI(account) {
+            if (!account || !account.username) return;
+            localStorage.setItem('fs_auth_user', account.username);
+            const pillUser = document.getElementById('hud-pill-user');
+            const menuUser = document.getElementById('hud-menu-username');
+            const backupName = document.getElementById('backup-account-name');
+            if (pillUser) pillUser.textContent = account.username;
+            if (menuUser) menuUser.textContent = account.username;
+            if (backupName) backupName.textContent = account.username;
+        }
+
+        async function handleLogin(ev) {
+            ev.preventDefault();
+            const username = document.getElementById('login-username').value.trim();
+            const password = document.getElementById('login-password').value;
+            try {
+                const resp = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+                const data = await resp.json();
+                if (!resp.ok || !data.ok) {
+                    showAuthMessage(data.error || 'เข้าสู่ระบบไม่สำเร็จ', true);
+                    return;
+                }
+                localStorage.setItem('fs_auth_token', data.token);
+                applyAccountUI(data.account);
+                showAuthMessage('เข้าสู่ระบบสำเร็จ! กำลังโหลดตัวละคร...', false);
+                setTimeout(() => {
+                    document.getElementById('auth-screen').style.display = 'none';
+                    launchTownWithToken(data.token);
+                }, 250);
+            } catch (e) {
+                showAuthMessage('ไม่สามารถติดต่อเซิร์ฟเวอร์ได้: ' + e.message, true);
+            }
+        }
+
+        async function handleRegister(ev) {
+            ev.preventDefault();
+            const username = document.getElementById('reg-username').value.trim();
+            const password = document.getElementById('reg-password').value;
+            const charName = document.getElementById('reg-charname').value.trim();
+            const style = Number(document.getElementById('reg-style').value) || 0;
+            const lookCode = `c2.${regSkin}.${style}.${regHair}.${regEyes}.${regGender === 1 ? 1 : 0}.${regClothes}.${regGender}`;
+            try {
+                const resp = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password, charName, lookCode })
+                });
+                const data = await resp.json();
+                if (!resp.ok || !data.ok) {
+                    showAuthMessage(data.error || 'สมัครสมาชิกไม่สำเร็จ', true);
+                    return;
+                }
+                localStorage.setItem('fs_auth_token', data.token);
+                applyAccountUI(data.account);
+                showAuthMessage('สร้างบัญชีสำเร็จ! กำลังเข้าสู่เกม...', false);
+                setTimeout(() => {
+                    document.getElementById('auth-screen').style.display = 'none';
+                    launchTownWithToken(data.token);
+                }, 250);
+            } catch (e) {
+                showAuthMessage('ไม่สามารถติดต่อเซิร์ฟเวอร์ได้: ' + e.message, true);
+            }
+        }
+
+        function downloadAccountBackup() {
+            const token = localStorage.getItem('fs_auth_token');
+            if (!token) {
+                alert('กรุณาเข้าสู่ระบบก่อนดาวน์โหลดไฟล์สำรองบัญชี');
+                return;
+            }
+            window.location.href = '/api/auth/export?token=' + encodeURIComponent(token);
+        }
+
+        async function handleImportAccountFile(inputId) {
+            const fileInput = document.getElementById(inputId);
+            if (!fileInput || !fileInput.files || !fileInput.files[0]) {
+                alert('กรุณาเลือกไฟล์ .json ที่สำรองไว้ก่อนครับ');
+                return;
+            }
+            try {
+                const text = await fileInput.files[0].text();
+                const parsed = JSON.parse(text);
+                const resp = await fetch('/api/auth/import', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(parsed)
+                });
+                const data = await resp.json();
+                if (!resp.ok || !data.ok) {
+                    showAuthMessage(data.error || 'นำเข้าไฟล์บัญชีไม่สำเร็จ', true);
+                    alert(data.error || 'นำเข้าไฟล์บัญชีไม่สำเร็จ');
+                    return;
+                }
+                localStorage.setItem('fs_auth_token', data.token);
+                applyAccountUI(data.account);
+                alert('นำเข้าบัญชี "' + data.account.username + '" สำเร็จ! กำลังโหลดข้อมูลตัวละคร...');
+                window.location.reload();
+            } catch (e) {
+                showAuthMessage('ไฟล์ไม่ถูกต้อง: ' + e.message, true);
+                alert('ไฟล์ไม่ถูกต้อง: ' + e.message);
+            }
+        }
+
+        function logoutAccount() {
+            if (!confirm('ต้องการออกจากระบบใช่หรือไม่? (ข้อมูลของคุณถูกบันทึกไว้บนเซิร์ฟเวอร์เรียบร้อยแล้ว)')) return;
+            localStorage.removeItem('fs_auth_token');
+            localStorage.removeItem('fs_auth_user');
+            window.location.href = '/';
+        }
+
+        let __cachedLabels = null;
+        let __reactRoot = null;
+
+        async function launchTownWithToken(token) {
+            const bar = document.getElementById('load-progress-bar');
+            const status = document.getElementById('load-status-text');
+
+            try {
+                if (!__cachedLabels) {
+                    if (bar) bar.style.width = '60%';
+                    if (status) status.innerText = 'กำลังโหลดพจนานุกรมและข้อมูลเกม...';
+                    try {
+                        const resp = await fetch('./labels.json');
+                        if (resp.ok) __cachedLabels = await resp.json();
+                    } catch (e) {
+                        console.warn("Failed to load labels.json:", e);
+                    }
+                }
+
+                if (bar) bar.style.width = '90%';
+                if (status) status.innerText = 'กำลังเปิดฉากเกมเมือง Final Slop...';
+
+                if (!window.turbopackRequire) {
+                    throw new Error("Turbopack runtime not initialized properly");
+                }
+
+                const React = window.turbopackRequire(71645);
+                const ReactDOM = window.turbopackRequire(46480);
+                const townClientMod = window.turbopackRequire(95296);
+
+                if (!townClientMod || !townClientMod.TownClient) {
+                    throw new Error("TownClient component not found in module 95296");
+                }
+
+                if (bar) bar.style.width = '100%';
+                if (status) status.innerText = 'เข้าสู่เกมสำเร็จ!';
+
+                setTimeout(() => {
+                    const mountNode = document.getElementById('app-mount');
+                    if (!__reactRoot) {
+                        __reactRoot = ReactDOM.createRoot(mountNode);
+                    }
+                    __reactRoot.render(React.createElement(townClientMod.TownClient, {
+                        labels: __cachedLabels || {},
+                        devToken: token
+                    }));
+                }, 120);
+            } catch (err) {
+                console.error("Game Client initialization error:", err);
+                if (status) {
+                    status.innerHTML = '<span style="color:#ff6b5e;">เกิดข้อผิดพลาด: ' + err.message + '</span><br/><button onclick="window.location.reload()" style="margin-top:10px; padding:4px 10px; background:#fff; color:#222; border-radius:4px; font-weight:bold;">ลองใหม่อีกครั้ง</button>';
+                }
+            }
+        }
+
+        async function initGameClient() {
+            const bar = document.getElementById('load-progress-bar');
+            const status = document.getElementById('load-status-text');
+
+            if (bar) bar.style.width = '35%';
+            if (status) status.innerText = 'กำลังตรวจสอบบัญชีผู้เล่น...';
+
+            const savedToken = localStorage.getItem('fs_auth_token');
+            if (savedToken) {
+                try {
+                    const resp = await fetch('/api/auth/me', {
+                        headers: { 'Authorization': 'Bearer ' + savedToken }
+                    });
+                    if (resp.ok) {
+                        const data = await resp.json();
+                        if (data && data.ok && data.account) {
+                            applyAccountUI(data.account);
+                            await launchTownWithToken(savedToken);
+                            return;
+                        }
+                    }
+                } catch (e) {
+                    console.warn("Session check failed:", e);
+                }
+                localStorage.removeItem('fs_auth_token');
+            }
+
+            // Not logged in -> show Login / Register / Cross-Device Import screen
+            if (status) status.innerText = 'กรุณาเข้าสู่ระบบหรือสมัครไอดีใหม่เพื่อเริ่มเกม';
+            initCustomizerSwatches();
+            document.getElementById('auth-screen').style.display = 'flex';
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initDraggableHud();
+            setTimeout(initGameClient, 100);
+        });
+    </script>
+
+    <!-- Job & Skill Selection Modal -->
+    <div id="job-modal" class="hud-menu-modal" onclick="closeJobModal(event)">
+        <div class="hud-menu-box" style="max-width:480px; max-height:85vh; overflow-y:auto;" onclick="event.stopPropagation()">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #3c5242; padding-bottom:10px; margin-bottom:14px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <span style="font-size:20px;">⚔️</span>
+                    <strong style="color:#f7ce6d; font-size:16px;">เลือกเปลี่ยนสายอาชีพ (Job Classes)</strong>
+                </div>
+                <button onclick="closeJobModal()" style="background:transparent; border:none; color:#a9b8ad; font-size:18px; cursor:pointer;">✕</button>
+            </div>
+            
+            <div style="font-size:12px; color:#a9b8ad; margin-bottom:12px;">
+                กดเลือกอาชีพเพื่อเปลี่ยนทันที พร้อมปลดล็อกสกิลเฉพาะทางของสายนั้นๆ:
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('novice')">
+                    <span>🌱</span>
+                    <div>
+                        <div style="font-size:12px;">Novice (โนวิซ)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">สกิล: First Aid</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('swordsman')">
+                    <span>🗡️</span>
+                    <div>
+                        <div style="font-size:12px;">Swordsman (นักดาบ)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Bash, Magnum Break</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('knight')">
+                    <span>🛡️</span>
+                    <div>
+                        <div style="font-size:12px;">Knight (อัศวิน)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Pierce, Bowling Bash</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('archer')">
+                    <span>🏹</span>
+                    <div>
+                        <div style="font-size:12px;">Archer (นักธนู)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Double Strafe, Arrow Shower</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('hunter')">
+                    <span>🦅</span>
+                    <div>
+                        <div style="font-size:12px;">Hunter (นักล่า)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Beast Strike, Trap Blast</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('mage')">
+                    <span>🔮</span>
+                    <div>
+                        <div style="font-size:12px;">Mage (นักเวท)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Fire Bolt, Cold Bolt, Storm</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('wizard')">
+                    <span>⚡</span>
+                    <div>
+                        <div style="font-size:12px;">Wizard (จอมเวท)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Meteor Storm, Storm Gust</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('acolyte')">
+                    <span>✨</span>
+                    <div>
+                        <div style="font-size:12px;">Acolyte (นักบวช)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Heal, Blessing, Agi</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('priest')">
+                    <span>🕊️</span>
+                    <div>
+                        <div style="font-size:12px;">Priest (พระ)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Sanctuary, Magnus, Kyrie</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('thief')">
+                    <span>🗡️</span>
+                    <div>
+                        <div style="font-size:12px;">Thief (จอมโจร)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Double Stab, Envenom</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('ninja')">
+                    <span>🥷</span>
+                    <div>
+                        <div style="font-size:12px;">Ninja (นินจา)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Shuriken, Kunai, Jutsu</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('merchant')">
+                    <span>💰</span>
+                    <div>
+                        <div style="font-size:12px;">Merchant (พ่อค้า)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Mammonite, Cart Rev</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('blacksmith')">
+                    <span>🔨</span>
+                    <div>
+                        <div style="font-size:12px;">Blacksmith (ช่างเหล็ก)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Power Smash, Adrenaline</div>
+                    </div>
+                </button>
+                <button class="menu-action-btn" style="padding:8px 10px; margin:0;" onclick="selectJobClass('alchemist')">
+                    <span>🧪</span>
+                    <div>
+                        <div style="font-size:12px;">Alchemist (เล่นแร่ฯ)</div>
+                        <div style="font-size:10px; color:#a9b8ad;">Acid Terror, Bomb Flask</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

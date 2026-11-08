@@ -1,0 +1,15 @@
+{
+  "name": "final-slop-local-server",
+  "version": "1.0.0",
+  "description": "Local Game Server and Web Host for Final Slop MMORPG",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "colyseus": "^0.18.12",
+    "@colyseus/schema": "^5.0.45",
+    "express": "^4.21.2",
+    "cors": "^2.8.5"
+  }
+}

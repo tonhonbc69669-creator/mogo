@@ -1,0 +1,5309 @@
+{
+  "aurum": {
+    "id": "aurum",
+    "name": "เมืองออรุ่ม (Aurum Town)",
+    "kind": "town",
+    "grid": [
+      5,
+      4
+    ],
+    "lv": [
+      1,
+      10
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 36.6,
+        "to": "bull1",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": 31,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -35,
+        "z": 0,
+        "to": "bear1",
+        "via": "east",
+        "out": {
+          "x": 85,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      },
+      {
+        "id": "east",
+        "x": 35,
+        "z": 0,
+        "to": "pip",
+        "via": "west",
+        "out": {
+          "x": -85,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "north",
+        "x": 0,
+        "z": -42,
+        "to": "pass",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 85,
+          "yaw": 0
+        }
+      }
+    ]
+  },
+  "bull1": {
+    "id": "bull1",
+    "name": "ทุ่งหญ้าออรุ่มใต้ (South Aurum Field)",
+    "kind": "field",
+    "grid": [
+      5,
+      5
+    ],
+    "lv": [
+      1,
+      5
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": 31.4,
+        "to": "aurum",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 37.2,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 90,
+        "z": 0,
+        "to": "bull2",
+        "via": "west",
+        "out": {
+          "x": -85,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -90,
+        "z": 0,
+        "to": "dryhills",
+        "via": "east",
+        "out": {
+          "x": 85,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "bull2": {
+    "id": "bull2",
+    "name": "ฟาร์มกังหันลม (Windmill Farm)",
+    "kind": "field",
+    "grid": [
+      6,
+      5
+    ],
+    "lv": [
+      5,
+      10
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "pip",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "deltaport",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "shore",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "bull1",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "pip": {
+    "id": "pip",
+    "name": "ทะเลสาบพิพ (Lake Pip)",
+    "kind": "field",
+    "grid": [
+      6,
+      4
+    ],
+    "lv": [
+      8,
+      13
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "highwick",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "bull2",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "cliffs",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "aurum",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "bear1": {
+    "id": "bear1",
+    "name": "ป่าหมีตะวันตก (Bear Woods West)",
+    "kind": "field",
+    "grid": [
+      4,
+      4
+    ],
+    "lv": [
+      12,
+      17
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "wick",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "dryhills",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "aurum",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "goblin",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "goblin": {
+    "id": "goblin",
+    "name": "ค่ายก็อบลิน (Goblin Camp)",
+    "kind": "field",
+    "grid": [
+      3,
+      4
+    ],
+    "lv": [
+      16,
+      22
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "bear2",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "canyon",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bear1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "ash",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "bear2": {
+    "id": "bear2",
+    "name": "ป่าหมีส่วนลึก (Deep Bear Woods)",
+    "kind": "field",
+    "grid": [
+      3,
+      3
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "spine",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "goblin",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "wick",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "abbey1",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "pass": {
+    "id": "pass",
+    "name": "ช่องเขาหิมะ (Snowy Mountain Pass)",
+    "kind": "field",
+    "grid": [
+      5,
+      3
+    ],
+    "lv": [
+      7,
+      12
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "frost",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "aurum",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "highwick",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "wick",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "highwick": {
+    "id": "highwick",
+    "name": "ป้อมไฮวิค (Highwick Keep)",
+    "kind": "town",
+    "grid": [
+      6,
+      3
+    ],
+    "lv": [
+      10,
+      15
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "glacier",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "pip",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "sanctum",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "pass",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "shore": {
+    "id": "shore",
+    "name": "ชายหาดออรุ่ม (Aurum Shore)",
+    "kind": "field",
+    "grid": [
+      7,
+      5
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "cliffs",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "pyra1",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "abyss",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "bull2",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "cliffs": {
+    "id": "cliffs",
+    "name": "หน้าผาวายุ (Storm Cliffs)",
+    "kind": "field",
+    "grid": [
+      7,
+      4
+    ],
+    "lv": [
+      14,
+      19
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "sanctum",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "shore",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "eldergrove",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "pip",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "dryhills": {
+    "id": "dryhills",
+    "name": "เนินเขาแล้ง (Dry Hills)",
+    "kind": "field",
+    "grid": [
+      4,
+      5
+    ],
+    "lv": [
+      10,
+      15
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "bear1",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "marsh",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bull1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "canyon",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "canyon": {
+    "id": "canyon",
+    "name": "หุบเขาหินแดง (Red Canyon)",
+    "kind": "field",
+    "grid": [
+      3,
+      5
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "goblin",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "hive",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "dryhills",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "mesafort",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "ash": {
+    "id": "ash",
+    "name": "ทุ่งเถ้าถ่าน (Ash Wastes)",
+    "kind": "field",
+    "grid": [
+      2,
+      4
+    ],
+    "lv": [
+      21,
+      26
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "abbey1",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "mesafort",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "goblin",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "forge",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "frost": {
+    "id": "frost",
+    "name": "ทุ่งน้ำแข็ง (Frost Field)",
+    "kind": "field",
+    "grid": [
+      5,
+      2
+    ],
+    "lv": [
+      14,
+      19
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "summit",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "pass",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "glacier",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "mine1",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "glacier": {
+    "id": "glacier",
+    "name": "ธารน้ำแข็ง (Glacier Peak)",
+    "kind": "field",
+    "grid": [
+      6,
+      2
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "aurora",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "highwick",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "cape",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "frost",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "marsh": {
+    "id": "marsh",
+    "name": "บึงหมอกพิษ (Misty Marsh)",
+    "kind": "field",
+    "grid": [
+      4,
+      6
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "dryhills",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "fungal",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bog",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "hive",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "bog": {
+    "id": "bog",
+    "name": "หนองน้ำคำสาป (Cursed Bog)",
+    "kind": "field",
+    "grid": [
+      5,
+      6
+    ],
+    "lv": [
+      14,
+      19
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "bull1",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "deltaport",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "marsh",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "isle": {
+    "id": "isle",
+    "name": "เกาะปะการัง (Coral Isle)",
+    "kind": "field",
+    "grid": [
+      10,
+      3
+    ],
+    "lv": [
+      36,
+      41
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "galleon",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "shoals",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "jungle",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "jungle": {
+    "id": "jungle",
+    "name": "ป่าดงดิบโบราณ (Ancient Jungle)",
+    "kind": "field",
+    "grid": [
+      11,
+      3
+    ],
+    "lv": [
+      43,
+      48
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "ember1",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "crownport",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "isle",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "wick": {
+    "id": "wick",
+    "name": "หมู่บ้านเหมืองวิค (Wick Village)",
+    "kind": "town",
+    "grid": [
+      4,
+      3
+    ],
+    "lv": [
+      10,
+      15
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "mine1",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "bear1",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "pass",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "bear2",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "mine1": {
+    "id": "mine1",
+    "name": "เหมืองร้าง ชั้น 1 (Mine B1)",
+    "kind": "dungeon",
+    "grid": [
+      4,
+      2
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "wick",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "frost",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "spine",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "mine2": {
+    "id": "mine2",
+    "name": "เหมืองร้าง ชั้น 2 (Mine B2)",
+    "kind": "dungeon",
+    "grid": [
+      4,
+      2
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "wick",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "frost",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "spine",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "mine3": {
+    "id": "mine3",
+    "name": "เหมืองร้าง ชั้น 3 (Mine B3)",
+    "kind": "dungeon",
+    "grid": [
+      4,
+      2
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "wick",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "frost",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "spine",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "grotto": {
+    "id": "grotto",
+    "name": "ดันเจี้ยนถ้ำกบยักษ์ (Toad Grotto)",
+    "kind": "dungeon",
+    "grid": [
+      6,
+      4
+    ],
+    "lv": [
+      7,
+      12
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "highwick",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "bull2",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "cliffs",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "aurum",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "warren": {
+    "id": "warren",
+    "name": "ดันเจี้ยนรังโจรก็อบลิน (Goblin Warren)",
+    "kind": "field",
+    "grid": [
+      3,
+      4
+    ],
+    "lv": [
+      14,
+      19
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "bear2",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "canyon",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bear1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "ash",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "crypt": {
+    "id": "crypt",
+    "name": "ดันเจี้ยนสุสานใต้ดิน (Ancient Crypt)",
+    "kind": "dungeon",
+    "grid": [
+      4,
+      3
+    ],
+    "lv": [
+      10,
+      15
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "mine1",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "bear1",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "pass",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "bear2",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "temple": {
+    "id": "temple",
+    "name": "ดันเจี้ยนวิหารงูโบราณ (Serpent Temple)",
+    "kind": "field",
+    "grid": [
+      11,
+      3
+    ],
+    "lv": [
+      43,
+      48
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "ember1",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "crownport",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "isle",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "galleon": {
+    "id": "galleon",
+    "name": "ดันเจี้ยนเรือผีสิง (Ghost Galleon)",
+    "kind": "field",
+    "grid": [
+      10,
+      2
+    ],
+    "lv": [
+      38,
+      43
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "isle",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "ember1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "hive": {
+    "id": "hive",
+    "name": "ดันเจี้ยนรังแมลงยักษ์ (Scorpion Hive)",
+    "kind": "field",
+    "grid": [
+      3,
+      6
+    ],
+    "lv": [
+      20,
+      25
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "canyon",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "bones",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "marsh",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "petrified",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "forge": {
+    "id": "forge",
+    "name": "ดันเจี้ยนเตาหลอมอสูร (Infernal Forge)",
+    "kind": "field",
+    "grid": [
+      1,
+      4
+    ],
+    "lv": [
+      28,
+      33
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "moor",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "steppe",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "ash",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "sanctum": {
+    "id": "sanctum",
+    "name": "ดันเจี้ยนวิหารวิญญาณ (Spirit Sanctum)",
+    "kind": "field",
+    "grid": [
+      7,
+      3
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "cape",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "cliffs",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "krakencoast",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "highwick",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "deltaport": {
+    "id": "deltaport",
+    "name": "ท่าเรือเดลต้า (Delta Port)",
+    "kind": "town",
+    "grid": [
+      6,
+      6
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "bull2",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "pyra1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "bog",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "mesafort": {
+    "id": "mesafort",
+    "name": "ป้อมปราการเมซ่า (Mesa Fort)",
+    "kind": "town",
+    "grid": [
+      2,
+      5
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "ash",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "petrified",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "canyon",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "steppe",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "pyra1": {
+    "id": "pyra1",
+    "name": "พีระมิดโบราณ ชั้น 1",
+    "kind": "dungeon",
+    "grid": [
+      7,
+      6
+    ],
+    "lv": [
+      20,
+      25
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "shore",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "deltaport",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "pyra2": {
+    "id": "pyra2",
+    "name": "พีระมิดโบราณ ชั้น 2",
+    "kind": "dungeon",
+    "grid": [
+      7,
+      6
+    ],
+    "lv": [
+      20,
+      25
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "shore",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "deltaport",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "pyra3": {
+    "id": "pyra3",
+    "name": "พีระมิดโบราณ ชั้น 3",
+    "kind": "dungeon",
+    "grid": [
+      7,
+      6
+    ],
+    "lv": [
+      20,
+      25
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "shore",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "deltaport",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "spiritvillage": {
+    "id": "spiritvillage",
+    "name": "หมู่บ้านวิญญาณ (Spirit Village)",
+    "kind": "town",
+    "grid": [
+      2,
+      2
+    ],
+    "lv": [
+      25,
+      30
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "abbey1",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "spine",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "fjord",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "abbey1": {
+    "id": "abbey1",
+    "name": "อารามร้าง ชั้น 1",
+    "kind": "dungeon",
+    "grid": [
+      2,
+      3
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "spiritvillage",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "ash",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bear2",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "moor",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "abbey2": {
+    "id": "abbey2",
+    "name": "อารามร้าง ชั้น 2",
+    "kind": "dungeon",
+    "grid": [
+      2,
+      3
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "spiritvillage",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "ash",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bear2",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "moor",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "abbey3": {
+    "id": "abbey3",
+    "name": "อารามร้าง ชั้น 3",
+    "kind": "dungeon",
+    "grid": [
+      2,
+      3
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "spiritvillage",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "ash",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bear2",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "moor",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "skyhaven": {
+    "id": "skyhaven",
+    "name": "นครลอยฟ้าสกายเฮเวน (Skyhaven)",
+    "kind": "town",
+    "grid": [
+      7,
+      3
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "cape",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "cliffs",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "krakencoast",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "highwick",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "star1": {
+    "id": "star1",
+    "name": "หอดูดาว ชั้น 1",
+    "kind": "dungeon",
+    "grid": [
+      7,
+      3
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "cape",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "cliffs",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "krakencoast",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "highwick",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "star2": {
+    "id": "star2",
+    "name": "หอดูดาว ชั้น 2",
+    "kind": "dungeon",
+    "grid": [
+      7,
+      3
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "cape",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "cliffs",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "krakencoast",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "highwick",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "star3": {
+    "id": "star3",
+    "name": "หอดูดาว ชั้น 3",
+    "kind": "dungeon",
+    "grid": [
+      7,
+      3
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "cape",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "cliffs",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "krakencoast",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "highwick",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "crownport": {
+    "id": "crownport",
+    "name": "เมืองท่าคราวน์พอร์ต (Crownport)",
+    "kind": "town",
+    "grid": [
+      11,
+      4
+    ],
+    "lv": [
+      42,
+      47
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "jungle",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "prismhall",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "sunk1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "shoals",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "duskhold": {
+    "id": "duskhold",
+    "name": "ปราการสนธยาดัสก์โฮลด์ (Duskhold)",
+    "kind": "field",
+    "grid": [
+      9,
+      8
+    ],
+    "lv": [
+      40,
+      45
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "rimehell",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "soulwood",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "mistvale": {
+    "id": "mistvale",
+    "name": "หุบเขาสายหมอกมิสต์เวล (Mistvale)",
+    "kind": "field",
+    "grid": [
+      11,
+      6
+    ],
+    "lv": [
+      44,
+      49
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "prismhall",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "bloodcathedral",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "gearvault",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "titangarden",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "prismhall": {
+    "id": "prismhall",
+    "name": "ดันเจี้ยนโถงปริซึม (Prism Hall)",
+    "kind": "field",
+    "grid": [
+      11,
+      5
+    ],
+    "lv": [
+      43,
+      48
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "crownport",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "mistvale",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "amberwaste",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "moonmeadow",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "gearvault": {
+    "id": "gearvault",
+    "name": "ดันเจี้ยนคลังจักรกล (Gear Vault)",
+    "kind": "field",
+    "grid": [
+      12,
+      6
+    ],
+    "lv": [
+      51,
+      56
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "amberwaste",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "ashgate",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "mistvale",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "bloodcathedral": {
+    "id": "bloodcathedral",
+    "name": "ดันเจี้ยนมหาวิหารโลหิต (Blood Cathedral)",
+    "kind": "field",
+    "grid": [
+      11,
+      7
+    ],
+    "lv": [
+      47,
+      52
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "mistvale",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "inferno",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "ashgate",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "voidrift",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "voidrift": {
+    "id": "voidrift",
+    "name": "ดันเจี้ยนรอยแยกมิติมืด (Void Rift)",
+    "kind": "field",
+    "grid": [
+      10,
+      7
+    ],
+    "lv": [
+      41,
+      46
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "titangarden",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "soulwood",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bloodcathedral",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "rimehell",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "sunk1": {
+    "id": "sunk1",
+    "name": "วิหารใต้น้ำ ชั้น 1",
+    "kind": "dungeon",
+    "grid": [
+      12,
+      4
+    ],
+    "lv": [
+      49,
+      54
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "amberwaste",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "crownport",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "sunk2": {
+    "id": "sunk2",
+    "name": "วิหารใต้น้ำ ชั้น 2",
+    "kind": "dungeon",
+    "grid": [
+      12,
+      4
+    ],
+    "lv": [
+      49,
+      54
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "amberwaste",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "crownport",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "sunk3": {
+    "id": "sunk3",
+    "name": "วิหารใต้น้ำ ชั้น 3",
+    "kind": "dungeon",
+    "grid": [
+      12,
+      4
+    ],
+    "lv": [
+      49,
+      54
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "amberwaste",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "crownport",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "dmn1": {
+    "id": "dmn1",
+    "name": "ปราสาทจอมมาร ชั้น 1",
+    "kind": "dungeon",
+    "grid": [
+      12,
+      8
+    ],
+    "lv": [
+      56,
+      61
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "ashgate",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "inferno",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "dmn2": {
+    "id": "dmn2",
+    "name": "ปราสาทจอมมาร ชั้น 2",
+    "kind": "dungeon",
+    "grid": [
+      12,
+      8
+    ],
+    "lv": [
+      56,
+      61
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "ashgate",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "inferno",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "dmn3": {
+    "id": "dmn3",
+    "name": "ปราสาทจอมมาร ชั้น 3",
+    "kind": "dungeon",
+    "grid": [
+      12,
+      8
+    ],
+    "lv": [
+      56,
+      61
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "ashgate",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "inferno",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "ember1": {
+    "id": "ember1",
+    "name": "ถ้ำเพลิง ชั้น 1",
+    "kind": "dungeon",
+    "grid": [
+      11,
+      2
+    ],
+    "lv": [
+      44,
+      49
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "jungle",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "galleon",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "ember2": {
+    "id": "ember2",
+    "name": "ถ้ำเพลิง ชั้น 2",
+    "kind": "dungeon",
+    "grid": [
+      11,
+      2
+    ],
+    "lv": [
+      44,
+      49
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "jungle",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "galleon",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "ember3": {
+    "id": "ember3",
+    "name": "ถ้ำเพลิง ชั้น 3",
+    "kind": "dungeon",
+    "grid": [
+      11,
+      2
+    ],
+    "lv": [
+      44,
+      49
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "jungle",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "galleon",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "reef": {
+    "id": "reef",
+    "name": "แนวปะการังน้ำลึก (Coral Reef)",
+    "kind": "field",
+    "grid": [
+      10,
+      2
+    ],
+    "lv": [
+      38,
+      43
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "isle",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "ember1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "volcano": {
+    "id": "volcano",
+    "name": "ปากปล่องภูเขาไฟ (Volcano Crater)",
+    "kind": "field",
+    "grid": [
+      11,
+      2
+    ],
+    "lv": [
+      44,
+      49
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "jungle",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "galleon",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "delta": {
+    "id": "delta",
+    "name": "สามเหลี่ยมปากแม่น้ำ (River Delta)",
+    "kind": "field",
+    "grid": [
+      6,
+      6
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "bull2",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "pyra1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "bog",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "dunes": {
+    "id": "dunes",
+    "name": "ทะเลทรายดูนส์ (Sand Dunes)",
+    "kind": "field",
+    "grid": [
+      7,
+      6
+    ],
+    "lv": [
+      20,
+      25
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "shore",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "deltaport",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "fungal": {
+    "id": "fungal",
+    "name": "ป่าเห็ดเรืองแสง (Fungal Cavern)",
+    "kind": "field",
+    "grid": [
+      4,
+      7
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "marsh",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "bones",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "bones": {
+    "id": "bones",
+    "name": "สุสานกระดูกมังกร (Bone Wastes)",
+    "kind": "field",
+    "grid": [
+      3,
+      7
+    ],
+    "lv": [
+      25,
+      30
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "hive",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "fungal",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "obsidian",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "obsidian": {
+    "id": "obsidian",
+    "name": "ชายฝั่งหินออบซิเดียน (Obsidian Coast)",
+    "kind": "field",
+    "grid": [
+      2,
+      7
+    ],
+    "lv": [
+      30,
+      35
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "petrified",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bones",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "thornwood": {
+    "id": "thornwood",
+    "name": "ป่าหนามทอร์นวูด (Thornwood)",
+    "kind": "field",
+    "grid": [
+      3,
+      6
+    ],
+    "lv": [
+      20,
+      25
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "canyon",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "bones",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "marsh",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "petrified",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "petrified": {
+    "id": "petrified",
+    "name": "ป่าหินสาป (Petrified Forest)",
+    "kind": "field",
+    "grid": [
+      2,
+      6
+    ],
+    "lv": [
+      25,
+      30
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "mesafort",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "obsidian",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "hive",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "mesa": {
+    "id": "mesa",
+    "name": "ที่ราบสูงเมซ่า (Mesa Plateau)",
+    "kind": "field",
+    "grid": [
+      2,
+      5
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "ash",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "petrified",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "canyon",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "steppe",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "steppe": {
+    "id": "steppe",
+    "name": "ทุ่งหญ้าสเตปป์ (Windy Steppe)",
+    "kind": "field",
+    "grid": [
+      1,
+      5
+    ],
+    "lv": [
+      29,
+      34
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "forge",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "mesafort",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "rift": {
+    "id": "rift",
+    "name": "รอยแยกธรณี (Magma Rift)",
+    "kind": "field",
+    "grid": [
+      1,
+      4
+    ],
+    "lv": [
+      28,
+      33
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "moor",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "steppe",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "ash",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "moor": {
+    "id": "moor",
+    "name": "ทุ่งมัวร์มืดมน (Dark Moor)",
+    "kind": "field",
+    "grid": [
+      1,
+      3
+    ],
+    "lv": [
+      29,
+      34
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "fjord",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "forge",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "abbey1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "vale": {
+    "id": "vale",
+    "name": "หุบเขาเงาจันทร์ (Shadow Vale)",
+    "kind": "field",
+    "grid": [
+      2,
+      3
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "spiritvillage",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "ash",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bear2",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "moor",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "fjord": {
+    "id": "fjord",
+    "name": "ฟยอร์ดน้ำแข็ง (Frozen Fjord)",
+    "kind": "field",
+    "grid": [
+      1,
+      2
+    ],
+    "lv": [
+      31,
+      36
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "moor",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "spiritvillage",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "spirit": {
+    "id": "spirit",
+    "name": "ป่าวิญญาณศักดิ์สิทธิ์ (Spirit Grove)",
+    "kind": "field",
+    "grid": [
+      2,
+      2
+    ],
+    "lv": [
+      25,
+      30
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "abbey1",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "spine",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "fjord",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "spine": {
+    "id": "spine",
+    "name": "สันเขามังกร (Dragon Spine)",
+    "kind": "field",
+    "grid": [
+      3,
+      2
+    ],
+    "lv": [
+      20,
+      25
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "bear2",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "mine1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "spiritvillage",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "summit": {
+    "id": "summit",
+    "name": "ยอดเขาเสียดฟ้า (Cloud Summit)",
+    "kind": "field",
+    "grid": [
+      5,
+      1
+    ],
+    "lv": [
+      21,
+      26
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "frost",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "aurora",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "aurora": {
+    "id": "aurora",
+    "name": "ทุ่งแสงเหนือออโรร่า (Aurora Peak)",
+    "kind": "field",
+    "grid": [
+      6,
+      1
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "glacier",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "summit",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "cape": {
+    "id": "cape",
+    "name": "แหลมพายุคลั่ง (Storm Cape)",
+    "kind": "field",
+    "grid": [
+      7,
+      2
+    ],
+    "lv": [
+      20,
+      25
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "sanctum",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "glacier",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "skyruins": {
+    "id": "skyruins",
+    "name": "ซากวิหารลอยฟ้า (Sky Ruins)",
+    "kind": "field",
+    "grid": [
+      7,
+      3
+    ],
+    "lv": [
+      16,
+      21
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "cape",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "cliffs",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "krakencoast",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "highwick",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "krakencoast": {
+    "id": "krakencoast",
+    "name": "ชายฝั่งคราเคน (Kraken Coast)",
+    "kind": "field",
+    "grid": [
+      8,
+      3
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "eldergrove",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "sanctum",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "eldergrove": {
+    "id": "eldergrove",
+    "name": "ป่าดึกดำบรรพ์เอลเดอร์ (Elder Grove)",
+    "kind": "field",
+    "grid": [
+      8,
+      4
+    ],
+    "lv": [
+      21,
+      26
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "krakencoast",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "abyss",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "cliffs",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "abyss": {
+    "id": "abyss",
+    "name": "ห้วงลึกอบิส (The Abyss)",
+    "kind": "field",
+    "grid": [
+      8,
+      5
+    ],
+    "lv": [
+      22,
+      27
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "eldergrove",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "shore",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "shoals": {
+    "id": "shoals",
+    "name": "หาดตื้นประกายแสง (Prism Shoals)",
+    "kind": "field",
+    "grid": [
+      10,
+      4
+    ],
+    "lv": [
+      35,
+      40
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "isle",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "moonmeadow",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "crownport",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "moonmeadow": {
+    "id": "moonmeadow",
+    "name": "ทุ่งหญ้าแสงจันทร์ (Moon Meadow)",
+    "kind": "field",
+    "grid": [
+      10,
+      5
+    ],
+    "lv": [
+      36,
+      41
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "shoals",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "titangarden",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "prismhall",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "prismcanyon": {
+    "id": "prismcanyon",
+    "name": "หุบเขาปริซึม (Prism Canyon)",
+    "kind": "field",
+    "grid": [
+      11,
+      5
+    ],
+    "lv": [
+      43,
+      48
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "crownport",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "mistvale",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "amberwaste",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "moonmeadow",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "titangarden": {
+    "id": "titangarden",
+    "name": "สวนยักษ์ไททัน (Titan Garden)",
+    "kind": "field",
+    "grid": [
+      10,
+      6
+    ],
+    "lv": [
+      38,
+      43
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "moonmeadow",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "voidrift",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "mistvale",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "cloudterrace": {
+    "id": "cloudterrace",
+    "name": "ระเบียงเมฆา (Cloud Terrace)",
+    "kind": "field",
+    "grid": [
+      11,
+      6
+    ],
+    "lv": [
+      44,
+      49
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "prismhall",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "bloodcathedral",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "gearvault",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "titangarden",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "amberwaste": {
+    "id": "amberwaste",
+    "name": "ทุ่งอำพัน (Amber Waste)",
+    "kind": "field",
+    "grid": [
+      12,
+      5
+    ],
+    "lv": [
+      49,
+      54
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "sunk1",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "gearvault",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "prismhall",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "sunkencity": {
+    "id": "sunkencity",
+    "name": "นครจมบาดาล (Sunken City)",
+    "kind": "dungeon",
+    "grid": [
+      12,
+      4
+    ],
+    "lv": [
+      49,
+      54
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "amberwaste",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "crownport",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "clockruins": {
+    "id": "clockruins",
+    "name": "ซากหอนาฬิกาโบราณ (Clockwork Ruins)",
+    "kind": "field",
+    "grid": [
+      12,
+      6
+    ],
+    "lv": [
+      51,
+      56
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "amberwaste",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "ashgate",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "mistvale",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "ashgate": {
+    "id": "ashgate",
+    "name": "ประตูเถ้าถ่าน (Ash Gate)",
+    "kind": "field",
+    "grid": [
+      12,
+      7
+    ],
+    "lv": [
+      53,
+      58
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "gearvault",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "dmn1",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "bloodcathedral",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "bloodmoor": {
+    "id": "bloodmoor",
+    "name": "ทุ่งโลหิตสีชาด (Blood Moor)",
+    "kind": "field",
+    "grid": [
+      11,
+      7
+    ],
+    "lv": [
+      47,
+      52
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "mistvale",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "inferno",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "ashgate",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "voidrift",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "echochasm": {
+    "id": "echochasm",
+    "name": "หุบเหวเสียงสะท้อน (Echo Chasm)",
+    "kind": "field",
+    "grid": [
+      10,
+      7
+    ],
+    "lv": [
+      41,
+      46
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "titangarden",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "soulwood",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "bloodcathedral",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "rimehell",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "rimehell": {
+    "id": "rimehell",
+    "name": "นรกเยือกแข็ง (Rime Hell)",
+    "kind": "field",
+    "grid": [
+      9,
+      7
+    ],
+    "lv": [
+      35,
+      40
+    ],
+    "warps": [
+      {
+        "id": "south",
+        "x": 0,
+        "z": 95,
+        "to": "duskhold",
+        "via": "north",
+        "out": {
+          "x": 0,
+          "z": -88,
+          "yaw": 3.141592653589793
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "voidrift",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "fallenkingdom": {
+    "id": "fallenkingdom",
+    "name": "อาณาจักรล่มสลาย (Fallen Kingdom)",
+    "kind": "field",
+    "grid": [
+      9,
+      8
+    ],
+    "lv": [
+      40,
+      45
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "rimehell",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "soulwood",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      }
+    ]
+  },
+  "soulwood": {
+    "id": "soulwood",
+    "name": "ป่าวิญญาณนิรันดร์ (Soulwood)",
+    "kind": "field",
+    "grid": [
+      10,
+      8
+    ],
+    "lv": [
+      45,
+      50
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "voidrift",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "inferno",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "duskhold",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "inferno": {
+    "id": "inferno",
+    "name": "ขุมนรกเพลิงโลกันตร์ (Inferno)",
+    "kind": "field",
+    "grid": [
+      11,
+      8
+    ],
+    "lv": [
+      50,
+      55
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "bloodcathedral",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "east",
+        "x": 95,
+        "z": 0,
+        "to": "dmn1",
+        "via": "west",
+        "out": {
+          "x": -88,
+          "z": 0,
+          "yaw": -1.5707963267948966
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "soulwood",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  },
+  "demonthrone": {
+    "id": "demonthrone",
+    "name": "บัลลังก์จอมมาร (Demon Throne)",
+    "kind": "field",
+    "grid": [
+      12,
+      8
+    ],
+    "lv": [
+      56,
+      61
+    ],
+    "warps": [
+      {
+        "id": "north",
+        "x": 0,
+        "z": -95,
+        "to": "ashgate",
+        "via": "south",
+        "out": {
+          "x": 0,
+          "z": 88,
+          "yaw": 0
+        }
+      },
+      {
+        "id": "west",
+        "x": -95,
+        "z": 0,
+        "to": "inferno",
+        "via": "east",
+        "out": {
+          "x": 88,
+          "z": 0,
+          "yaw": 1.5707963267948966
+        }
+      }
+    ]
+  }
+}
