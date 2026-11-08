@@ -325,7 +325,59 @@
         }
     </style>
     <script>
-        // Force local server by default so cached live server URLs never cause Clerk 523 errors
+        // GitHub Pages & Static Web Auto-Detection
+        const IS_GITHUB_PAGES = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
+        let REMOTE_SERVER_URL = localStorage.getItem('fs_remote_ws') || '';
+
+        function setRemoteServerUrl(url) {
+            url = (url || '').trim();
+            localStorage.setItem('fs_remote_ws', url);
+            REMOTE_SERVER_URL = url;
+            alert('บันทึกที่อยู่เซิร์ฟเวอร์เรียบร้อย: ' + (url || 'โหมดเล่นบนเบราว์เซอร์ (Offline/Standalone)'));
+            window.location.reload();
+        }
+
+        function promptServerConfig() {
+            const current = localStorage.getItem('fs_remote_ws') || '';
+            const next = prompt('กรอก WebSocket URL เซิร์ฟเวอร์ออนไลน์ (เว้นว่างไว้เพื่อเล่นบนเบราว์เซอร์ GitHub Pages โดยตรง):', current);
+            if (next !== null) {
+                setRemoteServerUrl(next);
+            }
+        }
+
+        // Global Fetch Interceptor for Static Hosting (GitHub Pages)
+        const _origFetch = window.fetch;
+        window.fetch = async function(input, init) {
+            const url = typeof input === 'string' ? input : (input && input.url ? input.url : '');
+            const isStatic = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+
+            if (isStatic) {
+                // Intercept Colyseus matchmake requests
+                if (url.includes('/matchmake/')) {
+                    return new Response(JSON.stringify({
+                        localJsonMode: true,
+                        roomId: "town_offline_room",
+                        sessionId: "sess_offline_" + Math.random().toString(36).slice(2, 8),
+                        processId: "local_offline",
+                        name: "town"
+                    }), {
+                        status: 200,
+                        headers: { "Content-Type": "application/json" }
+                    });
+                }
+
+                // Intercept game data sync
+                if (url.includes('/__SyncGameData')) {
+                    return new Response(JSON.stringify({ ok: true }), {
+                        status: 200,
+                        headers: { "Content-Type": "application/json" }
+                    });
+                }
+            }
+
+            return _origFetch.apply(this, arguments);
+        };
+
         const LOCAL_WS = "ws://" + (window.location.hostname || "localhost") + ":" + (window.location.port || "2567");
         const LIVE_WS = "wss://119-10-142-20.sslip.io";
         if (localStorage.getItem('game_server_ws') === LIVE_WS && !window.location.search.includes('live=1')) {
@@ -333,17 +385,434 @@
         }
         window.GAME_SERVER_WS = localStorage.getItem('game_server_ws') || LOCAL_WS;
 
-        // Local JSON Colyseus Room Bridge for 100% Full Gameplay without binary schema reflection mismatch
+        // In-Browser Simulation Engine Room (Runs 100% standalone inside browser)
+        function createVirtualSimulationRoom(reservation, joinOptions) {
+            console.log("🌟 Virtual Simulation Engine Activated for GitHub Pages!");
+            const mapName = (joinOptions && joinOptions.map) || reservation.map || 'aurum';
+            const msgHandlers = new Map();
+            const leaveHandlers = [];
+            const addCallbacks = { players: [], monsters: [], drops: [] };
+            const removeCallbacks = { players: [], monsters: [], drops: [] };
+
+            const state = {
+                players: new Map(),
+                monsters: new Map(),
+                drops: new Map(),
+                duels: ""
+            };
+
+            const localCallbacks = {
+                onAdd(col, cb, immediate) {
+                    if (!addCallbacks[col]) addCallbacks[col] = [];
+                    addCallbacks[col].push(cb);
+                    if (immediate && state[col]) {
+                        for (const [k, v] of state[col].entries()) {
+                            try { cb(v, k); } catch (err) { console.error("onAdd error:", err); }
+                        }
+                    }
+                    return () => {};
+                },
+                onRemove(col, cb) {
+                    if (!removeCallbacks[col]) removeCallbacks[col] = [];
+                    removeCallbacks[col].push(cb);
+                    return () => {};
+                },
+                listen() { return () => {}; }
+            };
+
+            function applyCollectionSync(col, itemsObj) {
+                if (!itemsObj || !state[col]) return;
+                for (const [id, val] of Object.entries(itemsObj)) {
+                    if (state[col].has(id)) {
+                        Object.assign(state[col].get(id), val);
+                    } else {
+                        state[col].set(id, val);
+                        for (const cb of (addCallbacks[col] || [])) {
+                            try { cb(val, id); } catch (err) { console.error("onAdd cb error:", err); }
+                        }
+                    }
+                }
+            }
+
+            function applyCollectionRemove(col, ids) {
+                if (!ids || !state[col]) return;
+                for (const id of ids) {
+                    const existing = state[col].get(id);
+                    if (existing) {
+                        state[col].delete(id);
+                        for (const cb of (removeCallbacks[col] || [])) {
+                            try { cb(existing, id); } catch (err) { console.error("onRemove cb error:", err); }
+                        }
+                    }
+                }
+            }
+
+            function dispatchMsg(type, data) {
+                const handlers = msgHandlers.get(type);
+                if (handlers) {
+                    for (const cb of handlers) {
+                        try { cb(data); } catch (err) { console.error("dispatchMsg error:", err); }
+                    }
+                }
+            }
+
+            // Retrieve or initialize account profile
+            let activeUser = null;
+            try {
+                const raw = localStorage.getItem('fs_auth_user');
+                if (raw) activeUser = typeof raw === 'string' && raw.startsWith('{') ? JSON.parse(raw) : { username: raw, charName: raw };
+            } catch (e) {}
+
+            const username = activeUser?.username || "Player";
+            const profKey = 'fs_prof_' + username;
+            let prof = null;
+            try { prof = JSON.parse(localStorage.getItem(profKey) || 'null'); } catch (e) {}
+
+            if (!prof) {
+                prof = {
+                    uid: "u_" + Math.random().toString(36).slice(2, 9),
+                    username: username,
+                    name: activeUser?.charName || username,
+                    level: 1,
+                    exp: 0,
+                    job: "novice",
+                    style: 0,
+                    look: activeUser?.lookCode || "c2.0.0.0.0.0.0.0",
+                    hp: 120,
+                    maxHp: 120,
+                    mp: 60,
+                    maxMp: 60,
+                    str: 6, vit: 6, agi: 6, int: 6, dex: 6, luk: 6, points: 10,
+                    skills: ["s_first_aid", "s_trick_dead"],
+                    quests: {},
+                    life: { pets: { out: null, pets: [] } },
+                    stats: { worn: {} },
+                    duels: { w: 0, l: 0 },
+                    zeny: 500,
+                    map: mapName,
+                    x: 0,
+                    z: 0,
+                    yaw: 0,
+                    items: [
+                        { id: "potion_red", qty: 10 },
+                        { id: "potion_blue", qty: 5 },
+                        { id: "jelly_green", qty: 5 }
+                    ],
+                    gear: [
+                        { id: "g_novice_knife", item: "novice_knife", slot: "rhand", refine: 0 }
+                    ]
+                };
+                try { localStorage.setItem(profKey, JSON.stringify(prof)); } catch (e) {}
+            }
+
+            const sessionId = "sess_browser_" + Math.random().toString(36).slice(2, 8);
+
+            function formatWornGear(p) {
+                return (p.gear || []).filter(g => g.slot).map(g => g.slot + ":" + g.item + ":" + (g.refine || 0)).join(",");
+            }
+
+            const playerEntity = {
+                uid: prof.uid,
+                name: prof.name || prof.username,
+                x: prof.x || 0,
+                z: prof.z || 0,
+                yaw: prof.yaw || 0,
+                speed: 0,
+                hp: prof.hp || 120,
+                maxHp: prof.maxHp || 120,
+                mp: prof.mp || 60,
+                maxMp: prof.maxMp || 60,
+                level: prof.level || 1,
+                job: prof.job || "novice",
+                style: prof.style || 0,
+                look: prof.look || "c2.0.0.0.0.0.0.0",
+                gear: formatWornGear(prof),
+                ride: "",
+                atk: 0,
+                gm: false,
+                guild: "",
+                emblem: "0.0.5.2",
+                title: "",
+                cos: "|",
+                pet: "",
+                petShiny: false,
+                petName: "",
+                act: "",
+                sit: false,
+                lie: false,
+                down: false,
+                cast: false,
+                hide: false,
+                fx: 0,
+                buff: 0
+            };
+
+            // Spawn monsters on map
+            const virtualMonsters = new Map();
+            const monsterTemplates = [
+                { kind: "slime", name: "Green Slime", lv: 1, hp: 45, x: 4.5, z: 5.5 },
+                { kind: "slime", name: "Green Slime", lv: 1, hp: 45, x: -5.5, z: 6.2 },
+                { kind: "slime", name: "Green Slime", lv: 2, hp: 55, x: 7.2, z: -4.5 },
+                { kind: "bunny", name: "Bunny", lv: 3, hp: 65, x: -8.8, z: -6.5 },
+                { kind: "bunny", name: "Bunny", lv: 3, hp: 65, x: 6.5, z: 9.2 },
+                { kind: "shroom", name: "Spore Shroom", lv: 4, hp: 80, x: -11.0, z: 7.8 },
+                { kind: "shroom", name: "Spore Shroom", lv: 5, hp: 95, x: 10.5, z: -9.5 },
+                { kind: "bee", name: "Hornet Bee", lv: 6, hp: 110, x: -8.2, z: 12.0 },
+                { kind: "goblin", name: "Goblin Scout", lv: 8, hp: 150, x: 13.5, z: 12.5 }
+            ];
+
+            monsterTemplates.forEach((t, i) => {
+                const mId = 'm_' + (i + 1);
+                virtualMonsters.set(mId, {
+                    id: mId,
+                    kind: t.kind,
+                    name: t.name,
+                    level: t.lv,
+                    x: t.x,
+                    z: t.z,
+                    spawnX: t.x,
+                    spawnZ: t.z,
+                    spawnR: 6,
+                    yaw: +(Math.random() * 6.28).toFixed(2),
+                    hp: t.hp,
+                    maxHp: t.hp,
+                    mode: "idle",
+                    variant: 0,
+                    elite: false,
+                    lunge: 0
+                });
+            });
+
+            function saveProf() {
+                try { localStorage.setItem(profKey, JSON.stringify(prof)); } catch (e) {}
+            }
+
+            function buildCharPayload() {
+                return {
+                    uid: prof.uid,
+                    name: prof.name,
+                    level: prof.level,
+                    exp: prof.exp,
+                    job: prof.job,
+                    style: prof.style,
+                    look: prof.look,
+                    str: prof.str,
+                    vit: prof.vit,
+                    agi: prof.agi,
+                    int: prof.int,
+                    points: prof.points || 0,
+                    skills: prof.skills || ["s_first_aid", "s_trick_dead"],
+                    quests: prof.quests || {},
+                    life: prof.life || {},
+                    stats: prof.stats || {},
+                    duels: prof.duels || { w: 0, l: 0 }
+                };
+            }
+
+            const room = {
+                name: "town",
+                roomId: reservation.roomId || "town_virtual",
+                sessionId: sessionId,
+                serializerId: "schema",
+                serializer: { getState: () => state },
+                state: state,
+                _localCallbacks: localCallbacks,
+                onMessage(type, cb) {
+                    if (!msgHandlers.has(type)) msgHandlers.set(type, []);
+                    msgHandlers.get(type).push(cb);
+                    return () => {};
+                },
+                onLeave(cb) {
+                    leaveHandlers.push(cb);
+                    return () => {};
+                },
+                onStateChange: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {} }),
+                onError: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {}, once: () => {}, remove: () => {} }),
+                onJoin: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {}, once: () => {} }),
+                ping(cb) { if (typeof cb === "function") cb(5); },
+                send(type, data) {
+                    if (type === "move" && data) {
+                        playerEntity.x = data.x;
+                        playerEntity.z = data.z;
+                        playerEntity.yaw = data.angle || 0;
+                        playerEntity.speed = data.moving ? 1 : 0;
+                        prof.x = data.x;
+                        prof.z = data.z;
+                        prof.yaw = data.angle || 0;
+                    } else if (type === "attack") {
+                        let hitMon = null;
+                        let minDist = 2.6;
+                        for (const [mId, m] of virtualMonsters.entries()) {
+                            if (m.hp > 0) {
+                                const d = Math.hypot(m.x - playerEntity.x, m.z - playerEntity.z);
+                                if (d < minDist) {
+                                    minDist = d;
+                                    hitMon = m;
+                                }
+                            }
+                        }
+                        if (hitMon) {
+                            const isCrit = Math.random() < 0.25;
+                            const baseDmg = 25 + (prof.str || 6) * 3;
+                            const dmg = Math.floor((baseDmg + Math.random() * 15) * (isCrit ? 1.5 : 1));
+                            hitMon.hp = Math.max(0, hitMon.hp - dmg);
+                            hitMon.mode = "hit";
+                            dispatchMsg("hit", { id: hitMon.id, dmg, crit: isCrit });
+
+                            if (hitMon.hp <= 0) {
+                                const expGain = 25 + hitMon.level * 10;
+                                const zenyGain = 15 + hitMon.level * 6;
+                                prof.exp = (prof.exp || 0) + expGain;
+                                prof.zeny = (prof.zeny || 0) + zenyGain;
+
+                                const expNeed = Math.round(50 * Math.pow(prof.level, 1.4));
+                                if (prof.exp >= expNeed) {
+                                    prof.level += 1;
+                                    prof.exp = 0;
+                                    prof.maxHp += 20;
+                                    prof.hp = prof.maxHp;
+                                    prof.maxMp += 10;
+                                    prof.mp = prof.maxMp;
+                                    prof.points = (prof.points || 0) + 5;
+                                    playerEntity.level = prof.level;
+                                    playerEntity.hp = prof.hp;
+                                    playerEntity.maxHp = prof.maxHp;
+                                    playerEntity.mp = prof.mp;
+                                    playerEntity.maxMp = prof.maxMp;
+                                    dispatchMsg("toast", { text: "🎉 เลเวลอัป! เป็นเลเวล " + prof.level + " (ได้รับแต้ม +5)", kind: "success" });
+                                }
+
+                                const lootId = hitMon.kind === "slime" ? "jelly_green" : (hitMon.kind === "bunny" ? "bunny_fur" : "shroom_cap");
+                                const lootName = lootId === "jelly_green" ? "เยลลี่เขียว (Green Jelly)" : (lootId === "bunny_fur" ? "ขนกระต่าย (Bunny Fur)" : "หมวกเห็ด (Shroom Cap)");
+                                const ex = prof.items.find(i => i.id === lootId);
+                                if (ex) ex.qty += 1;
+                                else prof.items.push({ id: lootId, qty: 1 });
+
+                                saveProf();
+                                dispatchMsg("char", buildCharPayload());
+                                dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
+                                dispatchMsg("toast", { text: "ได้รับ +" + zenyGain + " Zeny", kind: "coin" });
+                                dispatchMsg("toast", { text: "ได้รับ " + lootName, kind: "item" });
+
+                                applyCollectionRemove("monsters", [hitMon.id]);
+
+                                setTimeout(() => {
+                                    hitMon.hp = hitMon.maxHp;
+                                    hitMon.x = hitMon.spawnX + (Math.random() - 0.5) * 4;
+                                    hitMon.z = hitMon.spawnZ + (Math.random() - 0.5) * 4;
+                                    hitMon.mode = "idle";
+                                    applyCollectionSync("monsters", { [hitMon.id]: hitMon });
+                                }, 4000);
+                            } else {
+                                applyCollectionSync("monsters", { [hitMon.id]: hitMon });
+                            }
+                        }
+                    } else if (type === "skill") {
+                        if (prof.mp >= 10) {
+                            prof.mp -= 10;
+                            playerEntity.mp = prof.mp;
+                            dispatchMsg("char", buildCharPayload());
+                            for (const [mId, m] of virtualMonsters.entries()) {
+                                if (m.hp > 0 && Math.hypot(m.x - playerEntity.x, m.z - playerEntity.z) < 3.8) {
+                                    m.hp = Math.max(0, m.hp - 65);
+                                    if (m.hp <= 0) {
+                                        applyCollectionRemove("monsters", [m.id]);
+                                        setTimeout(() => {
+                                            m.hp = m.maxHp;
+                                            applyCollectionSync("monsters", { [m.id]: m });
+                                        }, 4000);
+                                    } else {
+                                        applyCollectionSync("monsters", { [m.id]: m });
+                                    }
+                                }
+                            }
+                        }
+                    } else if (type === "bag" && data && data.item) {
+                        if (data.item === "potion_red") {
+                            prof.hp = Math.min(prof.maxHp, prof.hp + 50);
+                            playerEntity.hp = prof.hp;
+                        } else if (data.item === "potion_blue") {
+                            prof.mp = Math.min(prof.maxMp, prof.mp + 30);
+                            playerEntity.mp = prof.mp;
+                        }
+                        saveProf();
+                        dispatchMsg("char", buildCharPayload());
+                        dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
+                    } else if (type === "chat" && data) {
+                        dispatchMsg("chat", { from: prof.name, text: data.text || "" });
+                    }
+                },
+                sendUnreliable(type, data) { this.send(type, data); },
+                leave() {
+                    saveProf();
+                    for (const cb of leaveHandlers) {
+                        try { cb(1000); } catch (e) {}
+                    }
+                    return Promise.resolve(1000);
+                },
+                removeAllListeners() {
+                    msgHandlers.clear();
+                    leaveHandlers.length = 0;
+                }
+            };
+
+            // Monster idle wander loop
+            setInterval(() => {
+                const moved = {};
+                for (const [mId, m] of virtualMonsters.entries()) {
+                    if (m.hp > 0 && Math.random() < 0.4) {
+                        m.x = +(m.spawnX + (Math.random() - 0.5) * m.spawnR).toFixed(2);
+                        m.z = +(m.spawnZ + (Math.random() - 0.5) * m.spawnR).toFixed(2);
+                        moved[mId] = { x: m.x, z: m.z };
+                    }
+                }
+                if (Object.keys(moved).length > 0) {
+                    applyCollectionSync("monsters", moved);
+                }
+            }, 3000);
+
+            // Auto-save player every 5s
+            setInterval(saveProf, 5000);
+
+            // Initial packet dispatch
+            setTimeout(() => {
+                applyCollectionSync("players", { [sessionId]: playerEntity });
+                applyCollectionSync("monsters", Object.fromEntries(virtualMonsters));
+                dispatchMsg("char", buildCharPayload());
+                dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
+                dispatchMsg("gear", prof.gear);
+                dispatchMsg("skills", prof.skills);
+                dispatchMsg("stats", prof.stats || {});
+                dispatchMsg("toast", { text: "ยินดีต้อนรับสู่โลก Final Slop, " + prof.name + "! (โหมดเบราว์เซอร์)", kind: "info" });
+            }, 60);
+
+            return room;
+        }
+
+        // Local JSON Colyseus Room Bridge
         window.__createLocalRoom = function(client, reservation, joinOptions) {
+            const isStaticHost = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+            if (isStaticHost) {
+                return Promise.resolve(createVirtualSimulationRoom(reservation, joinOptions));
+            }
+
             return new Promise((resolve, reject) => {
                 const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-                const wsHost = window.location.host || 'localhost:2567';
+                const wsHost = REMOTE_SERVER_URL || window.location.host || 'localhost:2567';
                 const mapName = (joinOptions && joinOptions.map) || reservation.map || 'aurum';
                 const charSlot = (joinOptions && joinOptions.char !== undefined) ? joinOptions.char : (reservation.charSlot ?? 0);
                 const token = (joinOptions && joinOptions.token) || reservation.token || localStorage.getItem('fs_auth_token') || '';
                 const wsUrl = `${wsProtocol}//${wsHost}/${reservation.processId}/${reservation.roomId}?sessionId=${reservation.sessionId}&map=${encodeURIComponent(mapName)}&char=${encodeURIComponent(charSlot)}&token=${encodeURIComponent(token)}`;
 
-                const ws = new WebSocket(wsUrl);
+                let ws;
+                try {
+                    ws = new WebSocket(wsUrl);
+                } catch (e) {
+                    console.warn("WebSocket creation failed, falling back to virtual room:", e);
+                    resolve(createVirtualSimulationRoom(reservation, joinOptions));
+                    return;
+                }
+
                 window.__fsWs = ws;
                 const msgHandlers = new Map();
                 const leaveHandlers = [];
@@ -363,7 +832,7 @@
                         addCallbacks[col].push(cb);
                         if (immediate && state[col]) {
                             for (const [k, v] of state[col].entries()) {
-                                try { cb(v, k); } catch (err) { console.error("onAdd immediate error:", err); }
+                                try { cb(v, k); } catch (err) { console.error("onAdd error:", err); }
                             }
                         }
                         return () => {};
@@ -396,17 +865,13 @@
                     onStateChange: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {} }),
                     onError: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {}, once: () => {}, remove: () => {} }),
                     onJoin: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {}, once: () => {} }),
-                    ping(cb) {
-                        if (typeof cb === "function") cb(1);
-                    },
+                    ping(cb) { if (typeof cb === "function") cb(1); },
                     send(type, data) {
                         if (ws.readyState === WebSocket.OPEN) {
                             ws.send(JSON.stringify({ t: "msg", type, data }));
                         }
                     },
-                    sendUnreliable(type, data) {
-                        this.send(type, data);
-                    },
+                    sendUnreliable(type, data) { this.send(type, data); },
                     leave() {
                         try { ws.close(1000); } catch (e) {}
                         return Promise.resolve(1000);
@@ -425,7 +890,7 @@
                         } else {
                             state[col].set(id, val);
                             for (const cb of (addCallbacks[col] || [])) {
-                                try { cb(val, id); } catch (err) { console.error(`onAdd(${col}) error:`, err); }
+                                try { cb(val, id); } catch (err) { console.error("onAdd error:", err); }
                             }
                         }
                     }
@@ -438,7 +903,7 @@
                         if (existing) {
                             state[col].delete(id);
                             for (const cb of (removeCallbacks[col] || [])) {
-                                try { cb(existing, id); } catch (err) { console.error(`onRemove(${col}) error:`, err); }
+                                try { cb(existing, id); } catch (err) { console.error("onRemove error:", err); }
                             }
                         }
                     }
@@ -448,28 +913,13 @@
                     const handlers = msgHandlers.get(type);
                     if (handlers) {
                         for (const cb of handlers) {
-                            try { cb(data); } catch (err) { console.error(`onMessage(${type}) error:`, err); }
+                            try { cb(data); } catch (err) { console.error("onMessage error:", err); }
                         }
                     }
                 }
 
                 let resolved = false;
                 ws.onopen = () => {
-                    // Send initial handshake if game data is already loaded on window
-                    if (window.__GAME_MAPS && window.__GAME_MONSTERS) {
-                        fetch("/__SyncGameData", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({
-                                maps: Object.fromEntries(Object.entries(window.__GAME_MAPS).map(([k, v]) => [k, {
-                                    id: v.id, kind: v.kind, lv: v.lv, start: v.start, revive: v.revive,
-                                    warps: v.warps, spawns: v.spawns, bounds: v.bounds, talkers: v.talkers, shops: v.shops
-                                }])),
-                                monsters: window.__GAME_MONSTERS.v,
-                                extras: window.__GAME_EXTRAS || null
-                            })
-                        }).catch(() => {});
-                    }
                     resolved = true;
                     resolve(room);
                 };
@@ -479,16 +929,13 @@
                     let packet;
                     try { packet = JSON.parse(ev.data); } catch (e) { return; }
 
-                    // Schedule slightly if handlers are still being attached on the same tick after resolve(room)
                     const run = () => {
                         if (packet.t === "init") {
                             if (packet.players) applyCollectionSync("players", packet.players);
                             if (packet.monsters) applyCollectionSync("monsters", packet.monsters);
                             if (packet.drops) applyCollectionSync("drops", packet.drops);
                             if (packet.messages) {
-                                for (const m of packet.messages) {
-                                    dispatchMsg(m.type, m.data);
-                                }
+                                for (const m of packet.messages) dispatchMsg(m.type, m.data);
                             }
                         } else if (packet.t === "patch") {
                             if (packet.players) applyCollectionSync("players", packet.players);
@@ -502,16 +949,14 @@
                         }
                     };
 
-                    if (addCallbacks.players.length === 0) {
-                        setTimeout(run, 20);
-                    } else {
-                        run();
-                    }
+                    if (addCallbacks.players.length === 0) setTimeout(run, 20);
+                    else run();
                 };
 
                 ws.onclose = (ev) => {
                     if (!resolved) {
-                        reject(new Error("WebSocket closed before open"));
+                        console.warn("WebSocket connection closed before open, falling back to Virtual Room...");
+                        resolve(createVirtualSimulationRoom(reservation, joinOptions));
                         return;
                     }
                     for (const cb of leaveHandlers) {
@@ -520,36 +965,14 @@
                 };
 
                 ws.onerror = (err) => {
-                    if (!resolved) reject(new Error("WebSocket connection error"));
+                    if (!resolved) {
+                        console.warn("WebSocket error, falling back to Virtual Room:", err);
+                        resolve(createVirtualSimulationRoom(reservation, joinOptions));
+                    }
                 };
             });
         };
     </script>
-
-    <script>
-        // GitHub Pages & Static Web Auto-Detection
-        const IS_GITHUB_PAGES = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
-        
-        // Multiplayer Cloud Server setting
-        let REMOTE_SERVER_URL = localStorage.getItem('fs_remote_ws') || '';
-        
-        function setRemoteServerUrl(url) {
-            url = (url || '').trim();
-            localStorage.setItem('fs_remote_ws', url);
-            REMOTE_SERVER_URL = url;
-            alert('บันทึกที่อยู่เซิร์ฟเวอร์เรียบร้อย: ' + (url || 'โหมดเล่นคนเดียว (Offline/Local)'));
-            window.location.reload();
-        }
-
-        function promptServerConfig() {
-            const current = localStorage.getItem('fs_remote_ws') || '';
-            const next = prompt('กรอก WebSocket URL เซิร์ฟเวอร์ออนไลน์ (เว้นว่างไว้เพื่อเล่นโหมดคนเดียว/GitHub Pages ออฟไลน์):', current);
-            if (next !== null) {
-                setRemoteServerUrl(next);
-            }
-        }
-    </script>
-
 </head>
 <body class="bg-[#16201a]">
 
@@ -730,8 +1153,6 @@
                 </div>
 
                 <button type="submit" class="auth-submit" style="margin-top:14px;">สร้างบัญชีและเริ่มเกมทันที</button>
-            </form>
-                <button type="submit" class="auth-submit">สร้างบัญชีและเริ่มเกมทันที</button>
             </form>
 
             <!-- Form: Cross-Device Import -->
@@ -1092,6 +1513,27 @@
             ev.preventDefault();
             const username = document.getElementById('login-username').value.trim();
             const password = document.getElementById('login-password').value;
+
+            const isStaticHost = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+            if (isStaticHost) {
+                const accounts = JSON.parse(localStorage.getItem('fs_accounts') || '{}');
+                const acc = accounts[username];
+                if (!acc || acc.password !== password) {
+                    showAuthMessage('ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง (หากยังไม่มีไอดี ให้คลิกแท็บ "สมัครไอดีใหม่")', true);
+                    return;
+                }
+                const token = 'local_' + btoa(encodeURIComponent(username));
+                localStorage.setItem('fs_auth_token', token);
+                localStorage.setItem('fs_auth_user', JSON.stringify(acc));
+                applyAccountUI(acc);
+                showAuthMessage('เข้าสู่ระบบสำเร็จ! กำลังโหลดตัวละคร...', false);
+                setTimeout(() => {
+                    document.getElementById('auth-screen').style.display = 'none';
+                    launchTownWithToken(token);
+                }, 200);
+                return;
+            }
+
             try {
                 const resp = await fetch('/api/auth/login', {
                     method: 'POST',
@@ -1119,9 +1561,67 @@
             ev.preventDefault();
             const username = document.getElementById('reg-username').value.trim();
             const password = document.getElementById('reg-password').value;
-            const charName = document.getElementById('reg-charname').value.trim();
+            const charName = document.getElementById('reg-charname').value.trim() || username;
             const style = Number(document.getElementById('reg-style').value) || 0;
             const lookCode = `c2.${regSkin}.${style}.${regHair}.${regEyes}.${regGender === 1 ? 1 : 0}.${regClothes}.${regGender}`;
+
+            const isStaticHost = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+            if (isStaticHost) {
+                const account = { username, password, charName, lookCode, createdAt: Date.now() };
+                const accounts = JSON.parse(localStorage.getItem('fs_accounts') || '{}');
+                accounts[username] = account;
+                localStorage.setItem('fs_accounts', JSON.stringify(accounts));
+
+                const profKey = 'fs_prof_' + username;
+                if (!localStorage.getItem(profKey)) {
+                    const starterProf = {
+                        uid: "u_" + Math.random().toString(36).slice(2, 9),
+                        username,
+                        name: charName,
+                        level: 1,
+                        exp: 0,
+                        job: "novice",
+                        style,
+                        look: lookCode,
+                        hp: 120,
+                        maxHp: 120,
+                        mp: 60,
+                        maxMp: 60,
+                        str: 6, vit: 6, agi: 6, int: 6, dex: 6, luk: 6, points: 10,
+                        skills: ["s_first_aid", "s_trick_dead"],
+                        quests: {},
+                        life: { pets: { out: null, pets: [] } },
+                        stats: { worn: {} },
+                        duels: { w: 0, l: 0 },
+                        zeny: 500,
+                        map: "aurum",
+                        x: 0,
+                        z: 0,
+                        yaw: 0,
+                        items: [
+                            { id: "potion_red", qty: 10 },
+                            { id: "potion_blue", qty: 5 },
+                            { id: "jelly_green", qty: 5 }
+                        ],
+                        gear: [
+                            { id: "g_novice_knife", item: "novice_knife", slot: "rhand", refine: 0 }
+                        ]
+                    };
+                    localStorage.setItem(profKey, JSON.stringify(starterProf));
+                }
+
+                const token = 'local_' + btoa(encodeURIComponent(username));
+                localStorage.setItem('fs_auth_token', token);
+                localStorage.setItem('fs_auth_user', JSON.stringify(account));
+                applyAccountUI(account);
+                showAuthMessage('สร้างบัญชีสำเร็จ! กำลังเข้าสู่เกม...', false);
+                setTimeout(() => {
+                    document.getElementById('auth-screen').style.display = 'none';
+                    launchTownWithToken(token);
+                }, 200);
+                return;
+            }
+
             try {
                 const resp = await fetch('/api/auth/register', {
                     method: 'POST',
@@ -1254,21 +1754,37 @@
             if (status) status.innerText = 'กำลังตรวจสอบบัญชีผู้เล่น...';
 
             const savedToken = localStorage.getItem('fs_auth_token');
+            const isStaticHost = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+
             if (savedToken) {
-                try {
-                    const resp = await fetch('/api/auth/me', {
-                        headers: { 'Authorization': 'Bearer ' + savedToken }
-                    });
-                    if (resp.ok) {
-                        const data = await resp.json();
-                        if (data && data.ok && data.account) {
-                            applyAccountUI(data.account);
+                if (isStaticHost) {
+                    const localUser = localStorage.getItem('fs_auth_user');
+                    if (localUser) {
+                        try {
+                            const acc = typeof localUser === 'string' && localUser.startsWith('{') ? JSON.parse(localUser) : { username: localUser };
+                            applyAccountUI(acc);
                             await launchTownWithToken(savedToken);
                             return;
+                        } catch (e) {
+                            console.warn("Local session check failed:", e);
                         }
                     }
-                } catch (e) {
-                    console.warn("Session check failed:", e);
+                } else {
+                    try {
+                        const resp = await fetch('/api/auth/me', {
+                            headers: { 'Authorization': 'Bearer ' + savedToken }
+                        });
+                        if (resp.ok) {
+                            const data = await resp.json();
+                            if (data && data.ok && data.account) {
+                                applyAccountUI(data.account);
+                                await launchTownWithToken(savedToken);
+                                return;
+                            }
+                        }
+                    } catch (e) {
+                        console.warn("Session check failed:", e);
+                    }
                 }
                 localStorage.removeItem('fs_auth_token');
             }
