@@ -432,7 +432,7 @@
         const _origFetch = window.fetch;
         window.fetch = async function(input, init) {
             const url = typeof input === 'string' ? input : (input && input.url ? input.url : '');
-            const isStatic = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+            const isStatic = !REMOTE_SERVER_URL || IS_GITHUB_PAGES;
 
             if (isStatic) {
                 // Intercept Colyseus matchmake requests
@@ -729,41 +729,133 @@
                 buff: 0
             };
 
-            // Spawn town monsters
-            const virtualMonsters = new Map();
-            const monsterTemplates = [
-                { kind: "slime", name: "Green Slime", lv: 1, hp: 45, x: 5.5, z: 6.5 },
-                { kind: "slime", name: "Green Slime", lv: 1, hp: 45, x: -6.5, z: 7.2 },
-                { kind: "slime", name: "Green Slime", lv: 2, hp: 55, x: 8.2, z: -5.5 },
-                { kind: "bunny", name: "Bunny", lv: 3, hp: 65, x: -9.8, z: -7.5 },
-                { kind: "bunny", name: "Bunny", lv: 3, hp: 65, x: 7.5, z: 10.2 },
-                { kind: "shroom", name: "Spore Shroom", lv: 4, hp: 80, x: -12.0, z: 8.8 },
-                { kind: "shroom", name: "Spore Shroom", lv: 5, hp: 95, x: 11.5, z: -10.5 },
-                { kind: "bee", name: "Hornet Bee", lv: 6, hp: 110, x: -9.2, z: 13.0 },
-                { kind: "goblin", name: "Goblin Scout", lv: 8, hp: 150, x: 14.5, z: 13.5 }
-            ];
+            // Authentic Map Configurations & Safe Zones (Canonical from Final Slop / MOGO)
+            const MAP_CONFIGS = {
+                aurum: {
+                    id: "aurum",
+                    kind: "town",
+                    name: "เมืองออรุ่ม (Aurum Town)",
+                    safeZone: true,
+                    spawns: [], // 0 MONSTERS! Authentic peaceful city safe zone!
+                    warps: [
+                        { id: "south", x: 0, z: 36.6, to: "bull1", out: { x: 0, z: 32.5, yaw: 0 }, radius: 2.8 },
+                        { id: "west", x: -35, z: 0, to: "bear1", out: { x: 80, z: 0, yaw: 1.57 }, radius: 2.8 },
+                        { id: "east", x: 35, z: 0, to: "pip", out: { x: -80, z: 0, yaw: -1.57 }, radius: 2.8 },
+                        { id: "north", x: 0, z: -42, to: "pass", out: { x: 0, z: 80, yaw: 0 }, radius: 2.8 }
+                    ]
+                },
+                bull1: {
+                    id: "bull1",
+                    kind: "field",
+                    name: "ทุ่งหญ้าออรุ่มใต้ (South Aurum Field)",
+                    safeZone: false,
+                    lv: [1, 5],
+                    spawns: [
+                        // Canonical spawns from original game (1qw2ky3x46e05.js / server.js)
+                        { kind: "slime", name: "สไลม์ (Slime)", lv: 1, hp: 45, x: -12, z: 52, r: 8, n: 6 },
+                        { kind: "slime", name: "สไลม์ (Slime)", lv: 2, hp: 50, x: 14, z: 58, r: 8, n: 6 },
+                        { kind: "slime", name: "สไลม์เขียว (Slime)", lv: 3, hp: 55, x: 0, z: 78, r: 9, n: 5 },
+                        { kind: "bunny", name: "กระต่ายป่า (Bunny)", lv: 3, hp: 65, x: 29, z: 76, r: 8, n: 5 },
+                        { kind: "slime", name: "สไลม์พิษ (Poison Slime)", lv: 4, hp: 70, x: -27, z: 94, r: 9, n: 5 },
+                        { kind: "kingslime", name: "ราชันย์สไลม์ (King Slime MVP)", lv: 8, hp: 450, x: 10, z: 124, r: 4, n: 1, boss: "mini" }
+                    ],
+                    warps: [
+                        { id: "north", x: 0, z: 31.4, to: "aurum", out: { x: 0, z: 34.0, yaw: 3.14 }, radius: 2.8 },
+                        { id: "east", x: 90, z: 0, to: "bull2", out: { x: -80, z: 0, yaw: -1.57 }, radius: 3.0 },
+                        { id: "west", x: -90, z: 0, to: "dryhills", out: { x: 80, z: 0, yaw: 1.57 }, radius: 3.0 }
+                    ]
+                },
+                bear1: {
+                    id: "bear1",
+                    kind: "field",
+                    name: "ป่าหมีตะวันตก (Bear Woods West)",
+                    safeZone: false,
+                    lv: [12, 17],
+                    spawns: [
+                        { kind: "wolf", name: "หมาป่า (Wolf)", lv: 12, hp: 350, x: 0, z: -20, r: 10, n: 5 },
+                        { kind: "shroom", name: "เห็ดพิษ (Poison Shroom)", lv: 14, hp: 500, x: -30, z: 20, r: 8, n: 5 },
+                        { kind: "bear", name: "หมีสีน้ำตาล (Grizzly Bear)", lv: 16, hp: 1200, x: 25, z: 40, r: 9, n: 4 },
+                        { kind: "bearking", name: "ราชันย์หมี (Bear King MVP)", lv: 25, hp: 8500, x: 0, z: 70, r: 5, n: 1, boss: "mini" }
+                    ],
+                    warps: [
+                        { id: "east", x: 95, z: 0, to: "aurum", out: { x: -32, z: 0, yaw: -1.57 }, radius: 3.0 }
+                    ]
+                },
+                pip: {
+                    id: "pip",
+                    kind: "field",
+                    name: "ทะเลสาบพิพ (Lake Pip)",
+                    safeZone: false,
+                    lv: [8, 13],
+                    spawns: [
+                        { kind: "bee", name: "ผึ้งต่อยเจ็บ (Hornet)", lv: 8, hp: 110, x: -20, z: -10, r: 9, n: 6 },
+                        { kind: "goblin", name: "ก็อบลินลาดตระเวน (Goblin Scout)", lv: 10, hp: 220, x: 30, z: 25, r: 9, n: 6 },
+                        { kind: "goblinking", name: "ราชาก็อบลิน (Goblin King MVP)", lv: 20, hp: 5500, x: 0, z: 60, r: 5, n: 1, boss: "mini" }
+                    ],
+                    warps: [
+                        { id: "west", x: -95, z: 0, to: "aurum", out: { x: 32, z: 0, yaw: 1.57 }, radius: 3.0 }
+                    ]
+                },
+                pass: {
+                    id: "pass",
+                    kind: "field",
+                    name: "ช่องเขาหิมะ (Snowy Pass)",
+                    safeZone: false,
+                    lv: [7, 12],
+                    spawns: [
+                        { kind: "ram", name: "แกะภูเขา (Mountain Ram)", lv: 8, hp: 160, x: -15, z: 20, r: 9, n: 5 },
+                        { kind: "harpy", name: "ฮาร์ปี้ลมหนาว (Wind Harpy)", lv: 11, hp: 240, x: 20, z: -30, r: 9, n: 5 }
+                    ],
+                    warps: [
+                        { id: "south", x: 0, z: 95, to: "aurum", out: { x: 0, z: -38, yaw: 3.14 }, radius: 3.0 }
+                    ]
+                }
+            };
 
-            monsterTemplates.forEach((t, i) => {
-                const mId = 'm_' + (i + 1);
-                virtualMonsters.set(mId, {
-                    id: mId,
-                    kind: t.kind,
-                    name: t.name,
-                    level: t.lv,
-                    x: t.x,
-                    z: t.z,
-                    spawnX: t.x,
-                    spawnZ: t.z,
-                    spawnR: 6,
-                    yaw: +(Math.random() * 6.28).toFixed(2),
-                    hp: t.hp,
-                    maxHp: t.hp,
-                    mode: "idle",
-                    variant: 0,
-                    elite: false,
-                    lunge: 0
-                });
-            });
+            const mapConfig = MAP_CONFIGS[mapName] || {
+                id: mapName,
+                name: mapName,
+                kind: (mapName === "aurum" || mapName === "wick" || mapName === "crownport" || mapName === "highwick") ? "town" : "field",
+                safeZone: (mapName === "aurum" || mapName === "wick" || mapName === "crownport" || mapName === "highwick"),
+                spawns: [],
+                warps: []
+            };
+
+            // Spawn monsters ONLY in field/dungeon maps according to canonical spawn tables
+            const virtualMonsters = new Map();
+            if (!mapConfig.safeZone && Array.isArray(mapConfig.spawns) && mapConfig.spawns.length > 0) {
+                let mCount = 1;
+                for (const sp of mapConfig.spawns) {
+                    const count = sp.n || 4;
+                    for (let j = 0; j < count; j++) {
+                        const mId = 'm_' + (mCount++);
+                        const angle = Math.random() * Math.PI * 2;
+                        const dist = Math.random() * (sp.r || 6);
+                        const mx = +(sp.x + Math.cos(angle) * dist).toFixed(1);
+                        const mz = +(sp.z + Math.sin(angle) * dist).toFixed(1);
+                        virtualMonsters.set(mId, {
+                            id: mId,
+                            kind: sp.kind,
+                            name: sp.name,
+                            level: sp.lv,
+                            x: mx,
+                            z: mz,
+                            spawnX: sp.x,
+                            spawnZ: sp.z,
+                            spawnR: sp.r || 8,
+                            yaw: +(Math.random() * 6.28).toFixed(2),
+                            hp: sp.hp,
+                            maxHp: sp.hp,
+                            mode: "idle",
+                            variant: 0,
+                            elite: sp.boss === "mini" || sp.boss === "world",
+                            lunge: 0
+                        });
+                    }
+                }
+            }
+
+            let lastWarpTime = 0;
 
             function saveProf() {
                 try { localStorage.setItem(profKey, JSON.stringify(prof)); } catch (e) {}
@@ -864,6 +956,31 @@
                         prof.x = playerEntity.x;
                         prof.z = playerEntity.z;
                         prof.yaw = playerEntity.yaw;
+
+                        // Check map warps
+                        const now = Date.now();
+                        if (mapConfig.warps && mapConfig.warps.length > 0 && now - lastWarpTime > 3000) {
+                            for (const w of mapConfig.warps) {
+                                const dist = Math.hypot(playerEntity.x - w.x, playerEntity.z - w.z);
+                                if (dist <= (w.radius || 2.5) && w.to) {
+                                    lastWarpTime = now;
+                                    console.log(`[Warp Transition] Stepping through warp ${w.id} to ${w.to}!`);
+                                    prof.map = w.to;
+                                    if (w.out) {
+                                        prof.x = w.out.x;
+                                        prof.z = w.out.z;
+                                        prof.yaw = w.out.yaw || 0;
+                                        playerEntity.x = prof.x;
+                                        playerEntity.z = prof.z;
+                                        playerEntity.yaw = prof.yaw;
+                                    }
+                                    saveProf();
+                                    dispatchMsg("toast", { text: `กำลังเดินทางไปยัง ${w.to}...`, kind: "info" });
+                                    dispatchMsg("warp", { map: w.to, roomId: "room_" + w.to });
+                                    return;
+                                }
+                            }
+                        }
                     }
                     // 2. Daily Login Reward
                     else if (type === "loginClaim") {
@@ -1069,6 +1186,10 @@
                     }
                     // 14. Combat Attack (Normal Attack / Space)
                     else if (type === "attack") {
+                        if (mapConfig.safeZone) {
+                            dispatchMsg("toast", { text: "เขตปลอดภัย เมืองออรัม: ห้ามต่อสู้! เดินออกประตูด้านใต้สู่ทุ่งวัว (Bull Plains) เพื่อล่ามอนสเตอร์", kind: "info" });
+                            return;
+                        }
                         let hitMon = null;
                         const targetId = data && data.id;
                         if (targetId && virtualMonsters.has(targetId) && virtualMonsters.get(targetId).hp > 0) {
@@ -1100,6 +1221,17 @@
                                 prof.exp = (prof.exp || 0) + expGain;
                                 prof.zeny = (prof.zeny || 0) + zenyGain;
                                 checkLevelUp();
+
+                                // Update Quest Kill Counter (m02 kill 5 slimes)
+                                if (prof.quests && prof.quests.on && prof.quests.on.m02 && hitMon.kind === "slime") {
+                                    prof.quests.on.m02[0] = Math.min(5, (prof.quests.on.m02[0] || 0) + 1);
+                                    dispatchMsg("quests", prof.quests);
+                                    if (prof.quests.on.m02[0] >= 5) {
+                                        dispatchMsg("toast", { text: "ภารกิจพร้อมส่ง: กำจัดสไลม์ครบ 5 ตัวแล้ว! เดินกลับเข้าเมืองออรัมทางประตูเหนือเพื่อส่งเควสต์กับเอล่า", kind: "success" });
+                                    } else {
+                                        dispatchMsg("toast", { text: `กำจัดสไลม์แล้ว: ${prof.quests.on.m02[0]}/5 ตัว`, kind: "info" });
+                                    }
+                                }
 
                                 const lootMap = {
                                     slime: { id: "jelly_green", name: "เยลลี่เขียว (Green Jelly)" },
@@ -1147,6 +1279,10 @@
                     // 15. Skill Casting
                     else if (type === "skill" && data) {
                         const skId = data.id || "bash";
+                        if (mapConfig.safeZone && skId !== "firstAid" && skId !== "heal" && skId !== "blessing" && skId !== "increaseAgi") {
+                            dispatchMsg("toast", { text: "เขตปลอดภัย เมืองออรัม: ห้ามใช้สกิลโจมตีในเมือง! เดินออกประตูด้านใต้เพื่อต่อสู้", kind: "info" });
+                            return;
+                        }
                         const mpCost = 10;
                         if ((prof.mp || 0) >= mpCost) {
                             prof.mp -= mpCost;
@@ -1245,7 +1381,11 @@
                 dispatchMsg("gear", prof.gear);
                 dispatchMsg("skills", prof.skills);
                 dispatchMsg("stats", prof.stats || {});
-                dispatchMsg("toast", { text: "ยินดีต้อนรับสู่โลก Final Slop, " + prof.name + "! (สำรวจเมืองออรัม)", kind: "info" });
+                if (mapConfig.safeZone) {
+                    dispatchMsg("toast", { text: "ยินดีต้อนรับสู่ " + mapConfig.name + "! (เขตปลอดภัย ปลอดมอนสเตอร์ 100%)", kind: "info" });
+                } else {
+                    dispatchMsg("toast", { text: "เข้าสู่ " + mapConfig.name + " (เลเวล 1-5)! ระวังมอนสเตอร์โจมตี", kind: "warning" });
+                }
             }, 60);
 
             return room;
