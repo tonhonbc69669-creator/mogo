@@ -470,7 +470,7 @@
 
         // In-Browser Simulation Engine Room (Runs 100% standalone inside browser)
         function createVirtualSimulationRoom(reservation, joinOptions) {
-            console.log("🌟 Virtual Simulation Engine Activated for GitHub Pages!");
+            console.log("🌟 Comprehensive Virtual Simulation Engine (Full Playable Edition) Activated!");
             const mapName = (joinOptions && joinOptions.map) || reservation.map || 'aurum';
             const msgHandlers = new Map();
             const leaveHandlers = [];
@@ -539,7 +539,7 @@
                 }
             }
 
-            // Retrieve or initialize account profile
+            // 1. Retrieve or initialize account profile
             let activeUser = null;
             try {
                 const raw = localStorage.getItem('fs_auth_user');
@@ -551,6 +551,65 @@
             let prof = null;
             try { prof = JSON.parse(localStorage.getItem(profKey) || 'null'); } catch (e) {}
 
+            const JOB_STARTER_SKILLS = {
+                novice: { firstAid: 1 },
+                swordsman: { bash: 1, magnumBreak: 1, provoke: 1, endure: 1, swordMastery: 1 },
+                archer: { doubleStrafe: 1, arrowShower: 1, chargeArrow: 1, concentration: 1, owlEye: 1 },
+                mage: { fireBolt: 1, coldBolt: 1, frostDiver: 1, thunderstorm: 1, mpRecovery: 1 },
+                acolyte: { heal: 1, blessing: 1, increaseAgi: 1, holyLight: 1, divineProtection: 1 },
+                thief: { doubleStab: 1, envenom: 1, smokeBomb: 1, shadowStep: 1, daggerMastery: 1 },
+                merchant: { mammonite: 1, cartRevolution: 1, coinToss: 1, battleCry: 1, haggle: 1 },
+                knight: { pierce: 1, bowlingBash: 1, spiralPierce: 1, twoHandQuicken: 1, knightMastery: 1 },
+                hunter: { beastStrike: 1, trapBlast: 1, piercingShot: 1, wildCall: 1, beastBond: 1 },
+                ninja: { shuriken: 1, kunaiRain: 1, fireJutsu: 1, shadowClone: 1, ninjutsu: 1 },
+                blacksmith: { powerSmash: 1, hammerFall: 1, adrenalineRush: 1, weaponPerfection: 1, forgeMastery: 1 },
+                alchemist: { acidTerror: 1, bombFlask: 1, potionPitcher: 1, aidPotion: 1, potionResearch: 1 },
+                wizard: { meteorStorm: 1, stormGust: 1, jupitelThunder: 1, energyCoat: 1, wizardMastery: 1 },
+                priest: { magnusExorcismus: 1, sanctuary: 1, kyrieEleison: 1, gloria: 1, spRecovery: 1 }
+            };
+
+            const POTIONS_DEF = {
+                potion_red: { heal: 60, mp: 0 },
+                potion_orange: { heal: 150, mp: 0 },
+                potion_yellow: { heal: 320, mp: 0 },
+                potion_white: { heal: 650, mp: 0 },
+                potion_blue: { heal: 0, mp: 50 },
+                wing_butterfly: { heal: 0, mp: 0, home: true }
+            };
+
+            const LOGIN_REWARDS = [
+                { zeny: 1000, items: [] },
+                { zeny: 0, items: [{ id: "potion_orange", qty: 10 }] },
+                { zeny: 2000, items: [] },
+                { zeny: 0, items: [{ id: "honey_cake", qty: 3 }] },
+                { zeny: 3000, items: [] },
+                { zeny: 0, items: [{ id: "potion_white", qty: 10 }] },
+                { zeny: 5000, items: [{ id: "egg_mystery", qty: 1 }] }
+            ];
+
+            function recalcStats(p) {
+                p.str = p.str || 6;
+                p.agi = p.agi || 6;
+                p.vit = p.vit || 6;
+                p.int = p.int || 6;
+                p.dex = p.dex || 6;
+                p.luk = p.luk || 6;
+                p.level = p.level || 1;
+                p.maxHp = 100 + p.level * 20 + p.vit * 10;
+                p.hp = Math.min(p.hp || p.maxHp, p.maxHp);
+                p.maxMp = 50 + p.level * 10 + p.int * 8;
+                p.mp = Math.min(p.mp || p.maxMp, p.maxMp);
+            }
+
+            function getDayStr() {
+                const d = new Date();
+                return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+            }
+
+            function expNeeded(lv) {
+                return Math.round(50 * Math.pow(lv, 1.4));
+            }
+
             if (!prof) {
                 prof = {
                     uid: "u_" + Math.random().toString(36).slice(2, 9),
@@ -561,12 +620,14 @@
                     job: "novice",
                     style: 0,
                     look: activeUser?.lookCode || "c2.0.0.0.0.0.0.0",
-                    hp: 120,
-                    maxHp: 120,
-                    mp: 60,
-                    maxMp: 60,
-                    str: 6, vit: 6, agi: 6, int: 6, dex: 6, luk: 6, points: 10,
-                    skills: ["s_first_aid", "s_trick_dead"],
+                    hp: 160,
+                    maxHp: 160,
+                    mp: 98,
+                    maxMp: 98,
+                    str: 6, vit: 6, agi: 6, int: 6, dex: 6, luk: 6,
+                    points: 10,
+                    skillPoints: 2,
+                    skills: { firstAid: 1 },
                     quests: { on: { m01: [0] }, done: [], dailyDone: [], track: ["m01"] },
                     life: {
                         lv: { fish: 1, mine: 1, cook: 1, farm: 1 },
@@ -578,7 +639,7 @@
                         mount: null,
                         plots: []
                     },
-                    stats: { worn: {} },
+                    stats: { worn: {}, login: { day: "", n: 0, total: 0 } },
                     duels: { w: 0, l: 0 },
                     zeny: 500,
                     map: mapName,
@@ -586,20 +647,21 @@
                     z: 0,
                     yaw: 0,
                     items: [
-                        { id: "potion_red", qty: 10 },
-                        { id: "potion_blue", qty: 5 },
+                        { id: "potion_red", qty: 15 },
+                        { id: "potion_blue", qty: 10 },
                         { id: "jelly_green", qty: 5 }
                     ],
                     gear: [
                         { id: "g_novice_knife", item: "novice_knife", slot: "rhand", refine: 0 }
                     ]
                 };
-                try { localStorage.setItem(profKey, JSON.stringify(prof)); } catch (e) {}
             }
 
-            const sessionId = "sess_browser_" + Math.random().toString(36).slice(2, 8);
-
-            // Ensure valid quest schema
+            // Auto-heal and normalize profile schema
+            recalcStats(prof);
+            if (!prof.skills || Array.isArray(prof.skills) || typeof prof.skills !== 'object') {
+                prof.skills = Object.assign({}, JOB_STARTER_SKILLS[prof.job || "novice"] || { firstAid: 1 });
+            }
             if (!prof.quests || typeof prof.quests !== 'object' || !prof.quests.on) {
                 prof.quests = { on: { m01: [0] }, done: [], dailyDone: [], track: ["m01"] };
             }
@@ -607,32 +669,25 @@
             if (!Array.isArray(prof.quests.dailyDone)) prof.quests.dailyDone = [];
             if (!Array.isArray(prof.quests.track)) prof.quests.track = ["m01"];
 
-            // Ensure valid life schema
             if (!prof.life || typeof prof.life !== 'object') prof.life = {};
-            if (!prof.life.lv || typeof prof.life.lv !== 'object') {
-                prof.life.lv = { fish: 1, mine: 1, cook: 1, farm: 1 };
-            }
-            if (!prof.life.exp || typeof prof.life.exp !== 'object') {
-                prof.life.exp = { fish: 0, mine: 0, cook: 0, farm: 0 };
-            }
+            if (!prof.life.lv || typeof prof.life.lv !== 'object') prof.life.lv = { fish: 1, mine: 1, cook: 1, farm: 1 };
+            if (!prof.life.exp || typeof prof.life.exp !== 'object') prof.life.exp = { fish: 0, mine: 0, cook: 0, farm: 0 };
             if (prof.life.rod === undefined) prof.life.rod = 0;
             if (prof.life.pick === undefined) prof.life.pick = 0;
-            if (!prof.life.pets || typeof prof.life.pets !== 'object') {
-                prof.life.pets = { out: null, pets: [], dex: [] };
-            }
+            if (!prof.life.pets || typeof prof.life.pets !== 'object') prof.life.pets = { out: null, pets: [], dex: [] };
             if (!Array.isArray(prof.life.pets.pets)) prof.life.pets.pets = [];
             if (!Array.isArray(prof.life.pets.dex)) prof.life.pets.dex = [];
             if (prof.life.food === undefined) prof.life.food = null;
             if (prof.life.mount === undefined) prof.life.mount = null;
             if (!Array.isArray(prof.life.plots)) prof.life.plots = [];
 
-            // Ensure valid stats schema
             if (!prof.stats || typeof prof.stats !== 'object') prof.stats = {};
             if (!prof.stats.worn || typeof prof.stats.worn !== 'object') prof.stats.worn = {};
-            if (!prof.stats.login || typeof prof.stats.login !== 'object') prof.stats.login = {};
+            if (!prof.stats.login || typeof prof.stats.login !== 'object') prof.stats.login = { day: "", n: 0, total: 0 };
 
-            // Immediately heal and save local profile if needed
             try { localStorage.setItem(profKey, JSON.stringify(prof)); } catch (e) {}
+
+            const sessionId = "sess_browser_" + Math.random().toString(36).slice(2, 8);
 
             function formatWornGear(p) {
                 return (p.gear || []).filter(g => g.slot).map(g => g.slot + ":" + g.item + ":" + (g.refine || 0)).join(",");
@@ -645,17 +700,17 @@
                 z: prof.z || 0,
                 yaw: prof.yaw || 0,
                 speed: 0,
-                hp: prof.hp || 120,
-                maxHp: prof.maxHp || 120,
-                mp: prof.mp || 60,
-                maxMp: prof.maxMp || 60,
+                hp: prof.hp || 160,
+                maxHp: prof.maxHp || 160,
+                mp: prof.mp || 98,
+                maxMp: prof.maxMp || 98,
                 level: prof.level || 1,
                 job: prof.job || "novice",
                 style: prof.style || 0,
                 look: prof.look || "c2.0.0.0.0.0.0.0",
                 gear: formatWornGear(prof),
                 ride: "",
-                atk: 0,
+                atk: 25,
                 gm: false,
                 guild: "",
                 emblem: "0.0.5.2",
@@ -674,18 +729,18 @@
                 buff: 0
             };
 
-            // Spawn monsters on map
+            // Spawn town monsters
             const virtualMonsters = new Map();
             const monsterTemplates = [
-                { kind: "slime", name: "Green Slime", lv: 1, hp: 45, x: 4.5, z: 5.5 },
-                { kind: "slime", name: "Green Slime", lv: 1, hp: 45, x: -5.5, z: 6.2 },
-                { kind: "slime", name: "Green Slime", lv: 2, hp: 55, x: 7.2, z: -4.5 },
-                { kind: "bunny", name: "Bunny", lv: 3, hp: 65, x: -8.8, z: -6.5 },
-                { kind: "bunny", name: "Bunny", lv: 3, hp: 65, x: 6.5, z: 9.2 },
-                { kind: "shroom", name: "Spore Shroom", lv: 4, hp: 80, x: -11.0, z: 7.8 },
-                { kind: "shroom", name: "Spore Shroom", lv: 5, hp: 95, x: 10.5, z: -9.5 },
-                { kind: "bee", name: "Hornet Bee", lv: 6, hp: 110, x: -8.2, z: 12.0 },
-                { kind: "goblin", name: "Goblin Scout", lv: 8, hp: 150, x: 13.5, z: 12.5 }
+                { kind: "slime", name: "Green Slime", lv: 1, hp: 45, x: 5.5, z: 6.5 },
+                { kind: "slime", name: "Green Slime", lv: 1, hp: 45, x: -6.5, z: 7.2 },
+                { kind: "slime", name: "Green Slime", lv: 2, hp: 55, x: 8.2, z: -5.5 },
+                { kind: "bunny", name: "Bunny", lv: 3, hp: 65, x: -9.8, z: -7.5 },
+                { kind: "bunny", name: "Bunny", lv: 3, hp: 65, x: 7.5, z: 10.2 },
+                { kind: "shroom", name: "Spore Shroom", lv: 4, hp: 80, x: -12.0, z: 8.8 },
+                { kind: "shroom", name: "Spore Shroom", lv: 5, hp: 95, x: 11.5, z: -10.5 },
+                { kind: "bee", name: "Hornet Bee", lv: 6, hp: 110, x: -9.2, z: 13.0 },
+                { kind: "goblin", name: "Goblin Scout", lv: 8, hp: 150, x: 14.5, z: 13.5 }
             ];
 
             monsterTemplates.forEach((t, i) => {
@@ -727,13 +782,55 @@
                     vit: prof.vit,
                     agi: prof.agi,
                     int: prof.int,
+                    dex: prof.dex || 6,
+                    luk: prof.luk || 6,
                     points: prof.points || 0,
-                    skills: prof.skills || ["s_first_aid", "s_trick_dead"],
+                    skillPoints: prof.skillPoints || 0,
+                    skills: prof.skills,
                     quests: prof.quests,
-                    life: prof.life || {},
-                    stats: prof.stats || {},
+                    life: prof.life,
+                    stats: prof.stats,
                     duels: prof.duels || { w: 0, l: 0 }
                 };
+            }
+
+            function addBagItem(itemId, qty = 1) {
+                const ex = prof.items.find(i => i.id === itemId);
+                if (ex) ex.qty += qty;
+                else prof.items.push({ id: itemId, qty: qty });
+            }
+
+            function removeBagItem(itemId, qty = 1) {
+                const ex = prof.items.find(i => i.id === itemId);
+                if (ex) {
+                    ex.qty -= qty;
+                    if (ex.qty <= 0) {
+                        prof.items = prof.items.filter(i => i.id !== itemId);
+                    }
+                    return true;
+                }
+                return false;
+            }
+
+            function checkLevelUp() {
+                let didLevel = false;
+                while (prof.exp >= expNeeded(prof.level)) {
+                    prof.exp -= expNeeded(prof.level);
+                    prof.level += 1;
+                    prof.points = (prof.points || 0) + 5;
+                    prof.skillPoints = (prof.skillPoints || 0) + 1;
+                    recalcStats(prof);
+                    prof.hp = prof.maxHp;
+                    prof.mp = prof.maxMp;
+                    playerEntity.level = prof.level;
+                    playerEntity.hp = prof.hp;
+                    playerEntity.maxHp = prof.maxHp;
+                    playerEntity.mp = prof.mp;
+                    playerEntity.maxMp = prof.maxMp;
+                    didLevel = true;
+                    dispatchMsg("toast", { text: "🎉 เลเวลอัป! เป็นเลเวล " + prof.level + " (+5 แต้มสเตตัส, +1 แต้มสกิล)", kind: "success" });
+                }
+                return didLevel;
             }
 
             const room = {
@@ -757,69 +854,281 @@
                 onError: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {}, once: () => {}, remove: () => {} }),
                 onJoin: Object.assign((cb) => {}, { clear: () => {}, invoke: () => {}, once: () => {} }),
                 ping(cb) { if (typeof cb === "function") cb(5); },
-                send(type, data) {
+                send(type, data = {}) {
+                    // 1. Move packet
                     if (type === "move" && data) {
-                        playerEntity.x = data.x;
-                        playerEntity.z = data.z;
-                        playerEntity.yaw = data.angle || 0;
-                        playerEntity.speed = data.moving ? 1 : 0;
-                        prof.x = data.x;
-                        prof.z = data.z;
-                        prof.yaw = data.angle || 0;
-                    } else if (type === "attack") {
-                        let hitMon = null;
-                        let minDist = 2.6;
-                        for (const [mId, m] of virtualMonsters.entries()) {
-                            if (m.hp > 0) {
-                                const d = Math.hypot(m.x - playerEntity.x, m.z - playerEntity.z);
-                                if (d < minDist) {
-                                    minDist = d;
-                                    hitMon = m;
+                        playerEntity.x = data.x ?? playerEntity.x;
+                        playerEntity.z = data.z ?? playerEntity.z;
+                        playerEntity.yaw = data.yaw || data.angle || 0;
+                        playerEntity.speed = data.speed || (data.moving ? 1 : 0);
+                        prof.x = playerEntity.x;
+                        prof.z = playerEntity.z;
+                        prof.yaw = playerEntity.yaw;
+                    }
+                    // 2. Daily Login Reward
+                    else if (type === "loginClaim") {
+                        const today = getDayStr();
+                        const login = prof.stats.login || { day: "", n: 0, total: 0 };
+                        const nextN = (login.n % LOGIN_REWARDS.length) + 1;
+                        const reward = LOGIN_REWARDS[nextN - 1] || { zeny: 1000, items: [] };
+
+                        prof.stats.login = {
+                            day: today,
+                            n: nextN,
+                            total: (login.total || 0) + 1
+                        };
+                        if (reward.zeny) prof.zeny = (prof.zeny || 0) + reward.zeny;
+                        for (const it of (reward.items || [])) {
+                            addBagItem(it.id, it.qty || 1);
+                        }
+                        saveProf();
+                        dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
+                        dispatchMsg("char", buildCharPayload());
+                        dispatchMsg("shopDone", { kind: "login", n: nextN });
+                        dispatchMsg("toast", { text: "🎁 ได้รับรางวัลล็อกอินวันที่ " + nextN + " เรียบร้อย!", kind: "success" });
+                    }
+                    // 3. Daily Look
+                    else if (type === "dailyLook") {
+                        dispatchMsg("char", buildCharPayload());
+                    }
+                    // 4. Quest Interaction & Talk
+                    else if (type === "questTalk" && data && data.npc) {
+                        const npc = data.npc;
+                        let progressed = false;
+                        if (prof.quests && prof.quests.on) {
+                            for (const [qId, progress] of Object.entries(prof.quests.on)) {
+                                if (qId === "m01" && npc === "guide") {
+                                    prof.quests.on[qId][0] = 1;
+                                    progressed = true;
                                 }
                             }
                         }
+                        if (progressed) {
+                            saveProf();
+                            dispatchMsg("quests", prof.quests);
+                            dispatchMsg("char", buildCharPayload());
+                            dispatchMsg("toast", { text: "พูดคุยกับ " + npc + " สำเร็จ! (พร้อมส่งเควสต์)", kind: "info" });
+                        }
+                    }
+                    // 5. Quest Accept
+                    else if (type === "questAccept" && data && data.id) {
+                        const qId = data.id;
+                        if (!prof.quests.on) prof.quests.on = {};
+                        prof.quests.on[qId] = [0];
+                        if (!prof.quests.track.includes(qId)) prof.quests.track.push(qId);
+                        saveProf();
+                        dispatchMsg("quests", prof.quests);
+                        dispatchMsg("questAccepted", { id: qId });
+                        dispatchMsg("toast", { text: "รับเควสต์ใหม่: " + qId, kind: "info" });
+                    }
+                    // 6. Quest Turn In
+                    else if (type === "questTurnIn" && data && data.id) {
+                        const qId = data.id;
+                        if (prof.quests.on && prof.quests.on[qId]) {
+                            delete prof.quests.on[qId];
+                        }
+                        if (!prof.quests.done.includes(qId)) prof.quests.done.push(qId);
+                        prof.quests.track = prof.quests.track.filter(x => x !== qId);
+
+                        // Quest Rewards
+                        let rewZeny = 50, rewExp = 40;
+                        if (qId === "m01") {
+                            rewZeny = 50; rewExp = 40;
+                            addBagItem("potion_red", 5);
+                            addBagItem("potion_blue", 5);
+                        } else if (qId === "m02") {
+                            rewZeny = 120; rewExp = 100;
+                            addBagItem("potion_orange", 5);
+                        }
+                        prof.zeny = (prof.zeny || 0) + rewZeny;
+                        prof.exp = (prof.exp || 0) + rewExp;
+                        checkLevelUp();
+
+                        // Auto-unlock next main quest
+                        if (qId === "m01") {
+                            prof.quests.on["m02"] = [0];
+                            prof.quests.track.push("m02");
+                            dispatchMsg("questAccepted", { id: "m02" });
+                        } else if (qId === "m02") {
+                            prof.quests.on["m03"] = [0];
+                            prof.quests.track.push("m03");
+                            dispatchMsg("questAccepted", { id: "m03" });
+                        }
+
+                        saveProf();
+                        dispatchMsg("questDone", { id: qId });
+                        dispatchMsg("quests", prof.quests);
+                        dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
+                        dispatchMsg("char", buildCharPayload());
+                        dispatchMsg("toast", { text: "🎉 ส่งเควสต์ " + qId + " สำเร็จ! (+" + rewZeny + " Zeny, +" + rewExp + " EXP)", kind: "success" });
+                    }
+                    // 7. Quest Track toggle
+                    else if (type === "questTrack" && data && data.id) {
+                        const qId = data.id;
+                        if (!prof.quests.track.includes(qId)) prof.quests.track.push(qId);
+                        else prof.quests.track = prof.quests.track.filter(x => x !== qId);
+                        saveProf();
+                        dispatchMsg("quests", prof.quests);
+                    }
+                    // 8. Drink Potions (Q/R hotkeys)
+                    else if (type === "drink" && data) {
+                        const itemId = data.item || "potion_red";
+                        const pot = POTIONS_DEF[itemId] || { heal: 60, mp: 0 };
+                        if (removeBagItem(itemId, 1)) {
+                            if (pot.heal) prof.hp = Math.min(prof.maxHp, prof.hp + pot.heal);
+                            if (pot.mp) prof.mp = Math.min(prof.maxMp, prof.mp + pot.mp);
+                            if (pot.home) {
+                                prof.x = 0; prof.z = 0;
+                                playerEntity.x = 0; playerEntity.z = 0;
+                            }
+                            playerEntity.hp = prof.hp;
+                            playerEntity.mp = prof.mp;
+                            saveProf();
+                            dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
+                            dispatchMsg("char", buildCharPayload());
+                            dispatchMsg("healed", { sid: sessionId, hp: pot.heal || 0, mp: pot.mp || 0 });
+                        }
+                    }
+                    // 9. Job Change
+                    else if (type === "jobChange" && data && data.job) {
+                        const newJob = String(data.job).toLowerCase();
+                        prof.job = newJob;
+                        playerEntity.job = newJob;
+                        if (!prof.skills || typeof prof.skills !== 'object') prof.skills = {};
+                        Object.assign(prof.skills, JOB_STARTER_SKILLS[newJob] || {});
+                        saveProf();
+                        applyCollectionSync("players", { [sessionId]: { job: newJob } });
+                        dispatchMsg("char", buildCharPayload());
+                        dispatchMsg("skills", prof.skills);
+                        dispatchMsg("toast", { text: "เปลี่ยนอาชีพเป็น " + newJob + " เรียบร้อย!", kind: "success" });
+                    }
+                    // 10. Stat Up
+                    else if (type === "statUp" && data && data.stat) {
+                        const s = data.stat;
+                        if ((prof.points || 0) > 0 && prof[s] !== undefined) {
+                            prof.points -= 1;
+                            prof[s] += 1;
+                            recalcStats(prof);
+                            playerEntity.hp = prof.hp;
+                            playerEntity.maxHp = prof.maxHp;
+                            playerEntity.mp = prof.mp;
+                            playerEntity.maxMp = prof.maxMp;
+                            saveProf();
+                            dispatchMsg("char", buildCharPayload());
+                        }
+                    }
+                    // 11. Skill Up
+                    else if (type === "skillUp" && data && data.id) {
+                        const sId = data.id;
+                        if ((prof.skillPoints || 0) > 0 || (prof.points || 0) > 0) {
+                            if (prof.skillPoints > 0) prof.skillPoints -= 1;
+                            else prof.points -= 1;
+                            prof.skills[sId] = (prof.skills[sId] || 0) + 1;
+                            saveProf();
+                            dispatchMsg("char", buildCharPayload());
+                            dispatchMsg("skills", prof.skills);
+                            dispatchMsg("toast", { text: "อัปเกรดสกิล " + sId + " เป็นเลเวล " + prof.skills[sId], kind: "info" });
+                        }
+                    }
+                    // 12. Equipment Wear
+                    else if (type === "wear" && data && data.id) {
+                        const gItem = prof.gear.find(g => g.id === data.id);
+                        if (gItem) {
+                            const targetSlot = data.slot || gItem.slot || "rhand";
+                            // Unequip current item in that slot
+                            prof.gear.forEach(g => { if (g.slot === targetSlot) g.slot = null; });
+                            gItem.slot = targetSlot;
+                            playerEntity.gear = formatWornGear(prof);
+                            saveProf();
+                            dispatchMsg("gear", prof.gear);
+                            dispatchMsg("char", buildCharPayload());
+                        }
+                    }
+                    // 13. Shop Buy & Sell
+                    else if (type === "shopBuy" && data && data.item) {
+                        const cost = (data.price || 50) * (data.qty || 1);
+                        if ((prof.zeny || 0) >= cost) {
+                            prof.zeny -= cost;
+                            addBagItem(data.item, data.qty || 1);
+                            saveProf();
+                            dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
+                            dispatchMsg("char", buildCharPayload());
+                            dispatchMsg("shopDone", { kind: "buy" });
+                        }
+                    } else if ((type === "sell" || type === "gearSell") && data && data.id) {
+                        const it = prof.items.find(i => i.id === data.id);
+                        if (it) {
+                            const earn = (data.price || 15) * (data.qty || 1);
+                            removeBagItem(data.id, data.qty || 1);
+                            prof.zeny = (prof.zeny || 0) + earn;
+                            saveProf();
+                            dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
+                            dispatchMsg("char", buildCharPayload());
+                            dispatchMsg("sold", { zeny: earn });
+                        }
+                    }
+                    // 14. Combat Attack (Normal Attack / Space)
+                    else if (type === "attack") {
+                        let hitMon = null;
+                        const targetId = data && data.id;
+                        if (targetId && virtualMonsters.has(targetId) && virtualMonsters.get(targetId).hp > 0) {
+                            hitMon = virtualMonsters.get(targetId);
+                        } else {
+                            let minDist = 12.0; // Melee & Ranged detection
+                            for (const [mId, m] of virtualMonsters.entries()) {
+                                if (m.hp > 0) {
+                                    const d = Math.hypot(m.x - playerEntity.x, m.z - playerEntity.z);
+                                    if (d < minDist) {
+                                        minDist = d;
+                                        hitMon = m;
+                                    }
+                                }
+                            }
+                        }
+
                         if (hitMon) {
                             const isCrit = Math.random() < 0.25;
-                            const baseDmg = 25 + (prof.str || 6) * 3;
+                            const baseDmg = 30 + (prof.str || 6) * 4 + (prof.dex || 6) * 2;
                             const dmg = Math.floor((baseDmg + Math.random() * 15) * (isCrit ? 1.5 : 1));
                             hitMon.hp = Math.max(0, hitMon.hp - dmg);
                             hitMon.mode = "hit";
                             dispatchMsg("hit", { id: hitMon.id, dmg, crit: isCrit });
 
                             if (hitMon.hp <= 0) {
-                                const expGain = 25 + hitMon.level * 10;
-                                const zenyGain = 15 + hitMon.level * 6;
+                                const expGain = 35 + hitMon.level * 15;
+                                const zenyGain = 20 + hitMon.level * 8;
                                 prof.exp = (prof.exp || 0) + expGain;
                                 prof.zeny = (prof.zeny || 0) + zenyGain;
+                                checkLevelUp();
 
-                                const expNeed = Math.round(50 * Math.pow(prof.level, 1.4));
-                                if (prof.exp >= expNeed) {
-                                    prof.level += 1;
-                                    prof.exp = 0;
-                                    prof.maxHp += 20;
-                                    prof.hp = prof.maxHp;
-                                    prof.maxMp += 10;
-                                    prof.mp = prof.maxMp;
-                                    prof.points = (prof.points || 0) + 5;
-                                    playerEntity.level = prof.level;
-                                    playerEntity.hp = prof.hp;
-                                    playerEntity.maxHp = prof.maxHp;
-                                    playerEntity.mp = prof.mp;
-                                    playerEntity.maxMp = prof.maxMp;
-                                    dispatchMsg("toast", { text: "🎉 เลเวลอัป! เป็นเลเวล " + prof.level + " (ได้รับแต้ม +5)", kind: "success" });
+                                const lootMap = {
+                                    slime: { id: "jelly_green", name: "เยลลี่เขียว (Green Jelly)" },
+                                    bunny: { id: "bunny_fur", name: "ขนกระต่าย (Bunny Fur)" },
+                                    shroom: { id: "shroom_cap", name: "หมวกเห็ด (Shroom Cap)" },
+                                    bee: { id: "bee_stinger", name: "เหล็กในผึ้ง (Bee Stinger)" },
+                                    goblin: { id: "iron_ore", name: "แร่เหล็ก (Iron Ore)" }
+                                };
+                                const lootInfo = lootMap[hitMon.kind] || { id: "jelly_green", name: "เยลลี่เขียว" };
+                                addBagItem(lootInfo.id, 1);
+
+                                // Quest Kill Progress (e.g. m02: 5 slimes)
+                                if (prof.quests && prof.quests.on) {
+                                    for (const [qId, prog] of Object.entries(prof.quests.on)) {
+                                        if (qId === "m02" && hitMon.kind === "slime") {
+                                            prof.quests.on[qId][0] = Math.min(5, (prof.quests.on[qId][0] || 0) + 1);
+                                            dispatchMsg("toast", { text: "กำจัดสไลม์ (" + prof.quests.on[qId][0] + "/5)", kind: "info" });
+                                        } else if (qId === "m03" && hitMon.kind === "bunny") {
+                                            prof.quests.on[qId][0] = Math.min(5, (prof.quests.on[qId][0] || 0) + 1);
+                                            dispatchMsg("toast", { text: "กำจัดกระต่าย (" + prof.quests.on[qId][0] + "/5)", kind: "info" });
+                                        }
+                                    }
                                 }
-
-                                const lootId = hitMon.kind === "slime" ? "jelly_green" : (hitMon.kind === "bunny" ? "bunny_fur" : "shroom_cap");
-                                const lootName = lootId === "jelly_green" ? "เยลลี่เขียว (Green Jelly)" : (lootId === "bunny_fur" ? "ขนกระต่าย (Bunny Fur)" : "หมวกเห็ด (Shroom Cap)");
-                                const ex = prof.items.find(i => i.id === lootId);
-                                if (ex) ex.qty += 1;
-                                else prof.items.push({ id: lootId, qty: 1 });
 
                                 saveProf();
                                 dispatchMsg("char", buildCharPayload());
                                 dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
                                 dispatchMsg("toast", { text: "ได้รับ +" + zenyGain + " Zeny", kind: "coin" });
-                                dispatchMsg("toast", { text: "ได้รับ " + lootName, kind: "item" });
+                                dispatchMsg("toast", { text: "ได้รับ " + lootInfo.name, kind: "item" });
 
                                 applyCollectionRemove("monsters", [hitMon.id]);
 
@@ -834,40 +1143,42 @@
                                 applyCollectionSync("monsters", { [hitMon.id]: hitMon });
                             }
                         }
-                    } else if (type === "skill") {
-                        if (prof.mp >= 10) {
-                            prof.mp -= 10;
+                    }
+                    // 15. Skill Casting
+                    else if (type === "skill" && data) {
+                        const skId = data.id || "bash";
+                        const mpCost = 10;
+                        if ((prof.mp || 0) >= mpCost) {
+                            prof.mp -= mpCost;
                             playerEntity.mp = prof.mp;
-                            dispatchMsg("char", buildCharPayload());
-                            for (const [mId, m] of virtualMonsters.entries()) {
-                                if (m.hp > 0 && Math.hypot(m.x - playerEntity.x, m.z - playerEntity.z) < 3.8) {
-                                    m.hp = Math.max(0, m.hp - 65);
-                                    if (m.hp <= 0) {
-                                        applyCollectionRemove("monsters", [m.id]);
-                                        setTimeout(() => {
-                                            m.hp = m.maxHp;
+                            if (skId === "firstAid" || skId === "heal") {
+                                prof.hp = Math.min(prof.maxHp, prof.hp + 70 + (prof.int || 6) * 5);
+                                playerEntity.hp = prof.hp;
+                                dispatchMsg("healed", { sid: sessionId, hp: 70 });
+                            } else {
+                                for (const [mId, m] of virtualMonsters.entries()) {
+                                    if (m.hp > 0 && Math.hypot(m.x - playerEntity.x, m.z - playerEntity.z) < 5.5) {
+                                        const dmg = 75 + (prof.str || 6) * 5 + (prof.int || 6) * 4;
+                                        m.hp = Math.max(0, m.hp - dmg);
+                                        dispatchMsg("hit", { id: m.id, dmg, crit: true });
+                                        if (m.hp <= 0) {
+                                            applyCollectionRemove("monsters", [m.id]);
+                                            setTimeout(() => {
+                                                m.hp = m.maxHp;
+                                                applyCollectionSync("monsters", { [m.id]: m });
+                                            }, 4000);
+                                        } else {
                                             applyCollectionSync("monsters", { [m.id]: m });
-                                        }, 4000);
-                                    } else {
-                                        applyCollectionSync("monsters", { [m.id]: m });
+                                        }
                                     }
                                 }
                             }
+                            saveProf();
+                            dispatchMsg("char", buildCharPayload());
                         }
-                    } else if (type === "bag" && data && data.item) {
-                        if (data.item === "potion_red") {
-                            prof.hp = Math.min(prof.maxHp, prof.hp + 50);
-                            playerEntity.hp = prof.hp;
-                        } else if (data.item === "potion_blue") {
-                            prof.mp = Math.min(prof.maxMp, prof.mp + 30);
-                            playerEntity.mp = prof.mp;
-                        }
-                        saveProf();
-                        dispatchMsg("char", buildCharPayload());
-                        dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
-                    } else if (type === "chat" && data) {
-                        dispatchMsg("chat", { from: prof.name, text: data.text || "" });
-                    } else if (type === "make" && data) {
+                    }
+                    // 16. Character Creator / Customizer
+                    else if (type === "make" && data) {
                         if (data.name) prof.name = data.name;
                         if (data.look) prof.look = data.look;
                         playerEntity.name = prof.name;
@@ -882,40 +1193,14 @@
                             saveProf();
                             dispatchMsg("char", buildCharPayload());
                         }
-                    } else if (type === "stat" && data && data.stat) {
-                        if ((prof.points || 0) > 0 && prof[data.stat] !== undefined) {
-                            prof.points -= 1;
-                            prof[data.stat] += 1;
-                            saveProf();
-                            dispatchMsg("char", buildCharPayload());
-                        }
-                    } else if (type === "questTrack" && data && data.id) {
-                        if (!prof.quests.track) prof.quests.track = [];
-                        if (!prof.quests.track.includes(data.id)) {
-                            prof.quests.track.push(data.id);
-                        } else {
-                            prof.quests.track = prof.quests.track.filter(x => x !== data.id);
-                        }
-                        saveProf();
-                        dispatchMsg("quests", prof.quests);
-                    } else if (type === "questAccept" && data && data.id) {
-                        if (!prof.quests.on) prof.quests.on = {};
-                        prof.quests.on[data.id] = [0];
-                        if (!prof.quests.track) prof.quests.track = [];
-                        if (!prof.quests.track.includes(data.id)) prof.quests.track.push(data.id);
-                        saveProf();
-                        dispatchMsg("quests", prof.quests);
-                        dispatchMsg("questAccepted", { id: data.id });
-                    } else if (type === "questTurnIn" && data && data.id) {
-                        if (prof.quests.on && prof.quests.on[data.id]) {
-                            delete prof.quests.on[data.id];
-                        }
-                        if (!prof.quests.done) prof.quests.done = [];
-                        if (!prof.quests.done.includes(data.id)) prof.quests.done.push(data.id);
-                        if (prof.quests.track) prof.quests.track = prof.quests.track.filter(x => x !== data.id);
-                        saveProf();
-                        dispatchMsg("quests", prof.quests);
-                        dispatchMsg("questDone", { id: data.id });
+                    }
+                    // 17. Chat
+                    else if (type === "chat" && data) {
+                        dispatchMsg("chat", { from: prof.name, text: data.text || "", ch: data.ch || "map" });
+                    }
+                    // 18. AutoLoot
+                    else if (type === "autoLoot") {
+                        // acknowledged
                     }
                 },
                 sendUnreliable(type, data) { this.send(type, data); },
@@ -936,7 +1221,7 @@
             setInterval(() => {
                 const moved = {};
                 for (const [mId, m] of virtualMonsters.entries()) {
-                    if (m.hp > 0 && Math.random() < 0.4) {
+                    if (m.hp > 0 && Math.random() < 0.35) {
                         m.x = +(m.spawnX + (Math.random() - 0.5) * m.spawnR).toFixed(2);
                         m.z = +(m.spawnZ + (Math.random() - 0.5) * m.spawnR).toFixed(2);
                         moved[mId] = { x: m.x, z: m.z };
@@ -960,15 +1245,14 @@
                 dispatchMsg("gear", prof.gear);
                 dispatchMsg("skills", prof.skills);
                 dispatchMsg("stats", prof.stats || {});
-                dispatchMsg("toast", { text: "ยินดีต้อนรับสู่โลก Final Slop, " + prof.name + "! (โหมดเบราว์เซอร์)", kind: "info" });
+                dispatchMsg("toast", { text: "ยินดีต้อนรับสู่โลก Final Slop, " + prof.name + "! (สำรวจเมืองออรัม)", kind: "info" });
             }, 60);
 
             return room;
         }
 
-        // Local JSON Colyseus Room Bridge
         window.__createLocalRoom = function(client, reservation, joinOptions) {
-            const isStaticHost = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+            const isStaticHost = !REMOTE_SERVER_URL || IS_GITHUB_PAGES;
             if (isStaticHost) {
                 return Promise.resolve(createVirtualSimulationRoom(reservation, joinOptions));
             }
@@ -1237,217 +1521,6 @@
     </div>
 
     <!-- Login / Register / Cross-Device Account Screen -->
-    <div id="auth-screen" class="auth-overlay" style="display:none;">
-        <div class="auth-card">
-            <div style="text-align:center; margin-bottom:16px;">
-                <img src="./site/logo.svg" alt="Final Slop" style="width:135px; height:auto; margin:0 auto 6px auto; display:block; image-rendering:pixelated;"/>
-                <div style="font-size:16px; font-weight:800; color:#f7ce6d; letter-spacing:0.3px;">ระบบบัญชีผู้เล่น & บันทึกข้อมูลข้ามเครื่อง</div>
-                <div style="font-size:12px; color:#a9b8ad; margin-top:2px;">บันทึกความคืบหน้าอัตโนมัติทุกการกระทำ รองรับการย้ายเครื่อง 100%</div>
-            </div>
-
-            <div class="auth-tabs">
-                <button id="tab-btn-login" class="auth-tab active" onclick="switchAuthTab('login')">🔑 เข้าสู่ระบบ</button>
-                <button id="tab-btn-register" class="auth-tab" onclick="switchAuthTab('register')">✨ สมัครไอดีใหม่</button>
-                <button id="tab-btn-import" class="auth-tab" onclick="switchAuthTab('import')">📦 ย้ายเครื่อง (นำเข้าเซฟ)</button>
-            </div>
-
-            <!-- Form: Login -->
-            <form id="form-login" onsubmit="handleLogin(event)">
-                <div class="auth-field">
-                    <label>ไอดีผู้เล่น (Account ID / Username)</label>
-                    <input id="login-username" type="text" class="auth-input" placeholder="กรอกไอดีของคุณ (เช่น hero01)" required autocomplete="username"/>
-                </div>
-                <div class="auth-field">
-                    <label>รหัสผ่าน (Password)</label>
-                    <input id="login-password" type="password" class="auth-input" placeholder="กรอกรหัสผ่าน" required autocomplete="current-password"/>
-                </div>
-                <button type="submit" class="auth-submit">เข้าสู่โลก Final Slop</button>
-            </form>
-
-            <!-- Form: Register with Character Customization -->
-            <form id="form-register" onsubmit="handleRegister(event)" style="display:none; max-height:75vh; overflow-y:auto; padding-right:4px;">
-                <div class="auth-field">
-                    <label>ตั้งไอดีผู้เล่น (Account ID 3-20 ตัวอักษร a-z, 0-9, _)</label>
-                    <input id="reg-username" type="text" class="auth-input" placeholder="เช่น kasidit99" required autocomplete="username"/>
-                </div>
-                <div class="auth-field">
-                    <label>ตั้งรหัสผ่าน (Password อย่างน้อย 4 ตัวอักษร)</label>
-                    <input id="reg-password" type="password" class="auth-input" placeholder="ตั้งรหัสผ่านสำหรับล็อกอิน" required autocomplete="new-password"/>
-                </div>
-                <div class="auth-field">
-                    <label>ชื่อตัวละครเริ่มต้น (Character Name)</label>
-                    <input id="reg-charname" type="text" class="auth-input" placeholder="ชื่อในเกม (เช่น นักผจญภัย, GunZo)" maxlength="16"/>
-                </div>
-
-                <div style="border-top:1px dashed #3a4e40; margin:14px 0 10px 0; padding-top:10px;">
-                    <div style="font-size:13.5px; font-weight:bold; color:#f7ce6d; margin-bottom:8px;">🎨 ปรับแต่งตัวละครเริ่มต้น (Appearance & Style)</div>
-                    
-                    <!-- Gender -->
-                    <div class="auth-field">
-                        <label>เพศตัวละคร (Gender)</label>
-                        <div class="gender-toggle">
-                            <button type="button" id="gender-btn-0" class="gender-btn selected" onclick="selectGender(0)">👦 ชาย (Male)</button>
-                            <button type="button" id="gender-btn-1" class="gender-btn" onclick="selectGender(1)">👧 หญิง (Female)</button>
-                        </div>
-                    </div>
-
-                    <!-- Hairstyle -->
-                    <div class="auth-field">
-                        <label>ทรงผม (Hairstyle)</label>
-                        <select id="reg-style" class="auth-input">
-                            <option value="0">ผมสั้นเรียบ (Short)</option>
-                            <option value="1">ชี้ตั้งเท่ (Spiky)</option>
-                            <option value="2">กะลาครอบ (Bowl)</option>
-                            <option value="3">ผมยาวสลวย (Long)</option>
-                            <option value="4">มัดหางม้า (Ponytail)</option>
-                            <option value="5">ทวินเทล (Twintails)</option>
-                            <option value="6">ผมหยิกเป็นลอน (Curly)</option>
-                            <option value="7">ไม่มีผม (None)</option>
-                        </select>
-                    </div>
-
-                    <!-- Hair Color -->
-                    <div class="auth-field">
-                        <label id="hair-label">สีผม (Hair Color)</label>
-                        <div class="swatch-group" id="hair-swatches"></div>
-                    </div>
-
-                    <!-- Skin Color -->
-                    <div class="auth-field">
-                        <label id="skin-label">สีผิว (Skin Tone)</label>
-                        <div class="swatch-group" id="skin-swatches"></div>
-                    </div>
-
-                    <!-- Starter Outfit Palette -->
-                    <div class="auth-field">
-                        <label id="clothes-label">โทนสีชุดเริ่มต้น (Outfit Palette)</label>
-                        <div class="swatch-group" id="clothes-swatches"></div>
-                    </div>
-
-                    <div style="font-size:11.5px; color:#7ce08a; margin-top:8px; line-height:1.4;">
-                        ✨ <em>สามารถกดปุ่ม [🎨 แต่งตัว/เปลี่ยนเพศ] ในเกม เพื่อเปิดหน้าต่าง 3D หมุนตัวละครปรับแต่งฟรีได้ทุกเมื่อ!</em>
-                    </div>
-                </div>
-
-                <button type="submit" class="auth-submit" style="margin-top:14px;">สร้างบัญชีและเริ่มเกมทันที</button>
-            </form>
-
-            <!-- Form: Cross-Device Import -->
-            <div id="form-import" style="display:none;">
-                <p style="font-size:12.5px; color:#d5dfd8; line-height:1.5; margin-top:0;">
-                    หากคุณเคยกด <strong>"ดาวน์โหลดไฟล์เซฟบัญชี (.json)"</strong> จากเครื่องอื่น สามารถเลือกไฟล์ด้านล่างเพื่อกู้คืนไอดี รหัสผ่าน และตัวละครทั้งหมดลงในเครื่องนี้ได้ทันที:
-                </p>
-                <div class="auth-field">
-                    <label>เลือกไฟล์สำรองบัญชี (FinalSlop_Account_*.json)</label>
-                    <input id="import-file-input" type="file" accept=".json,application/json" class="auth-input" style="padding:7px;"/>
-                </div>
-                <button type="button" class="auth-submit" onclick="handleImportAccountFile('import-file-input')">📥 นำเข้าบัญชีและเข้าสู่เกมทันที</button>
-            </div>
-
-            <div id="auth-message" class="auth-msg"></div>
-        </div>
-    </div>
-
-    <!-- Cross-Device Backup & Restore Modal (In-Game) -->
-    <div id="backup-modal" class="study-modal" onclick="closeBackupModal()">
-        <div class="study-box" style="max-width:540px;" onclick="event.stopPropagation()">
-            <h2>💾 ระบบบันทึกข้อมูล & ย้ายเครื่อง (Cross-Device Save)</h2>
-            <p style="font-size:13.5px; line-height:1.6;">
-                ตัวเกมบันทึกความคืบหน้าของบัญชี <strong id="backup-account-name" style="color:#f7ce6d;">-</strong> ลงฐานข้อมูลเซิร์ฟเวอร์ (<code>server/data/accounts.json</code>) <strong>อัตโนมัติทุกครั้งที่เดิน โจมตี เก็บของ หรือทำเควส</strong>
-            </p>
-
-            <div style="background:#121b15; border:1px solid #35493b; border-radius:8px; padding:14px; margin-bottom:14px;">
-                <h3 style="margin:0 0 6px 0; font-size:14.5px; color:#7ce08a;">วิธีที่ 1: เล่นผ่านเครือข่ายเดียวกัน (LAN / Wi-Fi)</h3>
-                <p style="margin:0; font-size:12.5px; color:#c8d6cc;">
-                    เปิดเบราว์เซอร์จากมือถือหรือคอมอีกเครื่องในวง LAN เดียวกัน แล้วเข้าที่พอร์ต <code>:2567</code> ของเครื่องนี้ จากนั้นล็อกอินด้วย <strong>ไอดีและรหัสผ่านเดียวกัน</strong> ข้อมูลจะซิงค์ตรงกันทันที!
-                </p>
-            </div>
-
-            <div style="background:#121b15; border:1px solid #35493b; border-radius:8px; padding:14px; margin-bottom:14px;">
-                <h3 style="margin:0 0 8px 0; font-size:14.5px; color:#f7ce6d;">วิธีที่ 2: ย้ายไปคอมคนละเครื่อง (Export / Import ไฟล์บัญชี)</h3>
-                <p style="margin:0 0 10px 0; font-size:12.5px; color:#c8d6cc;">
-                    ดาวน์โหลดไฟล์บัญชีของคุณเก็บไว้ เพื่อนำไปกด <strong>"ย้ายเครื่อง (นำเข้าเซฟ)"</strong> บนคอมเครื่องอื่น ข้อมูลตัวละคร เลเวล ไอเทม และเควสทั้งหมดจะตามไปครบ 100%
-                </p>
-                <button class="auth-submit" style="margin-bottom:12px;" onclick="downloadAccountBackup()">📤 ดาวน์โหลดไฟล์เซฟบัญชี (.json)</button>
-
-                <div style="border-top:1px dashed #35493b; padding-top:10px; margin-top:4px;">
-                    <label style="display:block; font-size:12px; color:#a9b8ad; margin-bottom:6px;">หรืออัปโหลดไฟล์เซฟจากเครื่องอื่นเพื่อทับข้อมูลปัจจุบัน:</label>
-                    <div style="display:flex; gap:8px;">
-                        <input id="ingame-import-input" type="file" accept=".json,application/json" class="auth-input" style="padding:6px; font-size:12px;"/>
-                        <button class="btn-mode" style="white-space:nowrap; padding:6px 12px;" onclick="handleImportAccountFile('ingame-import-input')">📥 นำเข้าเซฟ</button>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align:right;">
-                <button class="btn-mode" onclick="closeBackupModal()">ปิดหน้าต่าง (Close)</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mount Point for Game TownClient -->
-    <div id="app-mount">
-        <!-- Initial Loading Splash -->
-        <div id="loading-screen" class="absolute inset-0 z-20 flex flex-col items-center justify-center gap-4 bg-[linear-gradient(#6fa6dc,#c6dbec)] [image-rendering:pixelated]">
-            <img src="./site/logo.svg" alt="Final Slop" width="224" height="192" class="mb-2 h-auto w-[180px]"/>
-            <div class="h-4 w-64 border-2 border-[#2a3550] bg-[#2a3550]/40 p-0.5">
-                <div id="load-progress-bar" class="h-full bg-[#f4d27a] transition-all duration-300" style="width: 25%;"></div>
-            </div>
-            <p id="load-status-text" class="text-sm font-semibold text-white" style="text-shadow:1px 1px 0 #2a3550">กำลังเชื่อมต่อเข้าสู่โลก Final Slop...</p>
-        </div>
-    </div>
-
-    <!-- Architecture & Study Modal -->
-    <div id="study-modal" class="study-modal" onclick="closeStudyModal(event)">
-        <div class="study-box" onclick="event.stopPropagation()">
-            <h2>🗺️ คู่มือศึกษาโครงสร้างเกม Final Slop (Architecture Guide)</h2>
-            <p>เกมนี้เป็นเกม <strong>2.5D Isometric Web MMORPG</strong> ที่เรนเดอร์ในมุมมอง Isometric ด้วยเอนจิ้น <strong>Three.js</strong> และขับเคลื่อนระบบ Multiplayer ด้วย <strong>Colyseus</strong>:</p>
-            
-            <h3 style="color:#7ce08a;">1. Game Engine & Renderer</h3>
-            <ul>
-                <li><strong>Three.js (WebGL):</strong> จัดการฉาก 3 มิติ, มุมมองกล้อง Orthographic/Perspective, ท่อไอคอน/เงา และเอฟเฟกต์แสง</li>
-                <li><strong>Procedural Synthesizer:</strong> ระบบเสียง <code>yF</code> สังเคราะห์เสียงทั้งหมดด้วย Web Audio API สดๆ ไม่ต้องใช้ไฟล์ MP3 ขนาดใหญ่</li>
-                <li><strong>2D Billboard Sprites:</strong> ตัวละครและมอนสเตอร์ใช้เทคนิค 2.5D Sprite Sheets หันหน้า 4-8 ทิศทาง</li>
-            </ul>
-
-            <h3 style="color:#7ce08a;">2. Networking & State Management</h3>
-            <ul>
-                <li><strong>Colyseus Room <code>town</code>:</strong> จัดการการเชื่อมต่อผ่าน WebSocket และประสานสถานะ <code>players</code>, <code>monsters</code>, <code>drops</code></li>
-                <li><strong>Client Message Types:</strong> <code>move</code>, <code>attack</code>, <code>chat</code>, <code>bag</code>, <code>skill</code>, <code>warpTown</code></li>
-            </ul>
-
-            <h3 style="color:#7ce08a;">3. การควบคุม (Controls) & คำสั่งพิเศษ</h3>
-            <ul>
-                <li><strong>PC Keyboard:</strong> <code>W</code> <code>A</code> <code>S</code> <code>D</code> หรือปุ่มลูกศร เพื่อเดิน, <code>Spacebar</code> หรือ <code>J</code> โจมตี, <code>E</code> คุยกับ NPC, <code>H</code> เปิดบอทออโต้</li>
-                <li><strong>Mouse:</strong> คลิกที่พื้นเพื่อเดินไปยังจุดเป้าหมาย (Click-to-Move) หรือคลิกมอนสเตอร์เพื่อโจมตี</li>
-                <li><strong>Mobile / Touch:</strong> จอยสติ๊กเสมือนมุมซ้ายล่าง และปุ่มแอ็กชันมุมขวาล่าง</li>
-            </ul>
-
-            <div style="margin-top:20px; text-align:right;">
-                <button class="btn-mode" onclick="document.getElementById('study-modal').style.display='none'">ปิดหน้าต่าง (Close)</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Turbopack Runtime & Core Dependencies -->
-    <script src="./_next/static/immutable/chunks/turbopack-1cvbnb3nlabgn.js"></script>
-    <script src="./_next/static/immutable/chunks/2rv6p6j5p9eda.js"></script>
-    <script src="./_next/static/immutable/chunks/3a9ouwznrymd8.js"></script>
-    <script src="./_next/static/immutable/chunks/0fcmc8odz8v1w.js"></script>
-    <script src="./_next/static/immutable/chunks/2mgu2cp6fto7c.js"></script>
-    <script src="./_next/static/immutable/chunks/3x7cz7lqgi4_a.js"></script>
-    <script src="./_next/static/immutable/chunks/00z4pmesk2f4f.js"></script>
-    <script src="./_next/static/immutable/chunks/43hac3c7fnnri.js"></script>
-    <script src="./_next/static/immutable/chunks/1h9lsa67htw-l.js"></script>
-    <script src="./_next/static/immutable/chunks/1u5etgidtbfdn.js"></script>
-    <script src="./_next/static/immutable/chunks/424393y4rhx5z.js"></script>
-    <script src="./_next/static/immutable/chunks/3tmnfc-z5ph4b.js"></script>
-    <script src="./_next/static/immutable/chunks/1qw2ky3x46e05.js"></script>
-    <script src="./_next/static/immutable/chunks/1pkywcejrxhll.js"></script>
-    <script src="./_next/static/immutable/chunks/2ik365_vkdlgn.js"></script>
-    <script src="./_next/static/immutable/chunks/3_u2tpvmqiizn.js"></script>
-
-    <!-- Client Bootstrapper -->
     <script>
         const SKIN_COLORS = ["#f8dcc4", "#f2c6a0", "#e6b08a", "#d39a6c", "#b47a52", "#8a5a3c"];
         const HAIR_COLORS = ["#2e2622", "#5a3a26", "#8a5a34", "#c3532e", "#e0a24a", "#f0d27a", "#d8d2c8", "#7a4a9a", "#3f6fb0", "#d0648a"];
@@ -1691,7 +1764,7 @@
             const username = document.getElementById('login-username').value.trim();
             const password = document.getElementById('login-password').value;
 
-            const isStaticHost = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+            const isStaticHost = !REMOTE_SERVER_URL || IS_GITHUB_PAGES;
             if (isStaticHost) {
                 const accounts = JSON.parse(localStorage.getItem('fs_accounts') || '{}');
                 const acc = accounts[username];
@@ -1742,7 +1815,7 @@
             const style = Number(document.getElementById('reg-style').value) || 0;
             const lookCode = `c2.${regSkin}.${style}.${regHair}.${regEyes}.${regGender === 1 ? 1 : 0}.${regClothes}.${regGender}`;
 
-            const isStaticHost = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+            const isStaticHost = !REMOTE_SERVER_URL || IS_GITHUB_PAGES;
             if (isStaticHost) {
                 const account = { username, password, charName, lookCode, createdAt: Date.now() };
                 const accounts = JSON.parse(localStorage.getItem('fs_accounts') || '{}');
@@ -1765,10 +1838,20 @@
                         mp: 60,
                         maxMp: 60,
                         str: 6, vit: 6, agi: 6, int: 6, dex: 6, luk: 6, points: 10,
-                        skills: ["s_first_aid", "s_trick_dead"],
-                        quests: {},
-                        life: { pets: { out: null, pets: [] } },
-                        stats: { worn: {} },
+                        skills: { firstAid: 1 },
+                        skillPoints: 2,
+                        quests: { on: { m01: [0] }, done: [], dailyDone: [], track: ["m01"] },
+                        life: {
+                            lv: { fish: 1, mine: 1, cook: 1, farm: 1 },
+                            exp: { fish: 0, mine: 0, cook: 0, farm: 0 },
+                            rod: 0,
+                            pick: 0,
+                            pets: { out: null, pets: [], dex: [] },
+                            food: null,
+                            mount: null,
+                            plots: []
+                        },
+                        stats: { worn: {}, login: { day: "", n: 0, total: 0 } },
                         duels: { w: 0, l: 0 },
                         zeny: 500,
                         map: "aurum",
@@ -1931,7 +2014,7 @@
             if (status) status.innerText = 'กำลังตรวจสอบบัญชีผู้เล่น...';
 
             const savedToken = localStorage.getItem('fs_auth_token');
-            const isStaticHost = IS_GITHUB_PAGES && !REMOTE_SERVER_URL;
+            const isStaticHost = !REMOTE_SERVER_URL || IS_GITHUB_PAGES;
 
             if (savedToken) {
                 if (isStaticHost) {
@@ -1977,6 +2060,219 @@
             setTimeout(initGameClient, 100);
         });
     </script>
+
+    <div id="auth-screen" class="auth-overlay" style="display:none;">
+        <div class="auth-card">
+            <div style="text-align:center; margin-bottom:16px;">
+                <img src="./site/logo.svg" alt="Final Slop" style="width:135px; height:auto; margin:0 auto 6px auto; display:block; image-rendering:pixelated;"/>
+                <div style="font-size:16px; font-weight:800; color:#f7ce6d; letter-spacing:0.3px;">ระบบบัญชีผู้เล่น & บันทึกข้อมูลข้ามเครื่อง</div>
+                <div style="font-size:12px; color:#a9b8ad; margin-top:2px;">บันทึกความคืบหน้าอัตโนมัติทุกการกระทำ รองรับการย้ายเครื่อง 100%</div>
+            </div>
+
+            <div class="auth-tabs">
+                <button id="tab-btn-login" class="auth-tab active" onclick="switchAuthTab('login')">🔑 เข้าสู่ระบบ</button>
+                <button id="tab-btn-register" class="auth-tab" onclick="switchAuthTab('register')">✨ สมัครไอดีใหม่</button>
+                <button id="tab-btn-import" class="auth-tab" onclick="switchAuthTab('import')">📦 ย้ายเครื่อง (นำเข้าเซฟ)</button>
+            </div>
+
+            <!-- Form: Login -->
+            <form id="form-login" onsubmit="handleLogin(event)">
+                <div class="auth-field">
+                    <label>ไอดีผู้เล่น (Account ID / Username)</label>
+                    <input id="login-username" type="text" class="auth-input" placeholder="กรอกไอดีของคุณ (เช่น hero01)" required autocomplete="username"/>
+                </div>
+                <div class="auth-field">
+                    <label>รหัสผ่าน (Password)</label>
+                    <input id="login-password" type="password" class="auth-input" placeholder="กรอกรหัสผ่าน" required autocomplete="current-password"/>
+                </div>
+                <button type="submit" class="auth-submit">เข้าสู่โลก Final Slop</button>
+            </form>
+
+            <!-- Form: Register with Character Customization -->
+            <form id="form-register" onsubmit="handleRegister(event)" style="display:none; max-height:75vh; overflow-y:auto; padding-right:4px;">
+                <div class="auth-field">
+                    <label>ตั้งไอดีผู้เล่น (Account ID 3-20 ตัวอักษร a-z, 0-9, _)</label>
+                    <input id="reg-username" type="text" class="auth-input" placeholder="เช่น kasidit99" required autocomplete="username"/>
+                </div>
+                <div class="auth-field">
+                    <label>ตั้งรหัสผ่าน (Password อย่างน้อย 4 ตัวอักษร)</label>
+                    <input id="reg-password" type="password" class="auth-input" placeholder="ตั้งรหัสผ่านสำหรับล็อกอิน" required autocomplete="new-password"/>
+                </div>
+                <div class="auth-field">
+                    <label>ชื่อตัวละครเริ่มต้น (Character Name)</label>
+                    <input id="reg-charname" type="text" class="auth-input" placeholder="ชื่อในเกม (เช่น นักผจญภัย, GunZo)" maxlength="16"/>
+                </div>
+
+                <div style="border-top:1px dashed #3a4e40; margin:14px 0 10px 0; padding-top:10px;">
+                    <div style="font-size:13.5px; font-weight:bold; color:#f7ce6d; margin-bottom:8px;">🎨 ปรับแต่งตัวละครเริ่มต้น (Appearance & Style)</div>
+                    
+                    <!-- Gender -->
+                    <div class="auth-field">
+                        <label>เพศตัวละคร (Gender)</label>
+                        <div class="gender-toggle">
+                            <button type="button" id="gender-btn-0" class="gender-btn selected" onclick="selectGender(0)">👦 ชาย (Male)</button>
+                            <button type="button" id="gender-btn-1" class="gender-btn" onclick="selectGender(1)">👧 หญิง (Female)</button>
+                        </div>
+                    </div>
+
+                    <!-- Hairstyle -->
+                    <div class="auth-field">
+                        <label>ทรงผม (Hairstyle)</label>
+                        <select id="reg-style" class="auth-input">
+                            <option value="0">ผมสั้นเรียบ (Short)</option>
+                            <option value="1">ชี้ตั้งเท่ (Spiky)</option>
+                            <option value="2">กะลาครอบ (Bowl)</option>
+                            <option value="3">ผมยาวสลวย (Long)</option>
+                            <option value="4">มัดหางม้า (Ponytail)</option>
+                            <option value="5">ทวินเทล (Twintails)</option>
+                            <option value="6">ผมหยิกเป็นลอน (Curly)</option>
+                            <option value="7">ไม่มีผม (None)</option>
+                        </select>
+                    </div>
+
+                    <!-- Hair Color -->
+                    <div class="auth-field">
+                        <label id="hair-label">สีผม (Hair Color)</label>
+                        <div class="swatch-group" id="hair-swatches"></div>
+                    </div>
+
+                    <!-- Skin Color -->
+                    <div class="auth-field">
+                        <label id="skin-label">สีผิว (Skin Tone)</label>
+                        <div class="swatch-group" id="skin-swatches"></div>
+                    </div>
+
+                    <!-- Starter Outfit Palette -->
+                    <div class="auth-field">
+                        <label id="clothes-label">โทนสีชุดเริ่มต้น (Outfit Palette)</label>
+                        <div class="swatch-group" id="clothes-swatches"></div>
+                    </div>
+
+                    <div style="font-size:11.5px; color:#7ce08a; margin-top:8px; line-height:1.4;">
+                        ✨ <em>สามารถกดปุ่ม [🎨 แต่งตัว/เปลี่ยนเพศ] ในเกม เพื่อเปิดหน้าต่าง 3D หมุนตัวละครปรับแต่งฟรีได้ทุกเมื่อ!</em>
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-submit" style="margin-top:14px;">สร้างบัญชีและเริ่มเกมทันที</button>
+            </form>
+
+            <!-- Form: Cross-Device Import -->
+            <div id="form-import" style="display:none;">
+                <p style="font-size:12.5px; color:#d5dfd8; line-height:1.5; margin-top:0;">
+                    หากคุณเคยกด <strong>"ดาวน์โหลดไฟล์เซฟบัญชี (.json)"</strong> จากเครื่องอื่น สามารถเลือกไฟล์ด้านล่างเพื่อกู้คืนไอดี รหัสผ่าน และตัวละครทั้งหมดลงในเครื่องนี้ได้ทันที:
+                </p>
+                <div class="auth-field">
+                    <label>เลือกไฟล์สำรองบัญชี (FinalSlop_Account_*.json)</label>
+                    <input id="import-file-input" type="file" accept=".json,application/json" class="auth-input" style="padding:7px;"/>
+                </div>
+                <button type="button" class="auth-submit" onclick="handleImportAccountFile('import-file-input')">📥 นำเข้าบัญชีและเข้าสู่เกมทันที</button>
+            </div>
+
+            <div id="auth-message" class="auth-msg"></div>
+        </div>
+    </div>
+
+    <!-- Cross-Device Backup & Restore Modal (In-Game) -->
+    <div id="backup-modal" class="study-modal" onclick="closeBackupModal()">
+        <div class="study-box" style="max-width:540px;" onclick="event.stopPropagation()">
+            <h2>💾 ระบบบันทึกข้อมูล & ย้ายเครื่อง (Cross-Device Save)</h2>
+            <p style="font-size:13.5px; line-height:1.6;">
+                ตัวเกมบันทึกความคืบหน้าของบัญชี <strong id="backup-account-name" style="color:#f7ce6d;">-</strong> ลงฐานข้อมูลเซิร์ฟเวอร์ (<code>server/data/accounts.json</code>) <strong>อัตโนมัติทุกครั้งที่เดิน โจมตี เก็บของ หรือทำเควส</strong>
+            </p>
+
+            <div style="background:#121b15; border:1px solid #35493b; border-radius:8px; padding:14px; margin-bottom:14px;">
+                <h3 style="margin:0 0 6px 0; font-size:14.5px; color:#7ce08a;">วิธีที่ 1: เล่นผ่านเครือข่ายเดียวกัน (LAN / Wi-Fi)</h3>
+                <p style="margin:0; font-size:12.5px; color:#c8d6cc;">
+                    เปิดเบราว์เซอร์จากมือถือหรือคอมอีกเครื่องในวง LAN เดียวกัน แล้วเข้าที่พอร์ต <code>:2567</code> ของเครื่องนี้ จากนั้นล็อกอินด้วย <strong>ไอดีและรหัสผ่านเดียวกัน</strong> ข้อมูลจะซิงค์ตรงกันทันที!
+                </p>
+            </div>
+
+            <div style="background:#121b15; border:1px solid #35493b; border-radius:8px; padding:14px; margin-bottom:14px;">
+                <h3 style="margin:0 0 8px 0; font-size:14.5px; color:#f7ce6d;">วิธีที่ 2: ย้ายไปคอมคนละเครื่อง (Export / Import ไฟล์บัญชี)</h3>
+                <p style="margin:0 0 10px 0; font-size:12.5px; color:#c8d6cc;">
+                    ดาวน์โหลดไฟล์บัญชีของคุณเก็บไว้ เพื่อนำไปกด <strong>"ย้ายเครื่อง (นำเข้าเซฟ)"</strong> บนคอมเครื่องอื่น ข้อมูลตัวละคร เลเวล ไอเทม และเควสทั้งหมดจะตามไปครบ 100%
+                </p>
+                <button class="auth-submit" style="margin-bottom:12px;" onclick="downloadAccountBackup()">📤 ดาวน์โหลดไฟล์เซฟบัญชี (.json)</button>
+
+                <div style="border-top:1px dashed #35493b; padding-top:10px; margin-top:4px;">
+                    <label style="display:block; font-size:12px; color:#a9b8ad; margin-bottom:6px;">หรืออัปโหลดไฟล์เซฟจากเครื่องอื่นเพื่อทับข้อมูลปัจจุบัน:</label>
+                    <div style="display:flex; gap:8px;">
+                        <input id="ingame-import-input" type="file" accept=".json,application/json" class="auth-input" style="padding:6px; font-size:12px;"/>
+                        <button class="btn-mode" style="white-space:nowrap; padding:6px 12px;" onclick="handleImportAccountFile('ingame-import-input')">📥 นำเข้าเซฟ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:right;">
+                <button class="btn-mode" onclick="closeBackupModal()">ปิดหน้าต่าง (Close)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mount Point for Game TownClient -->
+    <div id="app-mount">
+        <!-- Initial Loading Splash -->
+        <div id="loading-screen" class="absolute inset-0 z-20 flex flex-col items-center justify-center gap-4 bg-[linear-gradient(#6fa6dc,#c6dbec)] [image-rendering:pixelated]">
+            <img src="./site/logo.svg" alt="Final Slop" width="224" height="192" class="mb-2 h-auto w-[180px]"/>
+            <div class="h-4 w-64 border-2 border-[#2a3550] bg-[#2a3550]/40 p-0.5">
+                <div id="load-progress-bar" class="h-full bg-[#f4d27a] transition-all duration-300" style="width: 25%;"></div>
+            </div>
+            <p id="load-status-text" class="text-sm font-semibold text-white" style="text-shadow:1px 1px 0 #2a3550">กำลังเชื่อมต่อเข้าสู่โลก Final Slop...</p>
+        </div>
+    </div>
+
+    <!-- Architecture & Study Modal -->
+    <div id="study-modal" class="study-modal" onclick="closeStudyModal(event)">
+        <div class="study-box" onclick="event.stopPropagation()">
+            <h2>🗺️ คู่มือศึกษาโครงสร้างเกม Final Slop (Architecture Guide)</h2>
+            <p>เกมนี้เป็นเกม <strong>2.5D Isometric Web MMORPG</strong> ที่เรนเดอร์ในมุมมอง Isometric ด้วยเอนจิ้น <strong>Three.js</strong> และขับเคลื่อนระบบ Multiplayer ด้วย <strong>Colyseus</strong>:</p>
+            
+            <h3 style="color:#7ce08a;">1. Game Engine & Renderer</h3>
+            <ul>
+                <li><strong>Three.js (WebGL):</strong> จัดการฉาก 3 มิติ, มุมมองกล้อง Orthographic/Perspective, ท่อไอคอน/เงา และเอฟเฟกต์แสง</li>
+                <li><strong>Procedural Synthesizer:</strong> ระบบเสียง <code>yF</code> สังเคราะห์เสียงทั้งหมดด้วย Web Audio API สดๆ ไม่ต้องใช้ไฟล์ MP3 ขนาดใหญ่</li>
+                <li><strong>2D Billboard Sprites:</strong> ตัวละครและมอนสเตอร์ใช้เทคนิค 2.5D Sprite Sheets หันหน้า 4-8 ทิศทาง</li>
+            </ul>
+
+            <h3 style="color:#7ce08a;">2. Networking & State Management</h3>
+            <ul>
+                <li><strong>Colyseus Room <code>town</code>:</strong> จัดการการเชื่อมต่อผ่าน WebSocket และประสานสถานะ <code>players</code>, <code>monsters</code>, <code>drops</code></li>
+                <li><strong>Client Message Types:</strong> <code>move</code>, <code>attack</code>, <code>chat</code>, <code>bag</code>, <code>skill</code>, <code>warpTown</code></li>
+            </ul>
+
+            <h3 style="color:#7ce08a;">3. การควบคุม (Controls) & คำสั่งพิเศษ</h3>
+            <ul>
+                <li><strong>PC Keyboard:</strong> <code>W</code> <code>A</code> <code>S</code> <code>D</code> หรือปุ่มลูกศร เพื่อเดิน, <code>Spacebar</code> หรือ <code>J</code> โจมตี, <code>E</code> คุยกับ NPC, <code>H</code> เปิดบอทออโต้</li>
+                <li><strong>Mouse:</strong> คลิกที่พื้นเพื่อเดินไปยังจุดเป้าหมาย (Click-to-Move) หรือคลิกมอนสเตอร์เพื่อโจมตี</li>
+                <li><strong>Mobile / Touch:</strong> จอยสติ๊กเสมือนมุมซ้ายล่าง และปุ่มแอ็กชันมุมขวาล่าง</li>
+            </ul>
+
+            <div style="margin-top:20px; text-align:right;">
+                <button class="btn-mode" onclick="document.getElementById('study-modal').style.display='none'">ปิดหน้าต่าง (Close)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Turbopack Runtime & Core Dependencies -->
+    <script src="./_next/static/immutable/chunks/turbopack-1cvbnb3nlabgn.js"></script>
+    <script src="./_next/static/immutable/chunks/2rv6p6j5p9eda.js"></script>
+    <script src="./_next/static/immutable/chunks/3a9ouwznrymd8.js"></script>
+    <script src="./_next/static/immutable/chunks/0fcmc8odz8v1w.js"></script>
+    <script src="./_next/static/immutable/chunks/2mgu2cp6fto7c.js"></script>
+    <script src="./_next/static/immutable/chunks/3x7cz7lqgi4_a.js"></script>
+    <script src="./_next/static/immutable/chunks/00z4pmesk2f4f.js"></script>
+    <script src="./_next/static/immutable/chunks/43hac3c7fnnri.js"></script>
+    <script src="./_next/static/immutable/chunks/1h9lsa67htw-l.js"></script>
+    <script src="./_next/static/immutable/chunks/1u5etgidtbfdn.js"></script>
+    <script src="./_next/static/immutable/chunks/424393y4rhx5z.js"></script>
+    <script src="./_next/static/immutable/chunks/3tmnfc-z5ph4b.js"></script>
+    <script src="./_next/static/immutable/chunks/1qw2ky3x46e05.js"></script>
+    <script src="./_next/static/immutable/chunks/1pkywcejrxhll.js"></script>
+    <script src="./_next/static/immutable/chunks/2ik365_vkdlgn.js"></script>
+    <script src="./_next/static/immutable/chunks/3_u2tpvmqiizn.js"></script>
+
+    <!-- Client Bootstrapper -->
+    
 
     <!-- Job & Skill Selection Modal -->
     <div id="job-modal" class="hud-menu-modal" onclick="closeJobModal(event)">
