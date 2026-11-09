@@ -4,11 +4,84 @@
     <script>
         (function() {
             var p = window.location.pathname;
-            var b = p.endsWith('/') ? p : p.substring(0, p.lastIndexOf('/') + 1);
-            var chunkBase = (b || '/') + '_next/';
+            var isGH = window.location.hostname.includes('github.io');
+            var baseHref = isGH ? (p.includes('/mogo') ? '/mogo/' : '/') : (p.endsWith('/') ? p : p.substring(0, p.lastIndexOf('/') + 1));
+            var basePath = isGH ? (p.includes('/mogo') ? '/mogo' : '') : '';
+            
+            var chunkBase = (basePath || '') + '/_next/';
             window.TURBOPACK_CHUNK_BASE_PATH = chunkBase;
             self.TURBOPACK_CHUNK_BASE_PATH = chunkBase;
             globalThis.TURBOPACK_CHUNK_BASE_PATH = chunkBase;
+            window.__GAME_BASE_PATH = basePath;
+            window.__GAME_BASE_HREF = baseHref;
+
+            // Global Asset Path Interceptor for GitHub Pages / subpaths
+            function fixAssetUrl(url) {
+                if (typeof url !== 'string') return url;
+                if (!basePath) return url;
+                if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:') || url.startsWith('blob:')) {
+                    return url;
+                }
+                if (url.startsWith('/mogo/') || url.startsWith('mogo/')) return url;
+                
+                if (url.startsWith('/textures/') || url.startsWith('/site/') || url.startsWith('/sprites/') || url.startsWith('/clerk/')) {
+                    return basePath + url;
+                }
+                if (url.startsWith('textures/') || url.startsWith('site/') || url.startsWith('sprites/') || url.startsWith('clerk/')) {
+                    return basePath + '/' + url;
+                }
+                if (url === '/favicon.ico' || url === 'favicon.ico') return basePath + '/favicon.ico';
+                if (url === '/manifest.webmanifest' || url === 'manifest.webmanifest') return basePath + '/manifest.webmanifest';
+                return url;
+            }
+
+            window.__fixAssetUrl = fixAssetUrl;
+
+            // Intercept Image elements (covers Three.js TextureLoader, new Image, and DOM <img>)
+            try {
+                var proto = HTMLImageElement.prototype;
+                var origSrcDesc = Object.getOwnPropertyDescriptor(proto, 'src');
+                if (origSrcDesc && origSrcDesc.set) {
+                    Object.defineProperty(proto, 'src', {
+                        get: function() { return origSrcDesc.get.call(this); },
+                        set: function(val) { return origSrcDesc.set.call(this, fixAssetUrl(val)); },
+                        configurable: true,
+                        enumerable: true
+                    });
+                }
+                var origSetAttr = proto.setAttribute;
+                proto.setAttribute = function(name, val) {
+                    if (name && name.toLowerCase() === 'src') {
+                        val = fixAssetUrl(val);
+                    }
+                    return origSetAttr.call(this, name, val);
+                };
+            } catch (e) {
+                console.warn("Image src interception:", e);
+            }
+
+            // Intercept window.fetch
+            var origFetch = window.fetch;
+            window.fetch = function(input, init) {
+                if (typeof input === 'string') {
+                    input = fixAssetUrl(input);
+                } else if (input && input.url) {
+                    var fixed = fixAssetUrl(input.url);
+                    if (fixed !== input.url) {
+                        input = new Request(fixed, input);
+                    }
+                }
+                return origFetch.call(this, input, init);
+            };
+
+            // Intercept XMLHttpRequest
+            if (typeof XMLHttpRequest !== 'undefined') {
+                var origOpen = XMLHttpRequest.prototype.open;
+                XMLHttpRequest.prototype.open = function(method, url) {
+                    var rest = Array.prototype.slice.call(arguments, 2);
+                    return origOpen.apply(this, [method, fixAssetUrl(url)].concat(rest));
+                };
+            }
         })();
     </script>
     <meta charset="utf-8"/>
@@ -494,7 +567,7 @@
                     maxMp: 60,
                     str: 6, vit: 6, agi: 6, int: 6, dex: 6, luk: 6, points: 10,
                     skills: ["s_first_aid", "s_trick_dead"],
-                    quests: {},
+                    quests: { on: { m01: [0] }, done: [], dailyDone: [], track: ["m01"] },
                     life: { pets: { out: null, pets: [] } },
                     stats: { worn: {} },
                     duels: { w: 0, l: 0 },
@@ -516,6 +589,14 @@
             }
 
             const sessionId = "sess_browser_" + Math.random().toString(36).slice(2, 8);
+
+            // Ensure valid quest schema
+            if (!prof.quests || typeof prof.quests !== 'object' || !prof.quests.on) {
+                prof.quests = { on: { m01: [0] }, done: [], dailyDone: [], track: ["m01"] };
+            }
+            if (!Array.isArray(prof.quests.done)) prof.quests.done = [];
+            if (!Array.isArray(prof.quests.dailyDone)) prof.quests.dailyDone = [];
+            if (!Array.isArray(prof.quests.track)) prof.quests.track = ["m01"];
 
             function formatWornGear(p) {
                 return (p.gear || []).filter(g => g.slot).map(g => g.slot + ":" + g.item + ":" + (g.refine || 0)).join(",");
@@ -612,7 +693,7 @@
                     int: prof.int,
                     points: prof.points || 0,
                     skills: prof.skills || ["s_first_aid", "s_trick_dead"],
-                    quests: prof.quests || {},
+                    quests: prof.quests,
                     life: prof.life || {},
                     stats: prof.stats || {},
                     duels: prof.duels || { w: 0, l: 0 }
@@ -750,6 +831,55 @@
                         dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
                     } else if (type === "chat" && data) {
                         dispatchMsg("chat", { from: prof.name, text: data.text || "" });
+                    } else if (type === "make" && data) {
+                        if (data.name) prof.name = data.name;
+                        if (data.look) prof.look = data.look;
+                        playerEntity.name = prof.name;
+                        playerEntity.look = prof.look;
+                        saveProf();
+                        dispatchMsg("made", {});
+                        dispatchMsg("char", buildCharPayload());
+                    } else if (type === "custom" && data) {
+                        if (data.look) {
+                            prof.look = data.look;
+                            playerEntity.look = prof.look;
+                            saveProf();
+                            dispatchMsg("char", buildCharPayload());
+                        }
+                    } else if (type === "stat" && data && data.stat) {
+                        if ((prof.points || 0) > 0 && prof[data.stat] !== undefined) {
+                            prof.points -= 1;
+                            prof[data.stat] += 1;
+                            saveProf();
+                            dispatchMsg("char", buildCharPayload());
+                        }
+                    } else if (type === "questTrack" && data && data.id) {
+                        if (!prof.quests.track) prof.quests.track = [];
+                        if (!prof.quests.track.includes(data.id)) {
+                            prof.quests.track.push(data.id);
+                        } else {
+                            prof.quests.track = prof.quests.track.filter(x => x !== data.id);
+                        }
+                        saveProf();
+                        dispatchMsg("quests", prof.quests);
+                    } else if (type === "questAccept" && data && data.id) {
+                        if (!prof.quests.on) prof.quests.on = {};
+                        prof.quests.on[data.id] = [0];
+                        if (!prof.quests.track) prof.quests.track = [];
+                        if (!prof.quests.track.includes(data.id)) prof.quests.track.push(data.id);
+                        saveProf();
+                        dispatchMsg("quests", prof.quests);
+                        dispatchMsg("questAccepted", { id: data.id });
+                    } else if (type === "questTurnIn" && data && data.id) {
+                        if (prof.quests.on && prof.quests.on[data.id]) {
+                            delete prof.quests.on[data.id];
+                        }
+                        if (!prof.quests.done) prof.quests.done = [];
+                        if (!prof.quests.done.includes(data.id)) prof.quests.done.push(data.id);
+                        if (prof.quests.track) prof.quests.track = prof.quests.track.filter(x => x !== data.id);
+                        saveProf();
+                        dispatchMsg("quests", prof.quests);
+                        dispatchMsg("questDone", { id: data.id });
                     }
                 },
                 sendUnreliable(type, data) { this.send(type, data); },
@@ -789,6 +919,7 @@
                 applyCollectionSync("players", { [sessionId]: playerEntity });
                 applyCollectionSync("monsters", Object.fromEntries(virtualMonsters));
                 dispatchMsg("char", buildCharPayload());
+                dispatchMsg("quests", prof.quests);
                 dispatchMsg("bag", { zeny: prof.zeny, items: prof.items });
                 dispatchMsg("gear", prof.gear);
                 dispatchMsg("skills", prof.skills);
