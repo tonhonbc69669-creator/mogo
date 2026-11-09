@@ -568,7 +568,16 @@
                     str: 6, vit: 6, agi: 6, int: 6, dex: 6, luk: 6, points: 10,
                     skills: ["s_first_aid", "s_trick_dead"],
                     quests: { on: { m01: [0] }, done: [], dailyDone: [], track: ["m01"] },
-                    life: { pets: { out: null, pets: [] } },
+                    life: {
+                        lv: { fish: 1, mine: 1, cook: 1, farm: 1 },
+                        exp: { fish: 0, mine: 0, cook: 0, farm: 0 },
+                        rod: 0,
+                        pick: 0,
+                        pets: { out: null, pets: [], dex: [] },
+                        food: null,
+                        mount: null,
+                        plots: []
+                    },
                     stats: { worn: {} },
                     duels: { w: 0, l: 0 },
                     zeny: 500,
@@ -597,6 +606,33 @@
             if (!Array.isArray(prof.quests.done)) prof.quests.done = [];
             if (!Array.isArray(prof.quests.dailyDone)) prof.quests.dailyDone = [];
             if (!Array.isArray(prof.quests.track)) prof.quests.track = ["m01"];
+
+            // Ensure valid life schema
+            if (!prof.life || typeof prof.life !== 'object') prof.life = {};
+            if (!prof.life.lv || typeof prof.life.lv !== 'object') {
+                prof.life.lv = { fish: 1, mine: 1, cook: 1, farm: 1 };
+            }
+            if (!prof.life.exp || typeof prof.life.exp !== 'object') {
+                prof.life.exp = { fish: 0, mine: 0, cook: 0, farm: 0 };
+            }
+            if (prof.life.rod === undefined) prof.life.rod = 0;
+            if (prof.life.pick === undefined) prof.life.pick = 0;
+            if (!prof.life.pets || typeof prof.life.pets !== 'object') {
+                prof.life.pets = { out: null, pets: [], dex: [] };
+            }
+            if (!Array.isArray(prof.life.pets.pets)) prof.life.pets.pets = [];
+            if (!Array.isArray(prof.life.pets.dex)) prof.life.pets.dex = [];
+            if (prof.life.food === undefined) prof.life.food = null;
+            if (prof.life.mount === undefined) prof.life.mount = null;
+            if (!Array.isArray(prof.life.plots)) prof.life.plots = [];
+
+            // Ensure valid stats schema
+            if (!prof.stats || typeof prof.stats !== 'object') prof.stats = {};
+            if (!prof.stats.worn || typeof prof.stats.worn !== 'object') prof.stats.worn = {};
+            if (!prof.stats.login || typeof prof.stats.login !== 'object') prof.stats.login = {};
+
+            // Immediately heal and save local profile if needed
+            try { localStorage.setItem(profKey, JSON.stringify(prof)); } catch (e) {}
 
             function formatWornGear(p) {
                 return (p.gear || []).filter(g => g.slot).map(g => g.slot + ":" + g.item + ":" + (g.refine || 0)).join(",");
